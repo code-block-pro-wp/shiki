@@ -1,4 +1,5 @@
 dist
+!packages/shiki/dist
 node_modules
 tsconfig.tsbuildinfo
 tmp
