@@ -66,6 +66,69 @@ export const githubThemeSources: [string, string][] = [
   [
     'rose-pine-moon',
     'https://github.com/rose-pine/vscode/blob/main/themes/rose-pine-moon-color-theme.json'
+  ],
+  [
+    'shades-of-purple',
+    'https://github.com/ahmadawais/shades-of-purple-vscode/blob/master/themes/shades-of-purple-color-theme.json'
+  ],
+  [
+    'shades-of-purple-super-dark',
+    'https://github.com/ahmadawais/shades-of-purple-vscode/blob/master/themes/shades-of-purple-color-theme-super-dark.json'
+  ],
+  [
+    'synthwave-84',
+    'https://github.com/robb0wen/synthwave-vscode/blob/master/themes/synthwave-color-theme.json'
+  ],
+  ['noctis', 'https://github.com/liviuschera/noctis/blob/master/themes/noctis.json'],
+  ['noctis-azureus', 'https://github.com/liviuschera/noctis/blob/master/themes/azureus.json'],
+  ['noctis-bordo', 'https://github.com/liviuschera/noctis/blob/master/themes/bordo.json'],
+  ['noctis-hibernus', 'https://github.com/liviuschera/noctis/blob/master/themes/hibernus.json'],
+  ['noctis-lilac', 'https://github.com/liviuschera/noctis/blob/master/themes/lilac.json'],
+  ['noctis-lux', 'https://github.com/liviuschera/noctis/blob/master/themes/lux.json'],
+  ['noctis-minimus', 'https://github.com/liviuschera/noctis/blob/master/themes/minimus.json'],
+  ['noctis-obscuro', 'https://github.com/liviuschera/noctis/blob/master/themes/obscuro.json'],
+  ['noctis-sereno', 'https://github.com/liviuschera/noctis/blob/master/themes/sereno.json'],
+  ['noctis-uva', 'https://github.com/liviuschera/noctis/blob/master/themes/uva.json'],
+  ['noctis-viola', 'https://github.com/liviuschera/noctis/blob/master/themes/viola.json'],
+  [
+    'tokyo-night',
+    'https://github.com/enkia/tokyo-night-vscode-theme/blob/master/themes/tokyo-night-color-theme.json'
+  ],
+  [
+    'tokyo-night-storm',
+    'https://github.com/enkia/tokyo-night-vscode-theme/blob/master/themes/tokyo-night-storm-color-theme.json'
+  ],
+  [
+    'tokyo-night-light',
+    'https://github.com/enkia/tokyo-night-vscode-theme/blob/master/themes/tokyo-night-light-color-theme.json'
+  ],
+  ['colbalt2', 'https://github.com/wesbos/cobalt2-vscode/blob/master/theme/cobalt2.json'],
+  [
+    'palenight',
+    'https://github.com/whizkydee/vscode-palenight-theme/blob/master/themes/palenight.json'
+  ],
+  ['ayu-dark', 'https://github.com/ayu-theme/vscode-ayu/blob/master/ayu-dark.json'],
+  ['ayu-mirage', 'https://github.com/ayu-theme/vscode-ayu/blob/master/ayu-mirage.json'],
+  ['ayu-light', 'https://github.com/ayu-theme/vscode-ayu/blob/master/ayu-light.json'],
+  [
+    'winter-is-coming',
+    'https://github.com/johnpapa/vscode-winteriscoming/blob/master/themes/WinterIsComing-dark-blue-color-theme.json'
+  ],
+  [
+    'winter-is-coming-dark',
+    'https://github.com/johnpapa/vscode-winteriscoming/blob/master/themes/WinterIsComing-dark-color-theme.json'
+  ],
+  [
+    'winter-is-coming-light',
+    'https://github.com/johnpapa/vscode-winteriscoming/blob/master/themes/WinterIsComing-light-color-theme.json'
+  ],
+  [
+    'night-owl',
+    'https://github.com/sdras/night-owl-vscode-theme/blob/main/themes/Night%20Owl-color-theme.json'
+  ],
+  [
+    'night-owl-light',
+    'https://github.com/sdras/night-owl-vscode-theme/blob/main/themes/Night%20Owl-Light-color-theme.json'
   ]
 ]
 
