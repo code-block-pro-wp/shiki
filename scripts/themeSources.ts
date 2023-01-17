@@ -107,6 +107,7 @@ export const githubThemeSources: [string, string][] = [
     'palenight',
     'https://github.com/whizkydee/vscode-palenight-theme/blob/master/themes/palenight.json'
   ],
+  ['pico8', 'https://github.com/ianjsikes/pico8-theme/blob/master/themes/PICO-8-color-theme.json'],
   ['ayu-dark', 'https://github.com/ayu-theme/vscode-ayu/blob/master/ayu-dark.json'],
   ['ayu-mirage', 'https://github.com/ayu-theme/vscode-ayu/blob/master/ayu-mirage.json'],
   ['ayu-light', 'https://github.com/ayu-theme/vscode-ayu/blob/master/ayu-light.json'],

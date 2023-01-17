@@ -38,6 +38,7 @@ export type Theme =
   | 'palenight-mild-contrast'
   | 'palenight-operator'
   | 'palenight'
+  | 'pico8'
   | 'poimandres'
   | 'rose-pine-dawn'
   | 'rose-pine-moon'
@@ -98,6 +99,7 @@ export const themes: Theme[] = [
   'palenight-mild-contrast',
   'palenight-operator',
   'palenight',
+  'pico8',
   'poimandres',
   'rose-pine-dawn',
   'rose-pine-moon',
