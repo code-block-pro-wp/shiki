@@ -211,7 +211,7 @@ if (!highlighter.getLoadedLanguages().includes(language)) {
     // Languages are specified by their id, they can also have aliases (i. e. "js" and "javascript")
     return bundle.id === language || bundle.aliases?.includes(language);
   });
-  if (bundles.length > 0)) {
+  if (bundles.length > 0) {
     await highlighter.loadLanguage(language)
   } else {
     // Do some error handling or default to another language or...
@@ -292,6 +292,8 @@ Shiki makes use of [VS Code Oniguruma](https://github.com/microsoft/vscode-onigu
 For Node.js environments the WASM file is automatically loaded, for browser environments you can specify how to load the WASM file.
 
 > If used, `setWASM` must be invoked before `getHighlighter` is called.
+
+> If you make use of a reverse proxy like [nginx](https://www.nginx.com/) or [traefik](https://traefik.io/traefik/) you may have to specify in its configuration the MIME type for wasm files.
 
 Use the default loader: (applies to Node.js and browser environments)
 
