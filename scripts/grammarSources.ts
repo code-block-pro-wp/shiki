@@ -53,7 +53,7 @@ export const vscodeGrammarsToRename = {
  *     - When the grammar provides an undesirable name (or no `name` key), for example `x86 and x86_64 Assembly` at
  *       https://github.com/13xforever/x86_64-assembly-vscode/blob/face834a56e416230c2d20939f9fa77c25344865/syntaxes/language-x86_64-assembly.tmLanguage#L13-L14
  *       specify the desired name, for example `asm`
- *   - `url` should be the github URL
+ *   - `url` should be the github URL. Supported suffixes: ['json', 'yml', 'yaml', 'plist', 'cson']
  * - Run `pnpm update:grammars`, examine the changes
  */
 export const githubGrammarSources: [string, string][] = [
@@ -80,6 +80,10 @@ export const githubGrammarSources: [string, string][] = [
   [
     'asm',
     'https://github.com/13xforever/x86_64-assembly-vscode/blob/master/syntaxes/language-x86_64-assembly.tmLanguage'
+  ],
+  [
+    'astro',
+    'https://github.com/withastro/language-tools/blob/main/packages/vscode/syntaxes/astro.tmLanguage.src.yaml'
   ],
   ['awk', 'https://github.com/luggage66/vscode-awk/blob/master/syntaxes/awk.tmLanguage'],
   [
@@ -153,6 +157,7 @@ export const githubGrammarSources: [string, string][] = [
     'jinja-html',
     'https://github.com/samuelcolvin/jinjahtml-vscode/blob/master/syntaxes/jinja-html.tmLanguage.json'
   ],
+  ['jison', 'https://github.com/cdibbs/language-jison/blob/master/grammars/jison.cson'],
   ['json5', 'https://github.com/mrmlnc/vscode-json5/blob/master/syntaxes/json5.json'],
   [
     'jsonnet',
@@ -285,6 +290,7 @@ export const githubGrammarSources: [string, string][] = [
   ['vue-html', 'https://github.com/vuejs/vetur/blob/master/syntaxes/vue-html.tmLanguage.json'],
   ['postcss', 'https://github.com/vuejs/vetur/blob/master/syntaxes/vue-postcss.json'],
   ['wasm', 'https://github.com/wasmerio/vscode-wasm/blob/master/syntaxes/wat.json'],
+  ['wgsl', 'https://github.com/PolyMeilex/vscode-wgsl/blob/master/syntaxes/wgsl.tmLanguage.json'],
   ['wenyan', 'https://github.com/wenyan-lang/highlight/blob/master/wenyan.tmLanguage.json'],
   [
     'zenscript',
@@ -308,6 +314,7 @@ export const languageAliases = {
   fsharp: ['f#', 'fs'],
   haskell: ['hs'],
   handlebars: ['hbs'],
+  ini: ['properties'],
   javascript: ['js'],
   jssm: ['fsl'],
   make: ['makefile'],
@@ -321,7 +328,7 @@ export const languageAliases = {
   rust: ['rs'],
   'html-ruby-erb': ['erb'],
   shaderlab: ['shader'],
-  shellscript: ['shell', 'bash', 'sh', 'zsh'],
+  shellscript: ['bash', 'console', 'sh', 'shell', 'zsh'],
   stylus: ['styl'],
   typescript: ['ts'],
   vb: ['cmd'],
@@ -355,6 +362,5 @@ export const embeddedLanguagesToExclude = [
  * Value is a list of language ids, as can be found by F1 -> Change Language Mode. For example `astro`
  */
 export const marketplaceGrammarSources: Record<string, string[]> = {
-  'bpruitt-goddard.mermaid-markdown-syntax-highlighting': ['mermaid'],
-  'astro-build.astro-vscode': ['astro']
+  'bpruitt-goddard.mermaid-markdown-syntax-highlighting': ['mermaid']
 }
