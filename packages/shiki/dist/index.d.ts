@@ -1,6 +1,10 @@
 import { IGrammar, IRawTheme } from 'vscode-textmate'
 
 type Theme =
+  | 'ayu-dark'
+  | 'ayu-light'
+  | 'ayu-mirage'
+  | 'colbalt2'
   | 'css-variables'
   | 'dark-plus'
   | 'dracula-soft'
@@ -10,16 +14,33 @@ type Theme =
   | 'github-light'
   | 'hc_light'
   | 'light-plus'
-  | 'material-darker'
-  | 'material-default'
-  | 'material-lighter'
-  | 'material-ocean'
-  | 'material-palenight'
+  | 'material-theme-darker'
+  | 'material-theme-lighter'
+  | 'material-theme-ocean'
+  | 'material-theme-palenight'
+  | 'material-theme'
   | 'min-dark'
   | 'min-light'
   | 'monokai'
+  | 'night-owl-light'
+  | 'night-owl'
+  | 'noctis-azureus'
+  | 'noctis-bordo'
+  | 'noctis-hibernus'
+  | 'noctis-lilac'
+  | 'noctis-lux'
+  | 'noctis-minimus'
+  | 'noctis-obscuro'
+  | 'noctis-sereno'
+  | 'noctis-uva'
+  | 'noctis-viola'
+  | 'noctis'
   | 'nord'
   | 'one-dark-pro'
+  | 'palenight-mild-contrast'
+  | 'palenight-operator'
+  | 'palenight'
+  | 'pico8'
   | 'poimandres'
   | 'rose-pine-dawn'
   | 'rose-pine-moon'
@@ -31,8 +52,14 @@ type Theme =
   | 'solarized-dark'
   | 'solarized-light'
   | 'synthwave-84'
+  | 'tokyo-night-light'
+  | 'tokyo-night-storm'
+  | 'tokyo-night'
   | 'vitesse-dark'
   | 'vitesse-light'
+  | 'winter-is-coming-dark'
+  | 'winter-is-coming-light'
+  | 'winter-is-coming'
 declare const themes: Theme[]
 
 declare enum FontStyle {
@@ -129,12 +156,12 @@ interface IThemedToken {
 interface HighlighterOptions {
   /**
    * The theme to load upfront.
+   *
+   * Default to: 'nord'
    */
   theme?: IThemeRegistration
   /**
    * A list of themes to load upfront.
-   *
-   * Default to: `['dark-plus', 'light-plus']`
    */
   themes?: IThemeRegistration[]
   /**
@@ -339,6 +366,7 @@ type Lang =
   | 'apex'
   | 'apl'
   | 'applescript'
+  | 'ara'
   | 'asm'
   | 'astro'
   | 'awk'
@@ -370,6 +398,7 @@ type Lang =
   | 'cue'
   | 'd'
   | 'dart'
+  | 'dax'
   | 'diff'
   | 'docker'
   | 'dream-maker'
@@ -399,12 +428,15 @@ type Lang =
   | 'hcl'
   | 'hlsl'
   | 'html'
+  | 'http'
   | 'imba'
   | 'ini'
+  | 'properties'
   | 'java'
   | 'javascript'
   | 'js'
   | 'jinja-html'
+  | 'jison'
   | 'json'
   | 'json5'
   | 'jsonc'
@@ -440,6 +472,7 @@ type Lang =
   | 'php'
   | 'plsql'
   | 'postcss'
+  | 'powerquery'
   | 'powershell'
   | 'ps'
   | 'ps1'
@@ -471,9 +504,10 @@ type Lang =
   | 'shaderlab'
   | 'shader'
   | 'shellscript'
-  | 'shell'
   | 'bash'
+  | 'console'
   | 'sh'
+  | 'shell'
   | 'zsh'
   | 'smalltalk'
   | 'solidity'
@@ -508,9 +542,11 @@ type Lang =
   | 'wasm'
   | 'wenyan'
   | '文言'
+  | 'wgsl'
   | 'xml'
   | 'xsl'
   | 'yaml'
+  | 'yml'
   | 'zenscript'
 declare const languages: ILanguageRegistration[]
 
@@ -518,6 +554,17 @@ declare function getHighlighter(options: HighlighterOptions): Promise<Highlighte
 
 declare function renderToHtml(lines: IThemedToken[][], options?: HtmlRendererOptions): string
 
+declare global {
+  interface Window {
+    WorkerGlobalScope: any
+  }
+  var self: Window & typeof globalThis
+  function fetch(url: string): Promise<Response>
+  interface Response {
+    json(): Promise<any>
+    text(): Promise<any>
+  }
+}
 /**
  * Set the route for loading the assets
  * URL should end with `/`

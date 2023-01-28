@@ -2,6 +2,10 @@ import { loadWASM, createOnigScanner, createOnigString } from 'vscode-oniguruma'
 import { INITIAL, Registry as Registry$1 } from 'vscode-textmate'
 
 const themes = [
+  'ayu-dark',
+  'ayu-light',
+  'ayu-mirage',
+  'colbalt2',
   'css-variables',
   'dark-plus',
   'dracula-soft',
@@ -11,16 +15,33 @@ const themes = [
   'github-light',
   'hc_light',
   'light-plus',
-  'material-darker',
-  'material-default',
-  'material-lighter',
-  'material-ocean',
-  'material-palenight',
+  'material-theme-darker',
+  'material-theme-lighter',
+  'material-theme-ocean',
+  'material-theme-palenight',
+  'material-theme',
   'min-dark',
   'min-light',
   'monokai',
+  'night-owl-light',
+  'night-owl',
+  'noctis-azureus',
+  'noctis-bordo',
+  'noctis-hibernus',
+  'noctis-lilac',
+  'noctis-lux',
+  'noctis-minimus',
+  'noctis-obscuro',
+  'noctis-sereno',
+  'noctis-uva',
+  'noctis-viola',
+  'noctis',
   'nord',
   'one-dark-pro',
+  'palenight-mild-contrast',
+  'palenight-operator',
+  'palenight',
+  'pico8',
   'poimandres',
   'rose-pine-dawn',
   'rose-pine-moon',
@@ -32,8 +53,14 @@ const themes = [
   'solarized-dark',
   'solarized-light',
   'synthwave-84',
+  'tokyo-night-light',
+  'tokyo-night-storm',
+  'tokyo-night',
   'vitesse-dark',
-  'vitesse-light'
+  'vitesse-light',
+  'winter-is-coming-dark',
+  'winter-is-coming-light',
+  'winter-is-coming'
 ]
 
 const languages = [
@@ -79,6 +106,12 @@ const languages = [
     samplePath: 'applescript.sample'
   },
   {
+    id: 'ara',
+    scopeName: 'source.ara',
+    path: 'ara.tmLanguage.json',
+    samplePath: 'ara.sample'
+  },
+  {
     id: 'asm',
     scopeName: 'source.asm.x86_64',
     path: 'asm.tmLanguage.json',
@@ -93,12 +126,13 @@ const languages = [
       'json',
       'javascript',
       'typescript',
-      'tsx',
-      'css',
-      'less',
+      'stylus',
       'sass',
+      'css',
       'scss',
-      'stylus'
+      'less',
+      'postcss',
+      'tsx'
     ]
   },
   {
@@ -243,6 +277,12 @@ const languages = [
     scopeName: 'source.dart',
     path: 'dart.tmLanguage.json',
     samplePath: 'dart.sample'
+  },
+  {
+    id: 'dax',
+    scopeName: 'source.dax',
+    path: 'dax.tmLanguage.json',
+    samplePath: 'dax.sample'
   },
   {
     id: 'diff',
@@ -393,6 +433,13 @@ const languages = [
     embeddedLangs: ['javascript', 'css']
   },
   {
+    id: 'http',
+    scopeName: 'source.http',
+    path: 'http.tmLanguage.json',
+    samplePath: 'http.sample',
+    embeddedLangs: ['shellscript', 'json', 'xml', 'graphql']
+  },
+  {
     id: 'imba',
     scopeName: 'source.imba',
     path: 'imba.tmLanguage.json',
@@ -401,7 +448,8 @@ const languages = [
   {
     id: 'ini',
     scopeName: 'source.ini',
-    path: 'ini.tmLanguage.json'
+    path: 'ini.tmLanguage.json',
+    aliases: ['properties']
   },
   {
     id: 'java',
@@ -421,6 +469,13 @@ const languages = [
     scopeName: 'text.html.jinja',
     path: 'jinja-html.tmLanguage.json',
     embeddedLangs: ['html']
+  },
+  {
+    id: 'jison',
+    scopeName: 'source.jison',
+    path: 'jison.tmLanguage.json',
+    samplePath: 'jison.sample',
+    embeddedLangs: ['javascript']
   },
   {
     id: 'json',
@@ -587,6 +642,7 @@ const languages = [
     id: 'marko',
     scopeName: 'text.marko',
     path: 'marko.tmLanguage.json',
+    samplePath: 'marko.sample',
     embeddedLangs: ['css', 'less', 'scss', 'typescript']
   },
   {
@@ -664,6 +720,12 @@ const languages = [
     id: 'postcss',
     scopeName: 'source.css.postcss',
     path: 'postcss.tmLanguage.json'
+  },
+  {
+    id: 'powerquery',
+    scopeName: 'source.powerquery',
+    path: 'powerquery.tmLanguage.json',
+    samplePath: 'powerquery.sample'
   },
   {
     id: 'powershell',
@@ -798,7 +860,7 @@ const languages = [
     id: 'shellscript',
     scopeName: 'source.shell',
     path: 'shellscript.tmLanguage.json',
-    aliases: ['shell', 'bash', 'sh', 'zsh']
+    aliases: ['bash', 'console', 'sh', 'shell', 'zsh']
   },
   {
     id: 'smalltalk',
@@ -985,6 +1047,12 @@ const languages = [
     aliases: ['\u6587\u8A00']
   },
   {
+    id: 'wgsl',
+    scopeName: 'source.wgsl',
+    path: 'wgsl.tmLanguage.json',
+    samplePath: 'wgsl.sample'
+  },
+  {
     id: 'xml',
     scopeName: 'text.xml',
     path: 'xml.tmLanguage.json',
@@ -999,7 +1067,8 @@ const languages = [
   {
     id: 'yaml',
     scopeName: 'source.yaml',
-    path: 'yaml.tmLanguage.json'
+    path: 'yaml.tmLanguage.json',
+    aliases: ['yml']
   },
   {
     id: 'zenscript',
