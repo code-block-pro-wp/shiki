@@ -5,6 +5,8 @@
     "dev": "pnpm -r --parallel watch",
     "fmt": "prettier --write packages/**/*.ts",
     "test": "cross-env NODE_OPTIONS=--max-old-space-size=4096 jest --colors",
+    "test:e2e": "npm run test:e2e:localserver & pnpm dlx playwright test",
+    "test:e2e:localserver": "node ./scripts/e2e/local-server.mjs",
     "update": "npm run update:themes && npm run update:grammars",
     "update:themes": "bash ./scripts/pullThemes.sh",
     "update:grammars": "bash ./scripts/pullGrammars.sh"
@@ -21,7 +23,8 @@
     ]
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^23.0.7",
+    "@playwright/test": "^1.30.0",
+    "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
     "@rollup/plugin-terser": "^0.2.1",
@@ -29,7 +32,7 @@
     "@types/fs-extra": "^9.0.13",
     "@types/jest": "^29.4.0",
     "@types/js-yaml": "^4.0.5",
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.11.19",
     "@types/unzipper": "^0.10.5",
     "chalk": "^5.2.0",
     "cross-env": "^7.0.3",
@@ -43,22 +46,19 @@
     "lint-staged": "^13.1.0",
     "lodash.kebabcase": "^4.1.1",
     "prettier": "^2.8.3",
-    "rollup": "^3.11.0",
+    "rollup": "^3.14.0",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-dts": "^5.1.1",
     "rollup-plugin-esbuild": "^5.0.0",
+    "superstatic": "^9.0.2",
     "ts-jest": "^29.0.5",
     "tsup": "^6.5.0",
-    "typescript": "^4.9.4",
+    "typescript": "^4.9.5",
     "unzipper": "^0.10.11",
     "yorkie": "^2.0.0"
   },
   "license": "MIT",
   "dependencies": {
-    "esbuild": "^0.16.7"
-  },
-  "name": "shiki",
-  "workspaces": [
-    "packages/*"
-  ]
+    "esbuild": "^0.16.17"
+  }
 }

@@ -185,13 +185,13 @@ interface Highlighter {
     code: string,
     lang?: StringLiteralUnion<Lang>,
     theme?: StringLiteralUnion<Theme>,
-    options?: HtmlOptions
+    options?: CodeToHtmlOptions
   ): string
   /**
    * Convert code to HTML tokens.
    * `lang` and `theme` must have been loaded.
    */
-  codeToHtml(code: string, options?: HtmlOptions): string
+  codeToHtml(code: string, options?: CodeToHtmlOptions): string
   /**
    * Convert code to themed tokens for custom processing.
    * `lang` and `theme` must have been loaded.
@@ -204,6 +204,18 @@ interface Highlighter {
     theme?: StringLiteralUnion<Theme>,
     options?: ThemedTokenizerOptions
   ): IThemedToken[][]
+  /**
+   * Convert ansi-escaped text to HTML tokens.
+   * `theme` must have been loaded.
+   */
+  ansiToHtml(ansi: string, options?: AnsiToHtmlOptions): string
+  /**
+   * Convert ansi-escaped text to themed tokens for custom processing.
+   * `theme` must have been loaded.
+   * You may customize the bundled HTML / SVG renderer or write your own
+   * renderer for another render target.
+   */
+  ansiToThemedTokens(ansi: string, theme?: StringLiteralUnion<Theme>): IThemedToken[][]
   /**
    * Get the loaded theme
    */
@@ -303,8 +315,12 @@ interface IShikiTheme extends IRawTheme {
  * Adapted from https://github.com/microsoft/TypeScript/issues/29729
  */
 type StringLiteralUnion<T extends U, U = string> = T | (U & {})
-interface HtmlOptions {
+interface CodeToHtmlOptions {
   lang?: StringLiteralUnion<Lang>
+  theme?: StringLiteralUnion<Theme>
+  lineOptions?: LineOption[]
+}
+interface AnsiToHtmlOptions {
   theme?: StringLiteralUnion<Theme>
   lineOptions?: LineOption[]
 }

@@ -746,10 +746,10 @@
     static printMetadata(e) {
       let t = s.getLanguageId(e),
         n = s.getTokenType(e),
-        a = s.getFontStyle(e),
-        r = s.getForeground(e),
+        r = s.getFontStyle(e),
+        a = s.getForeground(e),
         o = s.getBackground(e)
-      console.log({ languageId: t, tokenType: n, fontStyle: a, foreground: r, background: o })
+      console.log({ languageId: t, tokenType: n, fontStyle: r, foreground: a, background: o })
     }
     static getLanguageId(e) {
       return (255 & e) >>> 0
@@ -769,7 +769,7 @@
     static containsBalancedBrackets(e) {
       return 0 != (1024 & e)
     }
-    static set(e, t, n, a, r, o) {
+    static set(e, t, n, r, a, o) {
       let i = s.getLanguageId(e),
         c = s.getTokenType(e),
         l = s.getFontStyle(e),
@@ -778,8 +778,8 @@
       return (
         0 !== t && (i = t),
         0 !== n && (c = 8 === n ? 0 : n),
-        -1 !== a && (l = a),
-        0 !== r && (u = r),
+        -1 !== r && (l = r),
+        0 !== a && (u = a),
         0 !== o && (h = o),
         ((i << 0) |
           (c << 8) |
@@ -791,10 +791,10 @@
       )
     }
   }
-  function a(e) {
+  function r(e) {
     return e.endsWith('/') || e.endsWith('\\') ? e.slice(0, -1) : e
   }
-  function r(e) {
+  function a(e) {
     return e.startsWith('./') ? e.slice(2) : e
   }
   function o(e) {
@@ -802,7 +802,7 @@
     return t.slice(0, t.length - 1)
   }
   function i(...e) {
-    return e.map(a).map(r).join('/')
+    return e.map(r).map(a).join('/')
   }
   'undefined' != typeof globalThis
     ? globalThis
@@ -820,8 +820,8 @@
   function m(e, t = !1) {
     const n = e.length
     let s = 0,
-      a = '',
-      r = 0,
+      r = '',
+      a = 0,
       o = 16,
       i = 0,
       c = 0,
@@ -829,34 +829,34 @@
       u = 0,
       h = 0
     function p(t, n) {
-      let a = 0,
-        r = 0
-      for (; a < t || !n; ) {
+      let r = 0,
+        a = 0
+      for (; r < t || !n; ) {
         let t = e.charCodeAt(s)
-        if (t >= 48 && t <= 57) r = 16 * r + t - 48
-        else if (t >= 65 && t <= 70) r = 16 * r + t - 65 + 10
+        if (t >= 48 && t <= 57) a = 16 * a + t - 48
+        else if (t >= 65 && t <= 70) a = 16 * a + t - 65 + 10
         else {
           if (!(t >= 97 && t <= 102)) break
-          r = 16 * r + t - 97 + 10
+          a = 16 * a + t - 97 + 10
         }
-        s++, a++
+        s++, r++
       }
-      return a < t && (r = -1), r
+      return r < t && (a = -1), a
     }
     function d() {
-      if (((a = ''), (h = 0), (r = s), (c = i), (u = l), s >= n)) return (r = n), (o = 17)
+      if (((r = ''), (h = 0), (a = s), (c = i), (u = l), s >= n)) return (a = n), (o = 17)
       let t = e.charCodeAt(s)
       if (g(t)) {
         do {
-          s++, (a += String.fromCharCode(t)), (t = e.charCodeAt(s))
+          s++, (r += String.fromCharCode(t)), (t = e.charCodeAt(s))
         } while (g(t))
         return (o = 15)
       }
       if (f(t))
         return (
           s++,
-          (a += String.fromCharCode(t)),
-          13 === t && 10 === e.charCodeAt(s) && (s++, (a += '\n')),
+          (r += String.fromCharCode(t)),
+          13 === t && 10 === e.charCodeAt(s) && (s++, (r += '\n')),
           i++,
           (l = s),
           (o = 14)
@@ -877,30 +877,30 @@
         case 34:
           return (
             s++,
-            (a = (function () {
+            (r = (function () {
               let t = '',
-                a = s
+                r = s
               for (;;) {
                 if (s >= n) {
-                  ;(t += e.substring(a, s)), (h = 2)
+                  ;(t += e.substring(r, s)), (h = 2)
                   break
                 }
-                const r = e.charCodeAt(s)
-                if (34 === r) {
-                  ;(t += e.substring(a, s)), s++
+                const a = e.charCodeAt(s)
+                if (34 === a) {
+                  ;(t += e.substring(r, s)), s++
                   break
                 }
-                if (92 !== r) {
-                  if (r >= 0 && r <= 31) {
-                    if (f(r)) {
-                      ;(t += e.substring(a, s)), (h = 2)
+                if (92 !== a) {
+                  if (a >= 0 && a <= 31) {
+                    if (f(a)) {
+                      ;(t += e.substring(r, s)), (h = 2)
                       break
                     }
                     h = 6
                   }
                   s++
                 } else {
-                  if (((t += e.substring(a, s)), s++, s >= n)) {
+                  if (((t += e.substring(r, s)), s++, s >= n)) {
                     h = 2
                     break
                   }
@@ -936,7 +936,7 @@
                     default:
                       h = 5
                   }
-                  a = s
+                  r = s
                 }
               }
               return t
@@ -947,25 +947,25 @@
           const c = s - 1
           if (47 === e.charCodeAt(s + 1)) {
             for (s += 2; s < n && !f(e.charCodeAt(s)); ) s++
-            return (a = e.substring(c, s)), (o = 12)
+            return (r = e.substring(c, s)), (o = 12)
           }
           if (42 === e.charCodeAt(s + 1)) {
             s += 2
             const t = n - 1
-            let r = !1
+            let a = !1
             for (; s < t; ) {
               const t = e.charCodeAt(s)
               if (42 === t && 47 === e.charCodeAt(s + 1)) {
-                ;(s += 2), (r = !0)
+                ;(s += 2), (a = !0)
                 break
               }
               s++, f(t) && (13 === t && 10 === e.charCodeAt(s) && s++, i++, (l = s))
             }
-            return r || (s++, (h = 1)), (a = e.substring(c, s)), (o = 13)
+            return a || (s++, (h = 1)), (r = e.substring(c, s)), (o = 13)
           }
-          return (a += String.fromCharCode(t)), s++, (o = 16)
+          return (r += String.fromCharCode(t)), s++, (o = 16)
         case 45:
-          if (((a += String.fromCharCode(t)), s++, s === n || !_(e.charCodeAt(s)))) return (o = 16)
+          if (((r += String.fromCharCode(t)), s++, s === n || !_(e.charCodeAt(s)))) return (o = 16)
         case 48:
         case 49:
         case 50:
@@ -977,7 +977,7 @@
         case 56:
         case 57:
           return (
-            (a += (function () {
+            (r += (function () {
               let t = s
               if (48 === e.charCodeAt(s)) s++
               else for (s++; s < e.length && _(e.charCodeAt(s)); ) s++
@@ -1001,8 +1001,8 @@
           )
         default:
           for (; s < n && m(t); ) s++, (t = e.charCodeAt(s))
-          if (r !== s) {
-            switch (((a = e.substring(r, s)), a)) {
+          if (a !== s) {
+            switch (((r = e.substring(a, s)), r)) {
               case 'true':
                 return (o = 8)
               case 'false':
@@ -1012,7 +1012,7 @@
             }
             return (o = 16)
           }
-          return (a += String.fromCharCode(t)), s++, (o = 16)
+          return (r += String.fromCharCode(t)), s++, (o = 16)
       }
     }
     function m(e) {
@@ -1032,7 +1032,7 @@
     }
     return {
       setPosition: function (e) {
-        ;(s = e), (a = ''), (r = 0), (o = 16), (h = 0)
+        ;(s = e), (r = ''), (a = 0), (o = 16), (h = 0)
       },
       getPosition: () => s,
       scan: t
@@ -1045,11 +1045,11 @@
           }
         : d,
       getToken: () => o,
-      getTokenValue: () => a,
-      getTokenOffset: () => r,
-      getTokenLength: () => s - r,
+      getTokenValue: () => r,
+      getTokenOffset: () => a,
+      getTokenLength: () => s - a,
       getTokenStartLine: () => c,
-      getTokenStartCharacter: () => r - u,
+      getTokenStartCharacter: () => a - u,
       getTokenError: () => h
     }
   }
@@ -1079,23 +1079,23 @@
               t.OnigScanner =
               t.OnigString =
                 void 0)
-          const a = s(n(418))
-          let r = null,
+          const r = s(n(418))
+          let a = null,
             o = !1
           class i {
             static _utf8ByteLength(e) {
               let t = 0
               for (let n = 0, s = e.length; n < s; n++) {
-                const a = e.charCodeAt(n)
-                let r = a,
+                const r = e.charCodeAt(n)
+                let a = r,
                   o = !1
-                if (a >= 55296 && a <= 56319 && n + 1 < s) {
+                if (r >= 55296 && r <= 56319 && n + 1 < s) {
                   const t = e.charCodeAt(n + 1)
                   t >= 56320 &&
                     t <= 57343 &&
-                    ((r = (65536 + ((a - 55296) << 10)) | (t - 56320)), (o = !0))
+                    ((a = (65536 + ((r - 55296) << 10)) | (t - 56320)), (o = !0))
                 }
-                ;(t += r <= 127 ? 1 : r <= 2047 ? 2 : r <= 65535 ? 3 : 4), o && n++
+                ;(t += a <= 127 ? 1 : a <= 2047 ? 2 : a <= 65535 ? 3 : 4), o && n++
               }
               return t
             }
@@ -1103,10 +1103,10 @@
               const t = e.length,
                 n = i._utf8ByteLength(e),
                 s = n !== t,
-                a = s ? new Uint32Array(t + 1) : null
-              s && (a[t] = n)
-              const r = s ? new Uint32Array(n + 1) : null
-              s && (r[n] = t)
+                r = s ? new Uint32Array(t + 1) : null
+              s && (r[t] = n)
+              const a = s ? new Uint32Array(n + 1) : null
+              s && (a[n] = t)
               const o = new Uint8Array(n)
               let c = 0
               for (let n = 0; n < t; n++) {
@@ -1120,15 +1120,15 @@
                     ((l = (65536 + ((i - 55296) << 10)) | (t - 56320)), (u = !0))
                 }
                 s &&
-                  ((a[n] = c),
-                  u && (a[n + 1] = c),
+                  ((r[n] = c),
+                  u && (r[n + 1] = c),
                   l <= 127
-                    ? (r[c + 0] = n)
+                    ? (a[c + 0] = n)
                     : l <= 2047
-                    ? ((r[c + 0] = n), (r[c + 1] = n))
+                    ? ((a[c + 0] = n), (a[c + 1] = n))
                     : l <= 65535
-                    ? ((r[c + 0] = n), (r[c + 1] = n), (r[c + 2] = n))
-                    : ((r[c + 0] = n), (r[c + 1] = n), (r[c + 2] = n), (r[c + 3] = n))),
+                    ? ((a[c + 0] = n), (a[c + 1] = n), (a[c + 2] = n))
+                    : ((a[c + 0] = n), (a[c + 1] = n), (a[c + 2] = n), (a[c + 3] = n))),
                   l <= 127
                     ? (o[c++] = l)
                     : l <= 2047
@@ -1147,8 +1147,8 @@
                 (this.utf8Length = n),
                 (this.utf16Value = e),
                 (this.utf8Value = o),
-                (this.utf16OffsetToUtf8 = a),
-                (this.utf8OffsetToUtf16 = r)
+                (this.utf16OffsetToUtf8 = r),
+                (this.utf8OffsetToUtf16 = a)
             }
             createString(e) {
               const t = e._omalloc(this.utf8Length)
@@ -1157,19 +1157,19 @@
           }
           class c {
             constructor(e) {
-              if (((this.id = ++c.LAST_ID), !r)) throw new Error('Must invoke loadWASM first.')
-              ;(this._onigBinding = r), (this.content = e)
+              if (((this.id = ++c.LAST_ID), !a)) throw new Error('Must invoke loadWASM first.')
+              ;(this._onigBinding = a), (this.content = e)
               const t = new i(e)
               ;(this.utf16Length = t.utf16Length),
                 (this.utf8Length = t.utf8Length),
                 (this.utf16OffsetToUtf8 = t.utf16OffsetToUtf8),
                 (this.utf8OffsetToUtf16 = t.utf8OffsetToUtf16),
                 this.utf8Length < 1e4 && !c._sharedPtrInUse
-                  ? (c._sharedPtr || (c._sharedPtr = r._omalloc(1e4)),
+                  ? (c._sharedPtr || (c._sharedPtr = a._omalloc(1e4)),
                     (c._sharedPtrInUse = !0),
-                    r.HEAPU8.set(t.utf8Value, c._sharedPtr),
+                    a.HEAPU8.set(t.utf8Value, c._sharedPtr),
                     (this.ptr = c._sharedPtr))
-                  : (this.ptr = t.createString(r))
+                  : (this.ptr = t.createString(a))
             }
             convertUtf8OffsetToUtf16(e) {
               return this.utf8OffsetToUtf16
@@ -1198,26 +1198,26 @@
           ;(t.OnigString = c), (c.LAST_ID = 0), (c._sharedPtr = 0), (c._sharedPtrInUse = !1)
           class l {
             constructor(e) {
-              if (!r) throw new Error('Must invoke loadWASM first.')
+              if (!a) throw new Error('Must invoke loadWASM first.')
               const t = [],
                 n = []
-              for (let s = 0, a = e.length; s < a; s++) {
-                const a = new i(e[s])
-                ;(t[s] = a.createString(r)), (n[s] = a.utf8Length)
+              for (let s = 0, r = e.length; s < r; s++) {
+                const r = new i(e[s])
+                ;(t[s] = r.createString(a)), (n[s] = r.utf8Length)
               }
-              const s = r._omalloc(4 * e.length)
-              r.HEAPU32.set(t, s / 4)
-              const a = r._omalloc(4 * e.length)
-              r.HEAPU32.set(n, a / 4)
-              const o = r._createOnigScanner(s, a, e.length)
-              for (let n = 0, s = e.length; n < s; n++) r._ofree(t[n])
-              r._ofree(a),
-                r._ofree(s),
+              const s = a._omalloc(4 * e.length)
+              a.HEAPU32.set(t, s / 4)
+              const r = a._omalloc(4 * e.length)
+              a.HEAPU32.set(n, r / 4)
+              const o = a._createOnigScanner(s, r, e.length)
+              for (let n = 0, s = e.length; n < s; n++) a._ofree(t[n])
+              a._ofree(r),
+                a._ofree(s),
                 0 === o &&
                   (function (e) {
                     throw new Error(e.UTF8ToString(e._getLastOnigError()))
-                  })(r),
-                (this._onigBinding = r),
+                  })(a),
+                (this._onigBinding = a),
                 (this._ptr = o)
             }
             dispose() {
@@ -1225,25 +1225,25 @@
             }
             findNextMatchSync(e, t, n) {
               let s = o,
-                a = 0
+                r = 0
               if (
                 ('number' == typeof n
-                  ? (8 & n && (s = !0), (a = n))
+                  ? (8 & n && (s = !0), (r = n))
                   : 'boolean' == typeof n && (s = n),
                 'string' == typeof e)
               ) {
                 e = new c(e)
-                const n = this._findNextMatchSync(e, t, s, a)
+                const n = this._findNextMatchSync(e, t, s, r)
                 return e.dispose(), n
               }
-              return this._findNextMatchSync(e, t, s, a)
+              return this._findNextMatchSync(e, t, s, r)
             }
             _findNextMatchSync(e, t, n, s) {
-              const a = this._onigBinding
-              let r
+              const r = this._onigBinding
+              let a
               if (
-                ((r = n
-                  ? a._findNextOnigScannerMatchDbg(
+                ((a = n
+                  ? r._findNextOnigScannerMatchDbg(
                       this._ptr,
                       e.id,
                       e.ptr,
@@ -1251,7 +1251,7 @@
                       e.convertUtf16OffsetToUtf8(t),
                       s
                     )
-                  : a._findNextOnigScannerMatch(
+                  : r._findNextOnigScannerMatch(
                       this._ptr,
                       e.id,
                       e.ptr,
@@ -1259,11 +1259,11 @@
                       e.convertUtf16OffsetToUtf8(t),
                       s
                     )),
-                0 === r)
+                0 === a)
               )
                 return null
-              const o = a.HEAPU32
-              let i = r / 4
+              const o = r.HEAPU32
+              let i = a / 4
               const c = o[i++],
                 l = o[i++]
               let u = []
@@ -1317,7 +1317,7 @@
                 ;(s = e), (o = t)
               })),
               (function (e, t, n, s) {
-                ;(0, a.default)({
+                ;(0, r.default)({
                   print: t,
                   instantiateWasm: (t, n) => {
                     if ('undefined' == typeof performance) {
@@ -1328,7 +1328,7 @@
                     return e(t).then(e => n(e.instance), s), {}
                   }
                 }).then(e => {
-                  ;(r = e), n()
+                  ;(a = e), n()
                 })
               })(t, n, s, o),
               h
@@ -1354,18 +1354,19 @@
               s.ready = new Promise(function (e, s) {
                 ;(t = e), (n = s)
               })
-              var a,
-                r = Object.assign({}, s),
+              var r,
+                a = Object.assign({}, s),
                 o = !1,
                 i = ''
-              function c(e) {
-                return s.locateFile ? s.locateFile(e, i) : i + e
-              }
-              ;(a = function (e) {
+              ;(r = function (e) {
                 let t
                 return 'function' == typeof readbuffer
                   ? new Uint8Array(readbuffer(e))
-                  : ((t = read(e, 'binary')), m('object' == typeof t), t)
+                  : ((t = read(e, 'binary')),
+                    (function (e, t) {
+                      e || C(t)
+                    })('object' == typeof t),
+                    t)
               }),
                 'undefined' != typeof scriptArgs && scriptArgs,
                 'undefined' != typeof onig_print &&
@@ -1373,30 +1374,27 @@
                   (console.log = onig_print),
                   (console.warn = console.error =
                     'undefined' != typeof printErr ? printErr : onig_print))
-              var l,
-                u,
-                h = s.print || console.log.bind(console),
-                p = s.printErr || console.warn.bind(console)
-              Object.assign(s, r),
-                (r = null),
+              var c,
+                l,
+                u = s.print || console.log.bind(console),
+                h = s.printErr || console.warn.bind(console)
+              Object.assign(s, a),
+                (a = null),
                 s.arguments && s.arguments,
                 s.thisProgram && s.thisProgram,
                 s.quit && s.quit,
-                s.wasmBinary && (l = s.wasmBinary),
+                s.wasmBinary && (c = s.wasmBinary),
                 s.noExitRuntime,
-                'object' != typeof WebAssembly && O('no native wasm support detected')
-              var d = !1
-              function m(e, t) {
-                e || O(t)
-              }
-              var g,
-                f,
-                _,
-                b = 'undefined' != typeof TextDecoder ? new TextDecoder('utf8') : void 0
-              function y(e, t, n) {
-                for (var s = t + n, a = t; e[a] && !(a >= s); ) ++a
-                if (a - t > 16 && e.buffer && b) return b.decode(e.subarray(t, a))
-                for (var r = ''; t < a; ) {
+                'object' != typeof WebAssembly && C('no native wasm support detected')
+              var p,
+                d,
+                m,
+                g = !1,
+                f = 'undefined' != typeof TextDecoder ? new TextDecoder('utf8') : void 0
+              function _(e, t, n) {
+                for (var s = t + n, r = t; e[r] && !(r >= s); ) ++r
+                if (r - t > 16 && e.buffer && f) return f.decode(e.subarray(t, r))
+                for (var a = ''; t < r; ) {
                   var o = e[t++]
                   if (128 & o) {
                     var i = 63 & e[t++]
@@ -1408,220 +1406,144 @@
                             ? ((15 & o) << 12) | (i << 6) | c
                             : ((7 & o) << 18) | (i << 12) | (c << 6) | (63 & e[t++])) < 65536
                       )
-                        r += String.fromCharCode(o)
+                        a += String.fromCharCode(o)
                       else {
                         var l = o - 65536
-                        r += String.fromCharCode(55296 | (l >> 10), 56320 | (1023 & l))
+                        a += String.fromCharCode(55296 | (l >> 10), 56320 | (1023 & l))
                       }
-                    } else r += String.fromCharCode(((31 & o) << 6) | i)
-                  } else r += String.fromCharCode(o)
+                    } else a += String.fromCharCode(((31 & o) << 6) | i)
+                  } else a += String.fromCharCode(o)
                 }
-                return r
+                return a
               }
-              function k(e, t) {
-                return e ? y(f, e, t) : ''
-              }
-              function L(e) {
-                ;(g = e),
+              function b(e) {
+                ;(p = e),
                   (s.HEAP8 = new Int8Array(e)),
                   (s.HEAP16 = new Int16Array(e)),
                   (s.HEAP32 = new Int32Array(e)),
-                  (s.HEAPU8 = f = new Uint8Array(e)),
+                  (s.HEAPU8 = d = new Uint8Array(e)),
                   (s.HEAPU16 = new Uint16Array(e)),
-                  (s.HEAPU32 = _ = new Uint32Array(e)),
+                  (s.HEAPU32 = m = new Uint32Array(e)),
                   (s.HEAPF32 = new Float32Array(e)),
                   (s.HEAPF64 = new Float64Array(e))
               }
               s.INITIAL_MEMORY
-              var S = [],
-                v = [],
-                w = []
-              function N() {
-                if (s.preRun)
-                  for ('function' == typeof s.preRun && (s.preRun = [s.preRun]); s.preRun.length; )
-                    x(s.preRun.shift())
-                W(S)
+              var y = [],
+                k = [],
+                L = []
+              function v(e) {
+                y.unshift(e)
               }
-              function C() {
-                W(v)
+              function S(e) {
+                L.unshift(e)
               }
-              function j() {
-                if (s.postRun)
-                  for (
-                    'function' == typeof s.postRun && (s.postRun = [s.postRun]);
-                    s.postRun.length;
-
-                  )
-                    P(s.postRun.shift())
-                W(w)
-              }
-              function x(e) {
-                S.unshift(e)
-              }
-              function A(e) {
-                v.unshift(e)
-              }
-              function P(e) {
-                w.unshift(e)
-              }
-              var T = 0,
-                R = null
-              function I(e) {
-                T++, s.monitorRunDependencies && s.monitorRunDependencies(T)
-              }
-              function E(e) {
-                if ((T--, s.monitorRunDependencies && s.monitorRunDependencies(T), 0 == T && R)) {
-                  var t = R
-                  ;(R = null), t()
-                }
-              }
-              function O(e) {
+              var w = 0,
+                N = null
+              function C(e) {
                 s.onAbort && s.onAbort(e),
-                  p((e = 'Aborted(' + e + ')')),
-                  (d = !0),
+                  h((e = 'Aborted(' + e + ')')),
+                  (g = !0),
                   (e += '. Build with -sASSERTIONS for more info.')
                 var t = new WebAssembly.RuntimeError(e)
                 throw (n(t), t)
               }
-              var G,
-                M,
-                B = 'data:application/octet-stream;base64,'
-              function F(e) {
-                return e.startsWith(B)
+              var j,
+                x,
+                A = 'data:application/octet-stream;base64,'
+              function P(e) {
+                return e.startsWith(A)
               }
-              function D(e) {
+              function T(e) {
                 try {
-                  if (e == G && l) return new Uint8Array(l)
-                  if (a) return a(e)
+                  if (e == j && c) return new Uint8Array(c)
+                  if (r) return r(e)
                   throw 'both async and sync fetching of the wasm failed'
                 } catch (e) {
-                  O(e)
+                  C(e)
                 }
               }
-              function $() {
-                return l || !o || 'function' != typeof fetch
-                  ? Promise.resolve().then(function () {
-                      return D(G)
-                    })
-                  : fetch(G, { credentials: 'same-origin' })
-                      .then(function (e) {
-                        if (!e.ok) throw "failed to load wasm binary file at '" + G + "'"
-                        return e.arrayBuffer()
-                      })
-                      .catch(function () {
-                        return D(G)
-                      })
-              }
-              function U() {
-                var e = { env: X, wasi_snapshot_preview1: X }
-                function t(e, t) {
-                  var n = e.exports
-                  ;(s.asm = n),
-                    L((u = s.asm.memory).buffer),
-                    s.asm.__indirect_function_table,
-                    A(s.asm.__wasm_call_ctors),
-                    E()
-                }
-                function a(e) {
-                  t(e.instance)
-                }
-                function r(t) {
-                  return $()
-                    .then(function (t) {
-                      return WebAssembly.instantiate(t, e)
-                    })
-                    .then(function (e) {
-                      return e
-                    })
-                    .then(t, function (e) {
-                      p('failed to asynchronously prepare wasm: ' + e), O(e)
-                    })
-                }
-                if ((I(), s.instantiateWasm))
-                  try {
-                    return s.instantiateWasm(e, t)
-                  } catch (e) {
-                    p('Module.instantiateWasm callback failed with error: ' + e), n(e)
-                  }
-                return (
-                  (l ||
-                  'function' != typeof WebAssembly.instantiateStreaming ||
-                  F(G) ||
-                  'function' != typeof fetch
-                    ? r(a)
-                    : fetch(G, { credentials: 'same-origin' }).then(function (t) {
-                        return WebAssembly.instantiateStreaming(t, e).then(a, function (e) {
-                          return (
-                            p('wasm streaming compile failed: ' + e),
-                            p('falling back to ArrayBuffer instantiation'),
-                            r(a)
-                          )
-                        })
-                      })
-                  ).catch(n),
-                  {}
-                )
-              }
-              function W(e) {
+              function R(e) {
                 for (; e.length > 0; ) e.shift()(s)
               }
-              function q(e, t, n) {
-                f.copyWithin(e, t, t + n)
-              }
-              function z(e) {
+              function I(e) {
                 try {
-                  return u.grow((e - g.byteLength + 65535) >>> 16), L(u.buffer), 1
+                  return l.grow((e - p.byteLength + 65535) >>> 16), b(l.buffer), 1
                 } catch (e) {}
               }
-              function H(e) {
-                var t,
-                  n = f.length,
-                  s = 2147483648
-                if ((e >>>= 0) > s) return !1
-                for (var a = 1; a <= 4; a *= 2) {
-                  var r = n * (1 + 0.2 / a)
-                  if (
-                    ((r = Math.min(r, e + 100663296)),
-                    z(Math.min(s, (t = Math.max(e, r)) + ((65536 - (t % 65536)) % 65536))))
-                  )
-                    return !0
-                }
-                return !1
+              P((j = 'onig.wasm')) ||
+                (j = (function (e) {
+                  return s.locateFile ? s.locateFile(e, i) : i + e
+                })(j)),
+                (x = 'undefined' != typeof dateNow ? dateNow : () => performance.now())
+              var E = [null, [], []]
+              function O(e, t) {
+                var n = E[e]
+                0 === t || 10 === t ? ((1 === e ? u : h)(_(n, 0)), (n.length = 0)) : n.push(t)
               }
-              F((G = 'onig.wasm')) || (G = c(G)),
-                (M = 'undefined' != typeof dateNow ? dateNow : () => performance.now())
-              var V = [null, [], []]
-              function K(e, t) {
-                var n = V[e]
-                0 === t || 10 === t ? ((1 === e ? h : p)(y(n, 0)), (n.length = 0)) : n.push(t)
-              }
-              function Q(e, t, n, s) {
-                for (var a = 0, r = 0; r < n; r++) {
-                  var o = _[t >> 2],
-                    i = _[(t + 4) >> 2]
-                  t += 8
-                  for (var c = 0; c < i; c++) K(e, f[o + c])
-                  a += i
+              var B,
+                M = {
+                  emscripten_get_now: x,
+                  emscripten_memcpy_big: function (e, t, n) {
+                    d.copyWithin(e, t, t + n)
+                  },
+                  emscripten_resize_heap: function (e) {
+                    var t,
+                      n = d.length,
+                      s = 2147483648
+                    if ((e >>>= 0) > s) return !1
+                    for (var r = 1; r <= 4; r *= 2) {
+                      var a = n * (1 + 0.2 / r)
+                      if (
+                        ((a = Math.min(a, e + 100663296)),
+                        I(Math.min(s, (t = Math.max(e, a)) + ((65536 - (t % 65536)) % 65536))))
+                      )
+                        return !0
+                    }
+                    return !1
+                  },
+                  fd_write: function (e, t, n, s) {
+                    for (var r = 0, a = 0; a < n; a++) {
+                      var o = m[t >> 2],
+                        i = m[(t + 4) >> 2]
+                      t += 8
+                      for (var c = 0; c < i; c++) O(e, d[o + c])
+                      r += i
+                    }
+                    return (m[s >> 2] = r), 0
+                  }
                 }
-                return (_[s >> 2] = a), 0
-              }
-              var J,
-                X = {
-                  emscripten_get_now: M,
-                  emscripten_memcpy_big: q,
-                  emscripten_resize_heap: H,
-                  fd_write: Q
-                }
-              function Y(e) {
+              function G(e) {
                 function n() {
-                  J ||
-                    ((J = !0),
+                  B ||
+                    ((B = !0),
                     (s.calledRun = !0),
-                    d || (C(), t(s), s.onRuntimeInitialized && s.onRuntimeInitialized(), j()))
+                    g ||
+                      (R(k),
+                      t(s),
+                      s.onRuntimeInitialized && s.onRuntimeInitialized(),
+                      (function () {
+                        if (s.postRun)
+                          for (
+                            'function' == typeof s.postRun && (s.postRun = [s.postRun]);
+                            s.postRun.length;
+
+                          )
+                            S(s.postRun.shift())
+                        R(L)
+                      })()))
                 }
-                T > 0 ||
-                  (N(),
-                  T > 0 ||
+                w > 0 ||
+                  ((function () {
+                    if (s.preRun)
+                      for (
+                        'function' == typeof s.preRun && (s.preRun = [s.preRun]);
+                        s.preRun.length;
+
+                      )
+                        v(s.preRun.shift())
+                    R(y)
+                  })(),
+                  w > 0 ||
                     (s.setStatus
                       ? (s.setStatus('Running...'),
                         setTimeout(function () {
@@ -1633,7 +1555,81 @@
                       : n()))
               }
               if (
-                (U(),
+                ((function () {
+                  var e = { env: M, wasi_snapshot_preview1: M }
+                  function t(e, t) {
+                    var n = e.exports
+                    ;(s.asm = n),
+                      b((l = s.asm.memory).buffer),
+                      s.asm.__indirect_function_table,
+                      (function (e) {
+                        k.unshift(e)
+                      })(s.asm.__wasm_call_ctors),
+                      (function (e) {
+                        if (
+                          (w--,
+                          s.monitorRunDependencies && s.monitorRunDependencies(w),
+                          0 == w && N)
+                        ) {
+                          var t = N
+                          ;(N = null), t()
+                        }
+                      })()
+                  }
+                  function r(e) {
+                    t(e.instance)
+                  }
+                  function a(t) {
+                    return (
+                      c || !o || 'function' != typeof fetch
+                        ? Promise.resolve().then(function () {
+                            return T(j)
+                          })
+                        : fetch(j, { credentials: 'same-origin' })
+                            .then(function (e) {
+                              if (!e.ok) throw "failed to load wasm binary file at '" + j + "'"
+                              return e.arrayBuffer()
+                            })
+                            .catch(function () {
+                              return T(j)
+                            })
+                    )
+                      .then(function (t) {
+                        return WebAssembly.instantiate(t, e)
+                      })
+                      .then(function (e) {
+                        return e
+                      })
+                      .then(t, function (e) {
+                        h('failed to asynchronously prepare wasm: ' + e), C(e)
+                      })
+                  }
+                  if (
+                    (w++,
+                    s.monitorRunDependencies && s.monitorRunDependencies(w),
+                    s.instantiateWasm)
+                  )
+                    try {
+                      return s.instantiateWasm(e, t)
+                    } catch (e) {
+                      h('Module.instantiateWasm callback failed with error: ' + e), n(e)
+                    }
+                  ;(c ||
+                  'function' != typeof WebAssembly.instantiateStreaming ||
+                  P(j) ||
+                  'function' != typeof fetch
+                    ? a(r)
+                    : fetch(j, { credentials: 'same-origin' }).then(function (t) {
+                        return WebAssembly.instantiateStreaming(t, e).then(r, function (e) {
+                          return (
+                            h('wasm streaming compile failed: ' + e),
+                            h('falling back to ArrayBuffer instantiation'),
+                            a(r)
+                          )
+                        })
+                      })
+                  ).catch(n)
+                })(),
                 (s.___wasm_call_ctors = function () {
                   return (s.___wasm_call_ctors = s.asm.__wasm_call_ctors).apply(null, arguments)
                 }),
@@ -1679,9 +1675,11 @@
                 (s.dynCall_jiji = function () {
                   return (s.dynCall_jiji = s.asm.dynCall_jiji).apply(null, arguments)
                 }),
-                (s.UTF8ToString = k),
-                (R = function e() {
-                  J || Y(), J || (R = e)
+                (s.UTF8ToString = function (e, t) {
+                  return e ? _(d, e, t) : ''
+                }),
+                (N = function e() {
+                  B || G(), B || (N = e)
                 }),
                 s.preInit)
               )
@@ -1691,17 +1689,17 @@
 
                 )
                   s.preInit.pop()()
-              return Y(), e.ready
+              return G(), e.ready
             })
           e.exports = t
         }
       }),
       (t = {}),
       (function n(s) {
-        var a = t[s]
-        if (void 0 !== a) return a.exports
-        var r = (t[s] = { exports: {} })
-        return e[s].call(r.exports, r, r.exports, n), r.exports
+        var r = t[s]
+        if (void 0 !== r) return r.exports
+        var a = (t[s] = { exports: {} })
+        return e[s].call(a.exports, a, a.exports, n), a.exports
       })(770)
     )
     var e, t
@@ -1829,16 +1827,16 @@
     })(p || (p = {}))
   const b = function (e, t = [], n = u.DEFAULT) {
     let s = null,
-      a = []
-    const r = []
+      r = []
+    const a = []
     function o(e) {
-      Array.isArray(a) ? a.push(e) : null !== s && (a[s] = e)
+      Array.isArray(r) ? r.push(e) : null !== s && (r[s] = e)
     }
     return (
       (function (e, t, n = u.DEFAULT) {
         const s = m(e, !1),
-          a = []
-        function r(e) {
+          r = []
+        function a(e) {
           return e
             ? () =>
                 e(
@@ -1857,7 +1855,7 @@
                   s.getTokenLength(),
                   s.getTokenStartLine(),
                   s.getTokenStartCharacter(),
-                  () => a.slice()
+                  () => r.slice()
                 )
             : () => !0
         }
@@ -1882,50 +1880,50 @@
                   s.getTokenLength(),
                   s.getTokenStartLine(),
                   s.getTokenStartCharacter(),
-                  () => a.slice()
+                  () => r.slice()
                 )
             : () => !0
         }
         const l = o(t.onObjectBegin),
           h = c(t.onObjectProperty),
-          p = r(t.onObjectEnd),
+          p = a(t.onObjectEnd),
           d = o(t.onArrayBegin),
-          g = r(t.onArrayEnd),
+          g = a(t.onArrayEnd),
           f = c(t.onLiteralValue),
           _ = i(t.onSeparator),
-          b = r(t.onComment),
+          b = a(t.onComment),
           y = i(t.onError),
           k = n && n.disallowComments,
           L = n && n.allowTrailingComma
-        function S() {
+        function v() {
           for (;;) {
             const e = s.scan()
             switch (s.getTokenError()) {
               case 4:
-                v(14)
+                S(14)
                 break
               case 5:
-                v(15)
+                S(15)
                 break
               case 3:
-                v(13)
+                S(13)
                 break
               case 1:
-                k || v(11)
+                k || S(11)
                 break
               case 2:
-                v(12)
+                S(12)
                 break
               case 6:
-                v(16)
+                S(16)
             }
             switch (e) {
               case 12:
               case 13:
-                k ? v(10) : b()
+                k ? S(10) : b()
                 break
               case 16:
-                v(1)
+                S(1)
                 break
               case 15:
               case 14:
@@ -1935,29 +1933,29 @@
             }
           }
         }
-        function v(e, t = [], n = []) {
+        function S(e, t = [], n = []) {
           if ((y(e), t.length + n.length > 0)) {
             let e = s.getToken()
             for (; 17 !== e; ) {
               if (-1 !== t.indexOf(e)) {
-                S()
+                v()
                 break
               }
               if (-1 !== n.indexOf(e)) break
-              e = S()
+              e = v()
             }
           }
         }
         function w(e) {
           const t = s.getTokenValue()
-          return e ? f(t) : (h(t), a.push(t)), S(), !0
+          return e ? f(t) : (h(t), r.push(t)), v(), !0
         }
         function N() {
           switch (s.getToken()) {
             case 11:
               const e = s.getTokenValue()
               let t = Number(e)
-              isNaN(t) && (v(2), (t = 0)), f(t)
+              isNaN(t) && (S(2), (t = 0)), f(t)
               break
             case 7:
               f(null)
@@ -1971,38 +1969,38 @@
             default:
               return !1
           }
-          return S(), !0
+          return v(), !0
         }
         function C() {
           return 10 !== s.getToken()
-            ? (v(3, [], [2, 5]), !1)
+            ? (S(3, [], [2, 5]), !1)
             : (w(!1),
-              6 === s.getToken() ? (_(':'), S(), A() || v(4, [], [2, 5])) : v(5, [], [2, 5]),
-              a.pop(),
+              6 === s.getToken() ? (_(':'), v(), A() || S(4, [], [2, 5])) : S(5, [], [2, 5]),
+              r.pop(),
               !0)
         }
         function j() {
-          l(), S()
+          l(), v()
           let e = !1
           for (; 2 !== s.getToken() && 17 !== s.getToken(); ) {
             if (5 === s.getToken()) {
-              if ((e || v(4, [], []), _(','), S(), 2 === s.getToken() && L)) break
-            } else e && v(6, [], [])
-            C() || v(4, [], [2, 5]), (e = !0)
+              if ((e || S(4, [], []), _(','), v(), 2 === s.getToken() && L)) break
+            } else e && S(6, [], [])
+            C() || S(4, [], [2, 5]), (e = !0)
           }
-          return p(), 2 !== s.getToken() ? v(7, [2], []) : S(), !0
+          return p(), 2 !== s.getToken() ? S(7, [2], []) : v(), !0
         }
         function x() {
-          d(), S()
+          d(), v()
           let e = !0,
             t = !1
           for (; 4 !== s.getToken() && 17 !== s.getToken(); ) {
             if (5 === s.getToken()) {
-              if ((t || v(4, [], []), _(','), S(), 4 === s.getToken() && L)) break
-            } else t && v(6, [], [])
-            e ? (a.push(0), (e = !1)) : a[a.length - 1]++, A() || v(4, [], [4, 5]), (t = !0)
+              if ((t || S(4, [], []), _(','), v(), 4 === s.getToken() && L)) break
+            } else t && S(6, [], [])
+            e ? (r.push(0), (e = !1)) : r[r.length - 1]++, A() || S(4, [], [4, 5]), (t = !0)
           }
-          return g(), e || a.pop(), 4 !== s.getToken() ? v(8, [4], []) : S(), !0
+          return g(), e || r.pop(), 4 !== s.getToken() ? S(8, [4], []) : v(), !0
         }
         function A() {
           switch (s.getToken()) {
@@ -2016,28 +2014,28 @@
               return N()
           }
         }
-        if ((S(), 17 === s.getToken())) return !!n.allowEmptyContent || (v(4, [], []), !1)
-        if (!A()) return v(4, [], []), !1
-        17 !== s.getToken() && v(9, [], [])
+        if ((v(), 17 === s.getToken())) return !!n.allowEmptyContent || (S(4, [], []), !1)
+        if (!A()) return S(4, [], []), !1
+        17 !== s.getToken() && S(9, [], [])
       })(
         e,
         {
           onObjectBegin: () => {
             const e = {}
-            o(e), r.push(a), (a = e), (s = null)
+            o(e), a.push(r), (r = e), (s = null)
           },
           onObjectProperty: e => {
             s = e
           },
           onObjectEnd: () => {
-            a = r.pop()
+            r = a.pop()
           },
           onArrayBegin: () => {
             const e = []
-            o(e), r.push(a), (a = e), (s = null)
+            o(e), a.push(r), (r = e), (s = null)
           },
           onArrayEnd: () => {
-            a = r.pop()
+            r = a.pop()
           },
           onLiteralValue: o,
           onError: (e, n, s) => {
@@ -2046,7 +2044,7 @@
         },
         n
       ),
-      a[0]
+      r[0]
     )
   }
   var y
@@ -2074,26 +2072,27 @@
       'undefined' != typeof process &&
       void 0 !== process.release &&
       'node' === process.release.name,
-    S = k || !L
-  let v = 'https://cdn.jsdelivr.net/npm/shiki@0.13.0/',
+    v = k || !L
+  let S = 'https://cdn.jsdelivr.net/npm/shiki@0.14.0/',
     w = ''
-  function N(e) {
+  const N = 'dist/'
+  function C(e) {
     w = e
   }
-  let C = null
-  function j(e) {
-    if (S) return `${v}${e}`
+  let j = null
+  function x(e) {
+    if (v) return `${S}${e}`
     {
       const t = require('path')
       return t.isAbsolute(e) ? e : t.resolve(__dirname, '..', e)
     }
   }
-  async function x(e) {
+  async function A(e) {
     const t = [],
       n = b(
         await (async function (e) {
-          const t = j(e)
-          if (S) return await fetch(t).then(e => e.text())
+          const t = x(e)
+          if (v) return await fetch(t).then(e => e.text())
           {
             const e = require('fs')
             return await e.promises.readFile(t, 'utf-8')
@@ -2105,10 +2104,10 @@
     if (t.length) throw t[0]
     return n
   }
-  async function A(e) {
-    const t = P(await x(e))
+  async function P(e) {
+    const t = T(await A(e))
     if (t.include) {
-      const n = await A(i(...o(e), t.include))
+      const n = await P(i(...o(e), t.include))
       n.settings && (t.settings = n.settings.concat(t.settings)),
         n.bg && !t.bg && (t.bg = n.bg),
         n.colors && (t.colors = { ...n.colors, ...t.colors }),
@@ -2116,9 +2115,9 @@
     }
     return t
   }
-  function P(e) {
+  function T(e) {
     const t = e.type || 'dark',
-      n = { name: e.name, type: t, ...e, ...O(e) }
+      n = { name: e.name, type: t, ...e, ...E(e) }
     var s
     return (
       e.include && (n.include = e.include),
@@ -2129,26 +2128,24 @@
       n
     )
   }
-  const T = '#333333',
-    R = '#bbbbbb',
-    I = '#fffffe',
-    E = '#1e1e1e'
-  function O(e) {
+  const R = { light: '#333333', dark: '#bbbbbb' },
+    I = { light: '#fffffe', dark: '#1e1e1e' }
+  function E(e) {
     let t,
       n,
       s = e.settings ? e.settings : e.tokenColors
-    const a = s ? s.find(e => !e.name && !e.scope) : void 0
+    const r = s ? s.find(e => !e.name && !e.scope) : void 0
     return (
-      a?.settings?.foreground && (t = a.settings.foreground),
-      a?.settings?.background && (n = a.settings.background),
+      r?.settings?.foreground && (t = r.settings.foreground),
+      r?.settings?.background && (n = r.settings.background),
       !t && e?.colors?.['editor.foreground'] && (t = e.colors['editor.foreground']),
       !n && e?.colors?.['editor.background'] && (n = e.colors['editor.background']),
-      t || (t = 'light' === e.type ? T : R),
-      n || (n = 'light' === e.type ? I : E),
+      t || (t = 'light' === e.type ? R.light : R.dark),
+      n || (n = 'light' === e.type ? I.light : I.dark),
       { fg: t, bg: n }
     )
   }
-  class G {
+  class O {
     constructor(e, t) {
       ;(this.languagesPath = 'languages/'),
         (this.languageMap = {}),
@@ -2170,7 +2167,7 @@
       if (!n) return null
       if (n.grammar) return n.grammar
       const s = await (async function (e) {
-        return await x(e)
+        return await A(e)
       })(t.includes(n) ? `${this.languagesPath}${n.path}` : n.path)
       return (n.grammar = s), s
     }
@@ -2183,41 +2180,41 @@
         (this.scopeToLangMap[e.scopeName] = e)
     }
   }
-  var M = {}
-  function B(e, t) {
+  var B = {}
+  function M(e, t) {
     let n = []
-    for (let s = 0, a = t.length; s < a; s++) {
-      let a = t.slice(0, s),
-        r = t[s]
-      n[s] = { scopeName: r, themeMatches: $(e, r, a) }
+    for (let s = 0, r = t.length; s < r; s++) {
+      let r = t.slice(0, s),
+        a = t[s]
+      n[s] = { scopeName: a, themeMatches: D(e, a, r) }
     }
     return n
   }
-  function F(e, t) {
+  function G(e, t) {
     let n = e + '.'
     return e === t || t.substring(0, n.length) === n
   }
-  function D(e, t, n, s) {
-    if (!F(e, n)) return !1
-    let a = t.length - 1,
-      r = s.length - 1
-    for (; a >= 0 && r >= 0; ) F(t[a], s[r]) && a--, r--
-    return -1 === a
+  function F(e, t, n, s) {
+    if (!G(e, n)) return !1
+    let r = t.length - 1,
+      a = s.length - 1
+    for (; r >= 0 && a >= 0; ) G(t[r], s[a]) && r--, a--
+    return -1 === r
   }
-  function $(e, t, n) {
+  function D(e, t, n) {
     let s = [],
-      a = 0
-    for (let r = 0, o = e.settings.length; r < o; r++) {
+      r = 0
+    for (let a = 0, o = e.settings.length; a < o; a++) {
       let o,
-        i = e.settings[r]
+        i = e.settings[a]
       if ('string' == typeof i.scope) o = i.scope.split(/,/).map(e => e.trim())
       else {
         if (!Array.isArray(i.scope)) continue
         o = i.scope
       }
-      for (let e = 0, r = o.length; e < r; e++) {
+      for (let e = 0, a = o.length; e < a; e++) {
         let c = o[e].split(/ /)
-        D(c[c.length - 1], c.slice(0, c.length - 1), t, n) && ((s[a++] = i), (e = r))
+        F(c[c.length - 1], c.slice(0, c.length - 1), t, n) && ((s[r++] = i), (e = a))
       }
     }
     return s
@@ -2247,14 +2244,14 @@
             (n.print = function (e) {
               const t = n.getLanguageId(e),
                 s = n.getTokenType(e),
-                a = n.getFontStyle(e),
-                r = n.getForeground(e),
+                r = n.getFontStyle(e),
+                a = n.getForeground(e),
                 o = n.getBackground(e)
               console.log({
                 languageId: t,
                 tokenType: s,
-                fontStyle: a,
-                foreground: r,
+                fontStyle: r,
+                foreground: a,
                 background: o
               })
             }),
@@ -2276,7 +2273,7 @@
             (n.getBackground = function (e) {
               return (4278190080 & e) >>> 24
             }),
-            (n.set = function (e, t, s, a, r, o, i) {
+            (n.set = function (e, t, s, r, a, o, i) {
               let c = n.getLanguageId(e),
                 l = n.getTokenType(e),
                 u = n.containsBalancedBrackets(e) ? 1 : 0,
@@ -2286,8 +2283,8 @@
               return (
                 0 !== t && (c = t),
                 8 !== s && (l = s),
-                null !== a && (u = a ? 1 : 0),
-                -1 !== r && (h = r),
+                null !== r && (u = r ? 1 : 0),
+                -1 !== a && (h = a),
                 0 !== o && (p = o),
                 0 !== i && (d = i),
                 ((c << 0) | (l << 8) | (u << 10) | (h << 11) | (p << 15) | (d << 24)) >>> 0
@@ -2301,33 +2298,33 @@
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.BasicScopeAttributesProvider = t.BasicScopeAttributes = void 0)
           const s = n(878)
-          class a {
+          class r {
             constructor(e, t) {
               ;(this.languageId = e), (this.tokenType = t)
             }
           }
-          t.BasicScopeAttributes = a
-          class r {
+          t.BasicScopeAttributes = r
+          class a {
             constructor(e, t) {
               ;(this._getBasicScopeAttributes = new s.CachedFn(e => {
                 const t = this._scopeToLanguage(e),
                   n = this._toStandardTokenType(e)
-                return new a(t, n)
+                return new r(t, n)
               })),
-                (this._defaultAttributes = new a(e, 8)),
+                (this._defaultAttributes = new r(e, 8)),
                 (this._embeddedLanguagesMatcher = new o(Object.entries(t || {})))
             }
             getDefaultAttributes() {
               return this._defaultAttributes
             }
             getBasicScopeAttributes(e) {
-              return null === e ? r._NULL_SCOPE_METADATA : this._getBasicScopeAttributes.get(e)
+              return null === e ? a._NULL_SCOPE_METADATA : this._getBasicScopeAttributes.get(e)
             }
             _scopeToLanguage(e) {
               return this._embeddedLanguagesMatcher.match(e) || 0
             }
             _toStandardTokenType(e) {
-              const t = e.match(r.STANDARD_TOKEN_TYPE_REGEXP)
+              const t = e.match(a.STANDARD_TOKEN_TYPE_REGEXP)
               if (!t) return 8
               switch (t[1]) {
                 case 'comment':
@@ -2342,9 +2339,9 @@
               throw new Error('Unexpected match for standard token type!')
             }
           }
-          ;(t.BasicScopeAttributesProvider = r),
-            (r._NULL_SCOPE_METADATA = new a(0, 0)),
-            (r.STANDARD_TOKEN_TYPE_REGEXP = /\b(comment|string|regex|meta\.embedded)\b/)
+          ;(t.BasicScopeAttributesProvider = a),
+            (a._NULL_SCOPE_METADATA = new r(0, 0)),
+            (a.STANDARD_TOKEN_TYPE_REGEXP = /\b(comment|string|regex|meta\.embedded)\b/)
           class o {
             constructor(e) {
               if (0 === e.length) (this.values = null), (this.scopesRegExp = null)
@@ -2373,23 +2370,23 @@
               t.createGrammar =
                 void 0)
           const s = n(350),
-            a = n(36),
-            r = n(736),
+            r = n(36),
+            a = n(736),
             o = n(44),
             i = n(792),
             c = n(583),
             l = n(878),
             u = n(996),
             h = n(47)
-          function p(e, t, n, s, a) {
-            const o = r.createMatchers(t, d),
-              c = i.RuleFactory.getCompiledRuleId(n, s, a.repository)
+          function p(e, t, n, s, r) {
+            const o = a.createMatchers(t, d),
+              c = i.RuleFactory.getCompiledRuleId(n, s, r.repository)
             for (const n of o)
               e.push({
                 debugSelector: t,
                 matcher: n.matcher,
                 ruleId: c,
-                grammar: a,
+                grammar: r,
                 priority: n.priority
               })
           }
@@ -2407,11 +2404,11 @@
             const n = t.length
             return e.length > n && e.substr(0, n) === t && '.' === e[n]
           }
-          t.createGrammar = function (e, t, n, s, a, r, o, i) {
-            return new g(e, t, n, s, a, r, o, i)
+          t.createGrammar = function (e, t, n, s, r, a, o, i) {
+            return new g(e, t, n, s, r, a, o, i)
           }
           class g {
-            constructor(e, t, n, s, a, o, i, c) {
+            constructor(e, t, n, s, r, o, i, c) {
               if (
                 ((this._rootScopeName = e),
                 (this.balancedBracketSelectors = o),
@@ -2425,12 +2422,12 @@
                 (this._grammar = f(t, null)),
                 (this._injections = null),
                 (this._tokenTypeMatchers = []),
-                a)
+                r)
               )
-                for (const e of Object.keys(a)) {
-                  const t = r.createMatchers(e, d)
+                for (const e of Object.keys(r)) {
+                  const t = a.createMatchers(e, d)
                   for (const n of t)
-                    this._tokenTypeMatchers.push({ matcher: n.matcher, type: a[e] })
+                    this._tokenTypeMatchers.push({ matcher: n.matcher, type: r[e] })
                 }
             }
             get themeProvider() {
@@ -2457,9 +2454,9 @@
               if (n) {
                 const s = n.injections
                 if (s) for (let t in s) p(e, t, s[t], this, n)
-                const a = this._grammarRepository.injections(t)
-                a &&
-                  a.forEach(t => {
+                const r = this._grammarRepository.injections(t)
+                r &&
+                  r.forEach(t => {
                     const n = this.getExternalGrammar(t)
                     if (n) {
                       const t = n.injectionSelector
@@ -2513,7 +2510,7 @@
               }
             }
             _tokenize(e, t, n, s) {
-              let r
+              let a
               if (
                 (-1 === this._rootId &&
                   (this._rootId = i.RuleFactory.getCompiledRuleId(
@@ -2523,12 +2520,12 @@
                   )),
                 t && t !== b.NULL)
               )
-                (r = !1), t.reset()
+                (a = !1), t.reset()
               else {
-                r = !0
+                a = !0
                 const e = this._basicScopeAttributesProvider.getDefaultAttributes(),
                   n = this.themeProvider.getDefaults(),
-                  s = a.EncodedTokenAttributes.set(
+                  s = r.EncodedTokenAttributes.set(
                     0,
                     e.languageId,
                     e.tokenType,
@@ -2546,7 +2543,7 @@
               const c = this.createOnigString(e),
                 l = c.content.length,
                 u = new y(n, e, this._tokenTypeMatchers, this.balancedBracketSelectors),
-                p = h._tokenizeString(this, c, r, 0, t, u, !0, s)
+                p = h._tokenizeString(this, c, a, 0, t, u, !0, s)
               return (
                 o.disposeOnigString(c),
                 { lineLength: l, lineTokens: u, ruleStack: p.stack, stoppedEarly: p.stoppedEarly }
@@ -2575,10 +2572,10 @@
             }
             static createRootAndLookUpScopeName(e, t, n) {
               const s = n.getMetadataForScope(e),
-                a = new c.ScopeStack(null, e),
-                r = n.themeProvider.themeMatch(a),
-                o = _.mergeAttributes(t, s, r)
-              return new _(null, a, o)
+                r = new c.ScopeStack(null, e),
+                a = n.themeProvider.themeMatch(r),
+                o = _.mergeAttributes(t, s, a)
+              return new _(null, r, o)
             }
             get scopeName() {
               return this.scopePath.scopeName
@@ -2598,11 +2595,11 @@
             }
             static mergeAttributes(e, t, n) {
               let s = -1,
-                r = 0,
+                a = 0,
                 o = 0
               return (
-                null !== n && ((s = n.fontStyle), (r = n.foregroundId), (o = n.backgroundId)),
-                a.EncodedTokenAttributes.set(e, t.languageId, t.tokenType, null, s, r, o)
+                null !== n && ((s = n.fontStyle), (a = n.foregroundId), (o = n.backgroundId)),
+                r.EncodedTokenAttributes.set(e, t.languageId, t.tokenType, null, s, a, o)
               )
             }
             pushAttributed(e, t) {
@@ -2615,10 +2612,10 @@
             }
             static _pushAttributed(e, t, n) {
               const s = n.getMetadataForScope(t),
-                a = e.scopePath.push(t),
-                r = n.themeProvider.themeMatch(a),
-                o = _.mergeAttributes(e.tokenAttributes, s, r)
-              return new _(e, a, o)
+                r = e.scopePath.push(t),
+                a = n.themeProvider.themeMatch(r),
+                o = _.mergeAttributes(e.tokenAttributes, s, a)
+              return new _(e, r, o)
             }
             getScopeNames() {
               return this.scopePath.getSegments()
@@ -2626,11 +2623,11 @@
           }
           t.AttributedScopeStack = _
           class b {
-            constructor(e, t, n, s, a, r, o, i) {
+            constructor(e, t, n, s, r, a, o, i) {
               ;(this.parent = e),
                 (this.ruleId = t),
-                (this.beginRuleCapturedEOL = a),
-                (this.endRule = r),
+                (this.beginRuleCapturedEOL = r),
+                (this.endRule = a),
                 (this.nameScopesList = o),
                 (this.contentNameScopesList = i),
                 (this._stackElementBrand = void 0),
@@ -2673,8 +2670,8 @@
             safePop() {
               return this.parent ? this.parent : this
             }
-            push(e, t, n, s, a, r, o) {
-              return new b(this, e, t, n, s, a, r, o)
+            push(e, t, n, s, r, a, o) {
+              return new b(this, e, t, n, s, r, a, o)
             }
             getEnterPos() {
               return this._enterPos
@@ -2742,10 +2739,10 @@
                   (this.balancedBracketScopes = e.flatMap(e =>
                     '*' === e
                       ? ((this.allowAny = !0), [])
-                      : r.createMatchers(e, d).map(e => e.matcher)
+                      : a.createMatchers(e, d).map(e => e.matcher)
                   )),
                   (this.unbalancedBracketScopes = t.flatMap(e =>
-                    r.createMatchers(e, d).map(e => e.matcher)
+                    a.createMatchers(e, d).map(e => e.matcher)
                   ))
               }
               get matchesAlways() {
@@ -2761,8 +2758,8 @@
               }
             })
           class y {
-            constructor(e, t, n, a) {
-              ;(this.balancedBracketSelectors = a),
+            constructor(e, t, n, r) {
+              ;(this.balancedBracketSelectors = r),
                 (this._emitBinaryTokens = e),
                 (this._tokenTypeOverrides = n),
                 s.DebugFlags.InDebugMode ? (this._lineText = t) : (this._lineText = null),
@@ -2777,9 +2774,9 @@
               if (this._lastTokenEndIndex >= t) return
               if (this._emitBinaryTokens) {
                 let n = e.tokenAttributes,
-                  r = !1
+                  a = !1
                 if (
-                  (this.balancedBracketSelectors?.matchesAlways && (r = !0),
+                  (this.balancedBracketSelectors?.matchesAlways && (a = !0),
                   this._tokenTypeOverrides.length > 0 ||
                     (this.balancedBracketSelectors &&
                       !this.balancedBracketSelectors.matchesAlways &&
@@ -2788,19 +2785,19 @@
                   const t = e.getScopeNames()
                   for (const e of this._tokenTypeOverrides)
                     e.matcher(t) &&
-                      (n = a.EncodedTokenAttributes.set(
+                      (n = r.EncodedTokenAttributes.set(
                         n,
                         0,
-                        a.toOptionalTokenType(e.type),
+                        r.toOptionalTokenType(e.type),
                         null,
                         -1,
                         0,
                         0
                       ))
-                  this.balancedBracketSelectors && (r = this.balancedBracketSelectors.match(t))
+                  this.balancedBracketSelectors && (a = this.balancedBracketSelectors.match(t))
                 }
                 if (
-                  (r && (n = a.EncodedTokenAttributes.set(n, 0, 8, r, -1, 0, 0)),
+                  (a && (n = r.EncodedTokenAttributes.set(n, 0, 8, a, -1, 0, 0)),
                   this._binaryTokens.length > 0 &&
                     this._binaryTokens[this._binaryTokens.length - 1] === n)
                 )
@@ -2874,7 +2871,7 @@
               t.TopLevelRuleReference =
                 void 0)
           const s = n(878)
-          class a {
+          class r {
             constructor(e) {
               this.scopeName = e
             }
@@ -2882,8 +2879,8 @@
               return this.scopeName
             }
           }
-          t.TopLevelRuleReference = a
-          class r {
+          t.TopLevelRuleReference = r
+          class a {
             constructor(e, t) {
               ;(this.scopeName = e), (this.ruleName = t)
             }
@@ -2891,7 +2888,7 @@
               return `${this.scopeName}#${this.ruleName}`
             }
           }
-          t.TopLevelRepositoryRuleReference = r
+          t.TopLevelRepositoryRuleReference = a
           class o {
             constructor() {
               ;(this._references = []),
@@ -2908,17 +2905,17 @@
             }
           }
           function i(e, t, n, s) {
-            const r = n.lookup(e.scopeName)
-            if (!r) {
+            const a = n.lookup(e.scopeName)
+            if (!a) {
               if (e.scopeName === t) throw new Error(`No grammar provided for <${t}>`)
               return
             }
             const o = n.lookup(t)
-            e instanceof a
-              ? l({ baseGrammar: o, selfGrammar: r }, s)
-              : c(e.ruleName, { baseGrammar: o, selfGrammar: r, repository: r.repository }, s)
+            e instanceof r
+              ? l({ baseGrammar: o, selfGrammar: a }, s)
+              : c(e.ruleName, { baseGrammar: o, selfGrammar: a, repository: a.repository }, s)
             const i = n.injections(e.scopeName)
-            if (i) for (const e of i) s.add(new a(e))
+            if (i) for (const e of i) s.add(new r(e))
           }
           function c(e, t, n) {
             t.repository && t.repository[e] && u([t.repository[e]], t, n)
@@ -2962,10 +2959,10 @@
                       ? t.baseGrammar
                       : void 0
                   if (s) {
-                    const a = { baseGrammar: t.baseGrammar, selfGrammar: s, repository: e }
-                    4 === h.kind ? c(h.ruleName, a, n) : l(a, n)
+                    const r = { baseGrammar: t.baseGrammar, selfGrammar: s, repository: e }
+                    4 === h.kind ? c(h.ruleName, r, n) : l(r, n)
                   } else
-                    4 === h.kind ? n.add(new r(h.scopeName, h.ruleName)) : n.add(new a(h.scopeName))
+                    4 === h.kind ? n.add(new a(h.scopeName, h.ruleName)) : n.add(new r(h.scopeName))
               }
             }
           }
@@ -2977,7 +2974,7 @@
                   (this.seenFullScopeRequests = new Set()),
                   (this.seenPartialScopeRequests = new Set()),
                   this.seenFullScopeRequests.add(this.initialScopeName),
-                  (this.Q = [new a(this.initialScopeName)])
+                  (this.Q = [new r(this.initialScopeName)])
               }
               processQueue() {
                 const e = this.Q
@@ -2985,7 +2982,7 @@
                 const t = new o()
                 for (const n of e) i(n, this.initialScopeName, this.repo, t)
                 for (const e of t.references)
-                  if (e instanceof a) {
+                  if (e instanceof r) {
                     if (this.seenFullScopeRequests.has(e.scopeName)) continue
                     this.seenFullScopeRequests.add(e.scopeName), this.Q.push(e)
                   } else {
@@ -3054,37 +3051,37 @@
                 : function (e, t, n, s) {
                     void 0 === s && (s = n), (e[s] = t[n])
                   }),
-            a =
+            r =
               (this && this.__exportStar) ||
               function (e, t) {
                 for (var n in e)
                   'default' === n || Object.prototype.hasOwnProperty.call(t, n) || s(t, e, n)
               }
-          Object.defineProperty(t, '__esModule', { value: !0 }), a(n(947), t)
+          Object.defineProperty(t, '__esModule', { value: !0 }), r(n(947), t)
         },
         47: (e, t, n) => {
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.LocalStackElement = t._tokenizeString = void 0)
           const s = n(350),
-            a = n(44),
-            r = n(792),
+            r = n(44),
+            a = n(792),
             o = n(878)
           class i {
             constructor(e, t) {
               ;(this.stack = e), (this.stoppedEarly = t)
             }
           }
-          function c(e, t, n, a, c, h, d, m) {
+          function c(e, t, n, r, c, h, d, m) {
             const g = t.content.length
             let f = !1,
               _ = -1
             if (d) {
-              const o = (function (e, t, n, a, o, i) {
+              const o = (function (e, t, n, r, o, i) {
                 let c = o.beginRuleCapturedEOL ? 0 : -1
                 const l = []
                 for (let t = o; t; t = t.pop()) {
                   const n = t.getRule(e)
-                  n instanceof r.BeginWhileRule && l.push({ rule: n, stack: t })
+                  n instanceof a.BeginWhileRule && l.push({ rule: n, stack: t })
                 }
                 for (let h = l.pop(); h; h = l.pop()) {
                   const { ruleScanner: l, findOptions: d } = u(
@@ -3092,9 +3089,9 @@
                       e,
                       h.stack.endRule,
                       n,
-                      a === c
+                      r === c
                     ),
-                    m = l.findNextMatchSync(t, a, d)
+                    m = l.findNextMatchSync(t, r, d)
                   if (
                     (s.DebugFlags.InDebugMode &&
                       (console.log('  scanning for while rule'), console.log(l.toString())),
@@ -3107,7 +3104,7 @@
                       (o = h.stack.pop())
                     break
                   }
-                  if (m.ruleId !== r.whileRuleId) {
+                  if (m.ruleId !== a.whileRuleId) {
                     o = h.stack.pop()
                     break
                   }
@@ -3117,11 +3114,11 @@
                     p(e, t, n, h.stack, i, h.rule.whileCaptures, m.captureIndices),
                     i.produce(h.stack, m.captureIndices[0].end),
                     (c = m.captureIndices[0].end),
-                    m.captureIndices[0].end > a && ((a = m.captureIndices[0].end), (n = !1)))
+                    m.captureIndices[0].end > r && ((r = m.captureIndices[0].end), (n = !1)))
                 }
-                return { stack: o, linePos: a, anchorPosition: c, isFirstLine: n }
-              })(e, t, n, a, c, h)
-              ;(c = o.stack), (a = o.linePos), (n = o.isFirstLine), (_ = o.anchorPosition)
+                return { stack: o, linePos: r, anchorPosition: c, isFirstLine: n }
+              })(e, t, n, r, c, h)
+              ;(c = o.stack), (r = o.linePos), (n = o.isFirstLine), (_ = o.anchorPosition)
             }
             const b = Date.now()
             for (; !f; ) {
@@ -3132,21 +3129,21 @@
             function y() {
               s.DebugFlags.InDebugMode &&
                 (console.log(''),
-                console.log(`@@scanNext ${a}: |${t.content.substr(a).replace(/\n$/, '\\n')}|`))
-              const i = (function (e, t, n, a, r, i) {
-                const c = (function (e, t, n, a, r, i) {
-                    const c = r.getRule(e),
-                      { ruleScanner: u, findOptions: h } = l(c, e, r.endRule, n, a === i)
+                console.log(`@@scanNext ${r}: |${t.content.substr(r).replace(/\n$/, '\\n')}|`))
+              const i = (function (e, t, n, r, a, i) {
+                const c = (function (e, t, n, r, a, i) {
+                    const c = a.getRule(e),
+                      { ruleScanner: u, findOptions: h } = l(c, e, a.endRule, n, r === i)
                     let p = 0
                     s.DebugFlags.InDebugMode && (p = o.performanceNow())
-                    const d = u.findNextMatchSync(t, a, h)
+                    const d = u.findNextMatchSync(t, r, h)
                     if (s.DebugFlags.InDebugMode) {
                       const e = o.performanceNow() - p
                       e > 5 &&
                         console.warn(
                           `Rule ${c.debugName} (${c.id}) matching took ${e} against '${t}'`
                         ),
-                        console.log(`  scanning for (linePos: ${a}, anchorPosition: ${i})`),
+                        console.log(`  scanning for (linePos: ${r}, anchorPosition: ${i})`),
                         console.log(u.toString()),
                         d &&
                           console.log(
@@ -3154,10 +3151,10 @@
                           )
                     }
                     return d ? { captureIndices: d.captureIndices, matchedRuleId: d.ruleId } : null
-                  })(e, t, n, a, r, i),
+                  })(e, t, n, r, a, i),
                   u = e.getInjections()
                 if (0 === u.length) return c
-                const h = (function (e, t, n, a, r, o, i) {
+                const h = (function (e, t, n, r, a, o, i) {
                   let c,
                     u = Number.MAX_VALUE,
                     h = null,
@@ -3167,8 +3164,8 @@
                     const m = e[o]
                     if (!m.matcher(d)) continue
                     const g = t.getRule(m.ruleId),
-                      { ruleScanner: f, findOptions: _ } = l(g, t, null, a, r === i),
-                      b = f.findNextMatchSync(n, r, _)
+                      { ruleScanner: f, findOptions: _ } = l(g, t, null, r, a === i),
+                      b = f.findNextMatchSync(n, a, _)
                     if (!b) continue
                     s.DebugFlags.InDebugMode &&
                       (console.log(`  matched injection: ${m.debugSelector}`),
@@ -3176,18 +3173,18 @@
                     const y = b.captureIndices[0].start
                     if (
                       !(y >= u) &&
-                      ((u = y), (h = b.captureIndices), (c = b.ruleId), (p = m.priority), u === r)
+                      ((u = y), (h = b.captureIndices), (c = b.ruleId), (p = m.priority), u === a)
                     )
                       break
                   }
                   return h ? { priorityMatch: -1 === p, captureIndices: h, matchedRuleId: c } : null
-                })(u, e, t, n, a, r, i)
+                })(u, e, t, n, r, a, i)
                 if (!h) return c
                 if (!c) return h
                 const p = c.captureIndices[0].start,
                   d = h.captureIndices[0].start
                 return d < p || (h.priorityMatch && d === p) ? h : c
-              })(e, t, n, a, c, _)
+              })(e, t, n, r, c, _)
               if (!i)
                 return (
                   s.DebugFlags.InDebugMode && console.log('  no more matches.'),
@@ -3196,17 +3193,17 @@
                 )
               const u = i.captureIndices,
                 d = i.matchedRuleId,
-                m = !!(u && u.length > 0) && u[0].end > a
-              if (d === r.endRuleId) {
-                const r = c.getRule(e)
+                m = !!(u && u.length > 0) && u[0].end > r
+              if (d === a.endRuleId) {
+                const a = c.getRule(e)
                 s.DebugFlags.InDebugMode &&
-                  console.log('  popping ' + r.debugName + ' - ' + r.debugEndRegExp),
+                  console.log('  popping ' + a.debugName + ' - ' + a.debugEndRegExp),
                   h.produce(c, u[0].start),
                   (c = c.withContentNameScopesList(c.nameScopesList)),
-                  p(e, t, n, c, h, r.endCaptures, u),
+                  p(e, t, n, c, h, a.endCaptures, u),
                   h.produce(c, u[0].end)
                 const o = c
-                if (((c = c.parent), (_ = o.getAnchorPos()), !m && o.getEnterPos() === a))
+                if (((c = c.parent), (_ = o.getAnchorPos()), !m && o.getEnterPos() === r))
                   return (
                     s.DebugFlags.InDebugMode &&
                       console.error(
@@ -3223,20 +3220,20 @@
                   l = o.getName(t.content, u),
                   b = c.contentNameScopesList.pushAttributed(l, e)
                 if (
-                  ((c = c.push(d, a, _, u[0].end === g, null, b, b)), o instanceof r.BeginEndRule)
+                  ((c = c.push(d, r, _, u[0].end === g, null, b, b)), o instanceof a.BeginEndRule)
                 ) {
-                  const a = o
+                  const r = o
                   s.DebugFlags.InDebugMode &&
-                    console.log('  pushing ' + a.debugName + ' - ' + a.debugBeginRegExp),
-                    p(e, t, n, c, h, a.beginCaptures, u),
+                    console.log('  pushing ' + r.debugName + ' - ' + r.debugBeginRegExp),
+                    p(e, t, n, c, h, r.beginCaptures, u),
                     h.produce(c, u[0].end),
                     (_ = u[0].end)
-                  const r = a.getContentName(t.content, u),
-                    l = b.pushAttributed(r, e)
+                  const a = r.getContentName(t.content, u),
+                    l = b.pushAttributed(a, e)
                   if (
                     ((c = c.withContentNameScopesList(l)),
-                    a.endHasBackReferences &&
-                      (c = c.withEndRule(a.getEndWithResolvedBackReferences(t.content, u))),
+                    r.endHasBackReferences &&
+                      (c = c.withEndRule(r.getEndWithResolvedBackReferences(t.content, u))),
                     !m && i.hasSameRuleAs(c))
                   )
                     return (
@@ -3248,18 +3245,18 @@
                       h.produce(c, g),
                       void (f = !0)
                     )
-                } else if (o instanceof r.BeginWhileRule) {
-                  const a = o
-                  s.DebugFlags.InDebugMode && console.log('  pushing ' + a.debugName),
-                    p(e, t, n, c, h, a.beginCaptures, u),
+                } else if (o instanceof a.BeginWhileRule) {
+                  const r = o
+                  s.DebugFlags.InDebugMode && console.log('  pushing ' + r.debugName),
+                    p(e, t, n, c, h, r.beginCaptures, u),
                     h.produce(c, u[0].end),
                     (_ = u[0].end)
-                  const r = a.getContentName(t.content, u),
-                    l = b.pushAttributed(r, e)
+                  const a = r.getContentName(t.content, u),
+                    l = b.pushAttributed(a, e)
                   if (
                     ((c = c.withContentNameScopesList(l)),
-                    a.whileHasBackReferences &&
-                      (c = c.withEndRule(a.getWhileWithResolvedBackReferences(t.content, u))),
+                    r.whileHasBackReferences &&
+                      (c = c.withEndRule(r.getWhileWithResolvedBackReferences(t.content, u))),
                     !m && i.hasSameRuleAs(c))
                   )
                     return (
@@ -3272,11 +3269,11 @@
                       void (f = !0)
                     )
                 } else {
-                  const a = o
+                  const r = o
                   if (
                     (s.DebugFlags.InDebugMode &&
-                      console.log('  matched ' + a.debugName + ' - ' + a.debugMatchRegExp),
-                    p(e, t, n, c, h, a.captures, u),
+                      console.log('  matched ' + r.debugName + ' - ' + r.debugMatchRegExp),
+                    p(e, t, n, c, h, r.captures, u),
                     h.produce(c, u[0].end),
                     (c = c.pop()),
                     !m)
@@ -3292,24 +3289,24 @@
                     )
                 }
               }
-              u[0].end > a && ((a = u[0].end), (n = !1))
+              u[0].end > r && ((r = u[0].end), (n = !1))
             }
           }
-          function l(e, t, n, a, r) {
+          function l(e, t, n, r, a) {
             return s.UseOnigurumaFindOptions
-              ? { ruleScanner: e.compile(t, n), findOptions: h(a, r) }
-              : { ruleScanner: e.compileAG(t, n, a, r), findOptions: 0 }
+              ? { ruleScanner: e.compile(t, n), findOptions: h(r, a) }
+              : { ruleScanner: e.compileAG(t, n, r, a), findOptions: 0 }
           }
-          function u(e, t, n, a, r) {
+          function u(e, t, n, r, a) {
             return s.UseOnigurumaFindOptions
-              ? { ruleScanner: e.compileWhile(t, n), findOptions: h(a, r) }
-              : { ruleScanner: e.compileWhileAG(t, n, a, r), findOptions: 0 }
+              ? { ruleScanner: e.compileWhile(t, n), findOptions: h(r, a) }
+              : { ruleScanner: e.compileWhileAG(t, n, r, a), findOptions: 0 }
           }
           function h(e, t) {
             let n = 0
             return e || (n |= 1), t || (n |= 4), n
           }
-          function p(e, t, n, s, r, o, i) {
+          function p(e, t, n, s, a, o, i) {
             if (0 === o.length) return
             const l = t.content,
               u = Math.min(o.length, i.length),
@@ -3322,11 +3319,11 @@
               if (0 === m.length) continue
               if (m.start > p) break
               for (; h.length > 0 && h[h.length - 1].endPos <= m.start; )
-                r.produceFromScopes(h[h.length - 1].scopes, h[h.length - 1].endPos), h.pop()
+                a.produceFromScopes(h[h.length - 1].scopes, h[h.length - 1].endPos), h.pop()
               if (
                 (h.length > 0
-                  ? r.produceFromScopes(h[h.length - 1].scopes, m.start)
-                  : r.produce(s, m.start),
+                  ? a.produceFromScopes(h[h.length - 1].scopes, m.start)
+                  : a.produce(s, m.start),
                 u.retokenizeCapturedWithRuleId)
               ) {
                 const t = u.getName(l, i),
@@ -3335,7 +3332,7 @@
                   p = o.pushAttributed(h, e),
                   d = s.push(u.retokenizeCapturedWithRuleId, m.start, -1, !1, null, o, p),
                   g = e.createOnigString(l.substring(0, m.end))
-                c(e, g, n && 0 === m.start, m.start, d, r, !1, 0), a.disposeOnigString(g)
+                c(e, g, n && 0 === m.start, m.start, d, a, !1, 0), r.disposeOnigString(g)
                 continue
               }
               const g = u.getName(l, i)
@@ -3347,7 +3344,7 @@
               }
             }
             for (; h.length > 0; )
-              r.produceFromScopes(h[h.length - 1].scopes, h[h.length - 1].endPos), h.pop()
+              a.produceFromScopes(h[h.length - 1].scopes, h[h.length - 1].endPos), h.pop()
           }
           t._tokenizeString = c
           class d {
@@ -3367,7 +3364,7 @@
             (t.parseJSON = void 0),
             (t.parseJSON = function (e, t, o) {
               let i = new s(e),
-                c = new a(),
+                c = new r(),
                 l = 0,
                 u = null,
                 h = [],
@@ -3381,7 +3378,7 @@
               function g(e) {
                 n(i, e)
               }
-              for (; r(i, c); ) {
+              for (; a(i, c); ) {
                 if (0 === l) {
                   if ((null !== u && g('too many constructs in root'), 3 === c.type)) {
                     ;(u = {}), o && (u.$vscodeTextmateLocation = c.toLocation(t)), d(), (l = 1)
@@ -3412,8 +3409,8 @@
                   if (1 === c.type) {
                     let e = c.value
                     if (
-                      ((r(i, c) && 6 === c.type) || g('expected colon'),
-                      r(i, c) || g('expected value'),
+                      ((a(i, c) && 6 === c.type) || g('expected colon'),
+                      a(i, c) || g('expected value'),
                       (l = 2),
                       1 === c.type)
                     ) {
@@ -3518,7 +3515,7 @@
                 (this.char = 0)
             }
           }
-          class a {
+          class r {
             constructor() {
               ;(this.value = null),
                 (this.type = 0),
@@ -3531,7 +3528,7 @@
               return { filename: e, line: this.line, char: this.char }
             }
           }
-          function r(e, t) {
+          function a(e, t) {
             ;(t.value = null),
               (t.type = 0),
               (t.offset = -1),
@@ -3539,27 +3536,27 @@
               (t.line = -1),
               (t.char = -1)
             let s,
-              a = e.source,
-              r = e.pos,
+              r = e.source,
+              a = e.pos,
               o = e.len,
               i = e.line,
               c = e.char
             for (;;) {
-              if (r >= o) return !1
-              if (((s = a.charCodeAt(r)), 32 !== s && 9 !== s && 13 !== s)) {
+              if (a >= o) return !1
+              if (((s = r.charCodeAt(a)), 32 !== s && 9 !== s && 13 !== s)) {
                 if (10 !== s) break
-                r++, i++, (c = 0)
-              } else r++, c++
+                a++, i++, (c = 0)
+              } else a++, c++
             }
-            if (((t.offset = r), (t.line = i), (t.char = c), 34 === s)) {
-              for (t.type = 1, r++, c++; ; ) {
-                if (r >= o) return !1
-                if (((s = a.charCodeAt(r)), r++, c++, 92 !== s)) {
+            if (((t.offset = a), (t.line = i), (t.char = c), 34 === s)) {
+              for (t.type = 1, a++, c++; ; ) {
+                if (a >= o) return !1
+                if (((s = r.charCodeAt(a)), a++, c++, 92 !== s)) {
                   if (34 === s) break
-                } else r++, c++
+                } else a++, c++
               }
-              t.value = a
-                .substring(t.offset + 1, r - 1)
+              t.value = r
+                .substring(t.offset + 1, a - 1)
                 .replace(/\\u([0-9A-Fa-f]{4})/g, (e, t) => String.fromCodePoint(parseInt(t, 16)))
                 .replace(/\\(.)/g, (t, s) => {
                   switch (s) {
@@ -3584,33 +3581,33 @@
                   }
                   throw new Error('unreachable')
                 })
-            } else if (91 === s) (t.type = 2), r++, c++
-            else if (123 === s) (t.type = 3), r++, c++
-            else if (93 === s) (t.type = 4), r++, c++
-            else if (125 === s) (t.type = 5), r++, c++
-            else if (58 === s) (t.type = 6), r++, c++
-            else if (44 === s) (t.type = 7), r++, c++
+            } else if (91 === s) (t.type = 2), a++, c++
+            else if (123 === s) (t.type = 3), a++, c++
+            else if (93 === s) (t.type = 4), a++, c++
+            else if (125 === s) (t.type = 5), a++, c++
+            else if (58 === s) (t.type = 6), a++, c++
+            else if (44 === s) (t.type = 7), a++, c++
             else if (110 === s) {
-              if (((t.type = 8), r++, c++, (s = a.charCodeAt(r)), 117 !== s)) return !1
-              if ((r++, c++, (s = a.charCodeAt(r)), 108 !== s)) return !1
-              if ((r++, c++, (s = a.charCodeAt(r)), 108 !== s)) return !1
-              r++, c++
+              if (((t.type = 8), a++, c++, (s = r.charCodeAt(a)), 117 !== s)) return !1
+              if ((a++, c++, (s = r.charCodeAt(a)), 108 !== s)) return !1
+              if ((a++, c++, (s = r.charCodeAt(a)), 108 !== s)) return !1
+              a++, c++
             } else if (116 === s) {
-              if (((t.type = 9), r++, c++, (s = a.charCodeAt(r)), 114 !== s)) return !1
-              if ((r++, c++, (s = a.charCodeAt(r)), 117 !== s)) return !1
-              if ((r++, c++, (s = a.charCodeAt(r)), 101 !== s)) return !1
-              r++, c++
+              if (((t.type = 9), a++, c++, (s = r.charCodeAt(a)), 114 !== s)) return !1
+              if ((a++, c++, (s = r.charCodeAt(a)), 117 !== s)) return !1
+              if ((a++, c++, (s = r.charCodeAt(a)), 101 !== s)) return !1
+              a++, c++
             } else if (102 === s) {
-              if (((t.type = 10), r++, c++, (s = a.charCodeAt(r)), 97 !== s)) return !1
-              if ((r++, c++, (s = a.charCodeAt(r)), 108 !== s)) return !1
-              if ((r++, c++, (s = a.charCodeAt(r)), 115 !== s)) return !1
-              if ((r++, c++, (s = a.charCodeAt(r)), 101 !== s)) return !1
-              r++, c++
+              if (((t.type = 10), a++, c++, (s = r.charCodeAt(a)), 97 !== s)) return !1
+              if ((a++, c++, (s = r.charCodeAt(a)), 108 !== s)) return !1
+              if ((a++, c++, (s = r.charCodeAt(a)), 115 !== s)) return !1
+              if ((a++, c++, (s = r.charCodeAt(a)), 101 !== s)) return !1
+              a++, c++
             } else
               for (t.type = 11; ; ) {
-                if (r >= o) return !1
+                if (a >= o) return !1
                 if (
-                  ((s = a.charCodeAt(r)),
+                  ((s = r.charCodeAt(a)),
                   !(
                     46 === s ||
                     (s >= 48 && s <= 57) ||
@@ -3621,12 +3618,12 @@
                   ))
                 )
                   break
-                r++, c++
+                a++, c++
               }
             return (
-              (t.len = r - t.offset),
-              null === t.value && (t.value = a.substr(t.offset, t.len)),
-              (e.pos = r),
+              (t.len = a - t.offset),
+              null === t.value && (t.value = r.substr(t.offset, t.len)),
+              (e.pos = a),
               (e.line = i),
               (e.char = c),
               !0
@@ -3649,7 +3646,7 @@
                 : function (e, t, n, s) {
                     void 0 === s && (s = n), (e[s] = t[n])
                   }),
-            a =
+            r =
               (this && this.__exportStar) ||
               function (e, t) {
                 for (var n in e)
@@ -3657,12 +3654,12 @@
               }
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.parseRawGrammar = t.INITIAL = t.Registry = void 0)
-          const r = n(391),
+          const a = n(391),
             o = n(50),
             i = n(652),
             c = n(583),
             l = n(965)
-          a(n(44), t),
+          r(n(44), t),
             (t.Registry = class {
               constructor(e) {
                 ;(this._options = e),
@@ -3690,7 +3687,7 @@
                   t,
                   n.embeddedLanguages,
                   n.tokenTypes,
-                  new r.BalancedBracketSelectors(
+                  new a.BalancedBracketSelectors(
                     n.balancedBracketSelectors || [],
                     n.unbalancedBracketSelectors || []
                   )
@@ -3699,12 +3696,12 @@
               loadGrammar(e) {
                 return this._loadGrammar(e, 0, null, null, null)
               }
-              async _loadGrammar(e, t, n, s, a) {
-                const r = new l.ScopeDependencyProcessor(this._syncRegistry, e)
-                for (; r.Q.length > 0; )
-                  await Promise.all(r.Q.map(e => this._loadSingleGrammar(e.scopeName))),
-                    r.processQueue()
-                return this._grammarForScopeName(e, t, n, s, a)
+              async _loadGrammar(e, t, n, s, r) {
+                const a = new l.ScopeDependencyProcessor(this._syncRegistry, e)
+                for (; a.Q.length > 0; )
+                  await Promise.all(a.Q.map(e => this._loadSingleGrammar(e.scopeName))),
+                    a.processQueue()
+                return this._grammarForScopeName(e, t, n, s, r)
               }
               async _loadSingleGrammar(e) {
                 return (
@@ -3729,11 +3726,11 @@
                   await this._grammarForScopeName(e.scopeName, n, s)
                 )
               }
-              _grammarForScopeName(e, t = 0, n = null, s = null, a = null) {
-                return this._syncRegistry.grammarForScopeName(e, t, n, s, a)
+              _grammarForScopeName(e, t = 0, n = null, s = null, r = null) {
+                return this._syncRegistry.grammarForScopeName(e, t, n, s, r)
               }
             }),
-            (t.INITIAL = r.StateStack.NULL),
+            (t.INITIAL = a.StateStack.NULL),
             (t.parseRawGrammar = o.parseRawGrammar)
         },
         736: (e, t) => {
@@ -3744,7 +3741,7 @@
             (t.createMatchers = void 0),
             (t.createMatchers = function (e, t) {
               const s = [],
-                a = (function (e) {
+                r = (function (e) {
                   let t = /([LR]:|[\w\.:][\w\.:\-]*|[\,\|\-\(\)])/g,
                     n = t.exec(e)
                   return {
@@ -3755,11 +3752,11 @@
                     }
                   }
                 })(e)
-              let r = a.next()
-              for (; null !== r; ) {
+              let a = r.next()
+              for (; null !== a; ) {
                 let e = 0
-                if (2 === r.length && ':' === r.charAt(1)) {
-                  switch (r.charAt(0)) {
+                if (2 === a.length && ':' === a.charAt(1)) {
+                  switch (a.charAt(0)) {
                     case 'R':
                       e = 1
                       break
@@ -3767,41 +3764,41 @@
                       e = -1
                       break
                     default:
-                      console.log(`Unknown priority ${r} in scope selector`)
+                      console.log(`Unknown priority ${a} in scope selector`)
                   }
-                  r = a.next()
+                  a = r.next()
                 }
                 let t = i()
-                if ((s.push({ matcher: t, priority: e }), ',' !== r)) break
-                r = a.next()
+                if ((s.push({ matcher: t, priority: e }), ',' !== a)) break
+                a = r.next()
               }
               return s
               function o() {
-                if ('-' === r) {
-                  r = a.next()
+                if ('-' === a) {
+                  a = r.next()
                   const e = o()
                   return t => !!e && !e(t)
                 }
-                if ('(' === r) {
-                  r = a.next()
+                if ('(' === a) {
+                  a = r.next()
                   const e = (function () {
                     const e = []
                     let t = i()
-                    for (; t && (e.push(t), '|' === r || ',' === r); ) {
+                    for (; t && (e.push(t), '|' === a || ',' === a); ) {
                       do {
-                        r = a.next()
-                      } while ('|' === r || ',' === r)
+                        a = r.next()
+                      } while ('|' === a || ',' === a)
                       t = i()
                     }
                     return t => e.some(e => e(t))
                   })()
-                  return ')' === r && (r = a.next()), e
+                  return ')' === a && (a = r.next()), e
                 }
-                if (n(r)) {
+                if (n(a)) {
                   const e = []
                   do {
-                    e.push(r), (r = a.next())
-                  } while (n(r))
+                    e.push(a), (a = r.next())
+                  } while (n(a))
                   return n => t(e, n)
                 }
                 return null
@@ -3824,13 +3821,13 @@
         50: (e, t, n) => {
           Object.defineProperty(t, '__esModule', { value: !0 }), (t.parseRawGrammar = void 0)
           const s = n(69),
-            a = n(350),
-            r = n(974)
+            r = n(350),
+            a = n(974)
           t.parseRawGrammar = function (e, t = null) {
             return null !== t && /\.json$/.test(t)
-              ? ((n = e), (o = t), a.DebugFlags.InDebugMode ? r.parseJSON(n, o, !0) : JSON.parse(n))
+              ? ((n = e), (o = t), r.DebugFlags.InDebugMode ? a.parseJSON(n, o, !0) : JSON.parse(n))
               : (function (e, t) {
-                  return a.DebugFlags.InDebugMode
+                  return r.DebugFlags.InDebugMode
                     ? s.parseWithLocation(e, t, '$vscodeTextmateLocation')
                     : s.parsePLIST(e)
                 })(e, t)
@@ -3840,42 +3837,42 @@
         69: (e, t) => {
           function n(e, t, n) {
             const s = e.length
-            let a = 0,
-              r = 1,
+            let r = 0,
+              a = 1,
               o = 0
             function i(t) {
-              if (null === n) a += t
-              else for (; t > 0; ) 10 === e.charCodeAt(a) ? (a++, r++, (o = 0)) : (a++, o++), t--
+              if (null === n) r += t
+              else for (; t > 0; ) 10 === e.charCodeAt(r) ? (r++, a++, (o = 0)) : (r++, o++), t--
             }
             function c(e) {
-              null === n ? (a = e) : i(e - a)
+              null === n ? (r = e) : i(e - r)
             }
             function l() {
-              for (; a < s; ) {
-                let t = e.charCodeAt(a)
+              for (; r < s; ) {
+                let t = e.charCodeAt(r)
                 if (32 !== t && 9 !== t && 13 !== t && 10 !== t) break
                 i(1)
               }
             }
             function u(t) {
-              return e.substr(a, t.length) === t && (i(t.length), !0)
+              return e.substr(r, t.length) === t && (i(t.length), !0)
             }
             function h(t) {
-              let n = e.indexOf(t, a)
+              let n = e.indexOf(t, r)
               c(-1 !== n ? n + t.length : s)
             }
             function p(t) {
-              let n = e.indexOf(t, a)
+              let n = e.indexOf(t, r)
               if (-1 !== n) {
-                let s = e.substring(a, n)
+                let s = e.substring(r, n)
                 return c(n + t.length), s
               }
               {
-                let t = e.substr(a)
+                let t = e.substr(r)
                 return c(s), t
               }
             }
-            s > 0 && 65279 === e.charCodeAt(0) && (a = 1)
+            s > 0 && 65279 === e.charCodeAt(0) && (r = 1)
             let d = 0,
               m = null,
               g = [],
@@ -3889,24 +3886,24 @@
               ;(d = g.pop()), (m = f.pop())
             }
             function k(t) {
-              throw new Error('Near offset ' + a + ': ' + t + ' ~~~' + e.substr(a, 50) + '~~~')
+              throw new Error('Near offset ' + r + ': ' + t + ' ~~~' + e.substr(r, 50) + '~~~')
             }
             const L = function () {
                 if (null === _) return k('missing <key>')
                 let e = {}
-                null !== n && (e[n] = { filename: t, line: r, char: o }),
+                null !== n && (e[n] = { filename: t, line: a, char: o }),
                   (m[_] = e),
                   (_ = null),
                   b(1, e)
               },
-              S = function () {
+              v = function () {
                 if (null === _) return k('missing <key>')
                 let e = []
                 ;(m[_] = e), (_ = null), b(2, e)
               },
-              v = function () {
+              S = function () {
                 let e = {}
-                null !== n && (e[n] = { filename: t, line: r, char: o }), m.push(e), b(1, e)
+                null !== n && (e[n] = { filename: t, line: a, char: o }), m.push(e), b(1, e)
               },
               w = function () {
                 let e = []
@@ -3994,11 +3991,11 @@
                   })
               )
             }
-            for (; a < s && (l(), !(a >= s)); ) {
-              const c = e.charCodeAt(a)
+            for (; r < s && (l(), !(r >= s)); ) {
+              const c = e.charCodeAt(r)
               if ((i(1), 60 !== c)) return k('expected <')
-              if (a >= s) return k('unexpected end of input')
-              const p = e.charCodeAt(a)
+              if (r >= s) return k('unexpected end of input')
+              const p = e.charCodeAt(r)
               if (63 === p) {
                 i(1), h('?>')
                 continue
@@ -4032,12 +4029,12 @@
                   1 === d
                     ? L()
                     : 2 === d
-                    ? v()
-                    : ((m = {}), null !== n && (m[n] = { filename: t, line: r, char: o }), b(1, m)),
+                    ? S()
+                    : ((m = {}), null !== n && (m[n] = { filename: t, line: a, char: o }), b(1, m)),
                     g.isClosed && N()
                   continue
                 case 'array':
-                  1 === d ? S() : 2 === d ? w() : ((m = []), b(2, m)), g.isClosed && C()
+                  1 === d ? v() : 2 === d ? w() : ((m = []), b(2, m)), g.isClosed && C()
                   continue
                 case 'key':
                   ;(O = E(g)),
@@ -4115,13 +4112,13 @@
             themeMatch(e) {
               return this._theme.match(e)
             }
-            async grammarForScopeName(e, t, n, a, r) {
+            async grammarForScopeName(e, t, n, r, a) {
               if (!this._grammars.has(e)) {
                 let o = this._rawGrammars.get(e)
                 if (!o) return null
                 this._grammars.set(
                   e,
-                  s.createGrammar(e, o, t, n, a, r, this, await this._onigLibPromise)
+                  s.createGrammar(e, o, t, n, r, a, this, await this._onigLibPromise)
                 )
               }
               return this._grammars.get(e)
@@ -4146,8 +4143,8 @@
               t.endRuleId =
                 void 0)
           const s = n(878),
-            a = n(965),
-            r = /\\(\d+)/,
+            r = n(965),
+            a = /\\(\d+)/,
             o = /\\(\d+)/g
           ;(t.endRuleId = -1),
             (t.whileRuleId = -2),
@@ -4158,12 +4155,12 @@
               return e
             })
           class i {
-            constructor(e, t, n, a) {
+            constructor(e, t, n, r) {
               ;(this.$location = e),
                 (this.id = t),
                 (this._name = n || null),
                 (this._nameIsCapturing = s.RegexSource.hasCaptures(this._name)),
-                (this._contentName = a || null),
+                (this._contentName = r || null),
                 (this._contentNameIsCapturing = s.RegexSource.hasCaptures(this._contentName))
             }
             get debugName() {
@@ -4185,8 +4182,8 @@
           }
           t.Rule = i
           class c extends i {
-            constructor(e, t, n, s, a) {
-              super(e, t, n, s), (this.retokenizeCapturedWithRuleId = a)
+            constructor(e, t, n, s, r) {
+              super(e, t, n, s), (this.retokenizeCapturedWithRuleId = r)
             }
             dispose() {}
             collectPatterns(e, t) {
@@ -4201,10 +4198,10 @@
           }
           t.CaptureRule = c
           class l extends i {
-            constructor(e, t, n, s, a) {
+            constructor(e, t, n, s, r) {
               super(e, t, n, null),
                 (this._match = new m(s, this.id)),
-                (this.captures = a),
+                (this.captures = r),
                 (this._cachedCompiledPatterns = null)
             }
             dispose() {
@@ -4234,10 +4231,10 @@
           }
           t.MatchRule = l
           class u extends i {
-            constructor(e, t, n, s, a) {
+            constructor(e, t, n, s, r) {
               super(e, t, n, s),
-                (this.patterns = a.patterns),
-                (this.hasMissingPatterns = a.hasMissingPatterns),
+                (this.patterns = r.patterns),
+                (this.hasMissingPatterns = r.hasMissingPatterns),
                 (this._cachedCompiledPatterns = null)
             }
             dispose() {
@@ -4264,10 +4261,10 @@
           }
           t.IncludeOnlyRule = u
           class h extends i {
-            constructor(e, t, n, s, a, r, o, i, c, l) {
+            constructor(e, t, n, s, r, a, o, i, c, l) {
               super(e, t, n, s),
-                (this._begin = new m(a, this.id)),
-                (this.beginCaptures = r),
+                (this._begin = new m(r, this.id)),
+                (this.beginCaptures = a),
                 (this._end = new m(o || '￿', -1)),
                 (this.endHasBackReferences = this._end.hasBackReferences),
                 (this.endCaptures = i),
@@ -4325,9 +4322,9 @@
           }
           t.BeginEndRule = h
           class p extends i {
-            constructor(e, n, s, a, r, o, i, c, l) {
-              super(e, n, s, a),
-                (this._begin = new m(r, this.id)),
+            constructor(e, n, s, r, a, o, i, c, l) {
+              super(e, n, s, r),
+                (this._begin = new m(a, this.id)),
                 (this.beginCaptures = o),
                 (this.whileCaptures = c),
                 (this._while = new m(i, t.whileRuleId)),
@@ -4391,14 +4388,14 @@
           }
           t.BeginWhileRule = p
           class d {
-            static createCaptureRule(e, t, n, s, a) {
-              return e.registerRule(e => new c(t, e, n, s, a))
+            static createCaptureRule(e, t, n, s, r) {
+              return e.registerRule(e => new c(t, e, n, s, r))
             }
             static getCompiledRuleId(e, t, n) {
               return (
                 e.id ||
-                  t.registerRule(a => {
-                    if (((e.id = a), e.match))
+                  t.registerRule(r => {
+                    if (((e.id = r), e.match))
                       return new l(
                         e.$vscodeTextmateLocation,
                         e.id,
@@ -4408,15 +4405,15 @@
                       )
                     if (void 0 === e.begin) {
                       e.repository && (n = s.mergeObjects({}, n, e.repository))
-                      let a = e.patterns
+                      let r = e.patterns
                       return (
-                        void 0 === a && e.include && (a = [{ include: e.include }]),
+                        void 0 === r && e.include && (r = [{ include: e.include }]),
                         new u(
                           e.$vscodeTextmateLocation,
                           e.id,
                           e.name,
                           e.contentName,
-                          d._compilePatterns(a, t, n)
+                          d._compilePatterns(r, t, n)
                         )
                       )
                     }
@@ -4451,23 +4448,23 @@
             static _compileCaptures(e, t, n) {
               let s = []
               if (e) {
-                let a = 0
+                let r = 0
                 for (const t in e) {
                   if ('$vscodeTextmateLocation' === t) continue
                   const e = parseInt(t, 10)
-                  e > a && (a = e)
+                  e > r && (r = e)
                 }
-                for (let e = 0; e <= a; e++) s[e] = null
-                for (const a in e) {
-                  if ('$vscodeTextmateLocation' === a) continue
-                  const r = parseInt(a, 10)
+                for (let e = 0; e <= r; e++) s[e] = null
+                for (const r in e) {
+                  if ('$vscodeTextmateLocation' === r) continue
+                  const a = parseInt(r, 10)
                   let o = 0
-                  e[a].patterns && (o = d.getCompiledRuleId(e[a], t, n)),
-                    (s[r] = d.createCaptureRule(
+                  e[r].patterns && (o = d.getCompiledRuleId(e[r], t, n)),
+                    (s[a] = d.createCaptureRule(
                       t,
-                      e[a].$vscodeTextmateLocation,
-                      e[a].name,
-                      e[a].contentName,
+                      e[r].$vscodeTextmateLocation,
+                      e[r].name,
+                      e[r].contentName,
                       o
                     ))
                 }
@@ -4477,11 +4474,11 @@
             static _compilePatterns(e, t, n) {
               let s = []
               if (e)
-                for (let r = 0, o = e.length; r < o; r++) {
-                  const o = e[r]
+                for (let a = 0, o = e.length; a < o; a++) {
+                  const o = e[a]
                   let i = -1
                   if (o.include) {
-                    const e = a.parseInclude(o.include)
+                    const e = r.parseInclude(o.include)
                     switch (e.kind) {
                       case 0:
                       case 1:
@@ -4493,12 +4490,12 @@
                         break
                       case 3:
                       case 4:
-                        const a = e.scopeName,
-                          r = 4 === e.kind ? e.ruleName : null,
-                          c = t.getExternalGrammar(a, n)
+                        const r = e.scopeName,
+                          a = 4 === e.kind ? e.ruleName : null,
+                          c = t.getExternalGrammar(r, n)
                         if (c)
-                          if (r) {
-                            let e = c.repository[r]
+                          if (a) {
+                            let e = c.repository[a]
                             e && (i = d.getCompiledRuleId(e, t, c.repository))
                           } else i = d.getCompiledRuleId(c.repository.$self, t, c.repository)
                     }
@@ -4527,16 +4524,16 @@
                 const t = e.length
                 let n = 0,
                   s = [],
-                  a = !1
-                for (let r = 0; r < t; r++)
-                  if ('\\' === e.charAt(r) && r + 1 < t) {
-                    const t = e.charAt(r + 1)
+                  r = !1
+                for (let a = 0; a < t; a++)
+                  if ('\\' === e.charAt(a) && a + 1 < t) {
+                    const t = e.charAt(a + 1)
                     'z' === t
-                      ? (s.push(e.substring(n, r)), s.push('$(?!\\n)(?<!\\n)'), (n = r + 2))
-                      : ('A' !== t && 'G' !== t) || (a = !0),
-                      r++
+                      ? (s.push(e.substring(n, a)), s.push('$(?!\\n)(?<!\\n)'), (n = a + 2))
+                      : ('A' !== t && 'G' !== t) || (r = !0),
+                      a++
                   }
-                ;(this.hasAnchor = a),
+                ;(this.hasAnchor = r),
                   0 === n
                     ? (this.source = e)
                     : (s.push(e.substring(n, t)), (this.source = s.join('')))
@@ -4545,7 +4542,7 @@
                 ? (this._anchorCache = this._buildAnchorCache())
                 : (this._anchorCache = null),
                 (this.ruleId = t),
-                (this.hasBackReferences = r.test(this.source))
+                (this.hasBackReferences = a.test(this.source))
             }
             clone() {
               return new m(this.source, this.ruleId)
@@ -4567,26 +4564,26 @@
                 t,
                 n,
                 s,
-                a = [],
                 r = [],
+                a = [],
                 o = [],
                 i = []
               for (e = 0, t = this.source.length; e < t; e++)
                 (n = this.source.charAt(e)),
-                  (a[e] = n),
                   (r[e] = n),
+                  (a[e] = n),
                   (o[e] = n),
                   (i[e] = n),
                   '\\' === n &&
                     e + 1 < t &&
                     ((s = this.source.charAt(e + 1)),
                     'A' === s
-                      ? ((a[e + 1] = '￿'), (r[e + 1] = '￿'), (o[e + 1] = 'A'), (i[e + 1] = 'A'))
+                      ? ((r[e + 1] = '￿'), (a[e + 1] = '￿'), (o[e + 1] = 'A'), (i[e + 1] = 'A'))
                       : 'G' === s
-                      ? ((a[e + 1] = '￿'), (r[e + 1] = 'G'), (o[e + 1] = '￿'), (i[e + 1] = 'G'))
-                      : ((a[e + 1] = s), (r[e + 1] = s), (o[e + 1] = s), (i[e + 1] = s)),
+                      ? ((r[e + 1] = '￿'), (a[e + 1] = 'G'), (o[e + 1] = '￿'), (i[e + 1] = 'G'))
+                      : ((r[e + 1] = s), (a[e + 1] = s), (o[e + 1] = s), (i[e + 1] = s)),
                     e++)
-              return { A0_G0: a.join(''), A0_G1: r.join(''), A1_G0: o.join(''), A1_G1: i.join('') }
+              return { A0_G0: r.join(''), A0_G1: a.join(''), A1_G0: o.join(''), A1_G1: i.join('') }
             }
             resolveAnchors(e, t) {
               return this.hasAnchor && this._anchorCache
@@ -4707,7 +4704,7 @@
               t.Theme =
                 void 0)
           const s = n(878)
-          class a {
+          class r {
             constructor(e, t, n) {
               ;(this._colorMap = e),
                 (this._defaults = t),
@@ -4727,16 +4724,16 @@
                       0 !== n ? n : e.index - t.index)
                 })
                 let n = 0,
-                  r = '#000000',
+                  a = '#000000',
                   o = '#ffffff'
                 for (; e.length >= 1 && '' === e[0].scope; ) {
                   let t = e.shift()
                   ;-1 !== t.fontStyle && (n = t.fontStyle),
-                    null !== t.foreground && (r = t.foreground),
+                    null !== t.foreground && (a = t.foreground),
                     null !== t.background && (o = t.background)
                 }
                 let c = new u(t),
-                  l = new i(n, c.getId(r), c.getId(o)),
+                  l = new i(n, c.getId(a), c.getId(o)),
                   d = new p(new h(0, null, -1, 0, 0), [])
                 for (let t = 0, n = e.length; t < n; t++) {
                   let n = e[t]
@@ -4749,7 +4746,7 @@
                     c.getId(n.background)
                   )
                 }
-                return new a(c, l, d)
+                return new r(c, l, d)
               })(e, t)
             }
             getColorMap() {
@@ -4779,18 +4776,18 @@
               return n ? new i(n.fontStyle, n.foreground, n.background) : null
             }
           }
-          t.Theme = a
-          class r {
+          t.Theme = r
+          class a {
             constructor(e, t) {
               ;(this.parent = e), (this.scopeName = t)
             }
             static from(...e) {
               let t = null
-              for (let n = 0; n < e.length; n++) t = new r(t, e[n])
+              for (let n = 0; n < e.length; n++) t = new a(t, e[n])
               return t
             }
             push(e) {
-              return new r(this, e)
+              return new a(this, e)
             }
             getSegments() {
               let e = this
@@ -4805,7 +4802,7 @@
           function o(e, t) {
             return t === e || (e.startsWith(t) && '.' === e[t.length])
           }
-          t.ScopeStack = r
+          t.ScopeStack = a
           class i {
             constructor(e, t, n) {
               ;(this.fontStyle = e), (this.foregroundId = t), (this.backgroundId = n)
@@ -4816,15 +4813,15 @@
             if (!e.settings || !Array.isArray(e.settings)) return []
             let t = e.settings,
               n = [],
-              a = 0
-            for (let e = 0, r = t.length; e < r; e++) {
-              let r,
+              r = 0
+            for (let e = 0, a = t.length; e < a; e++) {
+              let a,
                 o = t[e]
               if (!o.settings) continue
               if ('string' == typeof o.scope) {
                 let e = o.scope
-                ;(e = e.replace(/^[,]+/, '')), (e = e.replace(/[,]+$/, '')), (r = e.split(','))
-              } else r = Array.isArray(o.scope) ? o.scope : ['']
+                ;(e = e.replace(/^[,]+/, '')), (e = e.replace(/[,]+$/, '')), (a = e.split(','))
+              } else a = Array.isArray(o.scope) ? o.scope : ['']
               let i = -1
               if ('string' == typeof o.settings.fontStyle) {
                 i = 0
@@ -4852,25 +4849,25 @@
               'string' == typeof o.settings.background &&
                 s.isValidHexColor(o.settings.background) &&
                 (u = o.settings.background)
-              for (let t = 0, s = r.length; t < s; t++) {
-                let s = r[t].trim().split(' '),
+              for (let t = 0, s = a.length; t < s; t++) {
+                let s = a[t].trim().split(' '),
                   o = s[s.length - 1],
                   h = null
                 s.length > 1 && ((h = s.slice(0, s.length - 1)), h.reverse()),
-                  (n[a++] = new l(o, h, e, i, c, u))
+                  (n[r++] = new l(o, h, e, i, c, u))
               }
             }
             return n
           }
           ;(t.StyleAttributes = i), (t.parseTheme = c)
           class l {
-            constructor(e, t, n, s, a, r) {
+            constructor(e, t, n, s, r, a) {
               ;(this.scope = e),
                 (this.parentScopes = t),
                 (this.index = n),
                 (this.fontStyle = s),
-                (this.foreground = a),
-                (this.background = r)
+                (this.foreground = r),
+                (this.background = a)
             }
           }
           ;(t.ParsedThemeRule = l),
@@ -4913,12 +4910,12 @@
           }
           t.ColorMap = u
           class h {
-            constructor(e, t, n, s, a) {
+            constructor(e, t, n, s, r) {
               ;(this.scopeDepth = e),
                 (this.parentScopes = t),
                 (this.fontStyle = n),
                 (this.foreground = s),
-                (this.background = a)
+                (this.background = r)
             }
             clone() {
               return new h(
@@ -4953,15 +4950,15 @@
               if (e.scopeDepth === t.scopeDepth) {
                 const n = e.parentScopes,
                   s = t.parentScopes
-                let a = null === n ? 0 : n.length,
-                  r = null === s ? 0 : s.length
-                if (a === r)
-                  for (let e = 0; e < a; e++) {
+                let r = null === n ? 0 : n.length,
+                  a = null === s ? 0 : s.length
+                if (r === a)
+                  for (let e = 0; e < r; e++) {
                     const t = n[e].length,
-                      a = s[e].length
-                    if (t !== a) return a - t
+                      r = s[e].length
+                    if (t !== r) return r - t
                   }
-                return r - a
+                return a - r
               }
               return t.scopeDepth - e.scopeDepth
             }
@@ -4984,8 +4981,8 @@
                     )
               )
             }
-            insert(e, t, n, s, a, r) {
-              if ('' === t) return void this._doInsertHere(e, n, s, a, r)
+            insert(e, t, n, s, r, a) {
+              if ('' === t) return void this._doInsertHere(e, n, s, r, a)
               let o,
                 i,
                 c,
@@ -4995,20 +4992,20 @@
                   ? (c = this._children[o])
                   : ((c = new p(this._mainRule.clone(), h.cloneArr(this._rulesWithParentScopes))),
                     (this._children[o] = c)),
-                c.insert(e + 1, i, n, s, a, r)
+                c.insert(e + 1, i, n, s, r, a)
             }
-            _doInsertHere(e, t, n, a, r) {
+            _doInsertHere(e, t, n, r, a) {
               if (null !== t) {
                 for (let o = 0, i = this._rulesWithParentScopes.length; o < i; o++) {
                   let i = this._rulesWithParentScopes[o]
                   if (0 === s.strArrCmp(i.parentScopes, t))
-                    return void i.acceptOverwrite(e, n, a, r)
+                    return void i.acceptOverwrite(e, n, r, a)
                 }
                 ;-1 === n && (n = this._mainRule.fontStyle),
-                  0 === a && (a = this._mainRule.foreground),
-                  0 === r && (r = this._mainRule.background),
-                  this._rulesWithParentScopes.push(new h(e, t, n, a, r))
-              } else this._mainRule.acceptOverwrite(e, n, a, r)
+                  0 === r && (r = this._mainRule.foreground),
+                  0 === a && (a = this._mainRule.background),
+                  this._rulesWithParentScopes.push(new h(e, t, n, r, a))
+              } else this._mainRule.acceptOverwrite(e, n, r, a)
             }
           }
           t.ThemeTrieElement = p
@@ -5018,7 +5015,7 @@
             return Array.isArray(e)
               ? (function (e) {
                   let t = []
-                  for (let s = 0, a = e.length; s < a; s++) t[s] = n(e[s])
+                  for (let s = 0, r = e.length; s < r; s++) t[s] = n(e[s])
                   return t
                 })(e)
               : 'object' == typeof e
@@ -5061,7 +5058,7 @@
                 : t.substr(1 + ~n)
             })
           let s = /\$(\d+)|\${(\d+):\/(downcase|upcase)}/g
-          function a(e, t) {
+          function r(e, t) {
             return e < t ? -1 : e > t ? 1 : 0
           }
           ;(t.RegexSource = class {
@@ -5069,13 +5066,13 @@
               return null !== e && ((s.lastIndex = 0), s.test(e))
             }
             static replaceCaptures(e, t, n) {
-              return e.replace(s, (e, s, a, r) => {
-                let o = n[parseInt(s || a, 10)]
+              return e.replace(s, (e, s, r, a) => {
+                let o = n[parseInt(s || r, 10)]
                 if (!o) return e
                 {
                   let e = t.substring(o.start, o.end)
                   for (; '.' === e[0]; ) e = e.substring(1)
-                  switch (r) {
+                  switch (a) {
                     case 'downcase':
                       return e.toLowerCase()
                     case 'upcase':
@@ -5087,7 +5084,7 @@
               })
             }
           }),
-            (t.strcmp = a),
+            (t.strcmp = r),
             (t.strArrCmp = function (e, t) {
               if (null === e && null === t) return 0
               if (!e) return -1
@@ -5096,7 +5093,7 @@
                 s = t.length
               if (n === s) {
                 for (let s = 0; s < n; s++) {
-                  let n = a(e[s], t[s])
+                  let n = r(e[s], t[s])
                   if (0 !== n) return n
                 }
                 return 0
@@ -5136,28 +5133,237 @@
       }),
       (s = {}),
       (function e(t) {
-        var a = s[t]
-        if (void 0 !== a) return a.exports
-        var r = (s[t] = { exports: {} })
-        return n[t].call(r.exports, r, r.exports, e), r.exports
+        var r = s[t]
+        if (void 0 !== r) return r.exports
+        var a = (s[t] = { exports: {} })
+        return n[t].call(a.exports, a, a.exports, e), a.exports
       })(787))
   })({
     get exports() {
-      return M
+      return B
     },
     set exports(e) {
-      M = e
+      B = e
     }
   })
-  const U = {
+  var $ = [
+      'black',
+      'red',
+      'green',
+      'yellow',
+      'blue',
+      'magenta',
+      'cyan',
+      'white',
+      'brightBlack',
+      'brightRed',
+      'brightGreen',
+      'brightYellow',
+      'brightBlue',
+      'brightMagenta',
+      'brightCyan',
+      'brightWhite'
+    ],
+    U = { 1: 'bold', 2: 'dim', 3: 'italic', 4: 'underline', 7: 'reverse', 9: 'strikethrough' }
+  function W(e, t) {
+    const n = e.indexOf('', t)
+    if (-1 !== n && '[' === e[n + 1]) {
+      const t = e.indexOf('m', n)
+      return { sequence: e.substring(n + 2, t).split(';'), startPosition: n, position: t + 1 }
+    }
+    return { position: e.length }
+  }
+  function q(e) {
+    const t = e.shift()
+    if ('2' === t) {
+      const t = e.splice(0, 3).map(e => Number.parseInt(e))
+      if (3 !== t.length || t.some(e => Number.isNaN(e))) return
+      return { type: 'rgb', rgb: t }
+    }
+    if ('5' === t) {
+      const t = e.shift()
+      if (t) return { type: 'table', index: Number(t) }
+    }
+  }
+  function z(e) {
+    const t = []
+    for (; e.length > 0; ) {
+      const n = e.shift()
+      if (!n) continue
+      const s = Number.parseInt(n)
+      if (!Number.isNaN(s))
+        if (0 === s) t.push({ type: 'resetAll' })
+        else if (s <= 9) {
+          U[s] && t.push({ type: 'setDecoration', value: U[s] })
+        } else if (s <= 29) {
+          const e = U[s - 20]
+          e && t.push({ type: 'resetDecoration', value: e })
+        } else if (s <= 37)
+          t.push({ type: 'setForegroundColor', value: { type: 'named', name: $[s - 30] } })
+        else if (38 === s) {
+          const n = q(e)
+          n && t.push({ type: 'setForegroundColor', value: n })
+        } else if (39 === s) t.push({ type: 'resetForegroundColor' })
+        else if (s <= 47)
+          t.push({ type: 'setBackgroundColor', value: { type: 'named', name: $[s - 40] } })
+        else if (48 === s) {
+          const n = q(e)
+          n && t.push({ type: 'setBackgroundColor', value: n })
+        } else
+          49 === s
+            ? t.push({ type: 'resetBackgroundColor' })
+            : s >= 90 && s <= 97
+            ? t.push({ type: 'setForegroundColor', value: { type: 'named', name: $[s - 90 + 8] } })
+            : s >= 100 &&
+              s <= 107 &&
+              t.push({ type: 'setBackgroundColor', value: { type: 'named', name: $[s - 100 + 8] } })
+    }
+    return t
+  }
+  var H = {
+    black: '#000000',
+    red: '#bb0000',
+    green: '#00bb00',
+    yellow: '#bbbb00',
+    blue: '#0000bb',
+    magenta: '#ff00ff',
+    cyan: '#00bbbb',
+    white: '#eeeeee',
+    brightBlack: '#555555',
+    brightRed: '#ff5555',
+    brightGreen: '#00ff00',
+    brightYellow: '#ffff55',
+    brightBlue: '#5555ff',
+    brightMagenta: '#ff55ff',
+    brightCyan: '#55ffff',
+    brightWhite: '#ffffff'
+  }
+  function V(e = H) {
+    function t(t) {
+      return e[t]
+    }
+    function n(e) {
+      return `#${e.map(e => Math.max(0, Math.min(e, 255)).toString(16).padStart(2, '0')).join('')}`
+    }
+    let s
+    function r(e) {
+      return (function () {
+        if (s) return s
+        s = []
+        for (let e = 0; e < $.length; e++) s.push(t($[e]))
+        let e = [0, 95, 135, 175, 215, 255]
+        for (let t = 0; t < 6; t++)
+          for (let r = 0; r < 6; r++) for (let a = 0; a < 6; a++) s.push(n([e[t], e[r], e[a]]))
+        let r = 8
+        for (let e = 0; e < 24; e++, r += 10) s.push(n([r, r, r]))
+        return s
+      })()[e]
+    }
+    return {
+      value: function (e) {
+        switch (e.type) {
+          case 'named':
+            return t(e.name)
+          case 'rgb':
+            return n(e.rgb)
+          case 'table':
+            return r(e.index)
+        }
+      }
+    }
+  }
+  function K(e, t) {
+    const s = t.split(/\r?\n/),
+      r = V(
+        Object.fromEntries(
+          $.map(t => [t, e.colors[`terminal.ansi${t[0].toUpperCase()}${t.substring(1)}`]])
+        )
+      ),
+      a = (function () {
+        let e = null,
+          t = null,
+          n = new Set()
+        return {
+          parse(s) {
+            const r = []
+            let a = 0
+            do {
+              const o = W(s, a),
+                i = o.sequence ? s.substring(a, o.startPosition) : s.substring(a)
+              if (
+                (i.length > 0 &&
+                  r.push({ value: i, foreground: e, background: t, decorations: new Set(n) }),
+                o.sequence)
+              ) {
+                const s = z(o.sequence)
+                for (const r of s)
+                  'resetAll' === r.type
+                    ? ((e = null), (t = null), n.clear())
+                    : 'resetForegroundColor' === r.type
+                    ? (e = null)
+                    : 'resetBackgroundColor' === r.type
+                    ? (t = null)
+                    : 'resetDecoration' === r.type && n.delete(r.value)
+                for (const r of s)
+                  'setForegroundColor' === r.type
+                    ? (e = r.value)
+                    : 'setBackgroundColor' === r.type
+                    ? (t = r.value)
+                    : 'setDecoration' === r.type && n.add(r.value)
+              }
+              a = o.position
+            } while (a < s.length)
+            return r
+          }
+        }
+      })()
+    return s.map(t =>
+      a.parse(t).map(t => {
+        let s
+        ;(s = t.decorations.has('reverse')
+          ? t.background
+            ? r.value(t.background)
+            : e.bg
+          : t.foreground
+          ? r.value(t.foreground)
+          : e.fg),
+          t.decorations.has('dim') &&
+            (s = (function (e) {
+              const t = e.match(/#([0-9a-f]{3})([0-9a-f]{3})?([0-9a-f]{2})?/)
+              if (t) {
+                if (t[3]) {
+                  const e = Math.round(Number.parseInt(t[3], 16) / 2)
+                    .toString(16)
+                    .padStart(2, '0')
+                  return `#${t[1]}${t[2]}${e}`
+                }
+                return t[2]
+                  ? `#${t[1]}${t[2]}80`
+                  : `#${Array.from(t[1])
+                      .map(e => `${e}${e}`)
+                      .join('')}80`
+              }
+              return e
+            })(s))
+        let a = n.None
+        return (
+          t.decorations.has('bold') && (a |= n.Bold),
+          t.decorations.has('italic') && (a |= n.Italic),
+          t.decorations.has('underline') && (a |= n.Underline),
+          { content: t.value, color: s, fontStyle: a }
+        )
+      })
+    )
+  }
+  const Q = {
     pre: ({ className: e, style: t, children: n }) => `<pre class="${e}" style="${t}">${n}</pre>`,
     code: ({ children: e }) => `<code>${e}</code>`,
     line: ({ className: e, children: t }) => `<span class="${e}">${t}</span>`,
     token: ({ style: e, children: t }) => `<span style="${e}">${t}</span>`
   }
-  function W(e, t = {}) {
+  function Y(e, t = {}) {
     const s = t.bg || '#fff',
-      a = (function (e, t) {
+      r = (function (e, t) {
         const n = new Map()
         for (const s of e) {
           const e = t(s)
@@ -5165,9 +5371,9 @@
         }
         return n
       })(t.lineOptions ?? [], e => e.line),
-      r = t.elements || {}
+      a = t.elements || {}
     function o(e = '', t = {}, n) {
-      const s = r[e] || U[e]
+      const s = a[e] || Q[e]
       return s
         ? ((n = n.filter(Boolean)), s({ ...t, children: 'code' === e ? n.join('\n') : n.join('') }))
         : ''
@@ -5180,24 +5386,24 @@
         o(
           'code',
           {},
-          e.map((s, r) => {
-            const i = r + 1,
+          e.map((s, a) => {
+            const i = a + 1,
               c = (function (e) {
                 const t = new Set(['line'])
                 for (const n of e) for (const e of n.classes ?? []) t.add(e)
                 return Array.from(t)
-              })(a.get(i) ?? []).join(' ')
+              })(r.get(i) ?? []).join(' ')
             return o(
               'line',
-              { className: c, lines: e, line: s, index: r },
-              s.map((e, a) => {
-                const r = [`color: ${e.color || t.fg}`]
+              { className: c, lines: e, line: s, index: a },
+              s.map((e, r) => {
+                const a = [`color: ${e.color || t.fg}`]
                 return (
-                  e.fontStyle & n.Italic && r.push('font-style: italic'),
-                  e.fontStyle & n.Bold && r.push('font-weight: bold'),
-                  e.fontStyle & n.Underline && r.push('text-decoration: underline'),
-                  o('token', { style: r.join('; '), tokens: s, token: e, index: a }, [
-                    ((i = e.content), i.replace(/[&<>"']/g, e => q[e]))
+                  e.fontStyle & n.Italic && a.push('font-style: italic'),
+                  e.fontStyle & n.Bold && a.push('font-weight: bold'),
+                  e.fontStyle & n.Underline && a.push('text-decoration: underline'),
+                  o('token', { style: a.join('; '), tokens: s, token: e, index: r }, [
+                    ((i = e.content), i.replace(/[&<>"']/g, e => J[e]))
                   ])
                 )
                 var i
@@ -5208,8 +5414,8 @@
       ]
     )
   }
-  const q = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }
-  class z extends M.Registry {
+  const J = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }
+  class X extends B.Registry {
     constructor(e) {
       super(e),
         (this._resolver = e),
@@ -5225,9 +5431,9 @@
     async loadTheme(e) {
       return 'string' == typeof e
         ? (this._resolvedThemes[e] ||
-            (this._resolvedThemes[e] = await A(`${this.themesPath}${e}.json`)),
+            (this._resolvedThemes[e] = await P(`${this.themesPath}${e}.json`)),
           this._resolvedThemes[e])
-        : ((e = P(e)).name && (this._resolvedThemes[e.name] = e), e)
+        : ((e = T(e)).name && (this._resolvedThemes[e.name] = e), e)
     }
     async loadThemes(e) {
       return await Promise.all(e.map(e => this.loadTheme(e)))
@@ -5273,7 +5479,7 @@
         for (const t of e.embeddedLangs) this._langGraph.set(t, this._langMap[t])
     }
   }
-  function H(e) {
+  function Z(e) {
     return 'string' == typeof e ? t.find(t => t.id === e || t.aliases?.includes(e)) : e
   }
   ;(e.BUNDLED_LANGUAGES = t),
@@ -5342,54 +5548,50 @@
     (e.getHighlighter = async function (e) {
       const {
           _languages: n,
-          _themes: a,
-          _wasmPath: r
+          _themes: r,
+          _wasmPath: a
         } = (function (e) {
           let n = t,
             s = e.themes || [],
-            a = e.paths?.wasm
-              ? e.paths.wasm.endsWith('/')
-                ? e.paths.wasm
-                : e.paths.wasm + '/'
-              : 'dist/'
+            r = e.paths?.wasm ? (e.paths.wasm.endsWith('/') ? e.paths.wasm : e.paths.wasm + '/') : N
           return (
-            e.langs && (n = e.langs.map(H)),
+            e.langs && (n = e.langs.map(Z)),
             e.theme && s.unshift(e.theme),
             s.length || (s = ['nord']),
-            { _languages: n, _themes: s, _wasmPath: a }
+            { _languages: n, _themes: s, _wasmPath: r }
           )
         })(e),
-        c = new G(
+        c = new O(
           (async function (e) {
-            if (!C) {
+            if (!j) {
               let t
-              if (S)
+              if (v)
                 t =
                   'string' == typeof w
-                    ? d.loadWASM({ data: await fetch(j(i(...o(e), 'onig.wasm'))) })
+                    ? d.loadWASM({ data: await fetch(x(i(...o(e), 'onig.wasm'))) })
                     : d.loadWASM({ data: w })
               else {
                 const e = require('path').join(require.resolve('vscode-oniguruma'), '../onig.wasm'),
                   n = require('fs').readFileSync(e).buffer
                 t = d.loadWASM(n)
               }
-              C = t.then(() => ({
+              j = t.then(() => ({
                 createOnigScanner: e => d.createOnigScanner(e),
                 createOnigString: e => d.createOnigString(e)
               }))
             }
-            return C
-          })(r),
+            return j
+          })(a),
           'vscode-oniguruma'
         ),
-        l = new z(c)
+        l = new X(c)
       e.paths?.themes &&
         (l.themesPath = e.paths.themes.endsWith('/') ? e.paths.themes : e.paths.themes + '/'),
         e.paths?.languages &&
           (c.languagesPath = e.paths.languages.endsWith('/')
             ? e.paths.languages
             : e.paths.languages + '/')
-      const u = (await l.loadThemes(a))[0]
+      const u = (await l.loadThemes(r))[0]
       let h
       await l.loadLanguages(n)
       let p = {
@@ -5422,7 +5624,7 @@
           { _theme: t, _colorMap: n }
         )
       }
-      function g(e, t = 'text', n, a = { includeExplanation: !0 }) {
+      function g(e, t = 'text', n, r = { includeExplanation: !0 }) {
         if (
           (function (e) {
             return !e || ['plaintext', 'txt', 'text'].includes(e)
@@ -5430,15 +5632,15 @@
         ) {
           return [...e.split(/\r\n|\r|\n/).map(e => [{ content: e }])]
         }
-        const { _grammar: r } = (function (e) {
+        const { _grammar: a } = (function (e) {
             const t = l.getGrammar(e)
             if (!t) throw Error(`No language registration for ${e}`)
             return { _grammar: t }
           })(t),
           { _theme: o, _colorMap: i } = m(n)
-        return (function (e, t, n, a, r) {
+        return (function (e, t, n, r, a) {
           let o = n.split(/\r\n|\r|\n/),
-            i = M.INITIAL,
+            i = B.INITIAL,
             c = [],
             l = []
           for (let n = 0, u = o.length; n < u; n++) {
@@ -5450,47 +5652,57 @@
               ;(c = []), l.push([])
               continue
             }
-            r.includeExplanation && ((u = a.tokenizeLine(d, i)), (h = u.tokens), (p = 0))
-            let m = a.tokenizeLine2(d, i),
+            a.includeExplanation && ((u = r.tokenizeLine(d, i)), (h = u.tokens), (p = 0))
+            let m = r.tokenizeLine2(d, i),
               g = m.tokens.length / 2
             for (let n = 0; n < g; n++) {
-              let a = m.tokens[2 * n],
+              let r = m.tokens[2 * n],
                 o = n + 1 < g ? m.tokens[2 * n + 2] : d.length
-              if (a === o) continue
+              if (r === o) continue
               let i = m.tokens[2 * n + 1],
                 l = t[s.getForeground(i)],
                 u = s.getFontStyle(i),
                 f = []
-              if (r.includeExplanation) {
+              if (a.includeExplanation) {
                 let t = 0
-                for (; a + t < o; ) {
+                for (; r + t < o; ) {
                   let n = h[p],
                     s = d.substring(n.startIndex, n.endIndex)
-                  ;(t += s.length), f.push({ content: s, scopes: B(e, n.scopes) }), p++
+                  ;(t += s.length), f.push({ content: s, scopes: M(e, n.scopes) }), p++
                 }
               }
-              c.push({ content: d.substring(a, o), color: l, fontStyle: u, explanation: f })
+              c.push({ content: d.substring(r, o), color: l, fontStyle: u, explanation: f })
             }
             l.push(c), (c = []), (i = m.ruleStack)
           }
           return l
-        })(o, i, e, r, a)
+        })(o, i, e, a, r)
+      }
+      function f(e, t) {
+        const { _theme: n } = m(t)
+        return K(n, e)
       }
       return {
         codeToThemedTokens: g,
         codeToHtml: function (e, t = 'text', n) {
           let s
           s = 'object' == typeof t ? t : { lang: t, theme: n }
-          const a = g(e, s.lang, s.theme, { includeExplanation: !1 }),
-            { _theme: r } = m(s.theme)
-          return W(a, { fg: r.fg, bg: r.bg, lineOptions: s?.lineOptions, themeName: r.name })
+          const r = g(e, s.lang, s.theme, { includeExplanation: !1 }),
+            { _theme: a } = m(s.theme)
+          return Y(r, { fg: a.fg, bg: a.bg, lineOptions: s?.lineOptions, themeName: a.name })
+        },
+        ansiToThemedTokens: f,
+        ansiToHtml: function (e, t) {
+          const n = f(e, t?.theme),
+            { _theme: s } = m(t?.theme)
+          return Y(n, { fg: s.fg, bg: s.bg, lineOptions: t?.lineOptions, themeName: s.name })
         },
         getTheme: e => m(e)._theme,
         loadTheme: async function (e) {
           await l.loadTheme(e)
         },
         loadLanguage: async function (e) {
-          const t = H(e)
+          const t = Z(e)
           c.addLanguage(t), await l.loadLanguage(t)
         },
         getBackgroundColor: function (e) {
@@ -5512,14 +5724,14 @@
         }
       }
     }),
-    (e.loadTheme = A),
-    (e.renderToHtml = W),
+    (e.loadTheme = P),
+    (e.renderToHtml = Y),
     (e.setCDN = function (e) {
-      v = e.endsWith('/') ? e : e + '/'
+      S = e.endsWith('/') ? e : e + '/'
     }),
     (e.setOnigasmWASM = function (e) {
-      N(e)
+      C(e)
     }),
-    (e.setWasm = N),
-    (e.toShikiTheme = P)
+    (e.setWasm = C),
+    (e.toShikiTheme = T)
 })((this.shiki = this.shiki || {}))
