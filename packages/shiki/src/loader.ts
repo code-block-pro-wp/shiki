@@ -1,22 +1,10 @@
+/// <reference path="./global.d.ts" />
+
 import { join, dirpathparts } from './utils'
 import type { IGrammar, IOnigLib, IRawTheme } from 'vscode-textmate'
 import { loadWASM, createOnigScanner, createOnigString } from 'vscode-oniguruma'
 import { parse, ParseError } from 'jsonc-parser'
 import type { IShikiTheme } from './types'
-
-// These will not be defined for Node which don't have "DOM" in their lib.
-// So declare the minimal interface we need.
-declare global {
-  interface Window {
-    WorkerGlobalScope: any
-  }
-  var self: Window & typeof globalThis
-  function fetch(url: string): Promise<Response>
-  interface Response {
-    json(): Promise<any>
-    text(): Promise<any>
-  }
-}
 
 export const isWebWorker =
   typeof self !== 'undefined' && typeof self.WorkerGlobalScope !== 'undefined'
@@ -121,15 +109,21 @@ async function _fetchAssets(filepath: string): Promise<string> {
 
 async function _fetchJSONAssets(filepath: string) {
   const errors: ParseError[] = []
-  const rawTheme = parse(await _fetchAssets(filepath), errors, {
-    allowTrailingComma: true
-  })
+  const assetString = await _fetchAssets(filepath)
+  let rawAsset
+  try {
+    // Try to parse as JSON first, since it's much faster
+    rawAsset = JSON.parse(assetString)
+  } catch (e) {
+    rawAsset = parse(assetString, errors, {
+      allowTrailingComma: true
+    })
 
-  if (errors.length) {
-    throw errors[0]
+    if (errors.length) {
+      throw errors[0]
+    }
   }
-
-  return rawTheme
+  return rawAsset
 }
 
 /**

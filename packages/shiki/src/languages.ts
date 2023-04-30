@@ -35,7 +35,7 @@ export type Lang =
   | 'dart'
   | 'dax'
   | 'diff'
-  | 'docker'
+  | 'docker' | 'dockerfile'
   | 'dream-maker'
   | 'elixir'
   | 'elm'
@@ -43,6 +43,9 @@ export type Lang =
   | 'erlang' | 'erl'
   | 'fish'
   | 'fsharp' | 'f#' | 'fs'
+  | 'gdresource'
+  | 'gdscript'
+  | 'gdshader'
   | 'gherkin'
   | 'git-commit'
   | 'git-rebase'
@@ -73,6 +76,7 @@ export type Lang =
   | 'jsx'
   | 'julia'
   | 'kotlin'
+  | 'kusto' | 'kql'
   | 'latex'
   | 'less'
   | 'liquid'
@@ -108,6 +112,7 @@ export type Lang =
   | 'r'
   | 'raku' | 'perl6'
   | 'razor'
+  | 'reg'
   | 'rel'
   | 'riscv'
   | 'rst'
@@ -148,6 +153,7 @@ export type Lang =
   | 'wasm'
   | 'wenyan' | '文言'
   | 'wgsl'
+  | 'wolfram'
   | 'xml'
   | 'xsl'
   | 'yaml' | 'yml'
@@ -373,7 +379,8 @@ export const languages: ILanguageRegistration[] = [
     id: 'docker',
     scopeName: 'source.dockerfile',
     path: 'docker.tmLanguage.json',
-    samplePath: 'docker.sample'
+    samplePath: 'docker.sample',
+    aliases: ['dockerfile']
   },
   {
     id: 'dream-maker',
@@ -421,6 +428,25 @@ export const languages: ILanguageRegistration[] = [
     samplePath: 'fsharp.sample',
     aliases: ['f#', 'fs'],
     embeddedLangs: ['markdown']
+  },
+  {
+    id: 'gdresource',
+    scopeName: 'source.gdresource',
+    path: 'gdresource.tmLanguage.json',
+    samplePath: 'gdresource.sample',
+    embeddedLangs: ['gdshader', 'gdscript']
+  },
+  {
+    id: 'gdscript',
+    scopeName: 'source.gdscript',
+    path: 'gdscript.tmLanguage.json',
+    samplePath: 'gdscript.sample'
+  },
+  {
+    id: 'gdshader',
+    scopeName: 'source.gdshader',
+    path: 'gdshader.tmLanguage.json',
+    samplePath: 'gdshader.sample'
   },
   {
     id: 'gherkin',
@@ -598,7 +624,15 @@ export const languages: ILanguageRegistration[] = [
   {
     id: 'kotlin',
     scopeName: 'source.kotlin',
-    path: 'kotlin.tmLanguage.json'
+    path: 'kotlin.tmLanguage.json',
+    samplePath: 'kotlin.sample'
+  },
+  {
+    id: 'kusto',
+    scopeName: 'source.kusto',
+    path: 'kusto.tmLanguage.json',
+    samplePath: 'kusto.sample',
+    aliases: ['kql']
   },
   {
     id: 'latex',
@@ -652,8 +686,12 @@ export const languages: ILanguageRegistration[] = [
     id: 'marko',
     scopeName: 'text.marko',
     path: 'marko.tmLanguage.json',
+<<<<<<< HEAD
     samplePath: 'marko.sample',
     embeddedLangs: ['css', 'less', 'scss', 'typescript']
+=======
+    embeddedLangs: ['css', 'less', 'scss', 'javascript']
+>>>>>>> upstream/main
   },
   {
     id: 'matlab',
@@ -662,9 +700,9 @@ export const languages: ILanguageRegistration[] = [
   },
   {
     id: 'mdx',
-    scopeName: 'text.html.markdown.jsx',
+    scopeName: 'source.mdx',
     path: 'mdx.tmLanguage.json',
-    embeddedLangs: ['jsx', 'markdown']
+    embeddedLangs: ['tsx', 'toml', 'yaml', 'c', 'clojure', 'coffee', 'cpp', 'csharp', 'css', 'diff', 'docker', 'elixir', 'elm', 'erlang', 'go', 'graphql', 'haskell', 'html', 'ini', 'java', 'javascript', 'json', 'julia', 'kotlin', 'less', 'lua', 'make', 'markdown', 'objective-c', 'perl', 'python', 'r', 'ruby', 'rust', 'scala', 'scss', 'shellscript', 'sql', 'xml', 'swift', 'typescript']
   },
   {
     id: 'mermaid',
@@ -800,6 +838,12 @@ export const languages: ILanguageRegistration[] = [
     scopeName: 'text.aspnetcorerazor',
     path: 'razor.tmLanguage.json',
     embeddedLangs: ['html', 'csharp']
+  },
+  {
+    id: 'reg',
+    scopeName: 'source.reg',
+    path: 'reg.tmLanguage.json',
+    samplePath: 'reg.sample'
   },
   {
     id: 'rel',
@@ -1030,6 +1074,12 @@ export const languages: ILanguageRegistration[] = [
     scopeName: 'source.wgsl',
     path: 'wgsl.tmLanguage.json',
     samplePath: 'wgsl.sample'
+  },
+  {
+    id: 'wolfram',
+    scopeName: 'source.wolfram',
+    path: 'wolfram.tmLanguage.json',
+    samplePath: 'wolfram.sample'
   },
   {
     id: 'xml',
