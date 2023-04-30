@@ -294,7 +294,8 @@ const languages = [
     id: 'docker',
     scopeName: 'source.dockerfile',
     path: 'docker.tmLanguage.json',
-    samplePath: 'docker.sample'
+    samplePath: 'docker.sample',
+    aliases: ['dockerfile']
   },
   {
     id: 'dream-maker',
@@ -342,6 +343,25 @@ const languages = [
     samplePath: 'fsharp.sample',
     aliases: ['f#', 'fs'],
     embeddedLangs: ['markdown']
+  },
+  {
+    id: 'gdresource',
+    scopeName: 'source.gdresource',
+    path: 'gdresource.tmLanguage.json',
+    samplePath: 'gdresource.sample',
+    embeddedLangs: ['gdshader', 'gdscript']
+  },
+  {
+    id: 'gdscript',
+    scopeName: 'source.gdscript',
+    path: 'gdscript.tmLanguage.json',
+    samplePath: 'gdscript.sample'
+  },
+  {
+    id: 'gdshader',
+    scopeName: 'source.gdshader',
+    path: 'gdshader.tmLanguage.json',
+    samplePath: 'gdshader.sample'
   },
   {
     id: 'gherkin',
@@ -519,7 +539,15 @@ const languages = [
   {
     id: 'kotlin',
     scopeName: 'source.kotlin',
-    path: 'kotlin.tmLanguage.json'
+    path: 'kotlin.tmLanguage.json',
+    samplePath: 'kotlin.sample'
+  },
+  {
+    id: 'kusto',
+    scopeName: 'source.kusto',
+    path: 'kusto.tmLanguage.json',
+    samplePath: 'kusto.sample',
+    aliases: ['kql']
   },
   {
     id: 'latex',
@@ -642,8 +670,7 @@ const languages = [
     id: 'marko',
     scopeName: 'text.marko',
     path: 'marko.tmLanguage.json',
-    samplePath: 'marko.sample',
-    embeddedLangs: ['css', 'less', 'scss', 'typescript']
+    embeddedLangs: ['css', 'less', 'scss', 'javascript']
   },
   {
     id: 'matlab',
@@ -652,9 +679,51 @@ const languages = [
   },
   {
     id: 'mdx',
-    scopeName: 'text.html.markdown.jsx',
+    scopeName: 'source.mdx',
     path: 'mdx.tmLanguage.json',
-    embeddedLangs: ['jsx', 'markdown']
+    embeddedLangs: [
+      'tsx',
+      'toml',
+      'yaml',
+      'c',
+      'clojure',
+      'coffee',
+      'cpp',
+      'csharp',
+      'css',
+      'diff',
+      'docker',
+      'elixir',
+      'elm',
+      'erlang',
+      'go',
+      'graphql',
+      'haskell',
+      'html',
+      'ini',
+      'java',
+      'javascript',
+      'json',
+      'julia',
+      'kotlin',
+      'less',
+      'lua',
+      'make',
+      'markdown',
+      'objective-c',
+      'perl',
+      'python',
+      'r',
+      'ruby',
+      'rust',
+      'scala',
+      'scss',
+      'shellscript',
+      'sql',
+      'xml',
+      'swift',
+      'typescript'
+    ]
   },
   {
     id: 'mermaid',
@@ -790,6 +859,12 @@ const languages = [
     scopeName: 'text.aspnetcorerazor',
     path: 'razor.tmLanguage.json',
     embeddedLangs: ['html', 'csharp']
+  },
+  {
+    id: 'reg',
+    scopeName: 'source.reg',
+    path: 'reg.tmLanguage.json',
+    samplePath: 'reg.sample'
   },
   {
     id: 'rel',
@@ -1051,6 +1126,12 @@ const languages = [
     scopeName: 'source.wgsl',
     path: 'wgsl.tmLanguage.json',
     samplePath: 'wgsl.sample'
+  },
+  {
+    id: 'wolfram',
+    scopeName: 'source.wolfram',
+    path: 'wolfram.tmLanguage.json',
+    samplePath: 'wolfram.sample'
   },
   {
     id: 'xml',
@@ -2163,13 +2244,19 @@ async function _fetchAssets(filepath) {
 }
 async function _fetchJSONAssets(filepath) {
   const errors = []
-  const rawTheme = parse(await _fetchAssets(filepath), errors, {
-    allowTrailingComma: true
-  })
-  if (errors.length) {
-    throw errors[0]
+  const assetString = await _fetchAssets(filepath)
+  let rawAsset
+  try {
+    rawAsset = JSON.parse(assetString)
+  } catch (e) {
+    rawAsset = parse(assetString, errors, {
+      allowTrailingComma: true
+    })
+    if (errors.length) {
+      throw errors[0]
+    }
   }
-  return rawTheme
+  return rawAsset
 }
 async function fetchTheme(themePath) {
   let theme = await _fetchJSONAssets(themePath)
@@ -2735,12 +2822,16 @@ function dimColor(color) {
         .join('')}80`
     }
   }
+  const cssVarMatch = color.match(/var\((--shiki-color-ansi-[\w-]+)\)/)
+  if (cssVarMatch) {
+    return `var(${cssVarMatch[1]}-dim)`
+  }
   return color
 }
 
 const defaultElements = {
   pre({ className, style, children }) {
-    return `<pre class="${className}" style="${style}">${children}</pre>`
+    return `<pre class="${className}" style="${style}" tabindex="0">${children}</pre>`
   },
   code({ children }) {
     return `<code>${children}</code>`
@@ -2950,6 +3041,27 @@ function resolveOptions(options) {
   }
   return { _languages, _themes, _wasmPath }
 }
+function generateDefaultColorReplacements() {
+  const replacements = {
+    '#000001': 'var(--shiki-color-text)',
+    '#000002': 'var(--shiki-color-background)',
+    '#000004': 'var(--shiki-token-constant)',
+    '#000005': 'var(--shiki-token-string)',
+    '#000006': 'var(--shiki-token-comment)',
+    '#000007': 'var(--shiki-token-keyword)',
+    '#000008': 'var(--shiki-token-parameter)',
+    '#000009': 'var(--shiki-token-function)',
+    '#000010': 'var(--shiki-token-string-expression)',
+    '#000011': 'var(--shiki-token-punctuation)',
+    '#000012': 'var(--shiki-token-link)'
+  }
+  for (let i = 0; i < namedColors.length; i++) {
+    const code = `#A${i.toString().padStart(5, '0')}`
+    const colorNameKebab = namedColors[i].replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+    replacements[code] = `var(--shiki-color-ansi-${colorNameKebab})`
+  }
+  return replacements
+}
 async function getHighlighter(options) {
   const { _languages, _themes, _wasmPath } = resolveOptions(options)
   const _resolver = new Resolver(getOniguruma(_wasmPath), 'vscode-oniguruma')
@@ -2968,25 +3080,16 @@ async function getHighlighter(options) {
   const _defaultTheme = themes[0]
   let _currentTheme
   await _registry.loadLanguages(_languages)
-  let COLOR_REPLACEMENTS = {
-    '#000001': 'var(--shiki-color-text)',
-    '#000002': 'var(--shiki-color-background)',
-    '#000004': 'var(--shiki-token-constant)',
-    '#000005': 'var(--shiki-token-string)',
-    '#000006': 'var(--shiki-token-comment)',
-    '#000007': 'var(--shiki-token-keyword)',
-    '#000008': 'var(--shiki-token-parameter)',
-    '#000009': 'var(--shiki-token-function)',
-    '#000010': 'var(--shiki-token-string-expression)',
-    '#000011': 'var(--shiki-token-punctuation)',
-    '#000012': 'var(--shiki-token-link)'
-  }
+  let COLOR_REPLACEMENTS = generateDefaultColorReplacements()
   function setColorReplacements(map) {
     COLOR_REPLACEMENTS = map
   }
   function fixCssVariablesTheme(theme, colorMap) {
     theme.bg = COLOR_REPLACEMENTS[theme.bg] || theme.bg
     theme.fg = COLOR_REPLACEMENTS[theme.fg] || theme.fg
+    Object.entries(theme.colors).forEach(([key, value]) => {
+      theme.colors[key] = COLOR_REPLACEMENTS[value] || value
+    })
     colorMap.forEach((val, i) => {
       colorMap[i] = COLOR_REPLACEMENTS[val] || val
     })

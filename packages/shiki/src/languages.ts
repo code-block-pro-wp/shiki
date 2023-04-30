@@ -686,12 +686,7 @@ export const languages: ILanguageRegistration[] = [
     id: 'marko',
     scopeName: 'text.marko',
     path: 'marko.tmLanguage.json',
-<<<<<<< HEAD
-    samplePath: 'marko.sample',
-    embeddedLangs: ['css', 'less', 'scss', 'typescript']
-=======
     embeddedLangs: ['css', 'less', 'scss', 'javascript']
->>>>>>> upstream/main
   },
   {
     id: 'matlab',

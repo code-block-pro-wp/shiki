@@ -183,7 +183,8 @@
       id: 'docker',
       scopeName: 'source.dockerfile',
       path: 'docker.tmLanguage.json',
-      samplePath: 'docker.sample'
+      samplePath: 'docker.sample',
+      aliases: ['dockerfile']
     },
     { id: 'dream-maker', scopeName: 'source.dm', path: 'dream-maker.tmLanguage.json' },
     {
@@ -227,6 +228,25 @@
       samplePath: 'fsharp.sample',
       aliases: ['f#', 'fs'],
       embeddedLangs: ['markdown']
+    },
+    {
+      id: 'gdresource',
+      scopeName: 'source.gdresource',
+      path: 'gdresource.tmLanguage.json',
+      samplePath: 'gdresource.sample',
+      embeddedLangs: ['gdshader', 'gdscript']
+    },
+    {
+      id: 'gdscript',
+      scopeName: 'source.gdscript',
+      path: 'gdscript.tmLanguage.json',
+      samplePath: 'gdscript.sample'
+    },
+    {
+      id: 'gdshader',
+      scopeName: 'source.gdshader',
+      path: 'gdshader.tmLanguage.json',
+      samplePath: 'gdshader.sample'
     },
     { id: 'gherkin', scopeName: 'text.gherkin.feature', path: 'gherkin.tmLanguage.json' },
     {
@@ -354,7 +374,19 @@
       path: 'julia.tmLanguage.json',
       embeddedLangs: ['cpp', 'python', 'javascript', 'r', 'sql']
     },
-    { id: 'kotlin', scopeName: 'source.kotlin', path: 'kotlin.tmLanguage.json' },
+    {
+      id: 'kotlin',
+      scopeName: 'source.kotlin',
+      path: 'kotlin.tmLanguage.json',
+      samplePath: 'kotlin.sample'
+    },
+    {
+      id: 'kusto',
+      scopeName: 'source.kusto',
+      path: 'kusto.tmLanguage.json',
+      samplePath: 'kusto.sample',
+      aliases: ['kql']
+    },
     {
       id: 'latex',
       scopeName: 'text.tex.latex',
@@ -463,15 +495,56 @@
       id: 'marko',
       scopeName: 'text.marko',
       path: 'marko.tmLanguage.json',
-      samplePath: 'marko.sample',
-      embeddedLangs: ['css', 'less', 'scss', 'typescript']
+      embeddedLangs: ['css', 'less', 'scss', 'javascript']
     },
     { id: 'matlab', scopeName: 'source.matlab', path: 'matlab.tmLanguage.json' },
     {
       id: 'mdx',
-      scopeName: 'text.html.markdown.jsx',
+      scopeName: 'source.mdx',
       path: 'mdx.tmLanguage.json',
-      embeddedLangs: ['jsx', 'markdown']
+      embeddedLangs: [
+        'tsx',
+        'toml',
+        'yaml',
+        'c',
+        'clojure',
+        'coffee',
+        'cpp',
+        'csharp',
+        'css',
+        'diff',
+        'docker',
+        'elixir',
+        'elm',
+        'erlang',
+        'go',
+        'graphql',
+        'haskell',
+        'html',
+        'ini',
+        'java',
+        'javascript',
+        'json',
+        'julia',
+        'kotlin',
+        'less',
+        'lua',
+        'make',
+        'markdown',
+        'objective-c',
+        'perl',
+        'python',
+        'r',
+        'ruby',
+        'rust',
+        'scala',
+        'scss',
+        'shellscript',
+        'sql',
+        'xml',
+        'swift',
+        'typescript'
+      ]
     },
     { id: 'mermaid', scopeName: 'source.mermaid', path: 'mermaid.tmLanguage.json' },
     {
@@ -559,6 +632,7 @@
       path: 'razor.tmLanguage.json',
       embeddedLangs: ['html', 'csharp']
     },
+    { id: 'reg', scopeName: 'source.reg', path: 'reg.tmLanguage.json', samplePath: 'reg.sample' },
     { id: 'rel', scopeName: 'source.rel', path: 'rel.tmLanguage.json', samplePath: 'rel.sample' },
     { id: 'riscv', scopeName: 'source.riscv', path: 'riscv.tmLanguage.json' },
     {
@@ -719,6 +793,12 @@
       path: 'wgsl.tmLanguage.json',
       samplePath: 'wgsl.sample'
     },
+    {
+      id: 'wolfram',
+      scopeName: 'source.wolfram',
+      path: 'wolfram.tmLanguage.json',
+      samplePath: 'wolfram.sample'
+    },
     { id: 'xml', scopeName: 'text.xml', path: 'xml.tmLanguage.json', embeddedLangs: ['java'] },
     { id: 'xsl', scopeName: 'text.xml.xsl', path: 'xsl.tmLanguage.json', embeddedLangs: ['xml'] },
     { id: 'yaml', scopeName: 'source.yaml', path: 'yaml.tmLanguage.json', aliases: ['yml'] },
@@ -812,256 +892,7 @@
     ? global
     : 'undefined' != typeof self && self
   var c,
-    l,
-    u,
-    h,
-    p,
-    d = {}
-  function m(e, t = !1) {
-    const n = e.length
-    let s = 0,
-      r = '',
-      a = 0,
-      o = 16,
-      i = 0,
-      c = 0,
-      l = 0,
-      u = 0,
-      h = 0
-    function p(t, n) {
-      let r = 0,
-        a = 0
-      for (; r < t || !n; ) {
-        let t = e.charCodeAt(s)
-        if (t >= 48 && t <= 57) a = 16 * a + t - 48
-        else if (t >= 65 && t <= 70) a = 16 * a + t - 65 + 10
-        else {
-          if (!(t >= 97 && t <= 102)) break
-          a = 16 * a + t - 97 + 10
-        }
-        s++, r++
-      }
-      return r < t && (a = -1), a
-    }
-    function d() {
-      if (((r = ''), (h = 0), (a = s), (c = i), (u = l), s >= n)) return (a = n), (o = 17)
-      let t = e.charCodeAt(s)
-      if (g(t)) {
-        do {
-          s++, (r += String.fromCharCode(t)), (t = e.charCodeAt(s))
-        } while (g(t))
-        return (o = 15)
-      }
-      if (f(t))
-        return (
-          s++,
-          (r += String.fromCharCode(t)),
-          13 === t && 10 === e.charCodeAt(s) && (s++, (r += '\n')),
-          i++,
-          (l = s),
-          (o = 14)
-        )
-      switch (t) {
-        case 123:
-          return s++, (o = 1)
-        case 125:
-          return s++, (o = 2)
-        case 91:
-          return s++, (o = 3)
-        case 93:
-          return s++, (o = 4)
-        case 58:
-          return s++, (o = 6)
-        case 44:
-          return s++, (o = 5)
-        case 34:
-          return (
-            s++,
-            (r = (function () {
-              let t = '',
-                r = s
-              for (;;) {
-                if (s >= n) {
-                  ;(t += e.substring(r, s)), (h = 2)
-                  break
-                }
-                const a = e.charCodeAt(s)
-                if (34 === a) {
-                  ;(t += e.substring(r, s)), s++
-                  break
-                }
-                if (92 !== a) {
-                  if (a >= 0 && a <= 31) {
-                    if (f(a)) {
-                      ;(t += e.substring(r, s)), (h = 2)
-                      break
-                    }
-                    h = 6
-                  }
-                  s++
-                } else {
-                  if (((t += e.substring(r, s)), s++, s >= n)) {
-                    h = 2
-                    break
-                  }
-                  switch (e.charCodeAt(s++)) {
-                    case 34:
-                      t += '"'
-                      break
-                    case 92:
-                      t += '\\'
-                      break
-                    case 47:
-                      t += '/'
-                      break
-                    case 98:
-                      t += '\b'
-                      break
-                    case 102:
-                      t += '\f'
-                      break
-                    case 110:
-                      t += '\n'
-                      break
-                    case 114:
-                      t += '\r'
-                      break
-                    case 116:
-                      t += '\t'
-                      break
-                    case 117:
-                      const e = p(4, !0)
-                      e >= 0 ? (t += String.fromCharCode(e)) : (h = 4)
-                      break
-                    default:
-                      h = 5
-                  }
-                  r = s
-                }
-              }
-              return t
-            })()),
-            (o = 10)
-          )
-        case 47:
-          const c = s - 1
-          if (47 === e.charCodeAt(s + 1)) {
-            for (s += 2; s < n && !f(e.charCodeAt(s)); ) s++
-            return (r = e.substring(c, s)), (o = 12)
-          }
-          if (42 === e.charCodeAt(s + 1)) {
-            s += 2
-            const t = n - 1
-            let a = !1
-            for (; s < t; ) {
-              const t = e.charCodeAt(s)
-              if (42 === t && 47 === e.charCodeAt(s + 1)) {
-                ;(s += 2), (a = !0)
-                break
-              }
-              s++, f(t) && (13 === t && 10 === e.charCodeAt(s) && s++, i++, (l = s))
-            }
-            return a || (s++, (h = 1)), (r = e.substring(c, s)), (o = 13)
-          }
-          return (r += String.fromCharCode(t)), s++, (o = 16)
-        case 45:
-          if (((r += String.fromCharCode(t)), s++, s === n || !_(e.charCodeAt(s)))) return (o = 16)
-        case 48:
-        case 49:
-        case 50:
-        case 51:
-        case 52:
-        case 53:
-        case 54:
-        case 55:
-        case 56:
-        case 57:
-          return (
-            (r += (function () {
-              let t = s
-              if (48 === e.charCodeAt(s)) s++
-              else for (s++; s < e.length && _(e.charCodeAt(s)); ) s++
-              if (s < e.length && 46 === e.charCodeAt(s)) {
-                if ((s++, !(s < e.length && _(e.charCodeAt(s))))) return (h = 3), e.substring(t, s)
-                for (s++; s < e.length && _(e.charCodeAt(s)); ) s++
-              }
-              let n = s
-              if (s < e.length && (69 === e.charCodeAt(s) || 101 === e.charCodeAt(s)))
-                if (
-                  (s++,
-                  ((s < e.length && 43 === e.charCodeAt(s)) || 45 === e.charCodeAt(s)) && s++,
-                  s < e.length && _(e.charCodeAt(s)))
-                ) {
-                  for (s++; s < e.length && _(e.charCodeAt(s)); ) s++
-                  n = s
-                } else h = 3
-              return e.substring(t, n)
-            })()),
-            (o = 11)
-          )
-        default:
-          for (; s < n && m(t); ) s++, (t = e.charCodeAt(s))
-          if (a !== s) {
-            switch (((r = e.substring(a, s)), r)) {
-              case 'true':
-                return (o = 8)
-              case 'false':
-                return (o = 9)
-              case 'null':
-                return (o = 7)
-            }
-            return (o = 16)
-          }
-          return (r += String.fromCharCode(t)), s++, (o = 16)
-      }
-    }
-    function m(e) {
-      if (g(e) || f(e)) return !1
-      switch (e) {
-        case 125:
-        case 93:
-        case 123:
-        case 91:
-        case 34:
-        case 58:
-        case 44:
-        case 47:
-          return !1
-      }
-      return !0
-    }
-    return {
-      setPosition: function (e) {
-        ;(s = e), (r = ''), (a = 0), (o = 16), (h = 0)
-      },
-      getPosition: () => s,
-      scan: t
-        ? function () {
-            let e
-            do {
-              e = d()
-            } while (e >= 12 && e <= 15)
-            return e
-          }
-        : d,
-      getToken: () => o,
-      getTokenValue: () => r,
-      getTokenOffset: () => a,
-      getTokenLength: () => s - a,
-      getTokenStartLine: () => c,
-      getTokenStartCharacter: () => a - u,
-      getTokenError: () => h
-    }
-  }
-  function g(e) {
-    return 32 === e || 9 === e
-  }
-  function f(e) {
-    return 10 === e || 13 === e
-  }
-  function _(e) {
-    return e >= 48 && e <= 57
-  }
+    l = { exports: {} }
   ;(c = () => {
     return (
       (e = {
@@ -1356,15 +1187,14 @@
               })
               var r,
                 a = Object.assign({}, s),
-                o = !1,
-                i = ''
+                o = !1
               ;(r = function (e) {
                 let t
                 return 'function' == typeof readbuffer
                   ? new Uint8Array(readbuffer(e))
                   : ((t = read(e, 'binary')),
                     (function (e, t) {
-                      e || C(t)
+                      e || N(t)
                     })('object' == typeof t),
                     t)
               }),
@@ -1374,26 +1204,26 @@
                   (console.log = onig_print),
                   (console.warn = console.error =
                     'undefined' != typeof printErr ? printErr : onig_print))
-              var c,
-                l,
-                u = s.print || console.log.bind(console),
-                h = s.printErr || console.warn.bind(console)
+              var i,
+                c,
+                l = s.print || console.log.bind(console),
+                u = s.printErr || console.warn.bind(console)
               Object.assign(s, a),
                 (a = null),
                 s.arguments && s.arguments,
                 s.thisProgram && s.thisProgram,
                 s.quit && s.quit,
-                s.wasmBinary && (c = s.wasmBinary),
+                s.wasmBinary && (i = s.wasmBinary),
                 s.noExitRuntime,
-                'object' != typeof WebAssembly && C('no native wasm support detected')
-              var p,
+                'object' != typeof WebAssembly && N('no native wasm support detected')
+              var h,
+                p,
                 d,
-                m,
-                g = !1,
-                f = 'undefined' != typeof TextDecoder ? new TextDecoder('utf8') : void 0
-              function _(e, t, n) {
+                m = !1,
+                g = 'undefined' != typeof TextDecoder ? new TextDecoder('utf8') : void 0
+              function f(e, t, n) {
                 for (var s = t + n, r = t; e[r] && !(r >= s); ) ++r
-                if (r - t > 16 && e.buffer && f) return f.decode(e.subarray(t, r))
+                if (r - t > 16 && e.buffer && g) return g.decode(e.subarray(t, r))
                 for (var a = ''; t < r; ) {
                   var o = e[t++]
                   if (128 & o) {
@@ -1416,86 +1246,86 @@
                 }
                 return a
               }
-              function b(e) {
-                ;(p = e),
+              function _(e) {
+                ;(h = e),
                   (s.HEAP8 = new Int8Array(e)),
                   (s.HEAP16 = new Int16Array(e)),
                   (s.HEAP32 = new Int32Array(e)),
-                  (s.HEAPU8 = d = new Uint8Array(e)),
+                  (s.HEAPU8 = p = new Uint8Array(e)),
                   (s.HEAPU16 = new Uint16Array(e)),
-                  (s.HEAPU32 = m = new Uint32Array(e)),
+                  (s.HEAPU32 = d = new Uint32Array(e)),
                   (s.HEAPF32 = new Float32Array(e)),
                   (s.HEAPF64 = new Float64Array(e))
               }
               s.INITIAL_MEMORY
-              var y = [],
-                k = [],
-                L = []
+              var b = [],
+                y = [],
+                k = []
+              function L(e) {
+                b.unshift(e)
+              }
               function v(e) {
-                y.unshift(e)
+                k.unshift(e)
               }
-              function S(e) {
-                L.unshift(e)
-              }
-              var w = 0,
-                N = null
-              function C(e) {
+              var S = 0,
+                w = null
+              function N(e) {
                 s.onAbort && s.onAbort(e),
-                  h((e = 'Aborted(' + e + ')')),
-                  (g = !0),
+                  u((e = 'Aborted(' + e + ')')),
+                  (m = !0),
                   (e += '. Build with -sASSERTIONS for more info.')
                 var t = new WebAssembly.RuntimeError(e)
                 throw (n(t), t)
               }
-              var j,
-                x,
-                A = 'data:application/octet-stream;base64,'
-              function P(e) {
-                return e.startsWith(A)
+              var C,
+                j,
+                x = 'data:application/octet-stream;base64,'
+              function A(e) {
+                return e.startsWith(x)
               }
-              function T(e) {
+              function P(e) {
                 try {
-                  if (e == j && c) return new Uint8Array(c)
+                  if (e == C && i) return new Uint8Array(i)
                   if (r) return r(e)
                   throw 'both async and sync fetching of the wasm failed'
                 } catch (e) {
-                  C(e)
+                  N(e)
                 }
               }
-              function R(e) {
+              function T(e) {
                 for (; e.length > 0; ) e.shift()(s)
               }
-              function I(e) {
+              function R(e) {
                 try {
-                  return l.grow((e - p.byteLength + 65535) >>> 16), b(l.buffer), 1
+                  return c.grow((e - h.byteLength + 65535) >>> 16), _(c.buffer), 1
                 } catch (e) {}
               }
-              P((j = 'onig.wasm')) ||
-                (j = (function (e) {
-                  return s.locateFile ? s.locateFile(e, i) : i + e
-                })(j)),
-                (x = 'undefined' != typeof dateNow ? dateNow : () => performance.now())
-              var E = [null, [], []]
-              function O(e, t) {
-                var n = E[e]
-                0 === t || 10 === t ? ((1 === e ? u : h)(_(n, 0)), (n.length = 0)) : n.push(t)
+              A((C = 'onig.wasm')) ||
+                (C = (function (e) {
+                  return s.locateFile ? s.locateFile(e, '') : '' + e
+                })(C)),
+                (j = 'undefined' != typeof dateNow ? dateNow : () => performance.now())
+              var I = [null, [], []]
+              function E(e, t) {
+                var n = I[e]
+                0 === t || 10 === t ? ((1 === e ? l : u)(f(n, 0)), (n.length = 0)) : n.push(t)
               }
-              var B,
-                M = {
-                  emscripten_get_now: x,
+              var O,
+                B = {
+                  emscripten_get_now: j,
                   emscripten_memcpy_big: function (e, t, n) {
-                    d.copyWithin(e, t, t + n)
+                    p.copyWithin(e, t, t + n)
                   },
                   emscripten_resize_heap: function (e) {
                     var t,
-                      n = d.length,
+                      n = p.length,
                       s = 2147483648
                     if ((e >>>= 0) > s) return !1
                     for (var r = 1; r <= 4; r *= 2) {
                       var a = n * (1 + 0.2 / r)
                       if (
                         ((a = Math.min(a, e + 100663296)),
-                        I(Math.min(s, (t = Math.max(e, a)) + ((65536 - (t % 65536)) % 65536))))
+                        R(Math.min(s, (t = Math.max(e, a)) + ((65536 - (t % 65536)) % 65536))))
                       )
                         return !0
                     }
@@ -1503,22 +1333,22 @@
                   },
                   fd_write: function (e, t, n, s) {
                     for (var r = 0, a = 0; a < n; a++) {
-                      var o = m[t >> 2],
-                        i = m[(t + 4) >> 2]
+                      var o = d[t >> 2],
+                        i = d[(t + 4) >> 2]
                       t += 8
-                      for (var c = 0; c < i; c++) O(e, d[o + c])
+                      for (var c = 0; c < i; c++) E(e, p[o + c])
                       r += i
                     }
-                    return (m[s >> 2] = r), 0
+                    return (d[s >> 2] = r), 0
                   }
                 }
-              function G(e) {
+              function M(e) {
                 function n() {
-                  B ||
-                    ((B = !0),
+                  O ||
+                    ((O = !0),
                     (s.calledRun = !0),
-                    g ||
-                      (R(k),
+                    m ||
+                      (T(y),
                       t(s),
                       s.onRuntimeInitialized && s.onRuntimeInitialized(),
                       (function () {
@@ -1528,11 +1358,11 @@
                             s.postRun.length;
 
                           )
-                            S(s.postRun.shift())
-                        R(L)
+                            v(s.postRun.shift())
+                        T(k)
                       })()))
                 }
-                w > 0 ||
+                S > 0 ||
                   ((function () {
                     if (s.preRun)
                       for (
@@ -1540,10 +1370,10 @@
                         s.preRun.length;
 
                       )
-                        v(s.preRun.shift())
-                    R(y)
+                        L(s.preRun.shift())
+                    T(b)
                   })(),
-                  w > 0 ||
+                  S > 0 ||
                     (s.setStatus
                       ? (s.setStatus('Running...'),
                         setTimeout(function () {
@@ -1556,23 +1386,23 @@
               }
               if (
                 ((function () {
-                  var e = { env: M, wasi_snapshot_preview1: M }
+                  var e = { env: B, wasi_snapshot_preview1: B }
                   function t(e, t) {
                     var n = e.exports
                     ;(s.asm = n),
-                      b((l = s.asm.memory).buffer),
+                      _((c = s.asm.memory).buffer),
                       s.asm.__indirect_function_table,
                       (function (e) {
-                        k.unshift(e)
+                        y.unshift(e)
                       })(s.asm.__wasm_call_ctors),
                       (function (e) {
                         if (
-                          (w--,
-                          s.monitorRunDependencies && s.monitorRunDependencies(w),
-                          0 == w && N)
+                          (S--,
+                          s.monitorRunDependencies && s.monitorRunDependencies(S),
+                          0 == S && w)
                         ) {
-                          var t = N
-                          ;(N = null), t()
+                          var t = w
+                          ;(w = null), t()
                         }
                       })()
                   }
@@ -1581,17 +1411,17 @@
                   }
                   function a(t) {
                     return (
-                      c || !o || 'function' != typeof fetch
+                      i || !o || 'function' != typeof fetch
                         ? Promise.resolve().then(function () {
-                            return T(j)
+                            return P(C)
                           })
-                        : fetch(j, { credentials: 'same-origin' })
+                        : fetch(C, { credentials: 'same-origin' })
                             .then(function (e) {
-                              if (!e.ok) throw "failed to load wasm binary file at '" + j + "'"
+                              if (!e.ok) throw "failed to load wasm binary file at '" + C + "'"
                               return e.arrayBuffer()
                             })
                             .catch(function () {
-                              return T(j)
+                              return P(C)
                             })
                     )
                       .then(function (t) {
@@ -1601,29 +1431,29 @@
                         return e
                       })
                       .then(t, function (e) {
-                        h('failed to asynchronously prepare wasm: ' + e), C(e)
+                        u('failed to asynchronously prepare wasm: ' + e), N(e)
                       })
                   }
                   if (
-                    (w++,
-                    s.monitorRunDependencies && s.monitorRunDependencies(w),
+                    (S++,
+                    s.monitorRunDependencies && s.monitorRunDependencies(S),
                     s.instantiateWasm)
                   )
                     try {
                       return s.instantiateWasm(e, t)
                     } catch (e) {
-                      h('Module.instantiateWasm callback failed with error: ' + e), n(e)
+                      u('Module.instantiateWasm callback failed with error: ' + e), n(e)
                     }
-                  ;(c ||
+                  ;(i ||
                   'function' != typeof WebAssembly.instantiateStreaming ||
-                  P(j) ||
+                  A(C) ||
                   'function' != typeof fetch
                     ? a(r)
-                    : fetch(j, { credentials: 'same-origin' }).then(function (t) {
+                    : fetch(C, { credentials: 'same-origin' }).then(function (t) {
                         return WebAssembly.instantiateStreaming(t, e).then(r, function (e) {
                           return (
-                            h('wasm streaming compile failed: ' + e),
-                            h('falling back to ArrayBuffer instantiation'),
+                            u('wasm streaming compile failed: ' + e),
+                            u('falling back to ArrayBuffer instantiation'),
                             a(r)
                           )
                         })
@@ -1676,10 +1506,10 @@
                   return (s.dynCall_jiji = s.asm.dynCall_jiji).apply(null, arguments)
                 }),
                 (s.UTF8ToString = function (e, t) {
-                  return e ? _(d, e, t) : ''
+                  return e ? f(p, e, t) : ''
                 }),
-                (N = function e() {
-                  B || G(), B || (N = e)
+                (w = function e() {
+                  O || M(), O || (w = e)
                 }),
                 s.preInit)
               )
@@ -1689,7 +1519,7 @@
 
                 )
                   s.preInit.pop()()
-              return G(), e.ready
+              return M(), e.ready
             })
           e.exports = t
         }
@@ -1704,99 +1534,342 @@
     )
     var e, t
   }),
-    ({
-      get exports() {
-        return d
-      },
-      set exports(e) {
-        d = e
+    (l.exports = c())
+  var u,
+    h,
+    p,
+    d,
+    m = l.exports
+  function g(e, t = !1) {
+    const n = e.length
+    let s = 0,
+      r = '',
+      a = 0,
+      o = 16,
+      i = 0,
+      c = 0,
+      l = 0,
+      u = 0,
+      h = 0
+    function p(t, n) {
+      let r = 0,
+        a = 0
+      for (; r < t || !n; ) {
+        let t = e.charCodeAt(s)
+        if (t >= 48 && t <= 57) a = 16 * a + t - 48
+        else if (t >= 65 && t <= 70) a = 16 * a + t - 65 + 10
+        else {
+          if (!(t >= 97 && t <= 102)) break
+          a = 16 * a + t - 97 + 10
+        }
+        s++, r++
       }
-    }.exports = c()),
-    (function (e) {
-      ;(e[(e.lineFeed = 10)] = 'lineFeed'),
-        (e[(e.carriageReturn = 13)] = 'carriageReturn'),
-        (e[(e.space = 32)] = 'space'),
-        (e[(e._0 = 48)] = '_0'),
-        (e[(e._1 = 49)] = '_1'),
-        (e[(e._2 = 50)] = '_2'),
-        (e[(e._3 = 51)] = '_3'),
-        (e[(e._4 = 52)] = '_4'),
-        (e[(e._5 = 53)] = '_5'),
-        (e[(e._6 = 54)] = '_6'),
-        (e[(e._7 = 55)] = '_7'),
-        (e[(e._8 = 56)] = '_8'),
-        (e[(e._9 = 57)] = '_9'),
-        (e[(e.a = 97)] = 'a'),
-        (e[(e.b = 98)] = 'b'),
-        (e[(e.c = 99)] = 'c'),
-        (e[(e.d = 100)] = 'd'),
-        (e[(e.e = 101)] = 'e'),
-        (e[(e.f = 102)] = 'f'),
-        (e[(e.g = 103)] = 'g'),
-        (e[(e.h = 104)] = 'h'),
-        (e[(e.i = 105)] = 'i'),
-        (e[(e.j = 106)] = 'j'),
-        (e[(e.k = 107)] = 'k'),
-        (e[(e.l = 108)] = 'l'),
-        (e[(e.m = 109)] = 'm'),
-        (e[(e.n = 110)] = 'n'),
-        (e[(e.o = 111)] = 'o'),
-        (e[(e.p = 112)] = 'p'),
-        (e[(e.q = 113)] = 'q'),
-        (e[(e.r = 114)] = 'r'),
-        (e[(e.s = 115)] = 's'),
-        (e[(e.t = 116)] = 't'),
-        (e[(e.u = 117)] = 'u'),
-        (e[(e.v = 118)] = 'v'),
-        (e[(e.w = 119)] = 'w'),
-        (e[(e.x = 120)] = 'x'),
-        (e[(e.y = 121)] = 'y'),
-        (e[(e.z = 122)] = 'z'),
-        (e[(e.A = 65)] = 'A'),
-        (e[(e.B = 66)] = 'B'),
-        (e[(e.C = 67)] = 'C'),
-        (e[(e.D = 68)] = 'D'),
-        (e[(e.E = 69)] = 'E'),
-        (e[(e.F = 70)] = 'F'),
-        (e[(e.G = 71)] = 'G'),
-        (e[(e.H = 72)] = 'H'),
-        (e[(e.I = 73)] = 'I'),
-        (e[(e.J = 74)] = 'J'),
-        (e[(e.K = 75)] = 'K'),
-        (e[(e.L = 76)] = 'L'),
-        (e[(e.M = 77)] = 'M'),
-        (e[(e.N = 78)] = 'N'),
-        (e[(e.O = 79)] = 'O'),
-        (e[(e.P = 80)] = 'P'),
-        (e[(e.Q = 81)] = 'Q'),
-        (e[(e.R = 82)] = 'R'),
-        (e[(e.S = 83)] = 'S'),
-        (e[(e.T = 84)] = 'T'),
-        (e[(e.U = 85)] = 'U'),
-        (e[(e.V = 86)] = 'V'),
-        (e[(e.W = 87)] = 'W'),
-        (e[(e.X = 88)] = 'X'),
-        (e[(e.Y = 89)] = 'Y'),
-        (e[(e.Z = 90)] = 'Z'),
-        (e[(e.asterisk = 42)] = 'asterisk'),
-        (e[(e.backslash = 92)] = 'backslash'),
-        (e[(e.closeBrace = 125)] = 'closeBrace'),
-        (e[(e.closeBracket = 93)] = 'closeBracket'),
-        (e[(e.colon = 58)] = 'colon'),
-        (e[(e.comma = 44)] = 'comma'),
-        (e[(e.dot = 46)] = 'dot'),
-        (e[(e.doubleQuote = 34)] = 'doubleQuote'),
-        (e[(e.minus = 45)] = 'minus'),
-        (e[(e.openBrace = 123)] = 'openBrace'),
-        (e[(e.openBracket = 91)] = 'openBracket'),
-        (e[(e.plus = 43)] = 'plus'),
-        (e[(e.slash = 47)] = 'slash'),
-        (e[(e.formFeed = 12)] = 'formFeed'),
-        (e[(e.tab = 9)] = 'tab')
-    })(l || (l = {})),
+      return r < t && (a = -1), a
+    }
+    function d() {
+      if (((r = ''), (h = 0), (a = s), (c = i), (u = l), s >= n)) return (a = n), (o = 17)
+      let t = e.charCodeAt(s)
+      if (f(t)) {
+        do {
+          s++, (r += String.fromCharCode(t)), (t = e.charCodeAt(s))
+        } while (f(t))
+        return (o = 15)
+      }
+      if (_(t))
+        return (
+          s++,
+          (r += String.fromCharCode(t)),
+          13 === t && 10 === e.charCodeAt(s) && (s++, (r += '\n')),
+          i++,
+          (l = s),
+          (o = 14)
+        )
+      switch (t) {
+        case 123:
+          return s++, (o = 1)
+        case 125:
+          return s++, (o = 2)
+        case 91:
+          return s++, (o = 3)
+        case 93:
+          return s++, (o = 4)
+        case 58:
+          return s++, (o = 6)
+        case 44:
+          return s++, (o = 5)
+        case 34:
+          return (
+            s++,
+            (r = (function () {
+              let t = '',
+                r = s
+              for (;;) {
+                if (s >= n) {
+                  ;(t += e.substring(r, s)), (h = 2)
+                  break
+                }
+                const a = e.charCodeAt(s)
+                if (34 === a) {
+                  ;(t += e.substring(r, s)), s++
+                  break
+                }
+                if (92 !== a) {
+                  if (a >= 0 && a <= 31) {
+                    if (_(a)) {
+                      ;(t += e.substring(r, s)), (h = 2)
+                      break
+                    }
+                    h = 6
+                  }
+                  s++
+                } else {
+                  if (((t += e.substring(r, s)), s++, s >= n)) {
+                    h = 2
+                    break
+                  }
+                  switch (e.charCodeAt(s++)) {
+                    case 34:
+                      t += '"'
+                      break
+                    case 92:
+                      t += '\\'
+                      break
+                    case 47:
+                      t += '/'
+                      break
+                    case 98:
+                      t += '\b'
+                      break
+                    case 102:
+                      t += '\f'
+                      break
+                    case 110:
+                      t += '\n'
+                      break
+                    case 114:
+                      t += '\r'
+                      break
+                    case 116:
+                      t += '\t'
+                      break
+                    case 117:
+                      const e = p(4, !0)
+                      e >= 0 ? (t += String.fromCharCode(e)) : (h = 4)
+                      break
+                    default:
+                      h = 5
+                  }
+                  r = s
+                }
+              }
+              return t
+            })()),
+            (o = 10)
+          )
+        case 47:
+          const c = s - 1
+          if (47 === e.charCodeAt(s + 1)) {
+            for (s += 2; s < n && !_(e.charCodeAt(s)); ) s++
+            return (r = e.substring(c, s)), (o = 12)
+          }
+          if (42 === e.charCodeAt(s + 1)) {
+            s += 2
+            const t = n - 1
+            let a = !1
+            for (; s < t; ) {
+              const t = e.charCodeAt(s)
+              if (42 === t && 47 === e.charCodeAt(s + 1)) {
+                ;(s += 2), (a = !0)
+                break
+              }
+              s++, _(t) && (13 === t && 10 === e.charCodeAt(s) && s++, i++, (l = s))
+            }
+            return a || (s++, (h = 1)), (r = e.substring(c, s)), (o = 13)
+          }
+          return (r += String.fromCharCode(t)), s++, (o = 16)
+        case 45:
+          if (((r += String.fromCharCode(t)), s++, s === n || !b(e.charCodeAt(s)))) return (o = 16)
+        case 48:
+        case 49:
+        case 50:
+        case 51:
+        case 52:
+        case 53:
+        case 54:
+        case 55:
+        case 56:
+        case 57:
+          return (
+            (r += (function () {
+              let t = s
+              if (48 === e.charCodeAt(s)) s++
+              else for (s++; s < e.length && b(e.charCodeAt(s)); ) s++
+              if (s < e.length && 46 === e.charCodeAt(s)) {
+                if ((s++, !(s < e.length && b(e.charCodeAt(s))))) return (h = 3), e.substring(t, s)
+                for (s++; s < e.length && b(e.charCodeAt(s)); ) s++
+              }
+              let n = s
+              if (s < e.length && (69 === e.charCodeAt(s) || 101 === e.charCodeAt(s)))
+                if (
+                  (s++,
+                  ((s < e.length && 43 === e.charCodeAt(s)) || 45 === e.charCodeAt(s)) && s++,
+                  s < e.length && b(e.charCodeAt(s)))
+                ) {
+                  for (s++; s < e.length && b(e.charCodeAt(s)); ) s++
+                  n = s
+                } else h = 3
+              return e.substring(t, n)
+            })()),
+            (o = 11)
+          )
+        default:
+          for (; s < n && m(t); ) s++, (t = e.charCodeAt(s))
+          if (a !== s) {
+            switch (((r = e.substring(a, s)), r)) {
+              case 'true':
+                return (o = 8)
+              case 'false':
+                return (o = 9)
+              case 'null':
+                return (o = 7)
+            }
+            return (o = 16)
+          }
+          return (r += String.fromCharCode(t)), s++, (o = 16)
+      }
+    }
+    function m(e) {
+      if (f(e) || _(e)) return !1
+      switch (e) {
+        case 125:
+        case 93:
+        case 123:
+        case 91:
+        case 34:
+        case 58:
+        case 44:
+        case 47:
+          return !1
+      }
+      return !0
+    }
+    return {
+      setPosition: function (e) {
+        ;(s = e), (r = ''), (a = 0), (o = 16), (h = 0)
+      },
+      getPosition: () => s,
+      scan: t
+        ? function () {
+            let e
+            do {
+              e = d()
+            } while (e >= 12 && e <= 15)
+            return e
+          }
+        : d,
+      getToken: () => o,
+      getTokenValue: () => r,
+      getTokenOffset: () => a,
+      getTokenLength: () => s - a,
+      getTokenStartLine: () => c,
+      getTokenStartCharacter: () => a - u,
+      getTokenError: () => h
+    }
+  }
+  function f(e) {
+    return 32 === e || 9 === e
+  }
+  function _(e) {
+    return 10 === e || 13 === e
+  }
+  function b(e) {
+    return e >= 48 && e <= 57
+  }
+  !(function (e) {
+    ;(e[(e.lineFeed = 10)] = 'lineFeed'),
+      (e[(e.carriageReturn = 13)] = 'carriageReturn'),
+      (e[(e.space = 32)] = 'space'),
+      (e[(e._0 = 48)] = '_0'),
+      (e[(e._1 = 49)] = '_1'),
+      (e[(e._2 = 50)] = '_2'),
+      (e[(e._3 = 51)] = '_3'),
+      (e[(e._4 = 52)] = '_4'),
+      (e[(e._5 = 53)] = '_5'),
+      (e[(e._6 = 54)] = '_6'),
+      (e[(e._7 = 55)] = '_7'),
+      (e[(e._8 = 56)] = '_8'),
+      (e[(e._9 = 57)] = '_9'),
+      (e[(e.a = 97)] = 'a'),
+      (e[(e.b = 98)] = 'b'),
+      (e[(e.c = 99)] = 'c'),
+      (e[(e.d = 100)] = 'd'),
+      (e[(e.e = 101)] = 'e'),
+      (e[(e.f = 102)] = 'f'),
+      (e[(e.g = 103)] = 'g'),
+      (e[(e.h = 104)] = 'h'),
+      (e[(e.i = 105)] = 'i'),
+      (e[(e.j = 106)] = 'j'),
+      (e[(e.k = 107)] = 'k'),
+      (e[(e.l = 108)] = 'l'),
+      (e[(e.m = 109)] = 'm'),
+      (e[(e.n = 110)] = 'n'),
+      (e[(e.o = 111)] = 'o'),
+      (e[(e.p = 112)] = 'p'),
+      (e[(e.q = 113)] = 'q'),
+      (e[(e.r = 114)] = 'r'),
+      (e[(e.s = 115)] = 's'),
+      (e[(e.t = 116)] = 't'),
+      (e[(e.u = 117)] = 'u'),
+      (e[(e.v = 118)] = 'v'),
+      (e[(e.w = 119)] = 'w'),
+      (e[(e.x = 120)] = 'x'),
+      (e[(e.y = 121)] = 'y'),
+      (e[(e.z = 122)] = 'z'),
+      (e[(e.A = 65)] = 'A'),
+      (e[(e.B = 66)] = 'B'),
+      (e[(e.C = 67)] = 'C'),
+      (e[(e.D = 68)] = 'D'),
+      (e[(e.E = 69)] = 'E'),
+      (e[(e.F = 70)] = 'F'),
+      (e[(e.G = 71)] = 'G'),
+      (e[(e.H = 72)] = 'H'),
+      (e[(e.I = 73)] = 'I'),
+      (e[(e.J = 74)] = 'J'),
+      (e[(e.K = 75)] = 'K'),
+      (e[(e.L = 76)] = 'L'),
+      (e[(e.M = 77)] = 'M'),
+      (e[(e.N = 78)] = 'N'),
+      (e[(e.O = 79)] = 'O'),
+      (e[(e.P = 80)] = 'P'),
+      (e[(e.Q = 81)] = 'Q'),
+      (e[(e.R = 82)] = 'R'),
+      (e[(e.S = 83)] = 'S'),
+      (e[(e.T = 84)] = 'T'),
+      (e[(e.U = 85)] = 'U'),
+      (e[(e.V = 86)] = 'V'),
+      (e[(e.W = 87)] = 'W'),
+      (e[(e.X = 88)] = 'X'),
+      (e[(e.Y = 89)] = 'Y'),
+      (e[(e.Z = 90)] = 'Z'),
+      (e[(e.asterisk = 42)] = 'asterisk'),
+      (e[(e.backslash = 92)] = 'backslash'),
+      (e[(e.closeBrace = 125)] = 'closeBrace'),
+      (e[(e.closeBracket = 93)] = 'closeBracket'),
+      (e[(e.colon = 58)] = 'colon'),
+      (e[(e.comma = 44)] = 'comma'),
+      (e[(e.dot = 46)] = 'dot'),
+      (e[(e.doubleQuote = 34)] = 'doubleQuote'),
+      (e[(e.minus = 45)] = 'minus'),
+      (e[(e.openBrace = 123)] = 'openBrace'),
+      (e[(e.openBracket = 91)] = 'openBracket'),
+      (e[(e.plus = 43)] = 'plus'),
+      (e[(e.slash = 47)] = 'slash'),
+      (e[(e.formFeed = 12)] = 'formFeed'),
+      (e[(e.tab = 9)] = 'tab')
+  })(u || (u = {})),
     (function (e) {
       e.DEFAULT = { allowTrailingComma: !1 }
-    })(u || (u = {})),
+    })(h || (h = {})),
     (function (e) {
       ;(e[(e.None = 0)] = 'None'),
         (e[(e.UnexpectedEndOfComment = 1)] = 'UnexpectedEndOfComment'),
@@ -1805,7 +1878,7 @@
         (e[(e.InvalidUnicode = 4)] = 'InvalidUnicode'),
         (e[(e.InvalidEscapeCharacter = 5)] = 'InvalidEscapeCharacter'),
         (e[(e.InvalidCharacter = 6)] = 'InvalidCharacter')
-    })(h || (h = {})),
+    })(p || (p = {})),
     (function (e) {
       ;(e[(e.OpenBraceToken = 1)] = 'OpenBraceToken'),
         (e[(e.CloseBraceToken = 2)] = 'CloseBraceToken'),
@@ -1824,8 +1897,8 @@
         (e[(e.Trivia = 15)] = 'Trivia'),
         (e[(e.Unknown = 16)] = 'Unknown'),
         (e[(e.EOF = 17)] = 'EOF')
-    })(p || (p = {}))
-  const b = function (e, t = [], n = u.DEFAULT) {
+    })(d || (d = {}))
+  const y = function (e, t = [], n = h.DEFAULT) {
     let s = null,
       r = []
     const a = []
@@ -1833,8 +1906,8 @@
       Array.isArray(r) ? r.push(e) : null !== s && (r[s] = e)
     }
     return (
-      (function (e, t, n = u.DEFAULT) {
-        const s = m(e, !1),
+      (function (e, t, n = h.DEFAULT) {
+        const s = g(e, !1),
           r = []
         function a(e) {
           return e
@@ -1885,10 +1958,10 @@
             : () => !0
         }
         const l = o(t.onObjectBegin),
-          h = c(t.onObjectProperty),
+          u = c(t.onObjectProperty),
           p = a(t.onObjectEnd),
           d = o(t.onArrayBegin),
-          g = a(t.onArrayEnd),
+          m = a(t.onArrayEnd),
           f = c(t.onLiteralValue),
           _ = i(t.onSeparator),
           b = a(t.onComment),
@@ -1948,7 +2021,7 @@
         }
         function w(e) {
           const t = s.getTokenValue()
-          return e ? f(t) : (h(t), r.push(t)), v(), !0
+          return e ? f(t) : (u(t), r.push(t)), v(), !0
         }
         function N() {
           switch (s.getToken()) {
@@ -2000,7 +2073,7 @@
             } else t && S(6, [], [])
             e ? (r.push(0), (e = !1)) : r[r.length - 1]++, A() || S(4, [], [4, 5]), (t = !0)
           }
-          return g(), e || r.pop(), 4 !== s.getToken() ? S(8, [4], []) : v(), !0
+          return m(), e || r.pop(), 4 !== s.getToken() ? S(8, [4], []) : v(), !0
         }
         function A() {
           switch (s.getToken()) {
@@ -2047,7 +2120,7 @@
       r[0]
     )
   }
-  var y
+  var k
   !(function (e) {
     ;(e[(e.InvalidSymbol = 1)] = 'InvalidSymbol'),
       (e[(e.InvalidNumberFormat = 2)] = 'InvalidNumberFormat'),
@@ -2065,49 +2138,50 @@
       (e[(e.InvalidUnicode = 14)] = 'InvalidUnicode'),
       (e[(e.InvalidEscapeCharacter = 15)] = 'InvalidEscapeCharacter'),
       (e[(e.InvalidCharacter = 16)] = 'InvalidCharacter')
-  })(y || (y = {}))
-  const k = 'undefined' != typeof self && void 0 !== self.WorkerGlobalScope,
-    L =
+  })(k || (k = {}))
+  const L = 'undefined' != typeof self && void 0 !== self.WorkerGlobalScope,
+    v =
       'process' in globalThis &&
       'undefined' != typeof process &&
       void 0 !== process.release &&
       'node' === process.release.name,
-    v = k || !L
-  let S = 'https://unpkg.com/shiki@0.14.0/',
-    w = ''
-  const N = 'dist/'
-  function C(e) {
-    w = e
+    S = L || !v
+  let w = 'https://unpkg.com/shiki@0.14.2/',
+    N = ''
+  const C = 'dist/'
+  function j(e) {
+    N = e
   }
-  let j = null
-  function x(e) {
-    if (v) return `${S}${e}`
+  let x = null
+  function A(e) {
+    if (S) return `${w}${e}`
     {
       const t = require('path')
       return t.isAbsolute(e) ? e : t.resolve(__dirname, '..', e)
     }
   }
-  async function A(e) {
-    const t = [],
-      n = b(
-        await (async function (e) {
-          const t = x(e)
-          if (v) return await fetch(t).then(e => e.text())
-          {
-            const e = require('fs')
-            return await e.promises.readFile(t, 'utf-8')
-          }
-        })(e),
-        t,
-        { allowTrailingComma: !0 }
-      )
-    if (t.length) throw t[0]
-    return n
-  }
   async function P(e) {
-    const t = T(await A(e))
+    const t = [],
+      n = await (async function (e) {
+        const t = A(e)
+        if (S) return await fetch(t).then(e => e.text())
+        {
+          const e = require('fs')
+          return await e.promises.readFile(t, 'utf-8')
+        }
+      })(e)
+    let s
+    try {
+      s = JSON.parse(n)
+    } catch (e) {
+      if (((s = y(n, t, { allowTrailingComma: !0 })), t.length)) throw t[0]
+    }
+    return s
+  }
+  async function T(e) {
+    const t = R(await P(e))
     if (t.include) {
-      const n = await P(i(...o(e), t.include))
+      const n = await T(i(...o(e), t.include))
       n.settings && (t.settings = n.settings.concat(t.settings)),
         n.bg && !t.bg && (t.bg = n.bg),
         n.colors && (t.colors = { ...n.colors, ...t.colors }),
@@ -2115,9 +2189,9 @@
     }
     return t
   }
-  function T(e) {
+  function R(e) {
     const t = e.type || 'dark',
-      n = { name: e.name, type: t, ...e, ...E(e) }
+      n = { name: e.name, type: t, ...e, ...O(e) }
     var s
     return (
       e.include && (n.include = e.include),
@@ -2128,9 +2202,9 @@
       n
     )
   }
-  const R = { light: '#333333', dark: '#bbbbbb' },
-    I = { light: '#fffffe', dark: '#1e1e1e' }
-  function E(e) {
+  const I = { light: '#333333', dark: '#bbbbbb' },
+    E = { light: '#fffffe', dark: '#1e1e1e' }
+  function O(e) {
     let t,
       n,
       s = e.settings ? e.settings : e.tokenColors
@@ -2140,12 +2214,12 @@
       r?.settings?.background && (n = r.settings.background),
       !t && e?.colors?.['editor.foreground'] && (t = e.colors['editor.foreground']),
       !n && e?.colors?.['editor.background'] && (n = e.colors['editor.background']),
-      t || (t = 'light' === e.type ? R.light : R.dark),
-      n || (n = 'light' === e.type ? I.light : I.dark),
+      t || (t = 'light' === e.type ? I.light : I.dark),
+      n || (n = 'light' === e.type ? E.light : E.dark),
       { fg: t, bg: n }
     )
   }
-  class O {
+  class B {
     constructor(e, t) {
       ;(this.languagesPath = 'languages/'),
         (this.languageMap = {}),
@@ -2167,7 +2241,7 @@
       if (!n) return null
       if (n.grammar) return n.grammar
       const s = await (async function (e) {
-        return await A(e)
+        return await P(e)
       })(t.includes(n) ? `${this.languagesPath}${n.path}` : n.path)
       return (n.grammar = s), s
     }
@@ -2180,45 +2254,7 @@
         (this.scopeToLangMap[e.scopeName] = e)
     }
   }
-  var B = {}
-  function M(e, t) {
-    let n = []
-    for (let s = 0, r = t.length; s < r; s++) {
-      let r = t.slice(0, s),
-        a = t[s]
-      n[s] = { scopeName: a, themeMatches: D(e, a, r) }
-    }
-    return n
-  }
-  function G(e, t) {
-    let n = e + '.'
-    return e === t || t.substring(0, n.length) === n
-  }
-  function F(e, t, n, s) {
-    if (!G(e, n)) return !1
-    let r = t.length - 1,
-      a = s.length - 1
-    for (; r >= 0 && a >= 0; ) G(t[r], s[a]) && r--, a--
-    return -1 === r
-  }
-  function D(e, t, n) {
-    let s = [],
-      r = 0
-    for (let a = 0, o = e.settings.length; a < o; a++) {
-      let o,
-        i = e.settings[a]
-      if ('string' == typeof i.scope) o = i.scope.split(/,/).map(e => e.trim())
-      else {
-        if (!Array.isArray(i.scope)) continue
-        o = i.scope
-      }
-      for (let e = 0, a = o.length; e < a; e++) {
-        let c = o[e].split(/ /)
-        F(c[c.length - 1], c.slice(0, c.length - 1), t, n) && ((s[r++] = i), (e = a))
-      }
-    }
-    return s
-  }
+  var M = { exports: {} }
   !(function (e, t) {
     var n, s
     e.exports =
@@ -5138,15 +5174,47 @@
         var a = (s[t] = { exports: {} })
         return n[t].call(a.exports, a, a.exports, e), a.exports
       })(787))
-  })({
-    get exports() {
-      return B
-    },
-    set exports(e) {
-      B = e
+  })(M)
+  var G = M.exports
+  function F(e, t) {
+    let n = []
+    for (let s = 0, r = t.length; s < r; s++) {
+      let r = t.slice(0, s),
+        a = t[s]
+      n[s] = { scopeName: a, themeMatches: U(e, a, r) }
     }
-  })
-  var $ = [
+    return n
+  }
+  function D(e, t) {
+    let n = e + '.'
+    return e === t || t.substring(0, n.length) === n
+  }
+  function $(e, t, n, s) {
+    if (!D(e, n)) return !1
+    let r = t.length - 1,
+      a = s.length - 1
+    for (; r >= 0 && a >= 0; ) D(t[r], s[a]) && r--, a--
+    return -1 === r
+  }
+  function U(e, t, n) {
+    let s = [],
+      r = 0
+    for (let a = 0, o = e.settings.length; a < o; a++) {
+      let o,
+        i = e.settings[a]
+      if ('string' == typeof i.scope) o = i.scope.split(/,/).map(e => e.trim())
+      else {
+        if (!Array.isArray(i.scope)) continue
+        o = i.scope
+      }
+      for (let e = 0, a = o.length; e < a; e++) {
+        let c = o[e].split(/ /)
+        $(c[c.length - 1], c.slice(0, c.length - 1), t, n) && ((s[r++] = i), (e = a))
+      }
+    }
+    return s
+  }
+  var W = [
       'black',
       'red',
       'green',
@@ -5164,8 +5232,8 @@
       'brightCyan',
       'brightWhite'
     ],
-    U = { 1: 'bold', 2: 'dim', 3: 'italic', 4: 'underline', 7: 'reverse', 9: 'strikethrough' }
-  function W(e, t) {
+    q = { 1: 'bold', 2: 'dim', 3: 'italic', 4: 'underline', 7: 'reverse', 9: 'strikethrough' }
+  function z(e, t) {
     const n = e.indexOf('', t)
     if (-1 !== n && '[' === e[n + 1]) {
       const t = e.indexOf('m', n)
@@ -5173,7 +5241,7 @@
     }
     return { position: e.length }
   }
-  function q(e) {
+  function H(e) {
     const t = e.shift()
     if ('2' === t) {
       const t = e.splice(0, 3).map(e => Number.parseInt(e))
@@ -5185,7 +5253,7 @@
       if (t) return { type: 'table', index: Number(t) }
     }
   }
-  function z(e) {
+  function V(e) {
     const t = []
     for (; e.length > 0; ) {
       const n = e.shift()
@@ -5194,33 +5262,33 @@
       if (!Number.isNaN(s))
         if (0 === s) t.push({ type: 'resetAll' })
         else if (s <= 9) {
-          U[s] && t.push({ type: 'setDecoration', value: U[s] })
+          q[s] && t.push({ type: 'setDecoration', value: q[s] })
         } else if (s <= 29) {
-          const e = U[s - 20]
+          const e = q[s - 20]
           e && t.push({ type: 'resetDecoration', value: e })
         } else if (s <= 37)
-          t.push({ type: 'setForegroundColor', value: { type: 'named', name: $[s - 30] } })
+          t.push({ type: 'setForegroundColor', value: { type: 'named', name: W[s - 30] } })
         else if (38 === s) {
-          const n = q(e)
+          const n = H(e)
           n && t.push({ type: 'setForegroundColor', value: n })
         } else if (39 === s) t.push({ type: 'resetForegroundColor' })
         else if (s <= 47)
-          t.push({ type: 'setBackgroundColor', value: { type: 'named', name: $[s - 40] } })
+          t.push({ type: 'setBackgroundColor', value: { type: 'named', name: W[s - 40] } })
         else if (48 === s) {
-          const n = q(e)
+          const n = H(e)
           n && t.push({ type: 'setBackgroundColor', value: n })
         } else
           49 === s
             ? t.push({ type: 'resetBackgroundColor' })
             : s >= 90 && s <= 97
-            ? t.push({ type: 'setForegroundColor', value: { type: 'named', name: $[s - 90 + 8] } })
+            ? t.push({ type: 'setForegroundColor', value: { type: 'named', name: W[s - 90 + 8] } })
             : s >= 100 &&
               s <= 107 &&
-              t.push({ type: 'setBackgroundColor', value: { type: 'named', name: $[s - 100 + 8] } })
+              t.push({ type: 'setBackgroundColor', value: { type: 'named', name: W[s - 100 + 8] } })
     }
     return t
   }
-  var H = {
+  var K = {
     black: '#000000',
     red: '#bb0000',
     green: '#00bb00',
@@ -5238,7 +5306,7 @@
     brightCyan: '#55ffff',
     brightWhite: '#ffffff'
   }
-  function V(e = H) {
+  function Q(e = K) {
     function t(t) {
       return e[t]
     }
@@ -5250,7 +5318,7 @@
       return (function () {
         if (s) return s
         s = []
-        for (let e = 0; e < $.length; e++) s.push(t($[e]))
+        for (let e = 0; e < W.length; e++) s.push(t(W[e]))
         let e = [0, 95, 135, 175, 215, 255]
         for (let t = 0; t < 6; t++)
           for (let r = 0; r < 6; r++) for (let a = 0; a < 6; a++) s.push(n([e[t], e[r], e[a]]))
@@ -5272,11 +5340,11 @@
       }
     }
   }
-  function K(e, t) {
+  function J(e, t) {
     const s = t.split(/\r?\n/),
-      r = V(
+      r = Q(
         Object.fromEntries(
-          $.map(t => [t, e.colors[`terminal.ansi${t[0].toUpperCase()}${t.substring(1)}`]])
+          W.map(t => [t, e.colors[`terminal.ansi${t[0].toUpperCase()}${t.substring(1)}`]])
         )
       ),
       a = (function () {
@@ -5288,14 +5356,14 @@
             const r = []
             let a = 0
             do {
-              const o = W(s, a),
+              const o = z(s, a),
                 i = o.sequence ? s.substring(a, o.startPosition) : s.substring(a)
               if (
                 (i.length > 0 &&
                   r.push({ value: i, foreground: e, background: t, decorations: new Set(n) }),
                 o.sequence)
               ) {
-                const s = z(o.sequence)
+                const s = V(o.sequence)
                 for (const r of s)
                   'resetAll' === r.type
                     ? ((e = null), (t = null), n.clear())
@@ -5343,6 +5411,8 @@
                       .map(e => `${e}${e}`)
                       .join('')}80`
               }
+              const n = e.match(/var\((--shiki-color-ansi-[\w-]+)\)/)
+              if (n) return `var(${n[1]}-dim)`
               return e
             })(s))
         let a = n.None
@@ -5355,13 +5425,14 @@
       })
     )
   }
-  const Q = {
-    pre: ({ className: e, style: t, children: n }) => `<pre class="${e}" style="${t}">${n}</pre>`,
+  const Y = {
+    pre: ({ className: e, style: t, children: n }) =>
+      `<pre class="${e}" style="${t}" tabindex="0">${n}</pre>`,
     code: ({ children: e }) => `<code>${e}</code>`,
     line: ({ className: e, children: t }) => `<span class="${e}">${t}</span>`,
     token: ({ style: e, children: t }) => `<span style="${e}">${t}</span>`
   }
-  function Y(e, t = {}) {
+  function X(e, t = {}) {
     const s = t.bg || '#fff',
       r = (function (e, t) {
         const n = new Map()
@@ -5373,7 +5444,7 @@
       })(t.lineOptions ?? [], e => e.line),
       a = t.elements || {}
     function o(e = '', t = {}, n) {
-      const s = a[e] || Q[e]
+      const s = a[e] || Y[e]
       return s
         ? ((n = n.filter(Boolean)), s({ ...t, children: 'code' === e ? n.join('\n') : n.join('') }))
         : ''
@@ -5403,7 +5474,7 @@
                   e.fontStyle & n.Bold && a.push('font-weight: bold'),
                   e.fontStyle & n.Underline && a.push('text-decoration: underline'),
                   o('token', { style: a.join('; '), tokens: s, token: e, index: r }, [
-                    ((i = e.content), i.replace(/[&<>"']/g, e => J[e]))
+                    ((i = e.content), i.replace(/[&<>"']/g, e => Z[e]))
                   ])
                 )
                 var i
@@ -5414,8 +5485,8 @@
       ]
     )
   }
-  const J = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }
-  class X extends B.Registry {
+  const Z = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }
+  class ee extends G.Registry {
     constructor(e) {
       super(e),
         (this._resolver = e),
@@ -5431,9 +5502,9 @@
     async loadTheme(e) {
       return 'string' == typeof e
         ? (this._resolvedThemes[e] ||
-            (this._resolvedThemes[e] = await P(`${this.themesPath}${e}.json`)),
+            (this._resolvedThemes[e] = await T(`${this.themesPath}${e}.json`)),
           this._resolvedThemes[e])
-        : ((e = T(e)).name && (this._resolvedThemes[e.name] = e), e)
+        : ((e = R(e)).name && (this._resolvedThemes[e.name] = e), e)
     }
     async loadThemes(e) {
       return await Promise.all(e.map(e => this.loadTheme(e)))
@@ -5479,7 +5550,7 @@
         for (const t of e.embeddedLangs) this._langGraph.set(t, this._langMap[t])
     }
   }
-  function Z(e) {
+  function te(e) {
     return 'string' == typeof e ? t.find(t => t.id === e || t.aliases?.includes(e)) : e
   }
   ;(e.BUNDLED_LANGUAGES = t),
@@ -5553,38 +5624,38 @@
         } = (function (e) {
           let n = t,
             s = e.themes || [],
-            r = e.paths?.wasm ? (e.paths.wasm.endsWith('/') ? e.paths.wasm : e.paths.wasm + '/') : N
+            r = e.paths?.wasm ? (e.paths.wasm.endsWith('/') ? e.paths.wasm : e.paths.wasm + '/') : C
           return (
-            e.langs && (n = e.langs.map(Z)),
+            e.langs && (n = e.langs.map(te)),
             e.theme && s.unshift(e.theme),
             s.length || (s = ['nord']),
             { _languages: n, _themes: s, _wasmPath: r }
           )
         })(e),
-        c = new O(
+        c = new B(
           (async function (e) {
-            if (!j) {
+            if (!x) {
               let t
-              if (v)
+              if (S)
                 t =
-                  'string' == typeof w
-                    ? d.loadWASM({ data: await fetch(x(i(...o(e), 'onig.wasm'))) })
-                    : d.loadWASM({ data: w })
+                  'string' == typeof N
+                    ? m.loadWASM({ data: await fetch(A(i(...o(e), 'onig.wasm'))) })
+                    : m.loadWASM({ data: N })
               else {
                 const e = require('path').join(require.resolve('vscode-oniguruma'), '../onig.wasm'),
                   n = require('fs').readFileSync(e).buffer
-                t = d.loadWASM(n)
+                t = m.loadWASM(n)
               }
-              j = t.then(() => ({
-                createOnigScanner: e => d.createOnigScanner(e),
-                createOnigString: e => d.createOnigString(e)
+              x = t.then(() => ({
+                createOnigScanner: e => m.createOnigScanner(e),
+                createOnigString: e => m.createOnigString(e)
               }))
             }
-            return j
+            return x
           })(a),
           'vscode-oniguruma'
         ),
-        l = new X(c)
+        l = new ee(c)
       e.paths?.themes &&
         (l.themesPath = e.paths.themes.endsWith('/') ? e.paths.themes : e.paths.themes + '/'),
         e.paths?.languages &&
@@ -5594,20 +5665,28 @@
       const u = (await l.loadThemes(r))[0]
       let h
       await l.loadLanguages(n)
-      let p = {
-        '#000001': 'var(--shiki-color-text)',
-        '#000002': 'var(--shiki-color-background)',
-        '#000004': 'var(--shiki-token-constant)',
-        '#000005': 'var(--shiki-token-string)',
-        '#000006': 'var(--shiki-token-comment)',
-        '#000007': 'var(--shiki-token-keyword)',
-        '#000008': 'var(--shiki-token-parameter)',
-        '#000009': 'var(--shiki-token-function)',
-        '#000010': 'var(--shiki-token-string-expression)',
-        '#000011': 'var(--shiki-token-punctuation)',
-        '#000012': 'var(--shiki-token-link)'
-      }
-      function m(e) {
+      let p = (function () {
+        const e = {
+          '#000001': 'var(--shiki-color-text)',
+          '#000002': 'var(--shiki-color-background)',
+          '#000004': 'var(--shiki-token-constant)',
+          '#000005': 'var(--shiki-token-string)',
+          '#000006': 'var(--shiki-token-comment)',
+          '#000007': 'var(--shiki-token-keyword)',
+          '#000008': 'var(--shiki-token-parameter)',
+          '#000009': 'var(--shiki-token-function)',
+          '#000010': 'var(--shiki-token-string-expression)',
+          '#000011': 'var(--shiki-token-punctuation)',
+          '#000012': 'var(--shiki-token-link)'
+        }
+        for (let t = 0; t < W.length; t++) {
+          const n = `#A${t.toString().padStart(5, '0')}`,
+            s = W[t].replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+          e[n] = `var(--shiki-color-ansi-${s})`
+        }
+        return e
+      })()
+      function d(e) {
         const t = e ? l.getTheme(e) : u
         if (!t) throw Error(`No theme registration for ${e}`)
         ;(h && h.name === t.name) || (l.setTheme(t), (h = t))
@@ -5617,6 +5696,9 @@
             (function (e, t) {
               ;(e.bg = p[e.bg] || e.bg),
                 (e.fg = p[e.fg] || e.fg),
+                Object.entries(e.colors).forEach(([t, n]) => {
+                  e.colors[t] = p[n] || n
+                }),
                 t.forEach((e, n) => {
                   t[n] = p[e] || e
                 })
@@ -5637,10 +5719,10 @@
             if (!t) throw Error(`No language registration for ${e}`)
             return { _grammar: t }
           })(t),
-          { _theme: o, _colorMap: i } = m(n)
+          { _theme: o, _colorMap: i } = d(n)
         return (function (e, t, n, r, a) {
           let o = n.split(/\r\n|\r|\n/),
-            i = B.INITIAL,
+            i = G.INITIAL,
             c = [],
             l = []
           for (let n = 0, u = o.length; n < u; n++) {
@@ -5668,7 +5750,7 @@
                 for (; r + t < o; ) {
                   let n = h[p],
                     s = d.substring(n.startIndex, n.endIndex)
-                  ;(t += s.length), f.push({ content: s, scopes: M(e, n.scopes) }), p++
+                  ;(t += s.length), f.push({ content: s, scopes: F(e, n.scopes) }), p++
                 }
               }
               c.push({ content: d.substring(r, o), color: l, fontStyle: u, explanation: f })
@@ -5679,8 +5761,8 @@
         })(o, i, e, a, r)
       }
       function f(e, t) {
-        const { _theme: n } = m(t)
-        return K(n, e)
+        const { _theme: n } = d(t)
+        return J(n, e)
       }
       return {
         codeToThemedTokens: g,
@@ -5688,29 +5770,29 @@
           let s
           s = 'object' == typeof t ? t : { lang: t, theme: n }
           const r = g(e, s.lang, s.theme, { includeExplanation: !1 }),
-            { _theme: a } = m(s.theme)
-          return Y(r, { fg: a.fg, bg: a.bg, lineOptions: s?.lineOptions, themeName: a.name })
+            { _theme: a } = d(s.theme)
+          return X(r, { fg: a.fg, bg: a.bg, lineOptions: s?.lineOptions, themeName: a.name })
         },
         ansiToThemedTokens: f,
         ansiToHtml: function (e, t) {
           const n = f(e, t?.theme),
-            { _theme: s } = m(t?.theme)
-          return Y(n, { fg: s.fg, bg: s.bg, lineOptions: t?.lineOptions, themeName: s.name })
+            { _theme: s } = d(t?.theme)
+          return X(n, { fg: s.fg, bg: s.bg, lineOptions: t?.lineOptions, themeName: s.name })
         },
-        getTheme: e => m(e)._theme,
+        getTheme: e => d(e)._theme,
         loadTheme: async function (e) {
           await l.loadTheme(e)
         },
         loadLanguage: async function (e) {
-          const t = Z(e)
+          const t = te(e)
           c.addLanguage(t), await l.loadLanguage(t)
         },
         getBackgroundColor: function (e) {
-          const { _theme: t } = m(e)
+          const { _theme: t } = d(e)
           return t.bg
         },
         getForegroundColor: function (e) {
-          const { _theme: t } = m(e)
+          const { _theme: t } = d(e)
           return t.fg
         },
         getLoadedThemes: function () {
@@ -5724,14 +5806,14 @@
         }
       }
     }),
-    (e.loadTheme = P),
-    (e.renderToHtml = Y),
+    (e.loadTheme = T),
+    (e.renderToHtml = X),
     (e.setCDN = function (e) {
-      S = e.endsWith('/') ? e : e + '/'
+      w = e.endsWith('/') ? e : e + '/'
     }),
     (e.setOnigasmWASM = function (e) {
-      C(e)
+      j(e)
     }),
-    (e.setWasm = C),
-    (e.toShikiTheme = T)
+    (e.setWasm = j),
+    (e.toShikiTheme = R)
 })((this.shiki = this.shiki || {}))
