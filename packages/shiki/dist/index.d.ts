@@ -309,12 +309,13 @@ interface IShikiTheme extends IRawTheme {
    */
   colors?: Record<string, string>
 }
+interface Nothing {}
 /**
  * type StringLiteralUnion<'foo'> = 'foo' | string
  * This has auto completion whereas `'foo' | string` doesn't
  * Adapted from https://github.com/microsoft/TypeScript/issues/29729
  */
-type StringLiteralUnion<T extends U, U = string> = T | (U & {})
+type StringLiteralUnion<T extends U, U = string> = T | (U & Nothing)
 interface CodeToHtmlOptions {
   lang?: StringLiteralUnion<Lang>
   theme?: StringLiteralUnion<Theme>
@@ -417,6 +418,7 @@ type Lang =
   | 'dax'
   | 'diff'
   | 'docker'
+  | 'dockerfile'
   | 'dream-maker'
   | 'elixir'
   | 'elm'
@@ -427,6 +429,9 @@ type Lang =
   | 'fsharp'
   | 'f#'
   | 'fs'
+  | 'gdresource'
+  | 'gdscript'
+  | 'gdshader'
   | 'gherkin'
   | 'git-commit'
   | 'git-rebase'
@@ -462,6 +467,8 @@ type Lang =
   | 'jsx'
   | 'julia'
   | 'kotlin'
+  | 'kusto'
+  | 'kql'
   | 'latex'
   | 'less'
   | 'liquid'
@@ -505,6 +512,7 @@ type Lang =
   | 'raku'
   | 'perl6'
   | 'razor'
+  | 'reg'
   | 'rel'
   | 'riscv'
   | 'rst'
@@ -559,6 +567,7 @@ type Lang =
   | 'wenyan'
   | '文言'
   | 'wgsl'
+  | 'wolfram'
   | 'xml'
   | 'xsl'
   | 'yaml'
@@ -570,17 +579,6 @@ declare function getHighlighter(options: HighlighterOptions): Promise<Highlighte
 
 declare function renderToHtml(lines: IThemedToken[][], options?: HtmlRendererOptions): string
 
-declare global {
-  interface Window {
-    WorkerGlobalScope: any
-  }
-  var self: Window & typeof globalThis
-  function fetch(url: string): Promise<Response>
-  interface Response {
-    json(): Promise<any>
-    text(): Promise<any>
-  }
-}
 /**
  * Set the route for loading the assets
  * URL should end with `/`
