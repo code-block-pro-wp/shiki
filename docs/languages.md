@@ -34,6 +34,9 @@ If you just have a `.tmLanguage` and need to convert it to JSON, [this VS Code e
 
 - Find grammar for a language by searching `<lang> textmate` on GitHub or searching `<lang>` on VS Code Marketplace
 - Add your grammar to [/scripts/grammarSources.ts](/scripts/grammarSources.ts)
+  - Edit `githubGrammarSources` for grammars on a GitHub repository
+  - Edit `marketplaceGrammarSources` for grammars found in a VS Code extension. This can be useful when the grammar is compiled and not on GitHub
+  - Edit `languageAliases` to allow aliases. For example `md` can refer to `markdown` language
 - In [/packages/shiki/samples/](/packages/shiki/samples/), add a code sample file `<id>.sample` for your language. A sample should include a variety of language syntaxes and succinctly capture the idiosyncrasy of a language. Format requirements:
   - Space for indentation
   - Less than 100 columns if possible
@@ -64,6 +67,7 @@ export type Lang =
   | 'awk'
   | 'ballerina'
   | 'bat' | 'batch'
+  | 'beancount'
   | 'berry' | 'be'
   | 'bibtex'
   | 'bicep'
@@ -81,6 +85,7 @@ export type Lang =
   | 'csharp' | 'c#' | 'cs'
   | 'css'
   | 'cue'
+  | 'cypher' | 'cql'
   | 'd'
   | 'dart'
   | 'dax'
@@ -99,6 +104,8 @@ export type Lang =
   | 'gherkin'
   | 'git-commit'
   | 'git-rebase'
+  | 'glimmer-js' | 'gjs'
+  | 'glimmer-ts' | 'gts'
   | 'glsl'
   | 'gnuplot'
   | 'go'
@@ -109,6 +116,7 @@ export type Lang =
   | 'handlebars' | 'hbs'
   | 'haskell' | 'hs'
   | 'hcl'
+  | 'hjson'
   | 'hlsl'
   | 'html'
   | 'http'
@@ -121,6 +129,7 @@ export type Lang =
   | 'json'
   | 'json5'
   | 'jsonc'
+  | 'jsonl'
   | 'jsonnet'
   | 'jssm' | 'fsl'
   | 'jsx'
@@ -139,6 +148,8 @@ export type Lang =
   | 'matlab'
   | 'mdx'
   | 'mermaid'
+  | 'narrat' | 'nar'
+  | 'nextflow' | 'nf'
   | 'nginx'
   | 'nim'
   | 'nix'
@@ -200,6 +211,7 @@ export type Lang =
   | 'viml' | 'vim' | 'vimscript'
   | 'vue-html'
   | 'vue'
+  | 'vyper' | 'vy'
   | 'wasm'
   | 'wenyan' | '文言'
   | 'wgsl'
