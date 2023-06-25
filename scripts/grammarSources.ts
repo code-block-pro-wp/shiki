@@ -91,6 +91,10 @@ export const githubGrammarSources: [string, string][] = [
     'https://github.com/ballerina-platform/ballerina-grammar/blob/master/syntaxes/ballerina.tmLanguage'
   ],
   [
+    'beancount',
+    'https://github.com/Lencerf/vscode-beancount/blob/master/syntaxes/beancount.tmLanguage'
+  ],
+  [
     'berry',
     'https://github.com/berry-lang/berry/blob/master/tools/plugins/vscode/skiars.berry-0.1.0/syntaxes/berry.json'
   ],
@@ -113,6 +117,7 @@ export const githubGrammarSources: [string, string][] = [
   ],
   ['csharp', 'https://github.com/dotnet/csharp-tmLanguage/blob/main/grammars/csharp.tmLanguage'],
   ['cue', 'https://github.com/cue-sh/vscode-cue/blob/master/syntaxes/cue.tmLanguage.json'],
+  ['cypher', 'https://github.com/adam-cowley/neo4j-vscode/blob/main/cypher/cypher.tmLanguage'],
   ['d', 'https://github.com/Pure-D/code-d/blob/master/syntaxes/d.json'],
   ['dart', 'https://github.com/Dart-Code/Dart-Code/blob/master/syntaxes/dart.json'],
   ['dax', 'https://github.com/huyza/dax-language/blob/master/syntaxes/dax.grammer.json'],
@@ -150,6 +155,14 @@ export const githubGrammarSources: [string, string][] = [
     'gherkin',
     'https://github.com/alexkrechik/VSCucumberAutoComplete/blob/master/gclient/syntaxes/feature.tmLanguage'
   ],
+  [
+    'glimmer-js',
+    'https://github.com/IgnaceMaes/glimmer-textmate-grammar/blob/main/glimmer-js.tmLanguage.json'
+  ],
+  [
+    'glimmer-ts',
+    'https://github.com/IgnaceMaes/glimmer-textmate-grammar/blob/main/glimmer-ts.tmLanguage.json'
+  ],
   ['glsl', 'https://github.com/polym0rph/GLSL.tmbundle/blob/master/Syntaxes/GLSL.tmLanguage'],
   [
     'gnuplot',
@@ -160,6 +173,7 @@ export const githubGrammarSources: [string, string][] = [
   ['haml', 'https://github.com/karuna/haml-vscode/blob/master/syntaxes/haml.json'],
   ['haskell', 'https://github.com/octref/language-haskell/blob/master/syntaxes/haskell.json'],
   ['hcl', 'https://github.com/hashicorp/syntax/blob/main/syntaxes/hcl.tmGrammar.json'],
+  ['hjson', 'https://github.com/hjson/textmate-hjson/blob/master/Syntaxes/Hjson.tmLanguage'],
   ['imba', 'https://github.com/imba/vscode-imba/blob/master/syntaxes/imba.tmLanguage'],
   [
     'jinja',
@@ -197,6 +211,14 @@ export const githubGrammarSources: [string, string][] = [
     'https://github.com/mathworks/MATLAB-Language-grammar/blob/40d9a0cd3b628f80cdcf948bbe1747a527ed5dd5/Matlab.tmbundle/Syntaxes/MATLAB.tmLanguage'
   ],
   ['mdx', 'https://github.com/wooorm/markdown-tm-language/blob/main/source.mdx.tmLanguage'],
+  [
+    'narrat',
+    'https://github.com/liana-p/narrat-syntax-highlighting-vscode/blob/main/syntaxes/narrat.tmLanguage.yaml'
+  ],
+  [
+    'nextflow',
+    'https://github.com/nextflow-io/vscode-language-nextflow/blob/master/syntaxes/nextflow.tmLanguage.json'
+  ],
   [
     'nginx',
     'https://github.com/hangxingliu/vscode-nginx-conf-hint/blob/master/src/syntax/nginx.tmLanguage'
@@ -299,6 +321,7 @@ export const githubGrammarSources: [string, string][] = [
     'https://github.com/vuejs/language-tools/blob/master/packages/vscode-vue/syntaxes/vue.tmLanguage.json'
   ],
   ['vue-html', 'https://github.com/vuejs/vetur/blob/master/syntaxes/vue-html.tmLanguage.json'],
+  ['vyper', 'https://github.com/tintinweb/vscode-vyper/blob/master/syntaxes/vyper.tmLanguage.json'],
   ['postcss', 'https://github.com/vuejs/vetur/blob/master/syntaxes/vue-postcss.json'],
   ['wasm', 'https://github.com/wasmerio/vscode-wasm/blob/master/syntaxes/wat.json'],
   ['wgsl', 'https://github.com/PolyMeilex/vscode-wgsl/blob/master/syntaxes/wgsl.tmLanguage.json'],
@@ -325,9 +348,12 @@ export const languageAliases = {
   clojure: ['clj'],
   codeql: ['ql'],
   csharp: ['c#', 'cs'],
+  cypher: ['cql'],
   docker: ['dockerfile'],
   erlang: ['erl'],
   fsharp: ['f#', 'fs'],
+  'glimmer-js': ['gjs'],
+  'glimmer-ts': ['gts'],
   haskell: ['hs'],
   handlebars: ['hbs'],
   ini: ['properties'],
@@ -336,6 +362,8 @@ export const languageAliases = {
   kusto: ['kql'],
   make: ['makefile'],
   markdown: ['md'],
+  narrat: ['nar'],
+  nextflow: ['nf'],
   'objective-c': ['objc'],
   powershell: ['ps', 'ps1'],
   pug: ['jade'],
@@ -350,8 +378,48 @@ export const languageAliases = {
   typescript: ['ts'],
   vb: ['cmd'],
   viml: ['vim', 'vimscript'],
+  vyper: ['vy'],
   wenyan: ['文言'],
   yaml: ['yml']
+}
+
+/**
+ * Override language `displayName` in the `languages.ts` file
+ *
+ * By default, this script will use the name of the grammar file as the `displayName`,
+ * so you usually don't need to add this field.
+ */
+export const languageDisplayOverrides: Record<string, string> = {
+  'actionscript-3': 'ActionScript',
+  apl: 'APL',
+  asm: 'Assembly',
+  clarity: 'Clarity',
+  codeql: 'CodeQL',
+  dax: 'DAX',
+  erb: 'ERB',
+  fish: 'Fish',
+  gdresource: 'GDResource',
+  gnuplot: 'Gnuplot',
+  http: 'HTTP',
+  ini: 'INI',
+  'jinja-html': 'Jinja',
+  jsx: 'JSX',
+  liquid: 'Liquid',
+  nginx: 'Nginx',
+  plsql: 'PL/SQL',
+  powerquery: 'PowerQuery',
+  prolog: 'Prolog',
+  reg: 'Windows Registry Script',
+  riscv: 'RISC-V',
+  sas: 'SAS',
+  shellscript: 'Shell',
+  svelte: 'Svelte',
+  tasl: 'Tasl',
+  tsx: 'TSX',
+  twig: 'Twig',
+  viml: 'Vim Script',
+  wasm: 'WebAssembly',
+  wenyan: 'Wenyan'
 }
 
 /**

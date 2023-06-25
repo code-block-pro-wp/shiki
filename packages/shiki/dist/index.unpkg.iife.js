@@ -5,45 +5,69 @@
       id: 'abap',
       scopeName: 'source.abap',
       path: 'abap.tmLanguage.json',
+      displayName: 'ABAP',
       samplePath: 'abap.sample'
     },
     {
       id: 'actionscript-3',
       scopeName: 'source.actionscript.3',
       path: 'actionscript-3.tmLanguage.json',
+      displayName: 'ActionScript',
       samplePath: 'actionscript-3.sample'
     },
-    { id: 'ada', scopeName: 'source.ada', path: 'ada.tmLanguage.json', samplePath: 'ada.sample' },
-    { id: 'apache', scopeName: 'source.apacheconf', path: 'apache.tmLanguage.json' },
+    {
+      id: 'ada',
+      scopeName: 'source.ada',
+      path: 'ada.tmLanguage.json',
+      displayName: 'Ada',
+      samplePath: 'ada.sample'
+    },
+    {
+      id: 'apache',
+      scopeName: 'source.apacheconf',
+      path: 'apache.tmLanguage.json',
+      displayName: 'Apache Conf'
+    },
     {
       id: 'apex',
       scopeName: 'source.apex',
       path: 'apex.tmLanguage.json',
+      displayName: 'Apex',
       samplePath: 'apex.sample'
     },
     {
       id: 'apl',
       scopeName: 'source.apl',
       path: 'apl.tmLanguage.json',
+      displayName: 'APL',
       embeddedLangs: ['html', 'xml', 'css', 'javascript', 'json']
     },
     {
       id: 'applescript',
       scopeName: 'source.applescript',
       path: 'applescript.tmLanguage.json',
+      displayName: 'AppleScript',
       samplePath: 'applescript.sample'
     },
-    { id: 'ara', scopeName: 'source.ara', path: 'ara.tmLanguage.json', samplePath: 'ara.sample' },
+    {
+      id: 'ara',
+      scopeName: 'source.ara',
+      path: 'ara.tmLanguage.json',
+      displayName: 'Ara',
+      samplePath: 'ara.sample'
+    },
     {
       id: 'asm',
       scopeName: 'source.asm.x86_64',
       path: 'asm.tmLanguage.json',
+      displayName: 'Assembly',
       samplePath: 'asm.sample'
     },
     {
       id: 'astro',
       scopeName: 'source.astro',
       path: 'astro.tmLanguage.json',
+      displayName: 'Astro',
       samplePath: 'astro.sample',
       embeddedLangs: [
         'json',
@@ -58,46 +82,76 @@
         'tsx'
       ]
     },
-    { id: 'awk', scopeName: 'source.awk', path: 'awk.tmLanguage.json', samplePath: 'awk.sample' },
+    {
+      id: 'awk',
+      scopeName: 'source.awk',
+      path: 'awk.tmLanguage.json',
+      displayName: 'AWK',
+      samplePath: 'awk.sample'
+    },
     {
       id: 'ballerina',
       scopeName: 'source.ballerina',
       path: 'ballerina.tmLanguage.json',
+      displayName: 'Ballerina',
       samplePath: 'ballerina.sample'
     },
     {
       id: 'bat',
       scopeName: 'source.batchfile',
       path: 'bat.tmLanguage.json',
+      displayName: 'Batch',
       samplePath: 'bat.sample',
       aliases: ['batch']
+    },
+    {
+      id: 'beancount',
+      scopeName: 'text.beancount',
+      path: 'beancount.tmLanguage.json',
+      displayName: 'Beancount',
+      samplePath: 'beancount.sample'
     },
     {
       id: 'berry',
       scopeName: 'source.berry',
       path: 'berry.tmLanguage.json',
+      displayName: 'Berry',
       samplePath: 'berry.sample',
       aliases: ['be']
     },
-    { id: 'bibtex', scopeName: 'text.bibtex', path: 'bibtex.tmLanguage.json' },
+    {
+      id: 'bibtex',
+      scopeName: 'text.bibtex',
+      path: 'bibtex.tmLanguage.json',
+      displayName: 'BibTeX'
+    },
     {
       id: 'bicep',
       scopeName: 'source.bicep',
       path: 'bicep.tmLanguage.json',
+      displayName: 'Bicep',
       samplePath: 'bicep.sample'
     },
     {
       id: 'blade',
       scopeName: 'text.html.php.blade',
       path: 'blade.tmLanguage.json',
+      displayName: 'Blade',
       samplePath: 'blade.sample',
       embeddedLangs: ['html', 'xml', 'sql', 'javascript', 'json', 'css']
     },
-    { id: 'c', scopeName: 'source.c', path: 'c.tmLanguage.json', samplePath: 'c.sample' },
+    {
+      id: 'c',
+      scopeName: 'source.c',
+      path: 'c.tmLanguage.json',
+      displayName: 'C',
+      samplePath: 'c.sample'
+    },
     {
       id: 'cadence',
       scopeName: 'source.cadence',
       path: 'cadence.tmLanguage.json',
+      displayName: 'Cadence',
       samplePath: 'cadence.sample',
       aliases: ['cdc']
     },
@@ -105,12 +159,14 @@
       id: 'clarity',
       scopeName: 'source.clar',
       path: 'clarity.tmLanguage.json',
+      displayName: 'Clarity',
       samplePath: 'clarity.sample'
     },
     {
       id: 'clojure',
       scopeName: 'source.clojure',
       path: 'clojure.tmLanguage.json',
+      displayName: 'Clojure',
       samplePath: 'clojure.sample',
       aliases: ['clj']
     },
@@ -118,12 +174,14 @@
       id: 'cmake',
       scopeName: 'source.cmake',
       path: 'cmake.tmLanguage.json',
+      displayName: 'CMake',
       samplePath: 'cmake.sample'
     },
     {
       id: 'cobol',
       scopeName: 'source.cobol',
       path: 'cobol.tmLanguage.json',
+      displayName: 'COBOL',
       samplePath: 'cobol.sample',
       embeddedLangs: ['sql', 'html', 'java']
     },
@@ -131,6 +189,7 @@
       id: 'codeql',
       scopeName: 'source.ql',
       path: 'codeql.tmLanguage.json',
+      displayName: 'CodeQL',
       samplePath: 'codeql.sample',
       aliases: ['ql'],
       embeddedLangs: ['markdown']
@@ -139,6 +198,7 @@
       id: 'coffee',
       scopeName: 'source.coffee',
       path: 'coffee.tmLanguage.json',
+      displayName: 'CoffeeScript',
       samplePath: 'coffee.sample',
       embeddedLangs: ['javascript']
     },
@@ -146,6 +206,7 @@
       id: 'cpp',
       scopeName: 'source.cpp',
       path: 'cpp.tmLanguage.json',
+      displayName: 'C++',
       samplePath: 'cpp.sample',
       embeddedLangs: ['glsl', 'sql']
     },
@@ -153,6 +214,7 @@
       id: 'crystal',
       scopeName: 'source.crystal',
       path: 'crystal.tmLanguage.json',
+      displayName: 'Crystal',
       samplePath: 'crystal.sample',
       embeddedLangs: ['html', 'sql', 'css', 'c', 'javascript', 'shellscript']
     },
@@ -160,37 +222,79 @@
       id: 'csharp',
       scopeName: 'source.cs',
       path: 'csharp.tmLanguage.json',
+      displayName: 'C#',
       samplePath: 'csharp.sample',
       aliases: ['c#', 'cs']
     },
-    { id: 'css', scopeName: 'source.css', path: 'css.tmLanguage.json', samplePath: 'css.sample' },
-    { id: 'cue', scopeName: 'source.cue', path: 'cue.tmLanguage.json', samplePath: 'cue.sample' },
-    { id: 'd', scopeName: 'source.d', path: 'd.tmLanguage.json', samplePath: 'd.sample' },
+    {
+      id: 'css',
+      scopeName: 'source.css',
+      path: 'css.tmLanguage.json',
+      displayName: 'CSS',
+      samplePath: 'css.sample'
+    },
+    {
+      id: 'cue',
+      scopeName: 'source.cue',
+      path: 'cue.tmLanguage.json',
+      displayName: 'CUE',
+      samplePath: 'cue.sample'
+    },
+    {
+      id: 'cypher',
+      scopeName: 'source.cypher',
+      path: 'cypher.tmLanguage.json',
+      displayName: 'Cypher',
+      samplePath: 'cypher.sample',
+      aliases: ['cql']
+    },
+    {
+      id: 'd',
+      scopeName: 'source.d',
+      path: 'd.tmLanguage.json',
+      displayName: 'D',
+      samplePath: 'd.sample'
+    },
     {
       id: 'dart',
       scopeName: 'source.dart',
       path: 'dart.tmLanguage.json',
+      displayName: 'Dart',
       samplePath: 'dart.sample'
     },
-    { id: 'dax', scopeName: 'source.dax', path: 'dax.tmLanguage.json', samplePath: 'dax.sample' },
+    {
+      id: 'dax',
+      scopeName: 'source.dax',
+      path: 'dax.tmLanguage.json',
+      displayName: 'DAX',
+      samplePath: 'dax.sample'
+    },
     {
       id: 'diff',
       scopeName: 'source.diff',
       path: 'diff.tmLanguage.json',
+      displayName: 'Diff',
       samplePath: 'diff.sample'
     },
     {
       id: 'docker',
       scopeName: 'source.dockerfile',
       path: 'docker.tmLanguage.json',
+      displayName: 'Docker',
       samplePath: 'docker.sample',
       aliases: ['dockerfile']
     },
-    { id: 'dream-maker', scopeName: 'source.dm', path: 'dream-maker.tmLanguage.json' },
+    {
+      id: 'dream-maker',
+      scopeName: 'source.dm',
+      path: 'dream-maker.tmLanguage.json',
+      displayName: 'Dream Maker'
+    },
     {
       id: 'elixir',
       scopeName: 'source.elixir',
       path: 'elixir.tmLanguage.json',
+      displayName: 'Elixir',
       samplePath: 'elixir.sample',
       embeddedLangs: ['html']
     },
@@ -198,6 +302,7 @@
       id: 'elm',
       scopeName: 'source.elm',
       path: 'elm.tmLanguage.json',
+      displayName: 'Elm',
       samplePath: 'elm.sample',
       embeddedLangs: ['glsl']
     },
@@ -205,6 +310,7 @@
       id: 'erb',
       scopeName: 'text.html.erb',
       path: 'erb.tmLanguage.json',
+      displayName: 'ERB',
       samplePath: 'erb.sample',
       embeddedLangs: ['html', 'ruby']
     },
@@ -212,6 +318,7 @@
       id: 'erlang',
       scopeName: 'source.erlang',
       path: 'erlang.tmLanguage.json',
+      displayName: 'Erlang',
       samplePath: 'erlang.sample',
       aliases: ['erl']
     },
@@ -219,12 +326,14 @@
       id: 'fish',
       scopeName: 'source.fish',
       path: 'fish.tmLanguage.json',
+      displayName: 'Fish',
       samplePath: 'fish.sample'
     },
     {
       id: 'fsharp',
       scopeName: 'source.fsharp',
       path: 'fsharp.tmLanguage.json',
+      displayName: 'F#',
       samplePath: 'fsharp.sample',
       aliases: ['f#', 'fs'],
       embeddedLangs: ['markdown']
@@ -233,6 +342,7 @@
       id: 'gdresource',
       scopeName: 'source.gdresource',
       path: 'gdresource.tmLanguage.json',
+      displayName: 'GDResource',
       samplePath: 'gdresource.sample',
       embeddedLangs: ['gdshader', 'gdscript']
     },
@@ -240,59 +350,105 @@
       id: 'gdscript',
       scopeName: 'source.gdscript',
       path: 'gdscript.tmLanguage.json',
+      displayName: 'GDScript',
       samplePath: 'gdscript.sample'
     },
     {
       id: 'gdshader',
       scopeName: 'source.gdshader',
       path: 'gdshader.tmLanguage.json',
+      displayName: 'GDShader',
       samplePath: 'gdshader.sample'
     },
-    { id: 'gherkin', scopeName: 'text.gherkin.feature', path: 'gherkin.tmLanguage.json' },
+    {
+      id: 'gherkin',
+      scopeName: 'text.gherkin.feature',
+      path: 'gherkin.tmLanguage.json',
+      displayName: 'Gherkin'
+    },
     {
       id: 'git-commit',
       scopeName: 'text.git-commit',
       path: 'git-commit.tmLanguage.json',
+      displayName: 'Git Commit Message',
       embeddedLangs: ['diff']
     },
     {
       id: 'git-rebase',
       scopeName: 'text.git-rebase',
       path: 'git-rebase.tmLanguage.json',
+      displayName: 'Git Rebase Message',
       embeddedLangs: ['shellscript']
+    },
+    {
+      id: 'glimmer-js',
+      scopeName: 'source.gjs',
+      path: 'glimmer-js.tmLanguage.json',
+      displayName: 'Glimmer JS',
+      aliases: ['gjs'],
+      embeddedLangs: ['javascript', 'handlebars']
+    },
+    {
+      id: 'glimmer-ts',
+      scopeName: 'source.gts',
+      path: 'glimmer-ts.tmLanguage.json',
+      displayName: 'Glimmer TS',
+      aliases: ['gts'],
+      embeddedLangs: ['typescript', 'handlebars']
     },
     {
       id: 'glsl',
       scopeName: 'source.glsl',
       path: 'glsl.tmLanguage.json',
+      displayName: 'GLSL',
       samplePath: 'glsl.sample',
       embeddedLangs: ['c']
     },
-    { id: 'gnuplot', scopeName: 'source.gnuplot', path: 'gnuplot.tmLanguage.json' },
-    { id: 'go', scopeName: 'source.go', path: 'go.tmLanguage.json', samplePath: 'go.sample' },
+    {
+      id: 'gnuplot',
+      scopeName: 'source.gnuplot',
+      path: 'gnuplot.tmLanguage.json',
+      displayName: 'Gnuplot'
+    },
+    {
+      id: 'go',
+      scopeName: 'source.go',
+      path: 'go.tmLanguage.json',
+      displayName: 'Go',
+      samplePath: 'go.sample'
+    },
     {
       id: 'graphql',
       scopeName: 'source.graphql',
       path: 'graphql.tmLanguage.json',
+      displayName: 'GraphQL',
       embeddedLangs: ['javascript', 'typescript', 'jsx', 'tsx']
     },
-    { id: 'groovy', scopeName: 'source.groovy', path: 'groovy.tmLanguage.json' },
+    {
+      id: 'groovy',
+      scopeName: 'source.groovy',
+      path: 'groovy.tmLanguage.json',
+      displayName: 'Groovy'
+    },
     {
       id: 'hack',
       scopeName: 'source.hack',
       path: 'hack.tmLanguage.json',
+      displayName: 'Hack',
       embeddedLangs: ['html', 'sql']
     },
     {
       id: 'haml',
       scopeName: 'text.haml',
       path: 'haml.tmLanguage.json',
+      displayName: 'Ruby Haml',
       embeddedLangs: ['ruby', 'javascript', 'sass', 'coffee', 'markdown', 'css']
     },
     {
       id: 'handlebars',
       scopeName: 'text.html.handlebars',
       path: 'handlebars.tmLanguage.json',
+      displayName: 'Handlebars',
       aliases: ['hbs'],
       embeddedLangs: ['html', 'css', 'javascript', 'yaml']
     },
@@ -300,14 +456,29 @@
       id: 'haskell',
       scopeName: 'source.haskell',
       path: 'haskell.tmLanguage.json',
+      displayName: 'Haskell',
       aliases: ['hs']
     },
-    { id: 'hcl', scopeName: 'source.hcl', path: 'hcl.tmLanguage.json', samplePath: 'hcl.sample' },
-    { id: 'hlsl', scopeName: 'source.hlsl', path: 'hlsl.tmLanguage.json' },
+    {
+      id: 'hcl',
+      scopeName: 'source.hcl',
+      path: 'hcl.tmLanguage.json',
+      displayName: 'HashiCorp HCL',
+      samplePath: 'hcl.sample'
+    },
+    {
+      id: 'hjson',
+      scopeName: 'source.hjson',
+      path: 'hjson.tmLanguage.json',
+      displayName: 'Hjson',
+      samplePath: 'hjson.sample'
+    },
+    { id: 'hlsl', scopeName: 'source.hlsl', path: 'hlsl.tmLanguage.json', displayName: 'HLSL' },
     {
       id: 'html',
       scopeName: 'text.html.basic',
       path: 'html.tmLanguage.json',
+      displayName: 'HTML',
       samplePath: 'html.sample',
       embeddedLangs: ['javascript', 'css']
     },
@@ -315,6 +486,7 @@
       id: 'http',
       scopeName: 'source.http',
       path: 'http.tmLanguage.json',
+      displayName: 'HTTP',
       samplePath: 'http.sample',
       embeddedLangs: ['shellscript', 'json', 'xml', 'graphql']
     },
@@ -322,19 +494,28 @@
       id: 'imba',
       scopeName: 'source.imba',
       path: 'imba.tmLanguage.json',
+      displayName: 'Imba',
       samplePath: 'imba.sample'
     },
-    { id: 'ini', scopeName: 'source.ini', path: 'ini.tmLanguage.json', aliases: ['properties'] },
+    {
+      id: 'ini',
+      scopeName: 'source.ini',
+      path: 'ini.tmLanguage.json',
+      displayName: 'INI',
+      aliases: ['properties']
+    },
     {
       id: 'java',
       scopeName: 'source.java',
       path: 'java.tmLanguage.json',
+      displayName: 'Java',
       samplePath: 'java.sample'
     },
     {
       id: 'javascript',
       scopeName: 'source.js',
       path: 'javascript.tmLanguage.json',
+      displayName: 'JavaScript',
       samplePath: 'javascript.sample',
       aliases: ['js']
     },
@@ -342,48 +523,71 @@
       id: 'jinja-html',
       scopeName: 'text.html.jinja',
       path: 'jinja-html.tmLanguage.json',
+      displayName: 'Jinja',
       embeddedLangs: ['html']
     },
     {
       id: 'jison',
       scopeName: 'source.jison',
       path: 'jison.tmLanguage.json',
+      displayName: 'Jison',
       samplePath: 'jison.sample',
       embeddedLangs: ['javascript']
     },
-    { id: 'json', scopeName: 'source.json', path: 'json.tmLanguage.json' },
+    { id: 'json', scopeName: 'source.json', path: 'json.tmLanguage.json', displayName: 'JSON' },
     {
       id: 'json5',
       scopeName: 'source.json5',
       path: 'json5.tmLanguage.json',
+      displayName: 'JSON5',
       samplePath: 'json5.sample'
     },
-    { id: 'jsonc', scopeName: 'source.json.comments', path: 'jsonc.tmLanguage.json' },
-    { id: 'jsonnet', scopeName: 'source.jsonnet', path: 'jsonnet.tmLanguage.json' },
+    {
+      id: 'jsonc',
+      scopeName: 'source.json.comments',
+      path: 'jsonc.tmLanguage.json',
+      displayName: 'JSON with Comments'
+    },
+    {
+      id: 'jsonl',
+      scopeName: 'source.json.lines',
+      path: 'jsonl.tmLanguage.json',
+      displayName: 'JSON Lines'
+    },
+    {
+      id: 'jsonnet',
+      scopeName: 'source.jsonnet',
+      path: 'jsonnet.tmLanguage.json',
+      displayName: 'Jsonnet'
+    },
     {
       id: 'jssm',
       scopeName: 'source.jssm',
       path: 'jssm.tmLanguage.json',
+      displayName: 'JSSM',
       samplePath: 'jssm.sample',
       aliases: ['fsl']
     },
-    { id: 'jsx', scopeName: 'source.js.jsx', path: 'jsx.tmLanguage.json' },
+    { id: 'jsx', scopeName: 'source.js.jsx', path: 'jsx.tmLanguage.json', displayName: 'JSX' },
     {
       id: 'julia',
       scopeName: 'source.julia',
       path: 'julia.tmLanguage.json',
+      displayName: 'Julia',
       embeddedLangs: ['cpp', 'python', 'javascript', 'r', 'sql']
     },
     {
       id: 'kotlin',
       scopeName: 'source.kotlin',
       path: 'kotlin.tmLanguage.json',
+      displayName: 'Kotlin',
       samplePath: 'kotlin.sample'
     },
     {
       id: 'kusto',
       scopeName: 'source.kusto',
       path: 'kusto.tmLanguage.json',
+      displayName: 'Kusto',
       samplePath: 'kusto.sample',
       aliases: ['kql']
     },
@@ -391,6 +595,7 @@
       id: 'latex',
       scopeName: 'text.tex.latex',
       path: 'latex.tmLanguage.json',
+      displayName: 'LaTeX',
       embeddedLangs: [
         'tex',
         'css',
@@ -414,28 +619,38 @@
       id: 'less',
       scopeName: 'source.css.less',
       path: 'less.tmLanguage.json',
+      displayName: 'Less',
       embeddedLangs: ['css']
     },
     {
       id: 'liquid',
       scopeName: 'text.html.liquid',
       path: 'liquid.tmLanguage.json',
+      displayName: 'Liquid',
       samplePath: 'liquid.sample',
       embeddedLangs: ['html', 'css', 'json', 'javascript']
     },
-    { id: 'lisp', scopeName: 'source.lisp', path: 'lisp.tmLanguage.json' },
-    { id: 'logo', scopeName: 'source.logo', path: 'logo.tmLanguage.json' },
-    { id: 'lua', scopeName: 'source.lua', path: 'lua.tmLanguage.json', embeddedLangs: ['c'] },
+    { id: 'lisp', scopeName: 'source.lisp', path: 'lisp.tmLanguage.json', displayName: 'Lisp' },
+    { id: 'logo', scopeName: 'source.logo', path: 'logo.tmLanguage.json', displayName: 'Logo' },
+    {
+      id: 'lua',
+      scopeName: 'source.lua',
+      path: 'lua.tmLanguage.json',
+      displayName: 'Lua',
+      embeddedLangs: ['c']
+    },
     {
       id: 'make',
       scopeName: 'source.makefile',
       path: 'make.tmLanguage.json',
+      displayName: 'Makefile',
       aliases: ['makefile']
     },
     {
       id: 'markdown',
       scopeName: 'text.html.markdown',
       path: 'markdown.tmLanguage.json',
+      displayName: 'Markdown',
       aliases: ['md'],
       embeddedLangs: [
         'css',
@@ -495,13 +710,20 @@
       id: 'marko',
       scopeName: 'text.marko',
       path: 'marko.tmLanguage.json',
+      displayName: 'Marko',
       embeddedLangs: ['css', 'less', 'scss', 'javascript']
     },
-    { id: 'matlab', scopeName: 'source.matlab', path: 'matlab.tmLanguage.json' },
+    {
+      id: 'matlab',
+      scopeName: 'source.matlab',
+      path: 'matlab.tmLanguage.json',
+      displayName: 'MATLAB'
+    },
     {
       id: 'mdx',
       scopeName: 'source.mdx',
       path: 'mdx.tmLanguage.json',
+      displayName: 'MDX',
       embeddedLangs: [
         'tsx',
         'toml',
@@ -546,124 +768,236 @@
         'typescript'
       ]
     },
-    { id: 'mermaid', scopeName: 'source.mermaid', path: 'mermaid.tmLanguage.json' },
+    {
+      id: 'mermaid',
+      scopeName: 'source.mermaid',
+      path: 'mermaid.tmLanguage.json',
+      displayName: 'Mermaid'
+    },
+    {
+      id: 'narrat',
+      scopeName: 'source.narrat',
+      path: 'narrat.tmLanguage.json',
+      displayName: 'Narrat Language',
+      samplePath: 'narrat.sample',
+      aliases: ['nar']
+    },
+    {
+      id: 'nextflow',
+      scopeName: 'source.nextflow',
+      path: 'nextflow.tmLanguage.json',
+      displayName: 'Nextflow',
+      samplePath: 'nextflow.sample',
+      aliases: ['nf']
+    },
     {
       id: 'nginx',
       scopeName: 'source.nginx',
       path: 'nginx.tmLanguage.json',
+      displayName: 'Nginx',
       embeddedLangs: ['lua']
     },
     {
       id: 'nim',
       scopeName: 'source.nim',
       path: 'nim.tmLanguage.json',
+      displayName: 'Nim',
       embeddedLangs: ['c', 'html', 'xml', 'javascript', 'css', 'glsl', 'markdown']
     },
-    { id: 'nix', scopeName: 'source.nix', path: 'nix.tmLanguage.json' },
+    { id: 'nix', scopeName: 'source.nix', path: 'nix.tmLanguage.json', displayName: 'Nix' },
     {
       id: 'objective-c',
       scopeName: 'source.objc',
       path: 'objective-c.tmLanguage.json',
+      displayName: 'Objective-C',
       aliases: ['objc']
     },
-    { id: 'objective-cpp', scopeName: 'source.objcpp', path: 'objective-cpp.tmLanguage.json' },
-    { id: 'ocaml', scopeName: 'source.ocaml', path: 'ocaml.tmLanguage.json' },
-    { id: 'pascal', scopeName: 'source.pascal', path: 'pascal.tmLanguage.json' },
+    {
+      id: 'objective-cpp',
+      scopeName: 'source.objcpp',
+      path: 'objective-cpp.tmLanguage.json',
+      displayName: 'Objective-C++'
+    },
+    { id: 'ocaml', scopeName: 'source.ocaml', path: 'ocaml.tmLanguage.json', displayName: 'OCaml' },
+    {
+      id: 'pascal',
+      scopeName: 'source.pascal',
+      path: 'pascal.tmLanguage.json',
+      displayName: 'Pascal'
+    },
     {
       id: 'perl',
       scopeName: 'source.perl',
       path: 'perl.tmLanguage.json',
+      displayName: 'Perl',
       embeddedLangs: ['html', 'xml', 'css', 'javascript', 'sql']
     },
     {
       id: 'php',
       scopeName: 'source.php',
       path: 'php.tmLanguage.json',
+      displayName: 'PHP',
       embeddedLangs: ['html', 'xml', 'sql', 'javascript', 'json', 'css']
     },
-    { id: 'plsql', scopeName: 'source.plsql.oracle', path: 'plsql.tmLanguage.json' },
-    { id: 'postcss', scopeName: 'source.css.postcss', path: 'postcss.tmLanguage.json' },
+    {
+      id: 'plsql',
+      scopeName: 'source.plsql.oracle',
+      path: 'plsql.tmLanguage.json',
+      displayName: 'PL/SQL'
+    },
+    {
+      id: 'postcss',
+      scopeName: 'source.css.postcss',
+      path: 'postcss.tmLanguage.json',
+      displayName: 'PostCSS'
+    },
     {
       id: 'powerquery',
       scopeName: 'source.powerquery',
       path: 'powerquery.tmLanguage.json',
+      displayName: 'PowerQuery',
       samplePath: 'powerquery.sample'
     },
     {
       id: 'powershell',
       scopeName: 'source.powershell',
       path: 'powershell.tmLanguage.json',
+      displayName: 'PowerShell',
       aliases: ['ps', 'ps1']
     },
     {
       id: 'prisma',
       scopeName: 'source.prisma',
       path: 'prisma.tmLanguage.json',
+      displayName: 'Prisma',
       samplePath: 'prisma.sample'
     },
-    { id: 'prolog', scopeName: 'source.prolog', path: 'prolog.tmLanguage.json' },
+    {
+      id: 'prolog',
+      scopeName: 'source.prolog',
+      path: 'prolog.tmLanguage.json',
+      displayName: 'Prolog'
+    },
     {
       id: 'proto',
       scopeName: 'source.proto',
       path: 'proto.tmLanguage.json',
+      displayName: 'Protocol Buffer 3',
       samplePath: 'proto.sample'
     },
     {
       id: 'pug',
       scopeName: 'text.pug',
       path: 'pug.tmLanguage.json',
+      displayName: 'Pug',
       aliases: ['jade'],
       embeddedLangs: ['javascript', 'css', 'sass', 'scss', 'stylus', 'coffee', 'html']
     },
-    { id: 'puppet', scopeName: 'source.puppet', path: 'puppet.tmLanguage.json' },
-    { id: 'purescript', scopeName: 'source.purescript', path: 'purescript.tmLanguage.json' },
+    {
+      id: 'puppet',
+      scopeName: 'source.puppet',
+      path: 'puppet.tmLanguage.json',
+      displayName: 'Puppet'
+    },
+    {
+      id: 'purescript',
+      scopeName: 'source.purescript',
+      path: 'purescript.tmLanguage.json',
+      displayName: 'PureScript'
+    },
     {
       id: 'python',
       scopeName: 'source.python',
       path: 'python.tmLanguage.json',
+      displayName: 'Python',
       samplePath: 'python.sample',
       aliases: ['py']
     },
-    { id: 'r', scopeName: 'source.r', path: 'r.tmLanguage.json' },
-    { id: 'raku', scopeName: 'source.perl.6', path: 'raku.tmLanguage.json', aliases: ['perl6'] },
+    { id: 'r', scopeName: 'source.r', path: 'r.tmLanguage.json', displayName: 'R' },
+    {
+      id: 'raku',
+      scopeName: 'source.perl.6',
+      path: 'raku.tmLanguage.json',
+      displayName: 'Perl 6',
+      aliases: ['perl6']
+    },
     {
       id: 'razor',
       scopeName: 'text.aspnetcorerazor',
       path: 'razor.tmLanguage.json',
+      displayName: 'ASP.NET Razor',
       embeddedLangs: ['html', 'csharp']
     },
-    { id: 'reg', scopeName: 'source.reg', path: 'reg.tmLanguage.json', samplePath: 'reg.sample' },
-    { id: 'rel', scopeName: 'source.rel', path: 'rel.tmLanguage.json', samplePath: 'rel.sample' },
-    { id: 'riscv', scopeName: 'source.riscv', path: 'riscv.tmLanguage.json' },
+    {
+      id: 'reg',
+      scopeName: 'source.reg',
+      path: 'reg.tmLanguage.json',
+      displayName: 'Windows Registry Script',
+      samplePath: 'reg.sample'
+    },
+    {
+      id: 'rel',
+      scopeName: 'source.rel',
+      path: 'rel.tmLanguage.json',
+      displayName: 'Rel',
+      samplePath: 'rel.sample'
+    },
+    {
+      id: 'riscv',
+      scopeName: 'source.riscv',
+      path: 'riscv.tmLanguage.json',
+      displayName: 'RISC-V'
+    },
     {
       id: 'rst',
       scopeName: 'source.rst',
       path: 'rst.tmLanguage.json',
+      displayName: 'reStructuredText',
       embeddedLangs: ['cpp', 'python', 'javascript', 'shellscript', 'yaml', 'cmake', 'ruby']
     },
     {
       id: 'ruby',
       scopeName: 'source.ruby',
       path: 'ruby.tmLanguage.json',
+      displayName: 'Ruby',
       samplePath: 'ruby.sample',
       aliases: ['rb'],
       embeddedLangs: ['html', 'xml', 'sql', 'css', 'c', 'javascript', 'shellscript', 'lua']
     },
-    { id: 'rust', scopeName: 'source.rust', path: 'rust.tmLanguage.json', aliases: ['rs'] },
-    { id: 'sas', scopeName: 'source.sas', path: 'sas.tmLanguage.json', embeddedLangs: ['sql'] },
-    { id: 'sass', scopeName: 'source.sass', path: 'sass.tmLanguage.json' },
-    { id: 'scala', scopeName: 'source.scala', path: 'scala.tmLanguage.json' },
-    { id: 'scheme', scopeName: 'source.scheme', path: 'scheme.tmLanguage.json' },
+    {
+      id: 'rust',
+      scopeName: 'source.rust',
+      path: 'rust.tmLanguage.json',
+      displayName: 'Rust',
+      aliases: ['rs']
+    },
+    {
+      id: 'sas',
+      scopeName: 'source.sas',
+      path: 'sas.tmLanguage.json',
+      displayName: 'SAS',
+      embeddedLangs: ['sql']
+    },
+    { id: 'sass', scopeName: 'source.sass', path: 'sass.tmLanguage.json', displayName: 'Sass' },
+    { id: 'scala', scopeName: 'source.scala', path: 'scala.tmLanguage.json', displayName: 'Scala' },
+    {
+      id: 'scheme',
+      scopeName: 'source.scheme',
+      path: 'scheme.tmLanguage.json',
+      displayName: 'Scheme'
+    },
     {
       id: 'scss',
       scopeName: 'source.css.scss',
       path: 'scss.tmLanguage.json',
+      displayName: 'SCSS',
       embeddedLangs: ['css']
     },
     {
       id: 'shaderlab',
       scopeName: 'source.shaderlab',
       path: 'shaderlab.tmLanguage.json',
+      displayName: 'ShaderLab',
       aliases: ['shader'],
       embeddedLangs: ['hlsl']
     },
@@ -671,31 +1005,56 @@
       id: 'shellscript',
       scopeName: 'source.shell',
       path: 'shellscript.tmLanguage.json',
+      displayName: 'Shell',
       aliases: ['bash', 'console', 'sh', 'shell', 'zsh']
     },
-    { id: 'smalltalk', scopeName: 'source.smalltalk', path: 'smalltalk.tmLanguage.json' },
-    { id: 'solidity', scopeName: 'source.solidity', path: 'solidity.tmLanguage.json' },
+    {
+      id: 'smalltalk',
+      scopeName: 'source.smalltalk',
+      path: 'smalltalk.tmLanguage.json',
+      displayName: 'Smalltalk'
+    },
+    {
+      id: 'solidity',
+      scopeName: 'source.solidity',
+      path: 'solidity.tmLanguage.json',
+      displayName: 'Solidity'
+    },
     {
       id: 'sparql',
       scopeName: 'source.sparql',
       path: 'sparql.tmLanguage.json',
+      displayName: 'SPARQL',
       samplePath: 'sparql.sample',
       embeddedLangs: ['turtle']
     },
-    { id: 'sql', scopeName: 'source.sql', path: 'sql.tmLanguage.json' },
-    { id: 'ssh-config', scopeName: 'source.ssh-config', path: 'ssh-config.tmLanguage.json' },
+    { id: 'sql', scopeName: 'source.sql', path: 'sql.tmLanguage.json', displayName: 'SQL' },
+    {
+      id: 'ssh-config',
+      scopeName: 'source.ssh-config',
+      path: 'ssh-config.tmLanguage.json',
+      displayName: 'SSH Config'
+    },
     {
       id: 'stata',
       scopeName: 'source.stata',
       path: 'stata.tmLanguage.json',
+      displayName: 'Stata',
       samplePath: 'stata.sample',
       embeddedLangs: ['sql']
     },
-    { id: 'stylus', scopeName: 'source.stylus', path: 'stylus.tmLanguage.json', aliases: ['styl'] },
+    {
+      id: 'stylus',
+      scopeName: 'source.stylus',
+      path: 'stylus.tmLanguage.json',
+      displayName: 'Stylus',
+      aliases: ['styl']
+    },
     {
       id: 'svelte',
       scopeName: 'source.svelte',
       path: 'svelte.tmLanguage.json',
+      displayName: 'Svelte',
       embeddedLangs: [
         'javascript',
         'typescript',
@@ -710,60 +1069,97 @@
         'markdown'
       ]
     },
-    { id: 'swift', scopeName: 'source.swift', path: 'swift.tmLanguage.json' },
+    { id: 'swift', scopeName: 'source.swift', path: 'swift.tmLanguage.json', displayName: 'Swift' },
     {
       id: 'system-verilog',
       scopeName: 'source.systemverilog',
-      path: 'system-verilog.tmLanguage.json'
+      path: 'system-verilog.tmLanguage.json',
+      displayName: 'SystemVerilog'
     },
     {
       id: 'tasl',
       scopeName: 'source.tasl',
       path: 'tasl.tmLanguage.json',
+      displayName: 'Tasl',
       samplePath: 'tasl.sample'
     },
-    { id: 'tcl', scopeName: 'source.tcl', path: 'tcl.tmLanguage.json' },
-    { id: 'tex', scopeName: 'text.tex', path: 'tex.tmLanguage.json', embeddedLangs: ['r'] },
-    { id: 'toml', scopeName: 'source.toml', path: 'toml.tmLanguage.json' },
-    { id: 'tsx', scopeName: 'source.tsx', path: 'tsx.tmLanguage.json', samplePath: 'tsx.sample' },
+    { id: 'tcl', scopeName: 'source.tcl', path: 'tcl.tmLanguage.json', displayName: 'Tcl' },
+    {
+      id: 'tex',
+      scopeName: 'text.tex',
+      path: 'tex.tmLanguage.json',
+      displayName: 'TeX',
+      embeddedLangs: ['r']
+    },
+    { id: 'toml', scopeName: 'source.toml', path: 'toml.tmLanguage.json', displayName: 'TOML' },
+    {
+      id: 'tsx',
+      scopeName: 'source.tsx',
+      path: 'tsx.tmLanguage.json',
+      displayName: 'TSX',
+      samplePath: 'tsx.sample'
+    },
     {
       id: 'turtle',
       scopeName: 'source.turtle',
       path: 'turtle.tmLanguage.json',
+      displayName: 'Turtle',
       samplePath: 'turtle.sample'
     },
     {
       id: 'twig',
       scopeName: 'text.html.twig',
       path: 'twig.tmLanguage.json',
+      displayName: 'Twig',
       embeddedLangs: ['css', 'javascript', 'php', 'python', 'ruby']
     },
     {
       id: 'typescript',
       scopeName: 'source.ts',
       path: 'typescript.tmLanguage.json',
+      displayName: 'TypeScript',
       aliases: ['ts']
     },
-    { id: 'v', scopeName: 'source.v', path: 'v.tmLanguage.json', samplePath: 'v.sample' },
-    { id: 'vb', scopeName: 'source.asp.vb.net', path: 'vb.tmLanguage.json', aliases: ['cmd'] },
-    { id: 'verilog', scopeName: 'source.verilog', path: 'verilog.tmLanguage.json' },
-    { id: 'vhdl', scopeName: 'source.vhdl', path: 'vhdl.tmLanguage.json' },
+    {
+      id: 'v',
+      scopeName: 'source.v',
+      path: 'v.tmLanguage.json',
+      displayName: 'V',
+      samplePath: 'v.sample'
+    },
+    {
+      id: 'vb',
+      scopeName: 'source.asp.vb.net',
+      path: 'vb.tmLanguage.json',
+      displayName: 'Visual Basic',
+      aliases: ['cmd']
+    },
+    {
+      id: 'verilog',
+      scopeName: 'source.verilog',
+      path: 'verilog.tmLanguage.json',
+      displayName: 'Verilog'
+    },
+    { id: 'vhdl', scopeName: 'source.vhdl', path: 'vhdl.tmLanguage.json', displayName: 'VHDL' },
     {
       id: 'viml',
       scopeName: 'source.viml',
       path: 'viml.tmLanguage.json',
+      displayName: 'Vim Script',
       aliases: ['vim', 'vimscript']
     },
     {
       id: 'vue-html',
       scopeName: 'text.html.vue-html',
       path: 'vue-html.tmLanguage.json',
+      displayName: 'Vue HTML',
       embeddedLangs: ['vue', 'javascript']
     },
     {
       id: 'vue',
       scopeName: 'source.vue',
       path: 'vue.tmLanguage.json',
+      displayName: 'Vue',
       embeddedLangs: [
         'html',
         'markdown',
@@ -785,51 +1181,91 @@
         'graphql'
       ]
     },
-    { id: 'wasm', scopeName: 'source.wat', path: 'wasm.tmLanguage.json' },
-    { id: 'wenyan', scopeName: 'source.wenyan', path: 'wenyan.tmLanguage.json', aliases: ['文言'] },
+    {
+      id: 'vyper',
+      scopeName: 'source.vyper',
+      path: 'vyper.tmLanguage.json',
+      displayName: 'Vyper',
+      samplePath: 'vyper.sample',
+      aliases: ['vy']
+    },
+    {
+      id: 'wasm',
+      scopeName: 'source.wat',
+      path: 'wasm.tmLanguage.json',
+      displayName: 'WebAssembly'
+    },
+    {
+      id: 'wenyan',
+      scopeName: 'source.wenyan',
+      path: 'wenyan.tmLanguage.json',
+      displayName: 'Wenyan',
+      aliases: ['文言']
+    },
     {
       id: 'wgsl',
       scopeName: 'source.wgsl',
       path: 'wgsl.tmLanguage.json',
+      displayName: 'WGSL',
       samplePath: 'wgsl.sample'
     },
     {
       id: 'wolfram',
       scopeName: 'source.wolfram',
       path: 'wolfram.tmLanguage.json',
+      displayName: 'Wolfram',
       samplePath: 'wolfram.sample'
     },
-    { id: 'xml', scopeName: 'text.xml', path: 'xml.tmLanguage.json', embeddedLangs: ['java'] },
-    { id: 'xsl', scopeName: 'text.xml.xsl', path: 'xsl.tmLanguage.json', embeddedLangs: ['xml'] },
-    { id: 'yaml', scopeName: 'source.yaml', path: 'yaml.tmLanguage.json', aliases: ['yml'] },
+    {
+      id: 'xml',
+      scopeName: 'text.xml',
+      path: 'xml.tmLanguage.json',
+      displayName: 'XML',
+      embeddedLangs: ['java']
+    },
+    {
+      id: 'xsl',
+      scopeName: 'text.xml.xsl',
+      path: 'xsl.tmLanguage.json',
+      displayName: 'XSL',
+      embeddedLangs: ['xml']
+    },
+    {
+      id: 'yaml',
+      scopeName: 'source.yaml',
+      path: 'yaml.tmLanguage.json',
+      displayName: 'YAML',
+      aliases: ['yml']
+    },
     {
       id: 'zenscript',
       scopeName: 'source.zenscript',
       path: 'zenscript.tmLanguage.json',
+      displayName: 'ZenScript',
       samplePath: 'zenscript.sample'
     }
   ]
-  var n = (e => (
+  var s = (e => (
     (e[(e.NotSet = -1)] = 'NotSet'),
     (e[(e.None = 0)] = 'None'),
     (e[(e.Italic = 1)] = 'Italic'),
     (e[(e.Bold = 2)] = 'Bold'),
     (e[(e.Underline = 4)] = 'Underline'),
     e
-  ))(n || {})
-  class s {
+  ))(s || {})
+  class n {
     static toBinaryStr(e) {
       let t = e.toString(2)
       for (; t.length < 32; ) t = '0' + t
       return t
     }
     static printMetadata(e) {
-      let t = s.getLanguageId(e),
-        n = s.getTokenType(e),
-        r = s.getFontStyle(e),
-        a = s.getForeground(e),
-        o = s.getBackground(e)
-      console.log({ languageId: t, tokenType: n, fontStyle: r, foreground: a, background: o })
+      let t = n.getLanguageId(e),
+        s = n.getTokenType(e),
+        a = n.getFontStyle(e),
+        r = n.getForeground(e),
+        o = n.getBackground(e)
+      console.log({ languageId: t, tokenType: s, fontStyle: a, foreground: r, background: o })
     }
     static getLanguageId(e) {
       return (255 & e) >>> 0
@@ -849,32 +1285,32 @@
     static containsBalancedBrackets(e) {
       return 0 != (1024 & e)
     }
-    static set(e, t, n, r, a, o) {
-      let i = s.getLanguageId(e),
-        c = s.getTokenType(e),
-        l = s.getFontStyle(e),
-        u = s.getForeground(e),
-        h = s.getBackground(e)
+    static set(e, t, s, a, r, o) {
+      let i = n.getLanguageId(e),
+        c = n.getTokenType(e),
+        l = n.getFontStyle(e),
+        u = n.getForeground(e),
+        p = n.getBackground(e)
       return (
         0 !== t && (i = t),
-        0 !== n && (c = 8 === n ? 0 : n),
-        -1 !== r && (l = r),
-        0 !== a && (u = a),
-        0 !== o && (h = o),
+        0 !== s && (c = 8 === s ? 0 : s),
+        -1 !== a && (l = a),
+        0 !== r && (u = r),
+        0 !== o && (p = o),
         ((i << 0) |
           (c << 8) |
           (l << 11) |
-          ((s.containsBalancedBrackets(e) ? 1 : 0) << 10) |
+          ((n.containsBalancedBrackets(e) ? 1 : 0) << 10) |
           (u << 15) |
-          (h << 24)) >>>
+          (p << 24)) >>>
           0
       )
     }
   }
-  function r(e) {
+  function a(e) {
     return e.endsWith('/') || e.endsWith('\\') ? e.slice(0, -1) : e
   }
-  function a(e) {
+  function r(e) {
     return e.startsWith('./') ? e.slice(2) : e
   }
   function o(e) {
@@ -882,7 +1318,7 @@
     return t.slice(0, t.length - 1)
   }
   function i(...e) {
-    return e.map(r).map(a).join('/')
+    return e.map(a).map(r).join('/')
   }
   'undefined' != typeof globalThis
     ? globalThis
@@ -896,8 +1332,8 @@
   ;(c = () => {
     return (
       (e = {
-        770: function (e, t, n) {
-          var s =
+        770: function (e, t, s) {
+          var n =
             (this && this.__importDefault) ||
             function (e) {
               return e && e.__esModule ? e : { default: e }
@@ -910,56 +1346,56 @@
               t.OnigScanner =
               t.OnigString =
                 void 0)
-          const r = s(n(418))
-          let a = null,
+          const a = n(s(418))
+          let r = null,
             o = !1
           class i {
             static _utf8ByteLength(e) {
               let t = 0
-              for (let n = 0, s = e.length; n < s; n++) {
-                const r = e.charCodeAt(n)
-                let a = r,
+              for (let s = 0, n = e.length; s < n; s++) {
+                const a = e.charCodeAt(s)
+                let r = a,
                   o = !1
-                if (r >= 55296 && r <= 56319 && n + 1 < s) {
-                  const t = e.charCodeAt(n + 1)
+                if (a >= 55296 && a <= 56319 && s + 1 < n) {
+                  const t = e.charCodeAt(s + 1)
                   t >= 56320 &&
                     t <= 57343 &&
-                    ((a = (65536 + ((r - 55296) << 10)) | (t - 56320)), (o = !0))
+                    ((r = (65536 + ((a - 55296) << 10)) | (t - 56320)), (o = !0))
                 }
-                ;(t += a <= 127 ? 1 : a <= 2047 ? 2 : a <= 65535 ? 3 : 4), o && n++
+                ;(t += r <= 127 ? 1 : r <= 2047 ? 2 : r <= 65535 ? 3 : 4), o && s++
               }
               return t
             }
             constructor(e) {
               const t = e.length,
-                n = i._utf8ByteLength(e),
-                s = n !== t,
-                r = s ? new Uint32Array(t + 1) : null
-              s && (r[t] = n)
-              const a = s ? new Uint32Array(n + 1) : null
-              s && (a[n] = t)
-              const o = new Uint8Array(n)
+                s = i._utf8ByteLength(e),
+                n = s !== t,
+                a = n ? new Uint32Array(t + 1) : null
+              n && (a[t] = s)
+              const r = n ? new Uint32Array(s + 1) : null
+              n && (r[s] = t)
+              const o = new Uint8Array(s)
               let c = 0
-              for (let n = 0; n < t; n++) {
-                const i = e.charCodeAt(n)
+              for (let s = 0; s < t; s++) {
+                const i = e.charCodeAt(s)
                 let l = i,
                   u = !1
-                if (i >= 55296 && i <= 56319 && n + 1 < t) {
-                  const t = e.charCodeAt(n + 1)
+                if (i >= 55296 && i <= 56319 && s + 1 < t) {
+                  const t = e.charCodeAt(s + 1)
                   t >= 56320 &&
                     t <= 57343 &&
                     ((l = (65536 + ((i - 55296) << 10)) | (t - 56320)), (u = !0))
                 }
-                s &&
-                  ((r[n] = c),
-                  u && (r[n + 1] = c),
+                n &&
+                  ((a[s] = c),
+                  u && (a[s + 1] = c),
                   l <= 127
-                    ? (a[c + 0] = n)
+                    ? (r[c + 0] = s)
                     : l <= 2047
-                    ? ((a[c + 0] = n), (a[c + 1] = n))
+                    ? ((r[c + 0] = s), (r[c + 1] = s))
                     : l <= 65535
-                    ? ((a[c + 0] = n), (a[c + 1] = n), (a[c + 2] = n))
-                    : ((a[c + 0] = n), (a[c + 1] = n), (a[c + 2] = n), (a[c + 3] = n))),
+                    ? ((r[c + 0] = s), (r[c + 1] = s), (r[c + 2] = s))
+                    : ((r[c + 0] = s), (r[c + 1] = s), (r[c + 2] = s), (r[c + 3] = s))),
                   l <= 127
                     ? (o[c++] = l)
                     : l <= 2047
@@ -972,14 +1408,14 @@
                       (o[c++] = 128 | ((258048 & l) >>> 12)),
                       (o[c++] = 128 | ((4032 & l) >>> 6)),
                       (o[c++] = 128 | ((63 & l) >>> 0))),
-                  u && n++
+                  u && s++
               }
               ;(this.utf16Length = t),
-                (this.utf8Length = n),
+                (this.utf8Length = s),
                 (this.utf16Value = e),
                 (this.utf8Value = o),
-                (this.utf16OffsetToUtf8 = r),
-                (this.utf8OffsetToUtf16 = a)
+                (this.utf16OffsetToUtf8 = a),
+                (this.utf8OffsetToUtf16 = r)
             }
             createString(e) {
               const t = e._omalloc(this.utf8Length)
@@ -988,19 +1424,19 @@
           }
           class c {
             constructor(e) {
-              if (((this.id = ++c.LAST_ID), !a)) throw new Error('Must invoke loadWASM first.')
-              ;(this._onigBinding = a), (this.content = e)
+              if (((this.id = ++c.LAST_ID), !r)) throw new Error('Must invoke loadWASM first.')
+              ;(this._onigBinding = r), (this.content = e)
               const t = new i(e)
               ;(this.utf16Length = t.utf16Length),
                 (this.utf8Length = t.utf8Length),
                 (this.utf16OffsetToUtf8 = t.utf16OffsetToUtf8),
                 (this.utf8OffsetToUtf16 = t.utf8OffsetToUtf16),
                 this.utf8Length < 1e4 && !c._sharedPtrInUse
-                  ? (c._sharedPtr || (c._sharedPtr = a._omalloc(1e4)),
+                  ? (c._sharedPtr || (c._sharedPtr = r._omalloc(1e4)),
                     (c._sharedPtrInUse = !0),
-                    a.HEAPU8.set(t.utf8Value, c._sharedPtr),
+                    r.HEAPU8.set(t.utf8Value, c._sharedPtr),
                     (this.ptr = c._sharedPtr))
-                  : (this.ptr = t.createString(a))
+                  : (this.ptr = t.createString(r))
             }
             convertUtf8OffsetToUtf16(e) {
               return this.utf8OffsetToUtf16
@@ -1029,140 +1465,140 @@
           ;(t.OnigString = c), (c.LAST_ID = 0), (c._sharedPtr = 0), (c._sharedPtrInUse = !1)
           class l {
             constructor(e) {
-              if (!a) throw new Error('Must invoke loadWASM first.')
+              if (!r) throw new Error('Must invoke loadWASM first.')
               const t = [],
-                n = []
-              for (let s = 0, r = e.length; s < r; s++) {
-                const r = new i(e[s])
-                ;(t[s] = r.createString(a)), (n[s] = r.utf8Length)
+                s = []
+              for (let n = 0, a = e.length; n < a; n++) {
+                const a = new i(e[n])
+                ;(t[n] = a.createString(r)), (s[n] = a.utf8Length)
               }
-              const s = a._omalloc(4 * e.length)
-              a.HEAPU32.set(t, s / 4)
-              const r = a._omalloc(4 * e.length)
-              a.HEAPU32.set(n, r / 4)
-              const o = a._createOnigScanner(s, r, e.length)
-              for (let n = 0, s = e.length; n < s; n++) a._ofree(t[n])
-              a._ofree(r),
-                a._ofree(s),
+              const n = r._omalloc(4 * e.length)
+              r.HEAPU32.set(t, n / 4)
+              const a = r._omalloc(4 * e.length)
+              r.HEAPU32.set(s, a / 4)
+              const o = r._createOnigScanner(n, a, e.length)
+              for (let s = 0, n = e.length; s < n; s++) r._ofree(t[s])
+              r._ofree(a),
+                r._ofree(n),
                 0 === o &&
                   (function (e) {
                     throw new Error(e.UTF8ToString(e._getLastOnigError()))
-                  })(a),
-                (this._onigBinding = a),
+                  })(r),
+                (this._onigBinding = r),
                 (this._ptr = o)
             }
             dispose() {
               this._onigBinding._freeOnigScanner(this._ptr)
             }
-            findNextMatchSync(e, t, n) {
-              let s = o,
-                r = 0
+            findNextMatchSync(e, t, s) {
+              let n = o,
+                a = 0
               if (
-                ('number' == typeof n
-                  ? (8 & n && (s = !0), (r = n))
-                  : 'boolean' == typeof n && (s = n),
+                ('number' == typeof s
+                  ? (8 & s && (n = !0), (a = s))
+                  : 'boolean' == typeof s && (n = s),
                 'string' == typeof e)
               ) {
                 e = new c(e)
-                const n = this._findNextMatchSync(e, t, s, r)
-                return e.dispose(), n
+                const s = this._findNextMatchSync(e, t, n, a)
+                return e.dispose(), s
               }
-              return this._findNextMatchSync(e, t, s, r)
+              return this._findNextMatchSync(e, t, n, a)
             }
-            _findNextMatchSync(e, t, n, s) {
-              const r = this._onigBinding
-              let a
+            _findNextMatchSync(e, t, s, n) {
+              const a = this._onigBinding
+              let r
               if (
-                ((a = n
-                  ? r._findNextOnigScannerMatchDbg(
+                ((r = s
+                  ? a._findNextOnigScannerMatchDbg(
                       this._ptr,
                       e.id,
                       e.ptr,
                       e.utf8Length,
                       e.convertUtf16OffsetToUtf8(t),
-                      s
+                      n
                     )
-                  : r._findNextOnigScannerMatch(
+                  : a._findNextOnigScannerMatch(
                       this._ptr,
                       e.id,
                       e.ptr,
                       e.utf8Length,
                       e.convertUtf16OffsetToUtf8(t),
-                      s
+                      n
                     )),
-                0 === a)
+                0 === r)
               )
                 return null
-              const o = r.HEAPU32
-              let i = a / 4
+              const o = a.HEAPU32
+              let i = r / 4
               const c = o[i++],
                 l = o[i++]
               let u = []
               for (let t = 0; t < l; t++) {
-                const n = e.convertUtf8OffsetToUtf16(o[i++]),
-                  s = e.convertUtf8OffsetToUtf16(o[i++])
-                u[t] = { start: n, end: s, length: s - n }
+                const s = e.convertUtf8OffsetToUtf16(o[i++]),
+                  n = e.convertUtf8OffsetToUtf16(o[i++])
+                u[t] = { start: s, end: n, length: n - s }
               }
               return { index: c, captureIndices: u }
             }
           }
           t.OnigScanner = l
           let u = !1,
-            h = null
+            p = null
           ;(t.loadWASM = function (e) {
-            if (u) return h
-            let t, n, s, o
+            if (u) return p
+            let t, s, n, o
             if (
               ((u = !0),
               (function (e) {
                 return 'function' == typeof e.instantiator
               })(e))
             )
-              (t = e.instantiator), (n = e.print)
+              (t = e.instantiator), (s = e.print)
             else {
-              let s
+              let n
               !(function (e) {
                 return void 0 !== e.data
               })(e)
-                ? (s = e)
-                : ((s = e.data), (n = e.print)),
+                ? (n = e)
+                : ((n = e.data), (s = e.print)),
                 (t = (function (e) {
                   return 'undefined' != typeof Response && e instanceof Response
-                })(s)
+                })(n)
                   ? 'function' == typeof WebAssembly.instantiateStreaming
                     ? (function (e) {
                         return t => WebAssembly.instantiateStreaming(e, t)
-                      })(s)
+                      })(n)
                     : (function (e) {
                         return async t => {
-                          const n = await e.arrayBuffer()
-                          return WebAssembly.instantiate(n, t)
+                          const s = await e.arrayBuffer()
+                          return WebAssembly.instantiate(s, t)
                         }
-                      })(s)
+                      })(n)
                   : (function (e) {
                       return t => WebAssembly.instantiate(e, t)
-                    })(s))
+                    })(n))
             }
             return (
-              (h = new Promise((e, t) => {
-                ;(s = e), (o = t)
+              (p = new Promise((e, t) => {
+                ;(n = e), (o = t)
               })),
-              (function (e, t, n, s) {
-                ;(0, r.default)({
+              (function (e, t, s, n) {
+                ;(0, a.default)({
                   print: t,
-                  instantiateWasm: (t, n) => {
+                  instantiateWasm: (t, s) => {
                     if ('undefined' == typeof performance) {
                       const e = () => Date.now()
                       ;(t.env.emscripten_get_now = e),
                         (t.wasi_snapshot_preview1.emscripten_get_now = e)
                     }
-                    return e(t).then(e => n(e.instance), s), {}
+                    return e(t).then(e => s(e.instance), n), {}
                   }
                 }).then(e => {
-                  ;(a = e), n()
+                  ;(r = e), s()
                 })
-              })(t, n, s, o),
-              h
+              })(t, s, n, o),
+              p
             )
           }),
             (t.createOnigString = function (e) {
@@ -1180,21 +1616,21 @@
             ('undefined' != typeof document && document.currentScript && document.currentScript.src,
             function (e) {
               var t,
-                n,
-                s = void 0 !== (e = e || {}) ? e : {}
-              s.ready = new Promise(function (e, s) {
-                ;(t = e), (n = s)
+                s,
+                n = void 0 !== (e = e || {}) ? e : {}
+              n.ready = new Promise(function (e, n) {
+                ;(t = e), (s = n)
               })
-              var r,
-                a = Object.assign({}, s),
+              var a,
+                r = Object.assign({}, n),
                 o = !1
-              ;(r = function (e) {
+              ;(a = function (e) {
                 let t
                 return 'function' == typeof readbuffer
                   ? new Uint8Array(readbuffer(e))
                   : ((t = read(e, 'binary')),
                     (function (e, t) {
-                      e || N(t)
+                      e || w(t)
                     })('object' == typeof t),
                     t)
               }),
@@ -1206,25 +1642,25 @@
                     'undefined' != typeof printErr ? printErr : onig_print))
               var i,
                 c,
-                l = s.print || console.log.bind(console),
-                u = s.printErr || console.warn.bind(console)
-              Object.assign(s, a),
-                (a = null),
-                s.arguments && s.arguments,
-                s.thisProgram && s.thisProgram,
-                s.quit && s.quit,
-                s.wasmBinary && (i = s.wasmBinary),
-                s.noExitRuntime,
-                'object' != typeof WebAssembly && N('no native wasm support detected')
-              var h,
-                p,
+                l = n.print || console.log.bind(console),
+                u = n.printErr || console.warn.bind(console)
+              Object.assign(n, r),
+                (r = null),
+                n.arguments && n.arguments,
+                n.thisProgram && n.thisProgram,
+                n.quit && n.quit,
+                n.wasmBinary && (i = n.wasmBinary),
+                n.noExitRuntime,
+                'object' != typeof WebAssembly && w('no native wasm support detected')
+              var p,
+                h,
                 d,
                 m = !1,
                 g = 'undefined' != typeof TextDecoder ? new TextDecoder('utf8') : void 0
-              function f(e, t, n) {
-                for (var s = t + n, r = t; e[r] && !(r >= s); ) ++r
-                if (r - t > 16 && e.buffer && g) return g.decode(e.subarray(t, r))
-                for (var a = ''; t < r; ) {
+              function f(e, t, s) {
+                for (var n = t + s, a = t; e[a] && !(a >= n); ) ++a
+                if (a - t > 16 && e.buffer && g) return g.decode(e.subarray(t, a))
+                for (var r = ''; t < a; ) {
                   var o = e[t++]
                   if (128 & o) {
                     var i = 63 & e[t++]
@@ -1236,184 +1672,184 @@
                             ? ((15 & o) << 12) | (i << 6) | c
                             : ((7 & o) << 18) | (i << 12) | (c << 6) | (63 & e[t++])) < 65536
                       )
-                        a += String.fromCharCode(o)
+                        r += String.fromCharCode(o)
                       else {
                         var l = o - 65536
-                        a += String.fromCharCode(55296 | (l >> 10), 56320 | (1023 & l))
+                        r += String.fromCharCode(55296 | (l >> 10), 56320 | (1023 & l))
                       }
-                    } else a += String.fromCharCode(((31 & o) << 6) | i)
-                  } else a += String.fromCharCode(o)
+                    } else r += String.fromCharCode(((31 & o) << 6) | i)
+                  } else r += String.fromCharCode(o)
                 }
-                return a
+                return r
               }
-              function _(e) {
-                ;(h = e),
-                  (s.HEAP8 = new Int8Array(e)),
-                  (s.HEAP16 = new Int16Array(e)),
-                  (s.HEAP32 = new Int32Array(e)),
-                  (s.HEAPU8 = p = new Uint8Array(e)),
-                  (s.HEAPU16 = new Uint16Array(e)),
-                  (s.HEAPU32 = d = new Uint32Array(e)),
-                  (s.HEAPF32 = new Float32Array(e)),
-                  (s.HEAPF64 = new Float64Array(e))
+              function y(e) {
+                ;(p = e),
+                  (n.HEAP8 = new Int8Array(e)),
+                  (n.HEAP16 = new Int16Array(e)),
+                  (n.HEAP32 = new Int32Array(e)),
+                  (n.HEAPU8 = h = new Uint8Array(e)),
+                  (n.HEAPU16 = new Uint16Array(e)),
+                  (n.HEAPU32 = d = new Uint32Array(e)),
+                  (n.HEAPF32 = new Float32Array(e)),
+                  (n.HEAPF64 = new Float64Array(e))
               }
-              s.INITIAL_MEMORY
+              n.INITIAL_MEMORY
               var b = [],
-                y = [],
-                k = []
-              function L(e) {
+                _ = [],
+                N = []
+              function k(e) {
                 b.unshift(e)
               }
-              function v(e) {
-                k.unshift(e)
+              function L(e) {
+                N.unshift(e)
               }
               var S = 0,
-                w = null
-              function N(e) {
-                s.onAbort && s.onAbort(e),
+                v = null
+              function w(e) {
+                n.onAbort && n.onAbort(e),
                   u((e = 'Aborted(' + e + ')')),
                   (m = !0),
                   (e += '. Build with -sASSERTIONS for more info.')
                 var t = new WebAssembly.RuntimeError(e)
-                throw (n(t), t)
+                throw (s(t), t)
               }
               var C,
                 j,
-                x = 'data:application/octet-stream;base64,'
+                P = 'data:application/octet-stream;base64,'
               function A(e) {
-                return e.startsWith(x)
+                return e.startsWith(P)
               }
-              function P(e) {
+              function x(e) {
                 try {
                   if (e == C && i) return new Uint8Array(i)
-                  if (r) return r(e)
+                  if (a) return a(e)
                   throw 'both async and sync fetching of the wasm failed'
                 } catch (e) {
-                  N(e)
+                  w(e)
                 }
               }
               function T(e) {
-                for (; e.length > 0; ) e.shift()(s)
+                for (; e.length > 0; ) e.shift()(n)
               }
               function R(e) {
                 try {
-                  return c.grow((e - h.byteLength + 65535) >>> 16), _(c.buffer), 1
+                  return c.grow((e - p.byteLength + 65535) >>> 16), y(c.buffer), 1
                 } catch (e) {}
               }
               A((C = 'onig.wasm')) ||
                 (C = (function (e) {
-                  return s.locateFile ? s.locateFile(e, '') : '' + e
+                  return n.locateFile ? n.locateFile(e, '') : '' + e
                 })(C)),
                 (j = 'undefined' != typeof dateNow ? dateNow : () => performance.now())
               var I = [null, [], []]
               function E(e, t) {
-                var n = I[e]
-                0 === t || 10 === t ? ((1 === e ? l : u)(f(n, 0)), (n.length = 0)) : n.push(t)
+                var s = I[e]
+                0 === t || 10 === t ? ((1 === e ? l : u)(f(s, 0)), (s.length = 0)) : s.push(t)
               }
               var O,
-                B = {
+                M = {
                   emscripten_get_now: j,
-                  emscripten_memcpy_big: function (e, t, n) {
-                    p.copyWithin(e, t, t + n)
+                  emscripten_memcpy_big: function (e, t, s) {
+                    h.copyWithin(e, t, t + s)
                   },
                   emscripten_resize_heap: function (e) {
                     var t,
-                      n = p.length,
-                      s = 2147483648
-                    if ((e >>>= 0) > s) return !1
-                    for (var r = 1; r <= 4; r *= 2) {
-                      var a = n * (1 + 0.2 / r)
+                      s = h.length,
+                      n = 2147483648
+                    if ((e >>>= 0) > n) return !1
+                    for (var a = 1; a <= 4; a *= 2) {
+                      var r = s * (1 + 0.2 / a)
                       if (
-                        ((a = Math.min(a, e + 100663296)),
-                        R(Math.min(s, (t = Math.max(e, a)) + ((65536 - (t % 65536)) % 65536))))
+                        ((r = Math.min(r, e + 100663296)),
+                        R(Math.min(n, (t = Math.max(e, r)) + ((65536 - (t % 65536)) % 65536))))
                       )
                         return !0
                     }
                     return !1
                   },
-                  fd_write: function (e, t, n, s) {
-                    for (var r = 0, a = 0; a < n; a++) {
+                  fd_write: function (e, t, s, n) {
+                    for (var a = 0, r = 0; r < s; r++) {
                       var o = d[t >> 2],
                         i = d[(t + 4) >> 2]
                       t += 8
-                      for (var c = 0; c < i; c++) E(e, p[o + c])
-                      r += i
+                      for (var c = 0; c < i; c++) E(e, h[o + c])
+                      a += i
                     }
-                    return (d[s >> 2] = r), 0
+                    return (d[n >> 2] = a), 0
                   }
                 }
-              function M(e) {
-                function n() {
+              function B(e) {
+                function s() {
                   O ||
                     ((O = !0),
-                    (s.calledRun = !0),
+                    (n.calledRun = !0),
                     m ||
-                      (T(y),
-                      t(s),
-                      s.onRuntimeInitialized && s.onRuntimeInitialized(),
+                      (T(_),
+                      t(n),
+                      n.onRuntimeInitialized && n.onRuntimeInitialized(),
                       (function () {
-                        if (s.postRun)
+                        if (n.postRun)
                           for (
-                            'function' == typeof s.postRun && (s.postRun = [s.postRun]);
-                            s.postRun.length;
+                            'function' == typeof n.postRun && (n.postRun = [n.postRun]);
+                            n.postRun.length;
 
                           )
-                            v(s.postRun.shift())
-                        T(k)
+                            L(n.postRun.shift())
+                        T(N)
                       })()))
                 }
                 S > 0 ||
                   ((function () {
-                    if (s.preRun)
+                    if (n.preRun)
                       for (
-                        'function' == typeof s.preRun && (s.preRun = [s.preRun]);
-                        s.preRun.length;
+                        'function' == typeof n.preRun && (n.preRun = [n.preRun]);
+                        n.preRun.length;
 
                       )
-                        L(s.preRun.shift())
+                        k(n.preRun.shift())
                     T(b)
                   })(),
                   S > 0 ||
-                    (s.setStatus
-                      ? (s.setStatus('Running...'),
+                    (n.setStatus
+                      ? (n.setStatus('Running...'),
                         setTimeout(function () {
                           setTimeout(function () {
-                            s.setStatus('')
+                            n.setStatus('')
                           }, 1),
-                            n()
+                            s()
                         }, 1))
-                      : n()))
+                      : s()))
               }
               if (
                 ((function () {
-                  var e = { env: B, wasi_snapshot_preview1: B }
+                  var e = { env: M, wasi_snapshot_preview1: M }
                   function t(e, t) {
-                    var n = e.exports
-                    ;(s.asm = n),
-                      _((c = s.asm.memory).buffer),
-                      s.asm.__indirect_function_table,
+                    var s = e.exports
+                    ;(n.asm = s),
+                      y((c = n.asm.memory).buffer),
+                      n.asm.__indirect_function_table,
                       (function (e) {
-                        y.unshift(e)
-                      })(s.asm.__wasm_call_ctors),
+                        _.unshift(e)
+                      })(n.asm.__wasm_call_ctors),
                       (function (e) {
                         if (
                           (S--,
-                          s.monitorRunDependencies && s.monitorRunDependencies(S),
-                          0 == S && w)
+                          n.monitorRunDependencies && n.monitorRunDependencies(S),
+                          0 == S && v)
                         ) {
-                          var t = w
-                          ;(w = null), t()
+                          var t = v
+                          ;(v = null), t()
                         }
                       })()
                   }
-                  function r(e) {
+                  function a(e) {
                     t(e.instance)
                   }
-                  function a(t) {
+                  function r(t) {
                     return (
                       i || !o || 'function' != typeof fetch
                         ? Promise.resolve().then(function () {
-                            return P(C)
+                            return x(C)
                           })
                         : fetch(C, { credentials: 'same-origin' })
                             .then(function (e) {
@@ -1421,7 +1857,7 @@
                               return e.arrayBuffer()
                             })
                             .catch(function () {
-                              return P(C)
+                              return x(C)
                             })
                     )
                       .then(function (t) {
@@ -1431,203 +1867,203 @@
                         return e
                       })
                       .then(t, function (e) {
-                        u('failed to asynchronously prepare wasm: ' + e), N(e)
+                        u('failed to asynchronously prepare wasm: ' + e), w(e)
                       })
                   }
                   if (
                     (S++,
-                    s.monitorRunDependencies && s.monitorRunDependencies(S),
-                    s.instantiateWasm)
+                    n.monitorRunDependencies && n.monitorRunDependencies(S),
+                    n.instantiateWasm)
                   )
                     try {
-                      return s.instantiateWasm(e, t)
+                      return n.instantiateWasm(e, t)
                     } catch (e) {
-                      u('Module.instantiateWasm callback failed with error: ' + e), n(e)
+                      u('Module.instantiateWasm callback failed with error: ' + e), s(e)
                     }
                   ;(i ||
                   'function' != typeof WebAssembly.instantiateStreaming ||
                   A(C) ||
                   'function' != typeof fetch
-                    ? a(r)
+                    ? r(a)
                     : fetch(C, { credentials: 'same-origin' }).then(function (t) {
-                        return WebAssembly.instantiateStreaming(t, e).then(r, function (e) {
+                        return WebAssembly.instantiateStreaming(t, e).then(a, function (e) {
                           return (
                             u('wasm streaming compile failed: ' + e),
                             u('falling back to ArrayBuffer instantiation'),
-                            a(r)
+                            r(a)
                           )
                         })
                       })
-                  ).catch(n)
+                  ).catch(s)
                 })(),
-                (s.___wasm_call_ctors = function () {
-                  return (s.___wasm_call_ctors = s.asm.__wasm_call_ctors).apply(null, arguments)
+                (n.___wasm_call_ctors = function () {
+                  return (n.___wasm_call_ctors = n.asm.__wasm_call_ctors).apply(null, arguments)
                 }),
-                (s.___errno_location = function () {
-                  return (s.___errno_location = s.asm.__errno_location).apply(null, arguments)
+                (n.___errno_location = function () {
+                  return (n.___errno_location = n.asm.__errno_location).apply(null, arguments)
                 }),
-                (s._omalloc = function () {
-                  return (s._omalloc = s.asm.omalloc).apply(null, arguments)
+                (n._omalloc = function () {
+                  return (n._omalloc = n.asm.omalloc).apply(null, arguments)
                 }),
-                (s._ofree = function () {
-                  return (s._ofree = s.asm.ofree).apply(null, arguments)
+                (n._ofree = function () {
+                  return (n._ofree = n.asm.ofree).apply(null, arguments)
                 }),
-                (s._getLastOnigError = function () {
-                  return (s._getLastOnigError = s.asm.getLastOnigError).apply(null, arguments)
+                (n._getLastOnigError = function () {
+                  return (n._getLastOnigError = n.asm.getLastOnigError).apply(null, arguments)
                 }),
-                (s._createOnigScanner = function () {
-                  return (s._createOnigScanner = s.asm.createOnigScanner).apply(null, arguments)
+                (n._createOnigScanner = function () {
+                  return (n._createOnigScanner = n.asm.createOnigScanner).apply(null, arguments)
                 }),
-                (s._freeOnigScanner = function () {
-                  return (s._freeOnigScanner = s.asm.freeOnigScanner).apply(null, arguments)
+                (n._freeOnigScanner = function () {
+                  return (n._freeOnigScanner = n.asm.freeOnigScanner).apply(null, arguments)
                 }),
-                (s._findNextOnigScannerMatch = function () {
-                  return (s._findNextOnigScannerMatch = s.asm.findNextOnigScannerMatch).apply(
+                (n._findNextOnigScannerMatch = function () {
+                  return (n._findNextOnigScannerMatch = n.asm.findNextOnigScannerMatch).apply(
                     null,
                     arguments
                   )
                 }),
-                (s._findNextOnigScannerMatchDbg = function () {
-                  return (s._findNextOnigScannerMatchDbg = s.asm.findNextOnigScannerMatchDbg).apply(
+                (n._findNextOnigScannerMatchDbg = function () {
+                  return (n._findNextOnigScannerMatchDbg = n.asm.findNextOnigScannerMatchDbg).apply(
                     null,
                     arguments
                   )
                 }),
-                (s.stackSave = function () {
-                  return (s.stackSave = s.asm.stackSave).apply(null, arguments)
+                (n.stackSave = function () {
+                  return (n.stackSave = n.asm.stackSave).apply(null, arguments)
                 }),
-                (s.stackRestore = function () {
-                  return (s.stackRestore = s.asm.stackRestore).apply(null, arguments)
+                (n.stackRestore = function () {
+                  return (n.stackRestore = n.asm.stackRestore).apply(null, arguments)
                 }),
-                (s.stackAlloc = function () {
-                  return (s.stackAlloc = s.asm.stackAlloc).apply(null, arguments)
+                (n.stackAlloc = function () {
+                  return (n.stackAlloc = n.asm.stackAlloc).apply(null, arguments)
                 }),
-                (s.dynCall_jiji = function () {
-                  return (s.dynCall_jiji = s.asm.dynCall_jiji).apply(null, arguments)
+                (n.dynCall_jiji = function () {
+                  return (n.dynCall_jiji = n.asm.dynCall_jiji).apply(null, arguments)
                 }),
-                (s.UTF8ToString = function (e, t) {
-                  return e ? f(p, e, t) : ''
+                (n.UTF8ToString = function (e, t) {
+                  return e ? f(h, e, t) : ''
                 }),
-                (w = function e() {
-                  O || M(), O || (w = e)
+                (v = function e() {
+                  O || B(), O || (v = e)
                 }),
-                s.preInit)
+                n.preInit)
               )
                 for (
-                  'function' == typeof s.preInit && (s.preInit = [s.preInit]);
-                  s.preInit.length > 0;
+                  'function' == typeof n.preInit && (n.preInit = [n.preInit]);
+                  n.preInit.length > 0;
 
                 )
-                  s.preInit.pop()()
-              return M(), e.ready
+                  n.preInit.pop()()
+              return B(), e.ready
             })
           e.exports = t
         }
       }),
       (t = {}),
-      (function n(s) {
-        var r = t[s]
-        if (void 0 !== r) return r.exports
-        var a = (t[s] = { exports: {} })
-        return e[s].call(a.exports, a, a.exports, n), a.exports
+      (function s(n) {
+        var a = t[n]
+        if (void 0 !== a) return a.exports
+        var r = (t[n] = { exports: {} })
+        return e[n].call(r.exports, r, r.exports, s), r.exports
       })(770)
     )
     var e, t
   }),
     (l.exports = c())
   var u,
-    h,
     p,
+    h,
     d,
     m = l.exports
   function g(e, t = !1) {
-    const n = e.length
-    let s = 0,
-      r = '',
-      a = 0,
+    const s = e.length
+    let n = 0,
+      a = '',
+      r = 0,
       o = 16,
       i = 0,
       c = 0,
       l = 0,
       u = 0,
-      h = 0
-    function p(t, n) {
-      let r = 0,
-        a = 0
-      for (; r < t || !n; ) {
-        let t = e.charCodeAt(s)
-        if (t >= 48 && t <= 57) a = 16 * a + t - 48
-        else if (t >= 65 && t <= 70) a = 16 * a + t - 65 + 10
+      p = 0
+    function h(t, s) {
+      let a = 0,
+        r = 0
+      for (; a < t || !s; ) {
+        let t = e.charCodeAt(n)
+        if (t >= 48 && t <= 57) r = 16 * r + t - 48
+        else if (t >= 65 && t <= 70) r = 16 * r + t - 65 + 10
         else {
           if (!(t >= 97 && t <= 102)) break
-          a = 16 * a + t - 97 + 10
+          r = 16 * r + t - 97 + 10
         }
-        s++, r++
+        n++, a++
       }
-      return r < t && (a = -1), a
+      return a < t && (r = -1), r
     }
     function d() {
-      if (((r = ''), (h = 0), (a = s), (c = i), (u = l), s >= n)) return (a = n), (o = 17)
-      let t = e.charCodeAt(s)
+      if (((a = ''), (p = 0), (r = n), (c = i), (u = l), n >= s)) return (r = s), (o = 17)
+      let t = e.charCodeAt(n)
       if (f(t)) {
         do {
-          s++, (r += String.fromCharCode(t)), (t = e.charCodeAt(s))
+          n++, (a += String.fromCharCode(t)), (t = e.charCodeAt(n))
         } while (f(t))
         return (o = 15)
       }
-      if (_(t))
+      if (y(t))
         return (
-          s++,
-          (r += String.fromCharCode(t)),
-          13 === t && 10 === e.charCodeAt(s) && (s++, (r += '\n')),
+          n++,
+          (a += String.fromCharCode(t)),
+          13 === t && 10 === e.charCodeAt(n) && (n++, (a += '\n')),
           i++,
-          (l = s),
+          (l = n),
           (o = 14)
         )
       switch (t) {
         case 123:
-          return s++, (o = 1)
+          return n++, (o = 1)
         case 125:
-          return s++, (o = 2)
+          return n++, (o = 2)
         case 91:
-          return s++, (o = 3)
+          return n++, (o = 3)
         case 93:
-          return s++, (o = 4)
+          return n++, (o = 4)
         case 58:
-          return s++, (o = 6)
+          return n++, (o = 6)
         case 44:
-          return s++, (o = 5)
+          return n++, (o = 5)
         case 34:
           return (
-            s++,
-            (r = (function () {
+            n++,
+            (a = (function () {
               let t = '',
-                r = s
+                a = n
               for (;;) {
-                if (s >= n) {
-                  ;(t += e.substring(r, s)), (h = 2)
+                if (n >= s) {
+                  ;(t += e.substring(a, n)), (p = 2)
                   break
                 }
-                const a = e.charCodeAt(s)
-                if (34 === a) {
-                  ;(t += e.substring(r, s)), s++
+                const r = e.charCodeAt(n)
+                if (34 === r) {
+                  ;(t += e.substring(a, n)), n++
                   break
                 }
-                if (92 !== a) {
-                  if (a >= 0 && a <= 31) {
-                    if (_(a)) {
-                      ;(t += e.substring(r, s)), (h = 2)
+                if (92 !== r) {
+                  if (r >= 0 && r <= 31) {
+                    if (y(r)) {
+                      ;(t += e.substring(a, n)), (p = 2)
                       break
                     }
-                    h = 6
+                    p = 6
                   }
-                  s++
+                  n++
                 } else {
-                  if (((t += e.substring(r, s)), s++, s >= n)) {
-                    h = 2
+                  if (((t += e.substring(a, n)), n++, n >= s)) {
+                    p = 2
                     break
                   }
-                  switch (e.charCodeAt(s++)) {
+                  switch (e.charCodeAt(n++)) {
                     case 34:
                       t += '"'
                       break
@@ -1653,13 +2089,13 @@
                       t += '\t'
                       break
                     case 117:
-                      const e = p(4, !0)
-                      e >= 0 ? (t += String.fromCharCode(e)) : (h = 4)
+                      const e = h(4, !0)
+                      e >= 0 ? (t += String.fromCharCode(e)) : (p = 4)
                       break
                     default:
-                      h = 5
+                      p = 5
                   }
-                  r = s
+                  a = n
                 }
               }
               return t
@@ -1667,28 +2103,28 @@
             (o = 10)
           )
         case 47:
-          const c = s - 1
-          if (47 === e.charCodeAt(s + 1)) {
-            for (s += 2; s < n && !_(e.charCodeAt(s)); ) s++
-            return (r = e.substring(c, s)), (o = 12)
+          const c = n - 1
+          if (47 === e.charCodeAt(n + 1)) {
+            for (n += 2; n < s && !y(e.charCodeAt(n)); ) n++
+            return (a = e.substring(c, n)), (o = 12)
           }
-          if (42 === e.charCodeAt(s + 1)) {
-            s += 2
-            const t = n - 1
-            let a = !1
-            for (; s < t; ) {
-              const t = e.charCodeAt(s)
-              if (42 === t && 47 === e.charCodeAt(s + 1)) {
-                ;(s += 2), (a = !0)
+          if (42 === e.charCodeAt(n + 1)) {
+            n += 2
+            const t = s - 1
+            let r = !1
+            for (; n < t; ) {
+              const t = e.charCodeAt(n)
+              if (42 === t && 47 === e.charCodeAt(n + 1)) {
+                ;(n += 2), (r = !0)
                 break
               }
-              s++, _(t) && (13 === t && 10 === e.charCodeAt(s) && s++, i++, (l = s))
+              n++, y(t) && (13 === t && 10 === e.charCodeAt(n) && n++, i++, (l = n))
             }
-            return a || (s++, (h = 1)), (r = e.substring(c, s)), (o = 13)
+            return r || (n++, (p = 1)), (a = e.substring(c, n)), (o = 13)
           }
-          return (r += String.fromCharCode(t)), s++, (o = 16)
+          return (a += String.fromCharCode(t)), n++, (o = 16)
         case 45:
-          if (((r += String.fromCharCode(t)), s++, s === n || !b(e.charCodeAt(s)))) return (o = 16)
+          if (((a += String.fromCharCode(t)), n++, n === s || !b(e.charCodeAt(n)))) return (o = 16)
         case 48:
         case 49:
         case 50:
@@ -1700,32 +2136,32 @@
         case 56:
         case 57:
           return (
-            (r += (function () {
-              let t = s
-              if (48 === e.charCodeAt(s)) s++
-              else for (s++; s < e.length && b(e.charCodeAt(s)); ) s++
-              if (s < e.length && 46 === e.charCodeAt(s)) {
-                if ((s++, !(s < e.length && b(e.charCodeAt(s))))) return (h = 3), e.substring(t, s)
-                for (s++; s < e.length && b(e.charCodeAt(s)); ) s++
+            (a += (function () {
+              let t = n
+              if (48 === e.charCodeAt(n)) n++
+              else for (n++; n < e.length && b(e.charCodeAt(n)); ) n++
+              if (n < e.length && 46 === e.charCodeAt(n)) {
+                if ((n++, !(n < e.length && b(e.charCodeAt(n))))) return (p = 3), e.substring(t, n)
+                for (n++; n < e.length && b(e.charCodeAt(n)); ) n++
               }
-              let n = s
-              if (s < e.length && (69 === e.charCodeAt(s) || 101 === e.charCodeAt(s)))
+              let s = n
+              if (n < e.length && (69 === e.charCodeAt(n) || 101 === e.charCodeAt(n)))
                 if (
-                  (s++,
-                  ((s < e.length && 43 === e.charCodeAt(s)) || 45 === e.charCodeAt(s)) && s++,
-                  s < e.length && b(e.charCodeAt(s)))
+                  (n++,
+                  ((n < e.length && 43 === e.charCodeAt(n)) || 45 === e.charCodeAt(n)) && n++,
+                  n < e.length && b(e.charCodeAt(n)))
                 ) {
-                  for (s++; s < e.length && b(e.charCodeAt(s)); ) s++
-                  n = s
-                } else h = 3
-              return e.substring(t, n)
+                  for (n++; n < e.length && b(e.charCodeAt(n)); ) n++
+                  s = n
+                } else p = 3
+              return e.substring(t, s)
             })()),
             (o = 11)
           )
         default:
-          for (; s < n && m(t); ) s++, (t = e.charCodeAt(s))
-          if (a !== s) {
-            switch (((r = e.substring(a, s)), r)) {
+          for (; n < s && m(t); ) n++, (t = e.charCodeAt(n))
+          if (r !== n) {
+            switch (((a = e.substring(r, n)), a)) {
               case 'true':
                 return (o = 8)
               case 'false':
@@ -1735,11 +2171,11 @@
             }
             return (o = 16)
           }
-          return (r += String.fromCharCode(t)), s++, (o = 16)
+          return (a += String.fromCharCode(t)), n++, (o = 16)
       }
     }
     function m(e) {
-      if (f(e) || _(e)) return !1
+      if (f(e) || y(e)) return !1
       switch (e) {
         case 125:
         case 93:
@@ -1755,9 +2191,9 @@
     }
     return {
       setPosition: function (e) {
-        ;(s = e), (r = ''), (a = 0), (o = 16), (h = 0)
+        ;(n = e), (a = ''), (r = 0), (o = 16), (p = 0)
       },
-      getPosition: () => s,
+      getPosition: () => n,
       scan: t
         ? function () {
             let e
@@ -1768,18 +2204,18 @@
           }
         : d,
       getToken: () => o,
-      getTokenValue: () => r,
-      getTokenOffset: () => a,
-      getTokenLength: () => s - a,
+      getTokenValue: () => a,
+      getTokenOffset: () => r,
+      getTokenLength: () => n - r,
       getTokenStartLine: () => c,
-      getTokenStartCharacter: () => a - u,
-      getTokenError: () => h
+      getTokenStartCharacter: () => r - u,
+      getTokenError: () => p
     }
   }
   function f(e) {
     return 32 === e || 9 === e
   }
-  function _(e) {
+  function y(e) {
     return 10 === e || 13 === e
   }
   function b(e) {
@@ -1869,7 +2305,7 @@
   })(u || (u = {})),
     (function (e) {
       e.DEFAULT = { allowTrailingComma: !1 }
-    })(h || (h = {})),
+    })(p || (p = {})),
     (function (e) {
       ;(e[(e.None = 0)] = 'None'),
         (e[(e.UnexpectedEndOfComment = 1)] = 'UnexpectedEndOfComment'),
@@ -1878,7 +2314,7 @@
         (e[(e.InvalidUnicode = 4)] = 'InvalidUnicode'),
         (e[(e.InvalidEscapeCharacter = 5)] = 'InvalidEscapeCharacter'),
         (e[(e.InvalidCharacter = 6)] = 'InvalidCharacter')
-    })(p || (p = {})),
+    })(h || (h = {})),
     (function (e) {
       ;(e[(e.OpenBraceToken = 1)] = 'OpenBraceToken'),
         (e[(e.CloseBraceToken = 2)] = 'CloseBraceToken'),
@@ -1898,25 +2334,25 @@
         (e[(e.Unknown = 16)] = 'Unknown'),
         (e[(e.EOF = 17)] = 'EOF')
     })(d || (d = {}))
-  const y = function (e, t = [], n = h.DEFAULT) {
-    let s = null,
-      r = []
-    const a = []
+  const _ = function (e, t = [], s = p.DEFAULT) {
+    let n = null,
+      a = []
+    const r = []
     function o(e) {
-      Array.isArray(r) ? r.push(e) : null !== s && (r[s] = e)
+      Array.isArray(a) ? a.push(e) : null !== n && (a[n] = e)
     }
     return (
-      (function (e, t, n = h.DEFAULT) {
-        const s = g(e, !1),
-          r = []
-        function a(e) {
+      (function (e, t, s = p.DEFAULT) {
+        const n = g(e, !1),
+          a = []
+        function r(e) {
           return e
             ? () =>
                 e(
-                  s.getTokenOffset(),
-                  s.getTokenLength(),
-                  s.getTokenStartLine(),
-                  s.getTokenStartCharacter()
+                  n.getTokenOffset(),
+                  n.getTokenLength(),
+                  n.getTokenStartLine(),
+                  n.getTokenStartCharacter()
                 )
             : () => !0
         }
@@ -1924,11 +2360,11 @@
           return e
             ? () =>
                 e(
-                  s.getTokenOffset(),
-                  s.getTokenLength(),
-                  s.getTokenStartLine(),
-                  s.getTokenStartCharacter(),
-                  () => r.slice()
+                  n.getTokenOffset(),
+                  n.getTokenLength(),
+                  n.getTokenStartLine(),
+                  n.getTokenStartCharacter(),
+                  () => a.slice()
                 )
             : () => !0
         }
@@ -1937,10 +2373,10 @@
             ? t =>
                 e(
                   t,
-                  s.getTokenOffset(),
-                  s.getTokenLength(),
-                  s.getTokenStartLine(),
-                  s.getTokenStartCharacter()
+                  n.getTokenOffset(),
+                  n.getTokenLength(),
+                  n.getTokenStartLine(),
+                  n.getTokenStartCharacter()
                 )
             : () => !0
         }
@@ -1949,29 +2385,29 @@
             ? t =>
                 e(
                   t,
-                  s.getTokenOffset(),
-                  s.getTokenLength(),
-                  s.getTokenStartLine(),
-                  s.getTokenStartCharacter(),
-                  () => r.slice()
+                  n.getTokenOffset(),
+                  n.getTokenLength(),
+                  n.getTokenStartLine(),
+                  n.getTokenStartCharacter(),
+                  () => a.slice()
                 )
             : () => !0
         }
         const l = o(t.onObjectBegin),
           u = c(t.onObjectProperty),
-          p = a(t.onObjectEnd),
+          h = r(t.onObjectEnd),
           d = o(t.onArrayBegin),
-          m = a(t.onArrayEnd),
+          m = r(t.onArrayEnd),
           f = c(t.onLiteralValue),
-          _ = i(t.onSeparator),
-          b = a(t.onComment),
-          y = i(t.onError),
-          k = n && n.disallowComments,
-          L = n && n.allowTrailingComma
-        function v() {
+          y = i(t.onSeparator),
+          b = r(t.onComment),
+          _ = i(t.onError),
+          N = s && s.disallowComments,
+          k = s && s.allowTrailingComma
+        function L() {
           for (;;) {
-            const e = s.scan()
-            switch (s.getTokenError()) {
+            const e = n.scan()
+            switch (n.getTokenError()) {
               case 4:
                 S(14)
                 break
@@ -1982,7 +2418,7 @@
                 S(13)
                 break
               case 1:
-                k || S(11)
+                N || S(11)
                 break
               case 2:
                 S(12)
@@ -1993,7 +2429,7 @@
             switch (e) {
               case 12:
               case 13:
-                k ? S(10) : b()
+                N ? S(10) : b()
                 break
               case 16:
                 S(1)
@@ -2006,27 +2442,27 @@
             }
           }
         }
-        function S(e, t = [], n = []) {
-          if ((y(e), t.length + n.length > 0)) {
-            let e = s.getToken()
+        function S(e, t = [], s = []) {
+          if ((_(e), t.length + s.length > 0)) {
+            let e = n.getToken()
             for (; 17 !== e; ) {
               if (-1 !== t.indexOf(e)) {
-                v()
+                L()
                 break
               }
-              if (-1 !== n.indexOf(e)) break
-              e = v()
+              if (-1 !== s.indexOf(e)) break
+              e = L()
             }
           }
         }
-        function w(e) {
-          const t = s.getTokenValue()
-          return e ? f(t) : (u(t), r.push(t)), v(), !0
+        function v(e) {
+          const t = n.getTokenValue()
+          return e ? f(t) : (u(t), a.push(t)), L(), !0
         }
-        function N() {
-          switch (s.getToken()) {
+        function w() {
+          switch (n.getToken()) {
             case 11:
-              const e = s.getTokenValue()
+              const e = n.getTokenValue()
               let t = Number(e)
               isNaN(t) && (S(2), (t = 0)), f(t)
               break
@@ -2042,85 +2478,85 @@
             default:
               return !1
           }
-          return v(), !0
+          return L(), !0
         }
         function C() {
-          return 10 !== s.getToken()
+          return 10 !== n.getToken()
             ? (S(3, [], [2, 5]), !1)
-            : (w(!1),
-              6 === s.getToken() ? (_(':'), v(), A() || S(4, [], [2, 5])) : S(5, [], [2, 5]),
-              r.pop(),
+            : (v(!1),
+              6 === n.getToken() ? (y(':'), L(), A() || S(4, [], [2, 5])) : S(5, [], [2, 5]),
+              a.pop(),
               !0)
         }
         function j() {
-          l(), v()
+          l(), L()
           let e = !1
-          for (; 2 !== s.getToken() && 17 !== s.getToken(); ) {
-            if (5 === s.getToken()) {
-              if ((e || S(4, [], []), _(','), v(), 2 === s.getToken() && L)) break
+          for (; 2 !== n.getToken() && 17 !== n.getToken(); ) {
+            if (5 === n.getToken()) {
+              if ((e || S(4, [], []), y(','), L(), 2 === n.getToken() && k)) break
             } else e && S(6, [], [])
             C() || S(4, [], [2, 5]), (e = !0)
           }
-          return p(), 2 !== s.getToken() ? S(7, [2], []) : v(), !0
+          return h(), 2 !== n.getToken() ? S(7, [2], []) : L(), !0
         }
-        function x() {
-          d(), v()
+        function P() {
+          d(), L()
           let e = !0,
             t = !1
-          for (; 4 !== s.getToken() && 17 !== s.getToken(); ) {
-            if (5 === s.getToken()) {
-              if ((t || S(4, [], []), _(','), v(), 4 === s.getToken() && L)) break
+          for (; 4 !== n.getToken() && 17 !== n.getToken(); ) {
+            if (5 === n.getToken()) {
+              if ((t || S(4, [], []), y(','), L(), 4 === n.getToken() && k)) break
             } else t && S(6, [], [])
-            e ? (r.push(0), (e = !1)) : r[r.length - 1]++, A() || S(4, [], [4, 5]), (t = !0)
+            e ? (a.push(0), (e = !1)) : a[a.length - 1]++, A() || S(4, [], [4, 5]), (t = !0)
           }
-          return m(), e || r.pop(), 4 !== s.getToken() ? S(8, [4], []) : v(), !0
+          return m(), e || a.pop(), 4 !== n.getToken() ? S(8, [4], []) : L(), !0
         }
         function A() {
-          switch (s.getToken()) {
+          switch (n.getToken()) {
             case 3:
-              return x()
+              return P()
             case 1:
               return j()
             case 10:
-              return w(!0)
+              return v(!0)
             default:
-              return N()
+              return w()
           }
         }
-        if ((v(), 17 === s.getToken())) return !!n.allowEmptyContent || (S(4, [], []), !1)
+        if ((L(), 17 === n.getToken())) return !!s.allowEmptyContent || (S(4, [], []), !1)
         if (!A()) return S(4, [], []), !1
-        17 !== s.getToken() && S(9, [], [])
+        17 !== n.getToken() && S(9, [], [])
       })(
         e,
         {
           onObjectBegin: () => {
             const e = {}
-            o(e), a.push(r), (r = e), (s = null)
+            o(e), r.push(a), (a = e), (n = null)
           },
           onObjectProperty: e => {
-            s = e
+            n = e
           },
           onObjectEnd: () => {
-            r = a.pop()
+            a = r.pop()
           },
           onArrayBegin: () => {
             const e = []
-            o(e), a.push(r), (r = e), (s = null)
+            o(e), r.push(a), (a = e), (n = null)
           },
           onArrayEnd: () => {
-            r = a.pop()
+            a = r.pop()
           },
           onLiteralValue: o,
-          onError: (e, n, s) => {
-            t.push({ error: e, offset: n, length: s })
+          onError: (e, s, n) => {
+            t.push({ error: e, offset: s, length: n })
           }
         },
-        n
+        s
       ),
-      r[0]
+      a[0]
     )
   }
-  var k
+  var N
   !(function (e) {
     ;(e[(e.InvalidSymbol = 1)] = 'InvalidSymbol'),
       (e[(e.InvalidNumberFormat = 2)] = 'InvalidNumberFormat'),
@@ -2138,31 +2574,31 @@
       (e[(e.InvalidUnicode = 14)] = 'InvalidUnicode'),
       (e[(e.InvalidEscapeCharacter = 15)] = 'InvalidEscapeCharacter'),
       (e[(e.InvalidCharacter = 16)] = 'InvalidCharacter')
-  })(k || (k = {}))
-  const L = 'undefined' != typeof self && void 0 !== self.WorkerGlobalScope,
-    v =
+  })(N || (N = {}))
+  const k = 'undefined' != typeof self && void 0 !== self.WorkerGlobalScope,
+    L =
       'process' in globalThis &&
       'undefined' != typeof process &&
       void 0 !== process.release &&
       'node' === process.release.name,
-    S = L || !v
-  let w = 'https://unpkg.com/shiki@0.14.2/',
-    N = ''
+    S = k || !L
+  let v = 'https://unpkg.com/shiki@0.14.3/',
+    w = ''
   const C = 'dist/'
   function j(e) {
-    N = e
+    w = e
   }
-  let x = null
+  let P = null
   function A(e) {
-    if (S) return `${w}${e}`
+    if (S) return `${v}${e}`
     {
       const t = require('path')
       return t.isAbsolute(e) ? e : t.resolve(__dirname, '..', e)
     }
   }
-  async function P(e) {
+  async function x(e) {
     const t = [],
-      n = await (async function (e) {
+      s = await (async function (e) {
         const t = A(e)
         if (S) return await fetch(t).then(e => e.text())
         {
@@ -2170,56 +2606,56 @@
           return await e.promises.readFile(t, 'utf-8')
         }
       })(e)
-    let s
+    let n
     try {
-      s = JSON.parse(n)
+      n = JSON.parse(s)
     } catch (e) {
-      if (((s = y(n, t, { allowTrailingComma: !0 })), t.length)) throw t[0]
+      if (((n = _(s, t, { allowTrailingComma: !0 })), t.length)) throw t[0]
     }
-    return s
+    return n
   }
   async function T(e) {
-    const t = R(await P(e))
+    const t = R(await x(e))
     if (t.include) {
-      const n = await T(i(...o(e), t.include))
-      n.settings && (t.settings = n.settings.concat(t.settings)),
-        n.bg && !t.bg && (t.bg = n.bg),
-        n.colors && (t.colors = { ...n.colors, ...t.colors }),
+      const s = await T(i(...o(e), t.include))
+      s.settings && (t.settings = s.settings.concat(t.settings)),
+        s.bg && !t.bg && (t.bg = s.bg),
+        s.colors && (t.colors = { ...s.colors, ...t.colors }),
         delete t.include
     }
     return t
   }
   function R(e) {
     const t = e.type || 'dark',
-      n = { name: e.name, type: t, ...e, ...O(e) }
-    var s
+      s = { name: e.name, type: t, ...e, ...O(e) }
+    var n
     return (
-      e.include && (n.include = e.include),
-      e.tokenColors && ((n.settings = e.tokenColors), delete n.tokenColors),
-      (s = n).settings || (s.settings = []),
-      (s.settings[0] && s.settings[0].settings && !s.settings[0].scope) ||
-        s.settings.unshift({ settings: { foreground: s.fg, background: s.bg } }),
-      n
+      e.include && (s.include = e.include),
+      e.tokenColors && ((s.settings = e.tokenColors), delete s.tokenColors),
+      (n = s).settings || (n.settings = []),
+      (n.settings[0] && n.settings[0].settings && !n.settings[0].scope) ||
+        n.settings.unshift({ settings: { foreground: n.fg, background: n.bg } }),
+      s
     )
   }
   const I = { light: '#333333', dark: '#bbbbbb' },
     E = { light: '#fffffe', dark: '#1e1e1e' }
   function O(e) {
     let t,
-      n,
-      s = e.settings ? e.settings : e.tokenColors
-    const r = s ? s.find(e => !e.name && !e.scope) : void 0
+      s,
+      n = e.settings ? e.settings : e.tokenColors
+    const a = n ? n.find(e => !e.name && !e.scope) : void 0
     return (
-      r?.settings?.foreground && (t = r.settings.foreground),
-      r?.settings?.background && (n = r.settings.background),
+      a?.settings?.foreground && (t = a.settings.foreground),
+      a?.settings?.background && (s = a.settings.background),
       !t && e?.colors?.['editor.foreground'] && (t = e.colors['editor.foreground']),
-      !n && e?.colors?.['editor.background'] && (n = e.colors['editor.background']),
+      !s && e?.colors?.['editor.background'] && (s = e.colors['editor.background']),
       t || (t = 'light' === e.type ? I.light : I.dark),
-      n || (n = 'light' === e.type ? E.light : E.dark),
-      { fg: t, bg: n }
+      s || (s = 'light' === e.type ? E.light : E.dark),
+      { fg: t, bg: s }
     )
   }
-  class B {
+  class M {
     constructor(e, t) {
       ;(this.languagesPath = 'languages/'),
         (this.languageMap = {}),
@@ -2237,13 +2673,13 @@
       return this.languageMap[e]
     }
     async loadGrammar(e) {
-      const n = this.scopeToLangMap[e]
-      if (!n) return null
-      if (n.grammar) return n.grammar
-      const s = await (async function (e) {
-        return await P(e)
-      })(t.includes(n) ? `${this.languagesPath}${n.path}` : n.path)
-      return (n.grammar = s), s
+      const s = this.scopeToLangMap[e]
+      if (!s) return null
+      if (s.grammar) return s.grammar
+      const n = await (async function (e) {
+        return await x(e)
+      })(t.includes(s) ? `${this.languagesPath}${s.path}` : s.path)
+      return (s.grammar = n), n
     }
     addLanguage(e) {
       ;(this.languageMap[e.id] = e),
@@ -2254,11 +2690,11 @@
         (this.scopeToLangMap[e.scopeName] = e)
     }
   }
-  var M = { exports: {} }
+  var B = { exports: {} }
   !(function (e, t) {
-    var n, s
+    var s, n
     e.exports =
-      ((n = {
+      ((s = {
         350: (e, t) => {
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.UseOnigurumaFindOptions = t.DebugFlags = void 0),
@@ -2268,99 +2704,99 @@
             (t.UseOnigurumaFindOptions = !1)
         },
         36: (e, t) => {
-          var n
+          var s
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.toOptionalTokenType = t.EncodedTokenAttributes = void 0),
-            ((n = t.EncodedTokenAttributes || (t.EncodedTokenAttributes = {})).toBinaryStr =
+            ((s = t.EncodedTokenAttributes || (t.EncodedTokenAttributes = {})).toBinaryStr =
               function (e) {
                 let t = e.toString(2)
                 for (; t.length < 32; ) t = '0' + t
                 return t
               }),
-            (n.print = function (e) {
-              const t = n.getLanguageId(e),
-                s = n.getTokenType(e),
-                r = n.getFontStyle(e),
-                a = n.getForeground(e),
-                o = n.getBackground(e)
+            (s.print = function (e) {
+              const t = s.getLanguageId(e),
+                n = s.getTokenType(e),
+                a = s.getFontStyle(e),
+                r = s.getForeground(e),
+                o = s.getBackground(e)
               console.log({
                 languageId: t,
-                tokenType: s,
-                fontStyle: r,
-                foreground: a,
+                tokenType: n,
+                fontStyle: a,
+                foreground: r,
                 background: o
               })
             }),
-            (n.getLanguageId = function (e) {
+            (s.getLanguageId = function (e) {
               return (255 & e) >>> 0
             }),
-            (n.getTokenType = function (e) {
+            (s.getTokenType = function (e) {
               return (768 & e) >>> 8
             }),
-            (n.containsBalancedBrackets = function (e) {
+            (s.containsBalancedBrackets = function (e) {
               return 0 != (1024 & e)
             }),
-            (n.getFontStyle = function (e) {
+            (s.getFontStyle = function (e) {
               return (30720 & e) >>> 11
             }),
-            (n.getForeground = function (e) {
+            (s.getForeground = function (e) {
               return (16744448 & e) >>> 15
             }),
-            (n.getBackground = function (e) {
+            (s.getBackground = function (e) {
               return (4278190080 & e) >>> 24
             }),
-            (n.set = function (e, t, s, r, a, o, i) {
-              let c = n.getLanguageId(e),
-                l = n.getTokenType(e),
-                u = n.containsBalancedBrackets(e) ? 1 : 0,
-                h = n.getFontStyle(e),
-                p = n.getForeground(e),
-                d = n.getBackground(e)
+            (s.set = function (e, t, n, a, r, o, i) {
+              let c = s.getLanguageId(e),
+                l = s.getTokenType(e),
+                u = s.containsBalancedBrackets(e) ? 1 : 0,
+                p = s.getFontStyle(e),
+                h = s.getForeground(e),
+                d = s.getBackground(e)
               return (
                 0 !== t && (c = t),
-                8 !== s && (l = s),
-                null !== r && (u = r ? 1 : 0),
-                -1 !== a && (h = a),
-                0 !== o && (p = o),
+                8 !== n && (l = n),
+                null !== a && (u = a ? 1 : 0),
+                -1 !== r && (p = r),
+                0 !== o && (h = o),
                 0 !== i && (d = i),
-                ((c << 0) | (l << 8) | (u << 10) | (h << 11) | (p << 15) | (d << 24)) >>> 0
+                ((c << 0) | (l << 8) | (u << 10) | (p << 11) | (h << 15) | (d << 24)) >>> 0
               )
             }),
             (t.toOptionalTokenType = function (e) {
               return e
             })
         },
-        996: (e, t, n) => {
+        996: (e, t, s) => {
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.BasicScopeAttributesProvider = t.BasicScopeAttributes = void 0)
-          const s = n(878)
-          class r {
+          const n = s(878)
+          class a {
             constructor(e, t) {
               ;(this.languageId = e), (this.tokenType = t)
             }
           }
-          t.BasicScopeAttributes = r
-          class a {
+          t.BasicScopeAttributes = a
+          class r {
             constructor(e, t) {
-              ;(this._getBasicScopeAttributes = new s.CachedFn(e => {
+              ;(this._getBasicScopeAttributes = new n.CachedFn(e => {
                 const t = this._scopeToLanguage(e),
-                  n = this._toStandardTokenType(e)
-                return new r(t, n)
+                  s = this._toStandardTokenType(e)
+                return new a(t, s)
               })),
-                (this._defaultAttributes = new r(e, 8)),
+                (this._defaultAttributes = new a(e, 8)),
                 (this._embeddedLanguagesMatcher = new o(Object.entries(t || {})))
             }
             getDefaultAttributes() {
               return this._defaultAttributes
             }
             getBasicScopeAttributes(e) {
-              return null === e ? a._NULL_SCOPE_METADATA : this._getBasicScopeAttributes.get(e)
+              return null === e ? r._NULL_SCOPE_METADATA : this._getBasicScopeAttributes.get(e)
             }
             _scopeToLanguage(e) {
               return this._embeddedLanguagesMatcher.match(e) || 0
             }
             _toStandardTokenType(e) {
-              const t = e.match(a.STANDARD_TOKEN_TYPE_REGEXP)
+              const t = e.match(r.STANDARD_TOKEN_TYPE_REGEXP)
               if (!t) return 8
               switch (t[1]) {
                 case 'comment':
@@ -2375,15 +2811,15 @@
               throw new Error('Unexpected match for standard token type!')
             }
           }
-          ;(t.BasicScopeAttributesProvider = a),
-            (a._NULL_SCOPE_METADATA = new r(0, 0)),
-            (a.STANDARD_TOKEN_TYPE_REGEXP = /\b(comment|string|regex|meta\.embedded)\b/)
+          ;(t.BasicScopeAttributesProvider = r),
+            (r._NULL_SCOPE_METADATA = new a(0, 0)),
+            (r.STANDARD_TOKEN_TYPE_REGEXP = /\b(comment|string|regex|meta\.embedded)\b/)
           class o {
             constructor(e) {
               if (0 === e.length) (this.values = null), (this.scopesRegExp = null)
               else {
                 this.values = new Map(e)
-                const t = e.map(([e, t]) => s.escapeRegExpCharacters(e))
+                const t = e.map(([e, t]) => n.escapeRegExpCharacters(e))
                 t.sort(),
                   t.reverse(),
                   (this.scopesRegExp = new RegExp(`^((${t.join(')|(')}))($|\\.)`, ''))
@@ -2396,7 +2832,7 @@
             }
           }
         },
-        947: (e, t, n) => {
+        947: (e, t, s) => {
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.LineTokens =
               t.BalancedBracketSelectors =
@@ -2405,51 +2841,51 @@
               t.Grammar =
               t.createGrammar =
                 void 0)
-          const s = n(350),
-            r = n(36),
-            a = n(736),
-            o = n(44),
-            i = n(792),
-            c = n(583),
-            l = n(878),
-            u = n(996),
-            h = n(47)
-          function p(e, t, n, s, r) {
-            const o = a.createMatchers(t, d),
-              c = i.RuleFactory.getCompiledRuleId(n, s, r.repository)
-            for (const n of o)
+          const n = s(350),
+            a = s(36),
+            r = s(736),
+            o = s(44),
+            i = s(792),
+            c = s(583),
+            l = s(878),
+            u = s(996),
+            p = s(47)
+          function h(e, t, s, n, a) {
+            const o = r.createMatchers(t, d),
+              c = i.RuleFactory.getCompiledRuleId(s, n, a.repository)
+            for (const s of o)
               e.push({
                 debugSelector: t,
-                matcher: n.matcher,
+                matcher: s.matcher,
                 ruleId: c,
-                grammar: r,
-                priority: n.priority
+                grammar: a,
+                priority: s.priority
               })
           }
           function d(e, t) {
             if (t.length < e.length) return !1
-            let n = 0
+            let s = 0
             return e.every(e => {
-              for (let s = n; s < t.length; s++) if (m(t[s], e)) return (n = s + 1), !0
+              for (let n = s; n < t.length; n++) if (m(t[n], e)) return (s = n + 1), !0
               return !1
             })
           }
           function m(e, t) {
             if (!e) return !1
             if (e === t) return !0
-            const n = t.length
-            return e.length > n && e.substr(0, n) === t && '.' === e[n]
+            const s = t.length
+            return e.length > s && e.substr(0, s) === t && '.' === e[s]
           }
-          t.createGrammar = function (e, t, n, s, r, a, o, i) {
-            return new g(e, t, n, s, r, a, o, i)
+          t.createGrammar = function (e, t, s, n, a, r, o, i) {
+            return new g(e, t, s, n, a, r, o, i)
           }
           class g {
-            constructor(e, t, n, s, r, o, i, c) {
+            constructor(e, t, s, n, a, o, i, c) {
               if (
                 ((this._rootScopeName = e),
                 (this.balancedBracketSelectors = o),
                 (this._onigLib = c),
-                (this._basicScopeAttributesProvider = new u.BasicScopeAttributesProvider(n, s)),
+                (this._basicScopeAttributesProvider = new u.BasicScopeAttributesProvider(s, n)),
                 (this._rootId = -1),
                 (this._lastRuleId = 0),
                 (this._ruleId2desc = [null]),
@@ -2458,12 +2894,12 @@
                 (this._grammar = f(t, null)),
                 (this._injections = null),
                 (this._tokenTypeMatchers = []),
-                r)
+                a)
               )
-                for (const e of Object.keys(r)) {
-                  const t = a.createMatchers(e, d)
-                  for (const n of t)
-                    this._tokenTypeMatchers.push({ matcher: n.matcher, type: r[e] })
+                for (const e of Object.keys(a)) {
+                  const t = r.createMatchers(e, d)
+                  for (const s of t)
+                    this._tokenTypeMatchers.push({ matcher: s.matcher, type: a[e] })
                 }
             }
             get themeProvider() {
@@ -2484,19 +2920,19 @@
             _collectInjections() {
               const e = [],
                 t = this._rootScopeName,
-                n = (e => (e === this._rootScopeName ? this._grammar : this.getExternalGrammar(e)))(
+                s = (e => (e === this._rootScopeName ? this._grammar : this.getExternalGrammar(e)))(
                   t
                 )
-              if (n) {
-                const s = n.injections
-                if (s) for (let t in s) p(e, t, s[t], this, n)
-                const r = this._grammarRepository.injections(t)
-                r &&
-                  r.forEach(t => {
-                    const n = this.getExternalGrammar(t)
-                    if (n) {
-                      const t = n.injectionSelector
-                      t && p(e, t, n, this, n)
+              if (s) {
+                const n = s.injections
+                if (n) for (let t in n) h(e, t, n[t], this, s)
+                const a = this._grammarRepository.injections(t)
+                a &&
+                  a.forEach(t => {
+                    const s = this.getExternalGrammar(t)
+                    if (s) {
+                      const t = s.injectionSelector
+                      t && h(e, t, s, this, s)
                     }
                   })
               }
@@ -2506,7 +2942,7 @@
               if (
                 null === this._injections &&
                 ((this._injections = this._collectInjections()),
-                s.DebugFlags.InDebugMode && this._injections.length > 0)
+                n.DebugFlags.InDebugMode && this._injections.length > 0)
               ) {
                 console.log(`Grammar ${this._rootScopeName} contains the following injections:`)
                 for (const e of this._injections) console.log(`  - ${e.debugSelector}`)
@@ -2515,8 +2951,8 @@
             }
             registerRule(e) {
               const t = ++this._lastRuleId,
-                n = e(i.ruleIdFromNumber(t))
-              return (this._ruleId2desc[t] = n), n
+                s = e(i.ruleIdFromNumber(t))
+              return (this._ruleId2desc[t] = s), s
             }
             getRule(e) {
               return this._ruleId2desc[i.ruleIdToNumber(e)]
@@ -2524,29 +2960,29 @@
             getExternalGrammar(e, t) {
               if (this._includedGrammars[e]) return this._includedGrammars[e]
               if (this._grammarRepository) {
-                const n = this._grammarRepository.lookup(e)
-                if (n)
-                  return (this._includedGrammars[e] = f(n, t && t.$base)), this._includedGrammars[e]
+                const s = this._grammarRepository.lookup(e)
+                if (s)
+                  return (this._includedGrammars[e] = f(s, t && t.$base)), this._includedGrammars[e]
               }
             }
-            tokenizeLine(e, t, n = 0) {
-              const s = this._tokenize(e, t, !1, n)
+            tokenizeLine(e, t, s = 0) {
+              const n = this._tokenize(e, t, !1, s)
               return {
-                tokens: s.lineTokens.getResult(s.ruleStack, s.lineLength),
-                ruleStack: s.ruleStack,
-                stoppedEarly: s.stoppedEarly
+                tokens: n.lineTokens.getResult(n.ruleStack, n.lineLength),
+                ruleStack: n.ruleStack,
+                stoppedEarly: n.stoppedEarly
               }
             }
-            tokenizeLine2(e, t, n = 0) {
-              const s = this._tokenize(e, t, !0, n)
+            tokenizeLine2(e, t, s = 0) {
+              const n = this._tokenize(e, t, !0, s)
               return {
-                tokens: s.lineTokens.getBinaryResult(s.ruleStack, s.lineLength),
-                ruleStack: s.ruleStack,
-                stoppedEarly: s.stoppedEarly
+                tokens: n.lineTokens.getBinaryResult(n.ruleStack, n.lineLength),
+                ruleStack: n.ruleStack,
+                stoppedEarly: n.stoppedEarly
               }
             }
-            _tokenize(e, t, n, s) {
-              let a
+            _tokenize(e, t, s, n) {
+              let r
               if (
                 (-1 === this._rootId &&
                   (this._rootId = i.RuleFactory.getCompiledRuleId(
@@ -2556,33 +2992,33 @@
                   )),
                 t && t !== b.NULL)
               )
-                (a = !1), t.reset()
+                (r = !1), t.reset()
               else {
-                a = !0
+                r = !0
                 const e = this._basicScopeAttributesProvider.getDefaultAttributes(),
-                  n = this.themeProvider.getDefaults(),
-                  s = r.EncodedTokenAttributes.set(
+                  s = this.themeProvider.getDefaults(),
+                  n = a.EncodedTokenAttributes.set(
                     0,
                     e.languageId,
                     e.tokenType,
                     null,
-                    n.fontStyle,
-                    n.foregroundId,
-                    n.backgroundId
+                    s.fontStyle,
+                    s.foregroundId,
+                    s.backgroundId
                   ),
                   o = this.getRule(this._rootId).getName(null, null)
                 let i
-                ;(i = o ? _.createRootAndLookUpScopeName(o, s, this) : _.createRoot('unknown', s)),
+                ;(i = o ? y.createRootAndLookUpScopeName(o, n, this) : y.createRoot('unknown', n)),
                   (t = new b(null, this._rootId, -1, -1, !1, null, i, i))
               }
               e += '\n'
               const c = this.createOnigString(e),
                 l = c.content.length,
-                u = new y(n, e, this._tokenTypeMatchers, this.balancedBracketSelectors),
-                p = h._tokenizeString(this, c, a, 0, t, u, !0, s)
+                u = new _(s, e, this._tokenTypeMatchers, this.balancedBracketSelectors),
+                h = p._tokenizeString(this, c, r, 0, t, u, !0, n)
               return (
                 o.disposeOnigString(c),
-                { lineLength: l, lineTokens: u, ruleStack: p.stack, stoppedEarly: p.stoppedEarly }
+                { lineLength: l, lineTokens: u, ruleStack: h.stack, stoppedEarly: h.stoppedEarly }
               )
             }
           }
@@ -2599,25 +3035,25 @@
             )
           }
           t.Grammar = g
-          class _ {
-            constructor(e, t, n) {
-              ;(this.parent = e), (this.scopePath = t), (this.tokenAttributes = n)
+          class y {
+            constructor(e, t, s) {
+              ;(this.parent = e), (this.scopePath = t), (this.tokenAttributes = s)
             }
             static createRoot(e, t) {
-              return new _(null, new c.ScopeStack(null, e), t)
+              return new y(null, new c.ScopeStack(null, e), t)
             }
-            static createRootAndLookUpScopeName(e, t, n) {
-              const s = n.getMetadataForScope(e),
-                r = new c.ScopeStack(null, e),
-                a = n.themeProvider.themeMatch(r),
-                o = _.mergeAttributes(t, s, a)
-              return new _(null, r, o)
+            static createRootAndLookUpScopeName(e, t, s) {
+              const n = s.getMetadataForScope(e),
+                a = new c.ScopeStack(null, e),
+                r = s.themeProvider.themeMatch(a),
+                o = y.mergeAttributes(t, n, r)
+              return new y(null, a, o)
             }
             get scopeName() {
               return this.scopePath.scopeName
             }
             equals(e) {
-              return _._equals(this, e)
+              return y._equals(this, e)
             }
             static _equals(e, t) {
               for (;;) {
@@ -2629,47 +3065,47 @@
                 ;(e = e.parent), (t = t.parent)
               }
             }
-            static mergeAttributes(e, t, n) {
-              let s = -1,
-                a = 0,
+            static mergeAttributes(e, t, s) {
+              let n = -1,
+                r = 0,
                 o = 0
               return (
-                null !== n && ((s = n.fontStyle), (a = n.foregroundId), (o = n.backgroundId)),
-                r.EncodedTokenAttributes.set(e, t.languageId, t.tokenType, null, s, a, o)
+                null !== s && ((n = s.fontStyle), (r = s.foregroundId), (o = s.backgroundId)),
+                a.EncodedTokenAttributes.set(e, t.languageId, t.tokenType, null, n, r, o)
               )
             }
             pushAttributed(e, t) {
               if (null === e) return this
-              if (-1 === e.indexOf(' ')) return _._pushAttributed(this, e, t)
-              const n = e.split(/ /g)
-              let s = this
-              for (const e of n) s = _._pushAttributed(s, e, t)
-              return s
+              if (-1 === e.indexOf(' ')) return y._pushAttributed(this, e, t)
+              const s = e.split(/ /g)
+              let n = this
+              for (const e of s) n = y._pushAttributed(n, e, t)
+              return n
             }
-            static _pushAttributed(e, t, n) {
-              const s = n.getMetadataForScope(t),
-                r = e.scopePath.push(t),
-                a = n.themeProvider.themeMatch(r),
-                o = _.mergeAttributes(e.tokenAttributes, s, a)
-              return new _(e, r, o)
+            static _pushAttributed(e, t, s) {
+              const n = s.getMetadataForScope(t),
+                a = e.scopePath.push(t),
+                r = s.themeProvider.themeMatch(a),
+                o = y.mergeAttributes(e.tokenAttributes, n, r)
+              return new y(e, a, o)
             }
             getScopeNames() {
               return this.scopePath.getSegments()
             }
           }
-          t.AttributedScopeStack = _
+          t.AttributedScopeStack = y
           class b {
-            constructor(e, t, n, s, r, a, o, i) {
+            constructor(e, t, s, n, a, r, o, i) {
               ;(this.parent = e),
                 (this.ruleId = t),
-                (this.beginRuleCapturedEOL = r),
-                (this.endRule = a),
+                (this.beginRuleCapturedEOL = a),
+                (this.endRule = r),
                 (this.nameScopesList = o),
                 (this.contentNameScopesList = i),
                 (this._stackElementBrand = void 0),
                 (this.depth = this.parent ? this.parent.depth + 1 : 1),
-                (this._enterPos = n),
-                (this._anchorPos = s)
+                (this._enterPos = s),
+                (this._anchorPos = n)
             }
             equals(e) {
               return null !== e && b._equals(this, e)
@@ -2706,8 +3142,8 @@
             safePop() {
               return this.parent ? this.parent : this
             }
-            push(e, t, n, s, r, a, o) {
-              return new b(this, e, t, n, s, r, a, o)
+            push(e, t, s, n, a, r, o) {
+              return new b(this, e, t, s, n, a, r, o)
             }
             getEnterPos() {
               return this._enterPos
@@ -2775,10 +3211,10 @@
                   (this.balancedBracketScopes = e.flatMap(e =>
                     '*' === e
                       ? ((this.allowAny = !0), [])
-                      : a.createMatchers(e, d).map(e => e.matcher)
+                      : r.createMatchers(e, d).map(e => e.matcher)
                   )),
                   (this.unbalancedBracketScopes = t.flatMap(e =>
-                    a.createMatchers(e, d).map(e => e.matcher)
+                    r.createMatchers(e, d).map(e => e.matcher)
                   ))
               }
               get matchesAlways() {
@@ -2793,12 +3229,12 @@
                 return this.allowAny
               }
             })
-          class y {
-            constructor(e, t, n, r) {
-              ;(this.balancedBracketSelectors = r),
+          class _ {
+            constructor(e, t, s, a) {
+              ;(this.balancedBracketSelectors = a),
                 (this._emitBinaryTokens = e),
-                (this._tokenTypeOverrides = n),
-                s.DebugFlags.InDebugMode ? (this._lineText = t) : (this._lineText = null),
+                (this._tokenTypeOverrides = s),
+                n.DebugFlags.InDebugMode ? (this._lineText = t) : (this._lineText = null),
                 (this._tokens = []),
                 (this._binaryTokens = []),
                 (this._lastTokenEndIndex = 0)
@@ -2809,10 +3245,10 @@
             produceFromScopes(e, t) {
               if (this._lastTokenEndIndex >= t) return
               if (this._emitBinaryTokens) {
-                let n = e.tokenAttributes,
-                  a = !1
+                let s = e.tokenAttributes,
+                  r = !1
                 if (
-                  (this.balancedBracketSelectors?.matchesAlways && (a = !0),
+                  (this.balancedBracketSelectors?.matchesAlways && (r = !0),
                   this._tokenTypeOverrides.length > 0 ||
                     (this.balancedBracketSelectors &&
                       !this.balancedBracketSelectors.matchesAlways &&
@@ -2821,48 +3257,48 @@
                   const t = e.getScopeNames()
                   for (const e of this._tokenTypeOverrides)
                     e.matcher(t) &&
-                      (n = r.EncodedTokenAttributes.set(
-                        n,
+                      (s = a.EncodedTokenAttributes.set(
+                        s,
                         0,
-                        r.toOptionalTokenType(e.type),
+                        a.toOptionalTokenType(e.type),
                         null,
                         -1,
                         0,
                         0
                       ))
-                  this.balancedBracketSelectors && (a = this.balancedBracketSelectors.match(t))
+                  this.balancedBracketSelectors && (r = this.balancedBracketSelectors.match(t))
                 }
                 if (
-                  (a && (n = r.EncodedTokenAttributes.set(n, 0, 8, a, -1, 0, 0)),
+                  (r && (s = a.EncodedTokenAttributes.set(s, 0, 8, r, -1, 0, 0)),
                   this._binaryTokens.length > 0 &&
-                    this._binaryTokens[this._binaryTokens.length - 1] === n)
+                    this._binaryTokens[this._binaryTokens.length - 1] === s)
                 )
                   return void (this._lastTokenEndIndex = t)
-                if (s.DebugFlags.InDebugMode) {
-                  const n = e.getScopeNames()
+                if (n.DebugFlags.InDebugMode) {
+                  const s = e.getScopeNames()
                   console.log(
                     '  token: |' +
                       this._lineText.substring(this._lastTokenEndIndex, t).replace(/\n$/, '\\n') +
                       '|'
                   )
-                  for (let e = 0; e < n.length; e++) console.log('      * ' + n[e])
+                  for (let e = 0; e < s.length; e++) console.log('      * ' + s[e])
                 }
                 return (
                   this._binaryTokens.push(this._lastTokenEndIndex),
-                  this._binaryTokens.push(n),
+                  this._binaryTokens.push(s),
                   void (this._lastTokenEndIndex = t)
                 )
               }
-              const n = e.getScopeNames()
-              if (s.DebugFlags.InDebugMode) {
+              const s = e.getScopeNames()
+              if (n.DebugFlags.InDebugMode) {
                 console.log(
                   '  token: |' +
                     this._lineText.substring(this._lastTokenEndIndex, t).replace(/\n$/, '\\n') +
                     '|'
                 )
-                for (let e = 0; e < n.length; e++) console.log('      * ' + n[e])
+                for (let e = 0; e < s.length; e++) console.log('      * ' + s[e])
               }
-              this._tokens.push({ startIndex: this._lastTokenEndIndex, endIndex: t, scopes: n }),
+              this._tokens.push({ startIndex: this._lastTokenEndIndex, endIndex: t, scopes: s }),
                 (this._lastTokenEndIndex = t)
             }
             getResult(e, t) {
@@ -2885,15 +3321,15 @@
                   ((this._lastTokenEndIndex = -1),
                   this.produce(e, t),
                   (this._binaryTokens[this._binaryTokens.length - 2] = 0))
-              const n = new Uint32Array(this._binaryTokens.length)
+              const s = new Uint32Array(this._binaryTokens.length)
               for (let e = 0, t = this._binaryTokens.length; e < t; e++)
-                n[e] = this._binaryTokens[e]
-              return n
+                s[e] = this._binaryTokens[e]
+              return s
             }
           }
-          t.LineTokens = y
+          t.LineTokens = _
         },
-        965: (e, t, n) => {
+        965: (e, t, s) => {
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.parseInclude =
               t.TopLevelRepositoryReference =
@@ -2906,8 +3342,8 @@
               t.TopLevelRepositoryRuleReference =
               t.TopLevelRuleReference =
                 void 0)
-          const s = n(878)
-          class r {
+          const n = s(878)
+          class a {
             constructor(e) {
               this.scopeName = e
             }
@@ -2915,8 +3351,8 @@
               return this.scopeName
             }
           }
-          t.TopLevelRuleReference = r
-          class a {
+          t.TopLevelRuleReference = a
+          class r {
             constructor(e, t) {
               ;(this.scopeName = e), (this.ruleName = t)
             }
@@ -2924,7 +3360,7 @@
               return `${this.scopeName}#${this.ruleName}`
             }
           }
-          t.TopLevelRepositoryRuleReference = a
+          t.TopLevelRepositoryRuleReference = r
           class o {
             constructor() {
               ;(this._references = []),
@@ -2940,21 +3376,21 @@
                 (this._seenReferenceKeys.add(t), this._references.push(e))
             }
           }
-          function i(e, t, n, s) {
-            const a = n.lookup(e.scopeName)
-            if (!a) {
+          function i(e, t, s, n) {
+            const r = s.lookup(e.scopeName)
+            if (!r) {
               if (e.scopeName === t) throw new Error(`No grammar provided for <${t}>`)
               return
             }
-            const o = n.lookup(t)
-            e instanceof r
-              ? l({ baseGrammar: o, selfGrammar: a }, s)
-              : c(e.ruleName, { baseGrammar: o, selfGrammar: a, repository: a.repository }, s)
-            const i = n.injections(e.scopeName)
-            if (i) for (const e of i) s.add(new r(e))
+            const o = s.lookup(t)
+            e instanceof a
+              ? l({ baseGrammar: o, selfGrammar: r }, n)
+              : c(e.ruleName, { baseGrammar: o, selfGrammar: r, repository: r.repository }, n)
+            const i = s.injections(e.scopeName)
+            if (i) for (const e of i) n.add(new a(e))
           }
-          function c(e, t, n) {
-            t.repository && t.repository[e] && u([t.repository[e]], t, n)
+          function c(e, t, s) {
+            t.repository && t.repository[e] && u([t.repository[e]], t, s)
           }
           function l(e, t) {
             e.selfGrammar.patterns &&
@@ -2967,38 +3403,38 @@
                   t
                 )
           }
-          function u(e, t, n) {
+          function u(e, t, s) {
             for (const o of e) {
-              if (n.visitedRule.has(o)) continue
-              n.visitedRule.add(o)
-              const e = o.repository ? s.mergeObjects({}, t.repository, o.repository) : t.repository
-              Array.isArray(o.patterns) && u(o.patterns, { ...t, repository: e }, n)
+              if (s.visitedRule.has(o)) continue
+              s.visitedRule.add(o)
+              const e = o.repository ? n.mergeObjects({}, t.repository, o.repository) : t.repository
+              Array.isArray(o.patterns) && u(o.patterns, { ...t, repository: e }, s)
               const i = o.include
               if (!i) continue
-              const h = f(i)
-              switch (h.kind) {
+              const p = f(i)
+              switch (p.kind) {
                 case 0:
-                  l({ ...t, selfGrammar: t.baseGrammar }, n)
+                  l({ ...t, selfGrammar: t.baseGrammar }, s)
                   break
                 case 1:
-                  l(t, n)
+                  l(t, s)
                   break
                 case 2:
-                  c(h.ruleName, { ...t, repository: e }, n)
+                  c(p.ruleName, { ...t, repository: e }, s)
                   break
                 case 3:
                 case 4:
-                  const s =
-                    h.scopeName === t.selfGrammar.scopeName
+                  const n =
+                    p.scopeName === t.selfGrammar.scopeName
                       ? t.selfGrammar
-                      : h.scopeName === t.baseGrammar.scopeName
+                      : p.scopeName === t.baseGrammar.scopeName
                       ? t.baseGrammar
                       : void 0
-                  if (s) {
-                    const r = { baseGrammar: t.baseGrammar, selfGrammar: s, repository: e }
-                    4 === h.kind ? c(h.ruleName, r, n) : l(r, n)
+                  if (n) {
+                    const a = { baseGrammar: t.baseGrammar, selfGrammar: n, repository: e }
+                    4 === p.kind ? c(p.ruleName, a, s) : l(a, s)
                   } else
-                    4 === h.kind ? n.add(new a(h.scopeName, h.ruleName)) : n.add(new r(h.scopeName))
+                    4 === p.kind ? s.add(new r(p.scopeName, p.ruleName)) : s.add(new a(p.scopeName))
               }
             }
           }
@@ -3010,15 +3446,15 @@
                   (this.seenFullScopeRequests = new Set()),
                   (this.seenPartialScopeRequests = new Set()),
                   this.seenFullScopeRequests.add(this.initialScopeName),
-                  (this.Q = [new r(this.initialScopeName)])
+                  (this.Q = [new a(this.initialScopeName)])
               }
               processQueue() {
                 const e = this.Q
                 this.Q = []
                 const t = new o()
-                for (const n of e) i(n, this.initialScopeName, this.repo, t)
+                for (const s of e) i(s, this.initialScopeName, this.repo, t)
                 for (const e of t.references)
-                  if (e instanceof r) {
+                  if (e instanceof a) {
                     if (this.seenFullScopeRequests.has(e.scopeName)) continue
                     this.seenFullScopeRequests.add(e.scopeName), this.Q.push(e)
                   } else {
@@ -3028,18 +3464,18 @@
                   }
               }
             })
-          class h {
+          class p {
             constructor() {
               this.kind = 0
             }
           }
-          t.BaseReference = h
-          class p {
+          t.BaseReference = p
+          class h {
             constructor() {
               this.kind = 1
             }
           }
-          t.SelfReference = p
+          t.SelfReference = h
           class d {
             constructor(e) {
               ;(this.ruleName = e), (this.kind = 2)
@@ -3058,128 +3494,128 @@
             }
           }
           function f(e) {
-            if ('$base' === e) return new h()
-            if ('$self' === e) return new p()
+            if ('$base' === e) return new p()
+            if ('$self' === e) return new h()
             const t = e.indexOf('#')
             if (-1 === t) return new m(e)
             if (0 === t) return new d(e.substring(1))
             {
-              const n = e.substring(0, t),
-                s = e.substring(t + 1)
-              return new g(n, s)
+              const s = e.substring(0, t),
+                n = e.substring(t + 1)
+              return new g(s, n)
             }
           }
           ;(t.TopLevelRepositoryReference = g), (t.parseInclude = f)
         },
-        391: function (e, t, n) {
-          var s =
+        391: function (e, t, s) {
+          var n =
               (this && this.__createBinding) ||
               (Object.create
-                ? function (e, t, n, s) {
-                    void 0 === s && (s = n),
-                      Object.defineProperty(e, s, {
+                ? function (e, t, s, n) {
+                    void 0 === n && (n = s),
+                      Object.defineProperty(e, n, {
                         enumerable: !0,
                         get: function () {
-                          return t[n]
+                          return t[s]
                         }
                       })
                   }
-                : function (e, t, n, s) {
-                    void 0 === s && (s = n), (e[s] = t[n])
+                : function (e, t, s, n) {
+                    void 0 === n && (n = s), (e[n] = t[s])
                   }),
-            r =
+            a =
               (this && this.__exportStar) ||
               function (e, t) {
-                for (var n in e)
-                  'default' === n || Object.prototype.hasOwnProperty.call(t, n) || s(t, e, n)
+                for (var s in e)
+                  'default' === s || Object.prototype.hasOwnProperty.call(t, s) || n(t, e, s)
               }
-          Object.defineProperty(t, '__esModule', { value: !0 }), r(n(947), t)
+          Object.defineProperty(t, '__esModule', { value: !0 }), a(s(947), t)
         },
-        47: (e, t, n) => {
+        47: (e, t, s) => {
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.LocalStackElement = t._tokenizeString = void 0)
-          const s = n(350),
-            r = n(44),
-            a = n(792),
-            o = n(878)
+          const n = s(350),
+            a = s(44),
+            r = s(792),
+            o = s(878)
           class i {
             constructor(e, t) {
               ;(this.stack = e), (this.stoppedEarly = t)
             }
           }
-          function c(e, t, n, r, c, h, d, m) {
+          function c(e, t, s, a, c, p, d, m) {
             const g = t.content.length
             let f = !1,
-              _ = -1
+              y = -1
             if (d) {
-              const o = (function (e, t, n, r, o, i) {
+              const o = (function (e, t, s, a, o, i) {
                 let c = o.beginRuleCapturedEOL ? 0 : -1
                 const l = []
                 for (let t = o; t; t = t.pop()) {
-                  const n = t.getRule(e)
-                  n instanceof a.BeginWhileRule && l.push({ rule: n, stack: t })
+                  const s = t.getRule(e)
+                  s instanceof r.BeginWhileRule && l.push({ rule: s, stack: t })
                 }
-                for (let h = l.pop(); h; h = l.pop()) {
+                for (let p = l.pop(); p; p = l.pop()) {
                   const { ruleScanner: l, findOptions: d } = u(
-                      h.rule,
+                      p.rule,
                       e,
-                      h.stack.endRule,
-                      n,
-                      r === c
+                      p.stack.endRule,
+                      s,
+                      a === c
                     ),
-                    m = l.findNextMatchSync(t, r, d)
+                    m = l.findNextMatchSync(t, a, d)
                   if (
-                    (s.DebugFlags.InDebugMode &&
+                    (n.DebugFlags.InDebugMode &&
                       (console.log('  scanning for while rule'), console.log(l.toString())),
                     !m)
                   ) {
-                    s.DebugFlags.InDebugMode &&
+                    n.DebugFlags.InDebugMode &&
                       console.log(
-                        '  popping ' + h.rule.debugName + ' - ' + h.rule.debugWhileRegExp
+                        '  popping ' + p.rule.debugName + ' - ' + p.rule.debugWhileRegExp
                       ),
-                      (o = h.stack.pop())
+                      (o = p.stack.pop())
                     break
                   }
-                  if (m.ruleId !== a.whileRuleId) {
-                    o = h.stack.pop()
+                  if (m.ruleId !== r.whileRuleId) {
+                    o = p.stack.pop()
                     break
                   }
                   m.captureIndices &&
                     m.captureIndices.length &&
-                    (i.produce(h.stack, m.captureIndices[0].start),
-                    p(e, t, n, h.stack, i, h.rule.whileCaptures, m.captureIndices),
-                    i.produce(h.stack, m.captureIndices[0].end),
+                    (i.produce(p.stack, m.captureIndices[0].start),
+                    h(e, t, s, p.stack, i, p.rule.whileCaptures, m.captureIndices),
+                    i.produce(p.stack, m.captureIndices[0].end),
                     (c = m.captureIndices[0].end),
-                    m.captureIndices[0].end > r && ((r = m.captureIndices[0].end), (n = !1)))
+                    m.captureIndices[0].end > a && ((a = m.captureIndices[0].end), (s = !1)))
                 }
-                return { stack: o, linePos: r, anchorPosition: c, isFirstLine: n }
-              })(e, t, n, r, c, h)
-              ;(c = o.stack), (r = o.linePos), (n = o.isFirstLine), (_ = o.anchorPosition)
+                return { stack: o, linePos: a, anchorPosition: c, isFirstLine: s }
+              })(e, t, s, a, c, p)
+              ;(c = o.stack), (a = o.linePos), (s = o.isFirstLine), (y = o.anchorPosition)
             }
             const b = Date.now()
             for (; !f; ) {
               if (0 !== m && Date.now() - b > m) return new i(c, !0)
-              y()
+              _()
             }
             return new i(c, !1)
-            function y() {
-              s.DebugFlags.InDebugMode &&
+            function _() {
+              n.DebugFlags.InDebugMode &&
                 (console.log(''),
-                console.log(`@@scanNext ${r}: |${t.content.substr(r).replace(/\n$/, '\\n')}|`))
-              const i = (function (e, t, n, r, a, i) {
-                const c = (function (e, t, n, r, a, i) {
-                    const c = a.getRule(e),
-                      { ruleScanner: u, findOptions: h } = l(c, e, a.endRule, n, r === i)
-                    let p = 0
-                    s.DebugFlags.InDebugMode && (p = o.performanceNow())
-                    const d = u.findNextMatchSync(t, r, h)
-                    if (s.DebugFlags.InDebugMode) {
-                      const e = o.performanceNow() - p
+                console.log(`@@scanNext ${a}: |${t.content.substr(a).replace(/\n$/, '\\n')}|`))
+              const i = (function (e, t, s, a, r, i) {
+                const c = (function (e, t, s, a, r, i) {
+                    const c = r.getRule(e),
+                      { ruleScanner: u, findOptions: p } = l(c, e, r.endRule, s, a === i)
+                    let h = 0
+                    n.DebugFlags.InDebugMode && (h = o.performanceNow())
+                    const d = u.findNextMatchSync(t, a, p)
+                    if (n.DebugFlags.InDebugMode) {
+                      const e = o.performanceNow() - h
                       e > 5 &&
                         console.warn(
                           `Rule ${c.debugName} (${c.id}) matching took ${e} against '${t}'`
                         ),
-                        console.log(`  scanning for (linePos: ${r}, anchorPosition: ${i})`),
+                        console.log(`  scanning for (linePos: ${a}, anchorPosition: ${i})`),
                         console.log(u.toString()),
                         d &&
                           console.log(
@@ -3187,200 +3623,200 @@
                           )
                     }
                     return d ? { captureIndices: d.captureIndices, matchedRuleId: d.ruleId } : null
-                  })(e, t, n, r, a, i),
+                  })(e, t, s, a, r, i),
                   u = e.getInjections()
                 if (0 === u.length) return c
-                const h = (function (e, t, n, r, a, o, i) {
+                const p = (function (e, t, s, a, r, o, i) {
                   let c,
                     u = Number.MAX_VALUE,
-                    h = null,
-                    p = 0
+                    p = null,
+                    h = 0
                   const d = o.contentNameScopesList.getScopeNames()
                   for (let o = 0, m = e.length; o < m; o++) {
                     const m = e[o]
                     if (!m.matcher(d)) continue
                     const g = t.getRule(m.ruleId),
-                      { ruleScanner: f, findOptions: _ } = l(g, t, null, r, a === i),
-                      b = f.findNextMatchSync(n, a, _)
+                      { ruleScanner: f, findOptions: y } = l(g, t, null, a, r === i),
+                      b = f.findNextMatchSync(s, r, y)
                     if (!b) continue
-                    s.DebugFlags.InDebugMode &&
+                    n.DebugFlags.InDebugMode &&
                       (console.log(`  matched injection: ${m.debugSelector}`),
                       console.log(f.toString()))
-                    const y = b.captureIndices[0].start
+                    const _ = b.captureIndices[0].start
                     if (
-                      !(y >= u) &&
-                      ((u = y), (h = b.captureIndices), (c = b.ruleId), (p = m.priority), u === a)
+                      !(_ >= u) &&
+                      ((u = _), (p = b.captureIndices), (c = b.ruleId), (h = m.priority), u === r)
                     )
                       break
                   }
-                  return h ? { priorityMatch: -1 === p, captureIndices: h, matchedRuleId: c } : null
-                })(u, e, t, n, r, a, i)
-                if (!h) return c
-                if (!c) return h
-                const p = c.captureIndices[0].start,
-                  d = h.captureIndices[0].start
-                return d < p || (h.priorityMatch && d === p) ? h : c
-              })(e, t, n, r, c, _)
+                  return p ? { priorityMatch: -1 === h, captureIndices: p, matchedRuleId: c } : null
+                })(u, e, t, s, a, r, i)
+                if (!p) return c
+                if (!c) return p
+                const h = c.captureIndices[0].start,
+                  d = p.captureIndices[0].start
+                return d < h || (p.priorityMatch && d === h) ? p : c
+              })(e, t, s, a, c, y)
               if (!i)
                 return (
-                  s.DebugFlags.InDebugMode && console.log('  no more matches.'),
-                  h.produce(c, g),
+                  n.DebugFlags.InDebugMode && console.log('  no more matches.'),
+                  p.produce(c, g),
                   void (f = !0)
                 )
               const u = i.captureIndices,
                 d = i.matchedRuleId,
-                m = !!(u && u.length > 0) && u[0].end > r
-              if (d === a.endRuleId) {
-                const a = c.getRule(e)
-                s.DebugFlags.InDebugMode &&
-                  console.log('  popping ' + a.debugName + ' - ' + a.debugEndRegExp),
-                  h.produce(c, u[0].start),
+                m = !!(u && u.length > 0) && u[0].end > a
+              if (d === r.endRuleId) {
+                const r = c.getRule(e)
+                n.DebugFlags.InDebugMode &&
+                  console.log('  popping ' + r.debugName + ' - ' + r.debugEndRegExp),
+                  p.produce(c, u[0].start),
                   (c = c.withContentNameScopesList(c.nameScopesList)),
-                  p(e, t, n, c, h, a.endCaptures, u),
-                  h.produce(c, u[0].end)
+                  h(e, t, s, c, p, r.endCaptures, u),
+                  p.produce(c, u[0].end)
                 const o = c
-                if (((c = c.parent), (_ = o.getAnchorPos()), !m && o.getEnterPos() === r))
+                if (((c = c.parent), (y = o.getAnchorPos()), !m && o.getEnterPos() === a))
                   return (
-                    s.DebugFlags.InDebugMode &&
+                    n.DebugFlags.InDebugMode &&
                       console.error(
                         '[1] - Grammar is in an endless loop - Grammar pushed & popped a rule without advancing'
                       ),
                     (c = o),
-                    h.produce(c, g),
+                    p.produce(c, g),
                     void (f = !0)
                   )
               } else {
                 const o = e.getRule(d)
-                h.produce(c, u[0].start)
+                p.produce(c, u[0].start)
                 const i = c,
                   l = o.getName(t.content, u),
                   b = c.contentNameScopesList.pushAttributed(l, e)
                 if (
-                  ((c = c.push(d, r, _, u[0].end === g, null, b, b)), o instanceof a.BeginEndRule)
+                  ((c = c.push(d, a, y, u[0].end === g, null, b, b)), o instanceof r.BeginEndRule)
                 ) {
-                  const r = o
-                  s.DebugFlags.InDebugMode &&
-                    console.log('  pushing ' + r.debugName + ' - ' + r.debugBeginRegExp),
-                    p(e, t, n, c, h, r.beginCaptures, u),
-                    h.produce(c, u[0].end),
-                    (_ = u[0].end)
-                  const a = r.getContentName(t.content, u),
-                    l = b.pushAttributed(a, e)
+                  const a = o
+                  n.DebugFlags.InDebugMode &&
+                    console.log('  pushing ' + a.debugName + ' - ' + a.debugBeginRegExp),
+                    h(e, t, s, c, p, a.beginCaptures, u),
+                    p.produce(c, u[0].end),
+                    (y = u[0].end)
+                  const r = a.getContentName(t.content, u),
+                    l = b.pushAttributed(r, e)
                   if (
                     ((c = c.withContentNameScopesList(l)),
-                    r.endHasBackReferences &&
-                      (c = c.withEndRule(r.getEndWithResolvedBackReferences(t.content, u))),
+                    a.endHasBackReferences &&
+                      (c = c.withEndRule(a.getEndWithResolvedBackReferences(t.content, u))),
                     !m && i.hasSameRuleAs(c))
                   )
                     return (
-                      s.DebugFlags.InDebugMode &&
+                      n.DebugFlags.InDebugMode &&
                         console.error(
                           '[2] - Grammar is in an endless loop - Grammar pushed the same rule without advancing'
                         ),
                       (c = c.pop()),
-                      h.produce(c, g),
+                      p.produce(c, g),
                       void (f = !0)
                     )
-                } else if (o instanceof a.BeginWhileRule) {
-                  const r = o
-                  s.DebugFlags.InDebugMode && console.log('  pushing ' + r.debugName),
-                    p(e, t, n, c, h, r.beginCaptures, u),
-                    h.produce(c, u[0].end),
-                    (_ = u[0].end)
-                  const a = r.getContentName(t.content, u),
-                    l = b.pushAttributed(a, e)
+                } else if (o instanceof r.BeginWhileRule) {
+                  const a = o
+                  n.DebugFlags.InDebugMode && console.log('  pushing ' + a.debugName),
+                    h(e, t, s, c, p, a.beginCaptures, u),
+                    p.produce(c, u[0].end),
+                    (y = u[0].end)
+                  const r = a.getContentName(t.content, u),
+                    l = b.pushAttributed(r, e)
                   if (
                     ((c = c.withContentNameScopesList(l)),
-                    r.whileHasBackReferences &&
-                      (c = c.withEndRule(r.getWhileWithResolvedBackReferences(t.content, u))),
+                    a.whileHasBackReferences &&
+                      (c = c.withEndRule(a.getWhileWithResolvedBackReferences(t.content, u))),
                     !m && i.hasSameRuleAs(c))
                   )
                     return (
-                      s.DebugFlags.InDebugMode &&
+                      n.DebugFlags.InDebugMode &&
                         console.error(
                           '[3] - Grammar is in an endless loop - Grammar pushed the same rule without advancing'
                         ),
                       (c = c.pop()),
-                      h.produce(c, g),
+                      p.produce(c, g),
                       void (f = !0)
                     )
                 } else {
-                  const r = o
+                  const a = o
                   if (
-                    (s.DebugFlags.InDebugMode &&
-                      console.log('  matched ' + r.debugName + ' - ' + r.debugMatchRegExp),
-                    p(e, t, n, c, h, r.captures, u),
-                    h.produce(c, u[0].end),
+                    (n.DebugFlags.InDebugMode &&
+                      console.log('  matched ' + a.debugName + ' - ' + a.debugMatchRegExp),
+                    h(e, t, s, c, p, a.captures, u),
+                    p.produce(c, u[0].end),
                     (c = c.pop()),
                     !m)
                   )
                     return (
-                      s.DebugFlags.InDebugMode &&
+                      n.DebugFlags.InDebugMode &&
                         console.error(
                           '[4] - Grammar is in an endless loop - Grammar is not advancing, nor is it pushing/popping'
                         ),
                       (c = c.safePop()),
-                      h.produce(c, g),
+                      p.produce(c, g),
                       void (f = !0)
                     )
                 }
               }
-              u[0].end > r && ((r = u[0].end), (n = !1))
+              u[0].end > a && ((a = u[0].end), (s = !1))
             }
           }
-          function l(e, t, n, r, a) {
-            return s.UseOnigurumaFindOptions
-              ? { ruleScanner: e.compile(t, n), findOptions: h(r, a) }
-              : { ruleScanner: e.compileAG(t, n, r, a), findOptions: 0 }
+          function l(e, t, s, a, r) {
+            return n.UseOnigurumaFindOptions
+              ? { ruleScanner: e.compile(t, s), findOptions: p(a, r) }
+              : { ruleScanner: e.compileAG(t, s, a, r), findOptions: 0 }
           }
-          function u(e, t, n, r, a) {
-            return s.UseOnigurumaFindOptions
-              ? { ruleScanner: e.compileWhile(t, n), findOptions: h(r, a) }
-              : { ruleScanner: e.compileWhileAG(t, n, r, a), findOptions: 0 }
+          function u(e, t, s, a, r) {
+            return n.UseOnigurumaFindOptions
+              ? { ruleScanner: e.compileWhile(t, s), findOptions: p(a, r) }
+              : { ruleScanner: e.compileWhileAG(t, s, a, r), findOptions: 0 }
           }
-          function h(e, t) {
-            let n = 0
-            return e || (n |= 1), t || (n |= 4), n
+          function p(e, t) {
+            let s = 0
+            return e || (s |= 1), t || (s |= 4), s
           }
-          function p(e, t, n, s, a, o, i) {
+          function h(e, t, s, n, r, o, i) {
             if (0 === o.length) return
             const l = t.content,
               u = Math.min(o.length, i.length),
-              h = [],
-              p = i[0].end
+              p = [],
+              h = i[0].end
             for (let t = 0; t < u; t++) {
               const u = o[t]
               if (null === u) continue
               const m = i[t]
               if (0 === m.length) continue
-              if (m.start > p) break
-              for (; h.length > 0 && h[h.length - 1].endPos <= m.start; )
-                a.produceFromScopes(h[h.length - 1].scopes, h[h.length - 1].endPos), h.pop()
+              if (m.start > h) break
+              for (; p.length > 0 && p[p.length - 1].endPos <= m.start; )
+                r.produceFromScopes(p[p.length - 1].scopes, p[p.length - 1].endPos), p.pop()
               if (
-                (h.length > 0
-                  ? a.produceFromScopes(h[h.length - 1].scopes, m.start)
-                  : a.produce(s, m.start),
+                (p.length > 0
+                  ? r.produceFromScopes(p[p.length - 1].scopes, m.start)
+                  : r.produce(n, m.start),
                 u.retokenizeCapturedWithRuleId)
               ) {
                 const t = u.getName(l, i),
-                  o = s.contentNameScopesList.pushAttributed(t, e),
-                  h = u.getContentName(l, i),
-                  p = o.pushAttributed(h, e),
-                  d = s.push(u.retokenizeCapturedWithRuleId, m.start, -1, !1, null, o, p),
+                  o = n.contentNameScopesList.pushAttributed(t, e),
+                  p = u.getContentName(l, i),
+                  h = o.pushAttributed(p, e),
+                  d = n.push(u.retokenizeCapturedWithRuleId, m.start, -1, !1, null, o, h),
                   g = e.createOnigString(l.substring(0, m.end))
-                c(e, g, n && 0 === m.start, m.start, d, a, !1, 0), r.disposeOnigString(g)
+                c(e, g, s && 0 === m.start, m.start, d, r, !1, 0), a.disposeOnigString(g)
                 continue
               }
               const g = u.getName(l, i)
               if (null !== g) {
                 const t = (
-                  h.length > 0 ? h[h.length - 1].scopes : s.contentNameScopesList
+                  p.length > 0 ? p[p.length - 1].scopes : n.contentNameScopesList
                 ).pushAttributed(g, e)
-                h.push(new d(t, m.end))
+                p.push(new d(t, m.end))
               }
             }
-            for (; h.length > 0; )
-              a.produceFromScopes(h[h.length - 1].scopes, h[h.length - 1].endPos), h.pop()
+            for (; p.length > 0; )
+              r.produceFromScopes(p[p.length - 1].scopes, p[p.length - 1].endPos), p.pop()
           }
           t._tokenizeString = c
           class d {
@@ -3391,7 +3827,7 @@
           t.LocalStackElement = d
         },
         974: (e, t) => {
-          function n(e, t) {
+          function s(e, t) {
             throw new Error(
               'Near offset ' + e.pos + ': ' + t + ' ~~~' + e.source.substr(e.pos, 50) + '~~~'
             )
@@ -3399,22 +3835,22 @@
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.parseJSON = void 0),
             (t.parseJSON = function (e, t, o) {
-              let i = new s(e),
-                c = new r(),
+              let i = new n(e),
+                c = new a(),
                 l = 0,
                 u = null,
-                h = [],
-                p = []
+                p = [],
+                h = []
               function d() {
-                h.push(l), p.push(u)
+                p.push(l), h.push(u)
               }
               function m() {
-                ;(l = h.pop()), (u = p.pop())
+                ;(l = p.pop()), (u = h.pop())
               }
               function g(e) {
-                n(i, e)
+                s(i, e)
               }
-              for (; a(i, c); ) {
+              for (; r(i, c); ) {
                 if (0 === l) {
                   if ((null !== u && g('too many constructs in root'), 3 === c.type)) {
                     ;(u = {}), o && (u.$vscodeTextmateLocation = c.toLocation(t)), d(), (l = 1)
@@ -3445,8 +3881,8 @@
                   if (1 === c.type) {
                     let e = c.value
                     if (
-                      ((a(i, c) && 6 === c.type) || g('expected colon'),
-                      a(i, c) || g('expected value'),
+                      ((r(i, c) && 6 === c.type) || g('expected colon'),
+                      r(i, c) || g('expected value'),
                       (l = 2),
                       1 === c.type)
                     ) {
@@ -3475,12 +3911,12 @@
                       continue
                     }
                     if (3 === c.type) {
-                      let n = {}
-                      o && (n.$vscodeTextmateLocation = c.toLocation(t)),
-                        (u[e] = n),
+                      let s = {}
+                      o && (s.$vscodeTextmateLocation = c.toLocation(t)),
+                        (u[e] = s),
                         d(),
                         (l = 1),
-                        (u = n)
+                        (u = s)
                       continue
                     }
                   }
@@ -3540,9 +3976,9 @@
                 }
                 g('unknown state')
               }
-              return 0 !== p.length && g('unclosed constructs'), u
+              return 0 !== h.length && g('unclosed constructs'), u
             })
-          class s {
+          class n {
             constructor(e) {
               ;(this.source = e),
                 (this.pos = 0),
@@ -3551,7 +3987,7 @@
                 (this.char = 0)
             }
           }
-          class r {
+          class a {
             constructor() {
               ;(this.value = null),
                 (this.type = 0),
@@ -3564,38 +4000,38 @@
               return { filename: e, line: this.line, char: this.char }
             }
           }
-          function a(e, t) {
+          function r(e, t) {
             ;(t.value = null),
               (t.type = 0),
               (t.offset = -1),
               (t.len = -1),
               (t.line = -1),
               (t.char = -1)
-            let s,
-              r = e.source,
-              a = e.pos,
+            let n,
+              a = e.source,
+              r = e.pos,
               o = e.len,
               i = e.line,
               c = e.char
             for (;;) {
-              if (a >= o) return !1
-              if (((s = r.charCodeAt(a)), 32 !== s && 9 !== s && 13 !== s)) {
-                if (10 !== s) break
-                a++, i++, (c = 0)
-              } else a++, c++
+              if (r >= o) return !1
+              if (((n = a.charCodeAt(r)), 32 !== n && 9 !== n && 13 !== n)) {
+                if (10 !== n) break
+                r++, i++, (c = 0)
+              } else r++, c++
             }
-            if (((t.offset = a), (t.line = i), (t.char = c), 34 === s)) {
-              for (t.type = 1, a++, c++; ; ) {
-                if (a >= o) return !1
-                if (((s = r.charCodeAt(a)), a++, c++, 92 !== s)) {
-                  if (34 === s) break
-                } else a++, c++
+            if (((t.offset = r), (t.line = i), (t.char = c), 34 === n)) {
+              for (t.type = 1, r++, c++; ; ) {
+                if (r >= o) return !1
+                if (((n = a.charCodeAt(r)), r++, c++, 92 !== n)) {
+                  if (34 === n) break
+                } else r++, c++
               }
-              t.value = r
-                .substring(t.offset + 1, a - 1)
+              t.value = a
+                .substring(t.offset + 1, r - 1)
                 .replace(/\\u([0-9A-Fa-f]{4})/g, (e, t) => String.fromCodePoint(parseInt(t, 16)))
-                .replace(/\\(.)/g, (t, s) => {
-                  switch (s) {
+                .replace(/\\(.)/g, (t, n) => {
+                  switch (n) {
                     case '"':
                       return '"'
                     case '\\':
@@ -3613,89 +4049,89 @@
                     case 't':
                       return '\t'
                     default:
-                      n(e, 'invalid escape sequence')
+                      s(e, 'invalid escape sequence')
                   }
                   throw new Error('unreachable')
                 })
-            } else if (91 === s) (t.type = 2), a++, c++
-            else if (123 === s) (t.type = 3), a++, c++
-            else if (93 === s) (t.type = 4), a++, c++
-            else if (125 === s) (t.type = 5), a++, c++
-            else if (58 === s) (t.type = 6), a++, c++
-            else if (44 === s) (t.type = 7), a++, c++
-            else if (110 === s) {
-              if (((t.type = 8), a++, c++, (s = r.charCodeAt(a)), 117 !== s)) return !1
-              if ((a++, c++, (s = r.charCodeAt(a)), 108 !== s)) return !1
-              if ((a++, c++, (s = r.charCodeAt(a)), 108 !== s)) return !1
-              a++, c++
-            } else if (116 === s) {
-              if (((t.type = 9), a++, c++, (s = r.charCodeAt(a)), 114 !== s)) return !1
-              if ((a++, c++, (s = r.charCodeAt(a)), 117 !== s)) return !1
-              if ((a++, c++, (s = r.charCodeAt(a)), 101 !== s)) return !1
-              a++, c++
-            } else if (102 === s) {
-              if (((t.type = 10), a++, c++, (s = r.charCodeAt(a)), 97 !== s)) return !1
-              if ((a++, c++, (s = r.charCodeAt(a)), 108 !== s)) return !1
-              if ((a++, c++, (s = r.charCodeAt(a)), 115 !== s)) return !1
-              if ((a++, c++, (s = r.charCodeAt(a)), 101 !== s)) return !1
-              a++, c++
+            } else if (91 === n) (t.type = 2), r++, c++
+            else if (123 === n) (t.type = 3), r++, c++
+            else if (93 === n) (t.type = 4), r++, c++
+            else if (125 === n) (t.type = 5), r++, c++
+            else if (58 === n) (t.type = 6), r++, c++
+            else if (44 === n) (t.type = 7), r++, c++
+            else if (110 === n) {
+              if (((t.type = 8), r++, c++, (n = a.charCodeAt(r)), 117 !== n)) return !1
+              if ((r++, c++, (n = a.charCodeAt(r)), 108 !== n)) return !1
+              if ((r++, c++, (n = a.charCodeAt(r)), 108 !== n)) return !1
+              r++, c++
+            } else if (116 === n) {
+              if (((t.type = 9), r++, c++, (n = a.charCodeAt(r)), 114 !== n)) return !1
+              if ((r++, c++, (n = a.charCodeAt(r)), 117 !== n)) return !1
+              if ((r++, c++, (n = a.charCodeAt(r)), 101 !== n)) return !1
+              r++, c++
+            } else if (102 === n) {
+              if (((t.type = 10), r++, c++, (n = a.charCodeAt(r)), 97 !== n)) return !1
+              if ((r++, c++, (n = a.charCodeAt(r)), 108 !== n)) return !1
+              if ((r++, c++, (n = a.charCodeAt(r)), 115 !== n)) return !1
+              if ((r++, c++, (n = a.charCodeAt(r)), 101 !== n)) return !1
+              r++, c++
             } else
               for (t.type = 11; ; ) {
-                if (a >= o) return !1
+                if (r >= o) return !1
                 if (
-                  ((s = r.charCodeAt(a)),
+                  ((n = a.charCodeAt(r)),
                   !(
-                    46 === s ||
-                    (s >= 48 && s <= 57) ||
-                    101 === s ||
-                    69 === s ||
-                    45 === s ||
-                    43 === s
+                    46 === n ||
+                    (n >= 48 && n <= 57) ||
+                    101 === n ||
+                    69 === n ||
+                    45 === n ||
+                    43 === n
                   ))
                 )
                   break
-                a++, c++
+                r++, c++
               }
             return (
-              (t.len = a - t.offset),
-              null === t.value && (t.value = r.substr(t.offset, t.len)),
-              (e.pos = a),
+              (t.len = r - t.offset),
+              null === t.value && (t.value = a.substr(t.offset, t.len)),
+              (e.pos = r),
               (e.line = i),
               (e.char = c),
               !0
             )
           }
         },
-        787: function (e, t, n) {
-          var s =
+        787: function (e, t, s) {
+          var n =
               (this && this.__createBinding) ||
               (Object.create
-                ? function (e, t, n, s) {
-                    void 0 === s && (s = n),
-                      Object.defineProperty(e, s, {
+                ? function (e, t, s, n) {
+                    void 0 === n && (n = s),
+                      Object.defineProperty(e, n, {
                         enumerable: !0,
                         get: function () {
-                          return t[n]
+                          return t[s]
                         }
                       })
                   }
-                : function (e, t, n, s) {
-                    void 0 === s && (s = n), (e[s] = t[n])
+                : function (e, t, s, n) {
+                    void 0 === n && (n = s), (e[n] = t[s])
                   }),
-            r =
+            a =
               (this && this.__exportStar) ||
               function (e, t) {
-                for (var n in e)
-                  'default' === n || Object.prototype.hasOwnProperty.call(t, n) || s(t, e, n)
+                for (var s in e)
+                  'default' === s || Object.prototype.hasOwnProperty.call(t, s) || n(t, e, s)
               }
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.parseRawGrammar = t.INITIAL = t.Registry = void 0)
-          const a = n(391),
-            o = n(50),
-            i = n(652),
-            c = n(583),
-            l = n(965)
-          r(n(44), t),
+          const r = s(391),
+            o = s(50),
+            i = s(652),
+            c = s(583),
+            l = s(965)
+          a(s(44), t),
             (t.Registry = class {
               constructor(e) {
                 ;(this._options = e),
@@ -3714,30 +4150,30 @@
               getColorMap() {
                 return this._syncRegistry.getColorMap()
               }
-              loadGrammarWithEmbeddedLanguages(e, t, n) {
-                return this.loadGrammarWithConfiguration(e, t, { embeddedLanguages: n })
+              loadGrammarWithEmbeddedLanguages(e, t, s) {
+                return this.loadGrammarWithConfiguration(e, t, { embeddedLanguages: s })
               }
-              loadGrammarWithConfiguration(e, t, n) {
+              loadGrammarWithConfiguration(e, t, s) {
                 return this._loadGrammar(
                   e,
                   t,
-                  n.embeddedLanguages,
-                  n.tokenTypes,
-                  new a.BalancedBracketSelectors(
-                    n.balancedBracketSelectors || [],
-                    n.unbalancedBracketSelectors || []
+                  s.embeddedLanguages,
+                  s.tokenTypes,
+                  new r.BalancedBracketSelectors(
+                    s.balancedBracketSelectors || [],
+                    s.unbalancedBracketSelectors || []
                   )
                 )
               }
               loadGrammar(e) {
                 return this._loadGrammar(e, 0, null, null, null)
               }
-              async _loadGrammar(e, t, n, s, r) {
-                const a = new l.ScopeDependencyProcessor(this._syncRegistry, e)
-                for (; a.Q.length > 0; )
-                  await Promise.all(a.Q.map(e => this._loadSingleGrammar(e.scopeName))),
-                    a.processQueue()
-                return this._grammarForScopeName(e, t, n, s, r)
+              async _loadGrammar(e, t, s, n, a) {
+                const r = new l.ScopeDependencyProcessor(this._syncRegistry, e)
+                for (; r.Q.length > 0; )
+                  await Promise.all(r.Q.map(e => this._loadSingleGrammar(e.scopeName))),
+                    r.processQueue()
+                return this._grammarForScopeName(e, t, s, n, a)
               }
               async _loadSingleGrammar(e) {
                 return (
@@ -3749,50 +4185,50 @@
               async _doLoadSingleGrammar(e) {
                 const t = await this._options.loadGrammar(e)
                 if (t) {
-                  const n =
+                  const s =
                     'function' == typeof this._options.getInjections
                       ? this._options.getInjections(e)
                       : void 0
-                  this._syncRegistry.addGrammar(t, n)
+                  this._syncRegistry.addGrammar(t, s)
                 }
               }
-              async addGrammar(e, t = [], n = 0, s = null) {
+              async addGrammar(e, t = [], s = 0, n = null) {
                 return (
                   this._syncRegistry.addGrammar(e, t),
-                  await this._grammarForScopeName(e.scopeName, n, s)
+                  await this._grammarForScopeName(e.scopeName, s, n)
                 )
               }
-              _grammarForScopeName(e, t = 0, n = null, s = null, r = null) {
-                return this._syncRegistry.grammarForScopeName(e, t, n, s, r)
+              _grammarForScopeName(e, t = 0, s = null, n = null, a = null) {
+                return this._syncRegistry.grammarForScopeName(e, t, s, n, a)
               }
             }),
-            (t.INITIAL = a.StateStack.NULL),
+            (t.INITIAL = r.StateStack.NULL),
             (t.parseRawGrammar = o.parseRawGrammar)
         },
         736: (e, t) => {
-          function n(e) {
+          function s(e) {
             return !!e && !!e.match(/[\w\.:]+/)
           }
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.createMatchers = void 0),
             (t.createMatchers = function (e, t) {
-              const s = [],
-                r = (function (e) {
+              const n = [],
+                a = (function (e) {
                   let t = /([LR]:|[\w\.:][\w\.:\-]*|[\,\|\-\(\)])/g,
-                    n = t.exec(e)
+                    s = t.exec(e)
                   return {
                     next: () => {
-                      if (!n) return null
-                      const s = n[0]
-                      return (n = t.exec(e)), s
+                      if (!s) return null
+                      const n = s[0]
+                      return (s = t.exec(e)), n
                     }
                   }
                 })(e)
-              let a = r.next()
-              for (; null !== a; ) {
+              let r = a.next()
+              for (; null !== r; ) {
                 let e = 0
-                if (2 === a.length && ':' === a.charAt(1)) {
-                  switch (a.charAt(0)) {
+                if (2 === r.length && ':' === r.charAt(1)) {
+                  switch (r.charAt(0)) {
                     case 'R':
                       e = 1
                       break
@@ -3800,42 +4236,42 @@
                       e = -1
                       break
                     default:
-                      console.log(`Unknown priority ${a} in scope selector`)
+                      console.log(`Unknown priority ${r} in scope selector`)
                   }
-                  a = r.next()
+                  r = a.next()
                 }
                 let t = i()
-                if ((s.push({ matcher: t, priority: e }), ',' !== a)) break
-                a = r.next()
+                if ((n.push({ matcher: t, priority: e }), ',' !== r)) break
+                r = a.next()
               }
-              return s
+              return n
               function o() {
-                if ('-' === a) {
-                  a = r.next()
+                if ('-' === r) {
+                  r = a.next()
                   const e = o()
                   return t => !!e && !e(t)
                 }
-                if ('(' === a) {
-                  a = r.next()
+                if ('(' === r) {
+                  r = a.next()
                   const e = (function () {
                     const e = []
                     let t = i()
-                    for (; t && (e.push(t), '|' === a || ',' === a); ) {
+                    for (; t && (e.push(t), '|' === r || ',' === r); ) {
                       do {
-                        a = r.next()
-                      } while ('|' === a || ',' === a)
+                        r = a.next()
+                      } while ('|' === r || ',' === r)
                       t = i()
                     }
                     return t => e.some(e => e(t))
                   })()
-                  return ')' === a && (a = r.next()), e
+                  return ')' === r && (r = a.next()), e
                 }
-                if (n(a)) {
+                if (s(r)) {
                   const e = []
                   do {
-                    e.push(a), (a = r.next())
-                  } while (n(a))
-                  return n => t(e, n)
+                    e.push(r), (r = a.next())
+                  } while (s(r))
+                  return s => t(e, s)
                 }
                 return null
               }
@@ -3854,144 +4290,144 @@
               'function' == typeof e.dispose && e.dispose()
             })
         },
-        50: (e, t, n) => {
+        50: (e, t, s) => {
           Object.defineProperty(t, '__esModule', { value: !0 }), (t.parseRawGrammar = void 0)
-          const s = n(69),
-            r = n(350),
-            a = n(974)
+          const n = s(69),
+            a = s(350),
+            r = s(974)
           t.parseRawGrammar = function (e, t = null) {
             return null !== t && /\.json$/.test(t)
-              ? ((n = e), (o = t), r.DebugFlags.InDebugMode ? a.parseJSON(n, o, !0) : JSON.parse(n))
+              ? ((s = e), (o = t), a.DebugFlags.InDebugMode ? r.parseJSON(s, o, !0) : JSON.parse(s))
               : (function (e, t) {
-                  return r.DebugFlags.InDebugMode
-                    ? s.parseWithLocation(e, t, '$vscodeTextmateLocation')
-                    : s.parsePLIST(e)
+                  return a.DebugFlags.InDebugMode
+                    ? n.parseWithLocation(e, t, '$vscodeTextmateLocation')
+                    : n.parsePLIST(e)
                 })(e, t)
-            var n, o
+            var s, o
           }
         },
         69: (e, t) => {
-          function n(e, t, n) {
-            const s = e.length
-            let r = 0,
-              a = 1,
+          function s(e, t, s) {
+            const n = e.length
+            let a = 0,
+              r = 1,
               o = 0
             function i(t) {
-              if (null === n) r += t
-              else for (; t > 0; ) 10 === e.charCodeAt(r) ? (r++, a++, (o = 0)) : (r++, o++), t--
+              if (null === s) a += t
+              else for (; t > 0; ) 10 === e.charCodeAt(a) ? (a++, r++, (o = 0)) : (a++, o++), t--
             }
             function c(e) {
-              null === n ? (r = e) : i(e - r)
+              null === s ? (a = e) : i(e - a)
             }
             function l() {
-              for (; r < s; ) {
-                let t = e.charCodeAt(r)
+              for (; a < n; ) {
+                let t = e.charCodeAt(a)
                 if (32 !== t && 9 !== t && 13 !== t && 10 !== t) break
                 i(1)
               }
             }
             function u(t) {
-              return e.substr(r, t.length) === t && (i(t.length), !0)
-            }
-            function h(t) {
-              let n = e.indexOf(t, r)
-              c(-1 !== n ? n + t.length : s)
+              return e.substr(a, t.length) === t && (i(t.length), !0)
             }
             function p(t) {
-              let n = e.indexOf(t, r)
-              if (-1 !== n) {
-                let s = e.substring(r, n)
-                return c(n + t.length), s
+              let s = e.indexOf(t, a)
+              c(-1 !== s ? s + t.length : n)
+            }
+            function h(t) {
+              let s = e.indexOf(t, a)
+              if (-1 !== s) {
+                let n = e.substring(a, s)
+                return c(s + t.length), n
               }
               {
-                let t = e.substr(r)
-                return c(s), t
+                let t = e.substr(a)
+                return c(n), t
               }
             }
-            s > 0 && 65279 === e.charCodeAt(0) && (r = 1)
+            n > 0 && 65279 === e.charCodeAt(0) && (a = 1)
             let d = 0,
               m = null,
               g = [],
               f = [],
-              _ = null
+              y = null
             function b(e, t) {
               g.push(d), f.push(m), (d = e), (m = t)
             }
-            function y() {
-              if (0 === g.length) return k('illegal state stack')
+            function _() {
+              if (0 === g.length) return N('illegal state stack')
               ;(d = g.pop()), (m = f.pop())
             }
-            function k(t) {
-              throw new Error('Near offset ' + r + ': ' + t + ' ~~~' + e.substr(r, 50) + '~~~')
+            function N(t) {
+              throw new Error('Near offset ' + a + ': ' + t + ' ~~~' + e.substr(a, 50) + '~~~')
             }
-            const L = function () {
-                if (null === _) return k('missing <key>')
+            const k = function () {
+                if (null === y) return N('missing <key>')
                 let e = {}
-                null !== n && (e[n] = { filename: t, line: a, char: o }),
-                  (m[_] = e),
-                  (_ = null),
+                null !== s && (e[s] = { filename: t, line: r, char: o }),
+                  (m[y] = e),
+                  (y = null),
                   b(1, e)
               },
-              v = function () {
-                if (null === _) return k('missing <key>')
+              L = function () {
+                if (null === y) return N('missing <key>')
                 let e = []
-                ;(m[_] = e), (_ = null), b(2, e)
+                ;(m[y] = e), (y = null), b(2, e)
               },
               S = function () {
                 let e = {}
-                null !== n && (e[n] = { filename: t, line: a, char: o }), m.push(e), b(1, e)
+                null !== s && (e[s] = { filename: t, line: r, char: o }), m.push(e), b(1, e)
               },
-              w = function () {
+              v = function () {
                 let e = []
                 m.push(e), b(2, e)
               }
-            function N() {
-              if (1 !== d) return k('unexpected </dict>')
-              y()
+            function w() {
+              if (1 !== d) return N('unexpected </dict>')
+              _()
             }
             function C() {
-              return 1 === d || 2 !== d ? k('unexpected </array>') : void y()
+              return 1 === d || 2 !== d ? N('unexpected </array>') : void _()
             }
             function j(e) {
               if (1 === d) {
-                if (null === _) return k('missing <key>')
-                ;(m[_] = e), (_ = null)
-              } else 2 === d ? m.push(e) : (m = e)
-            }
-            function x(e) {
-              if (isNaN(e)) return k('cannot parse float')
-              if (1 === d) {
-                if (null === _) return k('missing <key>')
-                ;(m[_] = e), (_ = null)
-              } else 2 === d ? m.push(e) : (m = e)
-            }
-            function A(e) {
-              if (isNaN(e)) return k('cannot parse integer')
-              if (1 === d) {
-                if (null === _) return k('missing <key>')
-                ;(m[_] = e), (_ = null)
+                if (null === y) return N('missing <key>')
+                ;(m[y] = e), (y = null)
               } else 2 === d ? m.push(e) : (m = e)
             }
             function P(e) {
+              if (isNaN(e)) return N('cannot parse float')
               if (1 === d) {
-                if (null === _) return k('missing <key>')
-                ;(m[_] = e), (_ = null)
+                if (null === y) return N('missing <key>')
+                ;(m[y] = e), (y = null)
+              } else 2 === d ? m.push(e) : (m = e)
+            }
+            function A(e) {
+              if (isNaN(e)) return N('cannot parse integer')
+              if (1 === d) {
+                if (null === y) return N('missing <key>')
+                ;(m[y] = e), (y = null)
+              } else 2 === d ? m.push(e) : (m = e)
+            }
+            function x(e) {
+              if (1 === d) {
+                if (null === y) return N('missing <key>')
+                ;(m[y] = e), (y = null)
               } else 2 === d ? m.push(e) : (m = e)
             }
             function T(e) {
               if (1 === d) {
-                if (null === _) return k('missing <key>')
-                ;(m[_] = e), (_ = null)
+                if (null === y) return N('missing <key>')
+                ;(m[y] = e), (y = null)
               } else 2 === d ? m.push(e) : (m = e)
             }
             function R(e) {
               if (1 === d) {
-                if (null === _) return k('missing <key>')
-                ;(m[_] = e), (_ = null)
+                if (null === y) return N('missing <key>')
+                ;(m[y] = e), (y = null)
               } else 2 === d ? m.push(e) : (m = e)
             }
             function I() {
-              let e = p('>'),
+              let e = h('>'),
                 t = !1
               return (
                 47 === e.charCodeAt(e.length - 1) && ((t = !0), (e = e.substring(0, e.length - 1))),
@@ -4000,9 +4436,9 @@
             }
             function E(e) {
               if (e.isClosed) return ''
-              let t = p('</')
+              let t = h('</')
               return (
-                h('>'),
+                p('>'),
                 t
                   .replace(/&#([0-9]+);/g, function (e, t) {
                     return String.fromCodePoint(parseInt(t, 10))
@@ -4027,66 +4463,66 @@
                   })
               )
             }
-            for (; r < s && (l(), !(r >= s)); ) {
-              const c = e.charCodeAt(r)
-              if ((i(1), 60 !== c)) return k('expected <')
-              if (r >= s) return k('unexpected end of input')
-              const p = e.charCodeAt(r)
-              if (63 === p) {
-                i(1), h('?>')
+            for (; a < n && (l(), !(a >= n)); ) {
+              const c = e.charCodeAt(a)
+              if ((i(1), 60 !== c)) return N('expected <')
+              if (a >= n) return N('unexpected end of input')
+              const h = e.charCodeAt(a)
+              if (63 === h) {
+                i(1), p('?>')
                 continue
               }
-              if (33 === p) {
+              if (33 === h) {
                 if ((i(1), u('--'))) {
-                  h('--\x3e')
+                  p('--\x3e')
                   continue
                 }
-                h('>')
+                p('>')
                 continue
               }
-              if (47 === p) {
+              if (47 === h) {
                 if ((i(1), l(), u('plist'))) {
-                  h('>')
+                  p('>')
                   continue
                 }
                 if (u('dict')) {
-                  h('>'), N()
+                  p('>'), w()
                   continue
                 }
                 if (u('array')) {
-                  h('>'), C()
+                  p('>'), C()
                   continue
                 }
-                return k('unexpected closed tag')
+                return N('unexpected closed tag')
               }
               let g = I()
               switch (g.name) {
                 case 'dict':
                   1 === d
-                    ? L()
+                    ? k()
                     : 2 === d
                     ? S()
-                    : ((m = {}), null !== n && (m[n] = { filename: t, line: a, char: o }), b(1, m)),
-                    g.isClosed && N()
+                    : ((m = {}), null !== s && (m[s] = { filename: t, line: r, char: o }), b(1, m)),
+                    g.isClosed && w()
                   continue
                 case 'array':
-                  1 === d ? v() : 2 === d ? w() : ((m = []), b(2, m)), g.isClosed && C()
+                  1 === d ? L() : 2 === d ? v() : ((m = []), b(2, m)), g.isClosed && C()
                   continue
                 case 'key':
                   ;(O = E(g)),
-                    1 !== d ? k('unexpected <key>') : null !== _ ? k('too many <key>') : (_ = O)
+                    1 !== d ? N('unexpected <key>') : null !== y ? N('too many <key>') : (y = O)
                   continue
                 case 'string':
                   j(E(g))
                   continue
                 case 'real':
-                  x(parseFloat(E(g)))
+                  P(parseFloat(E(g)))
                   continue
                 case 'integer':
                   A(parseInt(E(g), 10))
                   continue
                 case 'date':
-                  P(new Date(E(g)))
+                  x(new Date(E(g)))
                   continue
                 case 'data':
                   T(E(g))
@@ -4098,23 +4534,23 @@
                   E(g), R(!1)
                   continue
               }
-              if (!/^plist/.test(g.name)) return k('unexpected opened tag ' + g.name)
+              if (!/^plist/.test(g.name)) return N('unexpected opened tag ' + g.name)
             }
             var O
             return m
           }
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.parsePLIST = t.parseWithLocation = void 0),
-            (t.parseWithLocation = function (e, t, s) {
-              return n(e, t, s)
+            (t.parseWithLocation = function (e, t, n) {
+              return s(e, t, n)
             }),
             (t.parsePLIST = function (e) {
-              return n(e, null, null)
+              return s(e, null, null)
             })
         },
-        652: (e, t, n) => {
+        652: (e, t, s) => {
           Object.defineProperty(t, '__esModule', { value: !0 }), (t.SyncRegistry = void 0)
-          const s = n(391)
+          const n = s(391)
           t.SyncRegistry = class {
             constructor(e, t) {
               ;(this._onigLibPromise = t),
@@ -4148,20 +4584,20 @@
             themeMatch(e) {
               return this._theme.match(e)
             }
-            async grammarForScopeName(e, t, n, r, a) {
+            async grammarForScopeName(e, t, s, a, r) {
               if (!this._grammars.has(e)) {
                 let o = this._rawGrammars.get(e)
                 if (!o) return null
                 this._grammars.set(
                   e,
-                  s.createGrammar(e, o, t, n, r, a, this, await this._onigLibPromise)
+                  n.createGrammar(e, o, t, s, a, r, this, await this._onigLibPromise)
                 )
               }
               return this._grammars.get(e)
             }
           }
         },
-        792: (e, t, n) => {
+        792: (e, t, s) => {
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.CompiledRule =
               t.RegExpSourceList =
@@ -4178,9 +4614,9 @@
               t.whileRuleId =
               t.endRuleId =
                 void 0)
-          const s = n(878),
-            r = n(965),
-            a = /\\(\d+)/,
+          const n = s(878),
+            a = s(965),
+            r = /\\(\d+)/,
             o = /\\(\d+)/g
           ;(t.endRuleId = -1),
             (t.whileRuleId = -2),
@@ -4191,35 +4627,35 @@
               return e
             })
           class i {
-            constructor(e, t, n, r) {
+            constructor(e, t, s, a) {
               ;(this.$location = e),
                 (this.id = t),
-                (this._name = n || null),
-                (this._nameIsCapturing = s.RegexSource.hasCaptures(this._name)),
-                (this._contentName = r || null),
-                (this._contentNameIsCapturing = s.RegexSource.hasCaptures(this._contentName))
+                (this._name = s || null),
+                (this._nameIsCapturing = n.RegexSource.hasCaptures(this._name)),
+                (this._contentName = a || null),
+                (this._contentNameIsCapturing = n.RegexSource.hasCaptures(this._contentName))
             }
             get debugName() {
               const e = this.$location
-                ? `${s.basename(this.$location.filename)}:${this.$location.line}`
+                ? `${n.basename(this.$location.filename)}:${this.$location.line}`
                 : 'unknown'
               return `${this.constructor.name}#${this.id} @ ${e}`
             }
             getName(e, t) {
               return this._nameIsCapturing && null !== this._name && null !== e && null !== t
-                ? s.RegexSource.replaceCaptures(this._name, e, t)
+                ? n.RegexSource.replaceCaptures(this._name, e, t)
                 : this._name
             }
             getContentName(e, t) {
               return this._contentNameIsCapturing && null !== this._contentName
-                ? s.RegexSource.replaceCaptures(this._contentName, e, t)
+                ? n.RegexSource.replaceCaptures(this._contentName, e, t)
                 : this._contentName
             }
           }
           t.Rule = i
           class c extends i {
-            constructor(e, t, n, s, r) {
-              super(e, t, n, s), (this.retokenizeCapturedWithRuleId = r)
+            constructor(e, t, s, n, a) {
+              super(e, t, s, n), (this.retokenizeCapturedWithRuleId = a)
             }
             dispose() {}
             collectPatterns(e, t) {
@@ -4228,16 +4664,16 @@
             compile(e, t) {
               throw new Error('Not supported!')
             }
-            compileAG(e, t, n, s) {
+            compileAG(e, t, s, n) {
               throw new Error('Not supported!')
             }
           }
           t.CaptureRule = c
           class l extends i {
-            constructor(e, t, n, s, r) {
-              super(e, t, n, null),
-                (this._match = new m(s, this.id)),
-                (this.captures = r),
+            constructor(e, t, s, n, a) {
+              super(e, t, s, null),
+                (this._match = new m(n, this.id)),
+                (this.captures = a),
                 (this._cachedCompiledPatterns = null)
             }
             dispose() {
@@ -4253,8 +4689,8 @@
             compile(e, t) {
               return this._getCachedCompiledPatterns(e).compile(e)
             }
-            compileAG(e, t, n, s) {
-              return this._getCachedCompiledPatterns(e).compileAG(e, n, s)
+            compileAG(e, t, s, n) {
+              return this._getCachedCompiledPatterns(e).compileAG(e, s, n)
             }
             _getCachedCompiledPatterns(e) {
               return (
@@ -4267,10 +4703,10 @@
           }
           t.MatchRule = l
           class u extends i {
-            constructor(e, t, n, s, r) {
-              super(e, t, n, s),
-                (this.patterns = r.patterns),
-                (this.hasMissingPatterns = r.hasMissingPatterns),
+            constructor(e, t, s, n, a) {
+              super(e, t, s, n),
+                (this.patterns = a.patterns),
+                (this.hasMissingPatterns = a.hasMissingPatterns),
                 (this._cachedCompiledPatterns = null)
             }
             dispose() {
@@ -4278,13 +4714,13 @@
                 (this._cachedCompiledPatterns.dispose(), (this._cachedCompiledPatterns = null))
             }
             collectPatterns(e, t) {
-              for (const n of this.patterns) e.getRule(n).collectPatterns(e, t)
+              for (const s of this.patterns) e.getRule(s).collectPatterns(e, t)
             }
             compile(e, t) {
               return this._getCachedCompiledPatterns(e).compile(e)
             }
-            compileAG(e, t, n, s) {
-              return this._getCachedCompiledPatterns(e).compileAG(e, n, s)
+            compileAG(e, t, s, n) {
+              return this._getCachedCompiledPatterns(e).compileAG(e, s, n)
             }
             _getCachedCompiledPatterns(e) {
               return (
@@ -4296,11 +4732,11 @@
             }
           }
           t.IncludeOnlyRule = u
-          class h extends i {
-            constructor(e, t, n, s, r, a, o, i, c, l) {
-              super(e, t, n, s),
-                (this._begin = new m(r, this.id)),
-                (this.beginCaptures = a),
+          class p extends i {
+            constructor(e, t, s, n, a, r, o, i, c, l) {
+              super(e, t, s, n),
+                (this._begin = new m(a, this.id)),
+                (this.beginCaptures = r),
                 (this._end = new m(o || '￿', -1)),
                 (this.endHasBackReferences = this._end.hasBackReferences),
                 (this.endCaptures = i),
@@ -4328,8 +4764,8 @@
             compile(e, t) {
               return this._getCachedCompiledPatterns(e, t).compile(e)
             }
-            compileAG(e, t, n, s) {
-              return this._getCachedCompiledPatterns(e, t).compileAG(e, n, s)
+            compileAG(e, t, s, n) {
+              return this._getCachedCompiledPatterns(e, t).compileAG(e, s, n)
             }
             _getCachedCompiledPatterns(e, t) {
               if (!this._cachedCompiledPatterns) {
@@ -4356,11 +4792,11 @@
               )
             }
           }
-          t.BeginEndRule = h
-          class p extends i {
-            constructor(e, n, s, r, a, o, i, c, l) {
-              super(e, n, s, r),
-                (this._begin = new m(a, this.id)),
+          t.BeginEndRule = p
+          class h extends i {
+            constructor(e, s, n, a, r, o, i, c, l) {
+              super(e, s, n, a),
+                (this._begin = new m(r, this.id)),
                 (this.beginCaptures = o),
                 (this.whileCaptures = c),
                 (this._while = new m(i, t.whileRuleId)),
@@ -4392,8 +4828,8 @@
             compile(e, t) {
               return this._getCachedCompiledPatterns(e).compile(e)
             }
-            compileAG(e, t, n, s) {
-              return this._getCachedCompiledPatterns(e).compileAG(e, n, s)
+            compileAG(e, t, s, n) {
+              return this._getCachedCompiledPatterns(e).compileAG(e, s, n)
             }
             _getCachedCompiledPatterns(e) {
               if (!this._cachedCompiledPatterns) {
@@ -4406,8 +4842,8 @@
             compileWhile(e, t) {
               return this._getCachedCompiledWhilePatterns(e, t).compile(e)
             }
-            compileWhileAG(e, t, n, s) {
-              return this._getCachedCompiledWhilePatterns(e, t).compileAG(e, n, s)
+            compileWhileAG(e, t, s, n) {
+              return this._getCachedCompiledWhilePatterns(e, t).compileAG(e, s, n)
             }
             _getCachedCompiledWhilePatterns(e, t) {
               return (
@@ -4422,135 +4858,135 @@
               )
             }
           }
-          t.BeginWhileRule = p
+          t.BeginWhileRule = h
           class d {
-            static createCaptureRule(e, t, n, s, r) {
-              return e.registerRule(e => new c(t, e, n, s, r))
+            static createCaptureRule(e, t, s, n, a) {
+              return e.registerRule(e => new c(t, e, s, n, a))
             }
-            static getCompiledRuleId(e, t, n) {
+            static getCompiledRuleId(e, t, s) {
               return (
                 e.id ||
-                  t.registerRule(r => {
-                    if (((e.id = r), e.match))
+                  t.registerRule(a => {
+                    if (((e.id = a), e.match))
                       return new l(
                         e.$vscodeTextmateLocation,
                         e.id,
                         e.name,
                         e.match,
-                        d._compileCaptures(e.captures, t, n)
+                        d._compileCaptures(e.captures, t, s)
                       )
                     if (void 0 === e.begin) {
-                      e.repository && (n = s.mergeObjects({}, n, e.repository))
-                      let r = e.patterns
+                      e.repository && (s = n.mergeObjects({}, s, e.repository))
+                      let a = e.patterns
                       return (
-                        void 0 === r && e.include && (r = [{ include: e.include }]),
+                        void 0 === a && e.include && (a = [{ include: e.include }]),
                         new u(
                           e.$vscodeTextmateLocation,
                           e.id,
                           e.name,
                           e.contentName,
-                          d._compilePatterns(r, t, n)
+                          d._compilePatterns(a, t, s)
                         )
                       )
                     }
                     return e.while
-                      ? new p(
+                      ? new h(
                           e.$vscodeTextmateLocation,
                           e.id,
                           e.name,
                           e.contentName,
                           e.begin,
-                          d._compileCaptures(e.beginCaptures || e.captures, t, n),
+                          d._compileCaptures(e.beginCaptures || e.captures, t, s),
                           e.while,
-                          d._compileCaptures(e.whileCaptures || e.captures, t, n),
-                          d._compilePatterns(e.patterns, t, n)
+                          d._compileCaptures(e.whileCaptures || e.captures, t, s),
+                          d._compilePatterns(e.patterns, t, s)
                         )
-                      : new h(
+                      : new p(
                           e.$vscodeTextmateLocation,
                           e.id,
                           e.name,
                           e.contentName,
                           e.begin,
-                          d._compileCaptures(e.beginCaptures || e.captures, t, n),
+                          d._compileCaptures(e.beginCaptures || e.captures, t, s),
                           e.end,
-                          d._compileCaptures(e.endCaptures || e.captures, t, n),
+                          d._compileCaptures(e.endCaptures || e.captures, t, s),
                           e.applyEndPatternLast,
-                          d._compilePatterns(e.patterns, t, n)
+                          d._compilePatterns(e.patterns, t, s)
                         )
                   }),
                 e.id
               )
             }
-            static _compileCaptures(e, t, n) {
-              let s = []
+            static _compileCaptures(e, t, s) {
+              let n = []
               if (e) {
-                let r = 0
+                let a = 0
                 for (const t in e) {
                   if ('$vscodeTextmateLocation' === t) continue
                   const e = parseInt(t, 10)
-                  e > r && (r = e)
+                  e > a && (a = e)
                 }
-                for (let e = 0; e <= r; e++) s[e] = null
-                for (const r in e) {
-                  if ('$vscodeTextmateLocation' === r) continue
-                  const a = parseInt(r, 10)
+                for (let e = 0; e <= a; e++) n[e] = null
+                for (const a in e) {
+                  if ('$vscodeTextmateLocation' === a) continue
+                  const r = parseInt(a, 10)
                   let o = 0
-                  e[r].patterns && (o = d.getCompiledRuleId(e[r], t, n)),
-                    (s[a] = d.createCaptureRule(
+                  e[a].patterns && (o = d.getCompiledRuleId(e[a], t, s)),
+                    (n[r] = d.createCaptureRule(
                       t,
-                      e[r].$vscodeTextmateLocation,
-                      e[r].name,
-                      e[r].contentName,
+                      e[a].$vscodeTextmateLocation,
+                      e[a].name,
+                      e[a].contentName,
                       o
                     ))
                 }
               }
-              return s
+              return n
             }
-            static _compilePatterns(e, t, n) {
-              let s = []
+            static _compilePatterns(e, t, s) {
+              let n = []
               if (e)
-                for (let a = 0, o = e.length; a < o; a++) {
-                  const o = e[a]
+                for (let r = 0, o = e.length; r < o; r++) {
+                  const o = e[r]
                   let i = -1
                   if (o.include) {
-                    const e = r.parseInclude(o.include)
+                    const e = a.parseInclude(o.include)
                     switch (e.kind) {
                       case 0:
                       case 1:
-                        i = d.getCompiledRuleId(n[o.include], t, n)
+                        i = d.getCompiledRuleId(s[o.include], t, s)
                         break
                       case 2:
-                        let s = n[e.ruleName]
-                        s && (i = d.getCompiledRuleId(s, t, n))
+                        let n = s[e.ruleName]
+                        n && (i = d.getCompiledRuleId(n, t, s))
                         break
                       case 3:
                       case 4:
-                        const r = e.scopeName,
-                          a = 4 === e.kind ? e.ruleName : null,
-                          c = t.getExternalGrammar(r, n)
+                        const a = e.scopeName,
+                          r = 4 === e.kind ? e.ruleName : null,
+                          c = t.getExternalGrammar(a, s)
                         if (c)
-                          if (a) {
-                            let e = c.repository[a]
+                          if (r) {
+                            let e = c.repository[r]
                             e && (i = d.getCompiledRuleId(e, t, c.repository))
                           } else i = d.getCompiledRuleId(c.repository.$self, t, c.repository)
                     }
-                  } else i = d.getCompiledRuleId(o, t, n)
+                  } else i = d.getCompiledRuleId(o, t, s)
                   if (-1 !== i) {
                     const e = t.getRule(i)
-                    let n = !1
+                    let s = !1
                     if (
-                      ((e instanceof u || e instanceof h || e instanceof p) &&
+                      ((e instanceof u || e instanceof p || e instanceof h) &&
                         e.hasMissingPatterns &&
                         0 === e.patterns.length &&
-                        (n = !0),
-                      n)
+                        (s = !0),
+                      s)
                     )
                       continue
-                    s.push(i)
+                    n.push(i)
                   }
                 }
-              return { patterns: s, hasMissingPatterns: (e ? e.length : 0) !== s.length }
+              return { patterns: n, hasMissingPatterns: (e ? e.length : 0) !== n.length }
             }
           }
           t.RuleFactory = d
@@ -4558,27 +4994,27 @@
             constructor(e, t) {
               if (e) {
                 const t = e.length
-                let n = 0,
-                  s = [],
-                  r = !1
-                for (let a = 0; a < t; a++)
-                  if ('\\' === e.charAt(a) && a + 1 < t) {
-                    const t = e.charAt(a + 1)
+                let s = 0,
+                  n = [],
+                  a = !1
+                for (let r = 0; r < t; r++)
+                  if ('\\' === e.charAt(r) && r + 1 < t) {
+                    const t = e.charAt(r + 1)
                     'z' === t
-                      ? (s.push(e.substring(n, a)), s.push('$(?!\\n)(?<!\\n)'), (n = a + 2))
-                      : ('A' !== t && 'G' !== t) || (r = !0),
-                      a++
+                      ? (n.push(e.substring(s, r)), n.push('$(?!\\n)(?<!\\n)'), (s = r + 2))
+                      : ('A' !== t && 'G' !== t) || (a = !0),
+                      r++
                   }
-                ;(this.hasAnchor = r),
-                  0 === n
+                ;(this.hasAnchor = a),
+                  0 === s
                     ? (this.source = e)
-                    : (s.push(e.substring(n, t)), (this.source = s.join('')))
+                    : (n.push(e.substring(s, t)), (this.source = n.join('')))
               } else (this.hasAnchor = !1), (this.source = e)
               this.hasAnchor
                 ? (this._anchorCache = this._buildAnchorCache())
                 : (this._anchorCache = null),
                 (this.ruleId = t),
-                (this.hasBackReferences = a.test(this.source))
+                (this.hasBackReferences = r.test(this.source))
             }
             clone() {
               return new m(this.source, this.ruleId)
@@ -4589,37 +5025,37 @@
                 this.hasAnchor && (this._anchorCache = this._buildAnchorCache()))
             }
             resolveBackReferences(e, t) {
-              let n = t.map(t => e.substring(t.start, t.end))
+              let s = t.map(t => e.substring(t.start, t.end))
               return (
                 (o.lastIndex = 0),
-                this.source.replace(o, (e, t) => s.escapeRegExpCharacters(n[parseInt(t, 10)] || ''))
+                this.source.replace(o, (e, t) => n.escapeRegExpCharacters(s[parseInt(t, 10)] || ''))
               )
             }
             _buildAnchorCache() {
               let e,
                 t,
-                n,
                 s,
-                r = [],
+                n,
                 a = [],
+                r = [],
                 o = [],
                 i = []
               for (e = 0, t = this.source.length; e < t; e++)
-                (n = this.source.charAt(e)),
-                  (r[e] = n),
-                  (a[e] = n),
-                  (o[e] = n),
-                  (i[e] = n),
-                  '\\' === n &&
+                (s = this.source.charAt(e)),
+                  (a[e] = s),
+                  (r[e] = s),
+                  (o[e] = s),
+                  (i[e] = s),
+                  '\\' === s &&
                     e + 1 < t &&
-                    ((s = this.source.charAt(e + 1)),
-                    'A' === s
-                      ? ((r[e + 1] = '￿'), (a[e + 1] = '￿'), (o[e + 1] = 'A'), (i[e + 1] = 'A'))
-                      : 'G' === s
-                      ? ((r[e + 1] = '￿'), (a[e + 1] = 'G'), (o[e + 1] = '￿'), (i[e + 1] = 'G'))
-                      : ((r[e + 1] = s), (a[e + 1] = s), (o[e + 1] = s), (i[e + 1] = s)),
+                    ((n = this.source.charAt(e + 1)),
+                    'A' === n
+                      ? ((a[e + 1] = '￿'), (r[e + 1] = '￿'), (o[e + 1] = 'A'), (i[e + 1] = 'A'))
+                      : 'G' === n
+                      ? ((a[e + 1] = '￿'), (r[e + 1] = 'G'), (o[e + 1] = '￿'), (i[e + 1] = 'G'))
+                      : ((a[e + 1] = n), (r[e + 1] = n), (o[e + 1] = n), (i[e + 1] = n)),
                     e++)
-              return { A0_G0: r.join(''), A0_G1: a.join(''), A1_G0: o.join(''), A1_G1: i.join('') }
+              return { A0_G0: a.join(''), A0_G1: r.join(''), A1_G0: o.join(''), A1_G1: i.join('') }
             }
             resolveAnchors(e, t) {
               return this.hasAnchor && this._anchorCache
@@ -4678,56 +5114,56 @@
               }
               return this._cached
             }
-            compileAG(e, t, n) {
+            compileAG(e, t, s) {
               return this._hasAnchors
                 ? t
-                  ? n
+                  ? s
                     ? (this._anchorCache.A1_G1 ||
-                        (this._anchorCache.A1_G1 = this._resolveAnchors(e, t, n)),
+                        (this._anchorCache.A1_G1 = this._resolveAnchors(e, t, s)),
                       this._anchorCache.A1_G1)
                     : (this._anchorCache.A1_G0 ||
-                        (this._anchorCache.A1_G0 = this._resolveAnchors(e, t, n)),
+                        (this._anchorCache.A1_G0 = this._resolveAnchors(e, t, s)),
                       this._anchorCache.A1_G0)
-                  : n
+                  : s
                   ? (this._anchorCache.A0_G1 ||
-                      (this._anchorCache.A0_G1 = this._resolveAnchors(e, t, n)),
+                      (this._anchorCache.A0_G1 = this._resolveAnchors(e, t, s)),
                     this._anchorCache.A0_G1)
                   : (this._anchorCache.A0_G0 ||
-                      (this._anchorCache.A0_G0 = this._resolveAnchors(e, t, n)),
+                      (this._anchorCache.A0_G0 = this._resolveAnchors(e, t, s)),
                     this._anchorCache.A0_G0)
                 : this.compile(e)
             }
-            _resolveAnchors(e, t, n) {
-              let s = this._items.map(e => e.resolveAnchors(t, n))
+            _resolveAnchors(e, t, s) {
+              let n = this._items.map(e => e.resolveAnchors(t, s))
               return new f(
                 e,
-                s,
+                n,
                 this._items.map(e => e.ruleId)
               )
             }
           }
           t.RegExpSourceList = g
           class f {
-            constructor(e, t, n) {
-              ;(this.regExps = t), (this.rules = n), (this.scanner = e.createOnigScanner(t))
+            constructor(e, t, s) {
+              ;(this.regExps = t), (this.rules = s), (this.scanner = e.createOnigScanner(t))
             }
             dispose() {
               'function' == typeof this.scanner.dispose && this.scanner.dispose()
             }
             toString() {
               const e = []
-              for (let t = 0, n = this.rules.length; t < n; t++)
+              for (let t = 0, s = this.rules.length; t < s; t++)
                 e.push('   - ' + this.rules[t] + ': ' + this.regExps[t])
               return e.join('\n')
             }
-            findNextMatchSync(e, t, n) {
-              const s = this.scanner.findNextMatchSync(e, t, n)
-              return s ? { ruleId: this.rules[s.index], captureIndices: s.captureIndices } : null
+            findNextMatchSync(e, t, s) {
+              const n = this.scanner.findNextMatchSync(e, t, s)
+              return n ? { ruleId: this.rules[n.index], captureIndices: n.captureIndices } : null
             }
           }
           t.CompiledRule = f
         },
-        583: (e, t, n) => {
+        583: (e, t, s) => {
           Object.defineProperty(t, '__esModule', { value: !0 }),
             (t.ThemeTrieElement =
               t.ThemeTrieElementRule =
@@ -4739,13 +5175,13 @@
               t.ScopeStack =
               t.Theme =
                 void 0)
-          const s = n(878)
-          class r {
-            constructor(e, t, n) {
+          const n = s(878)
+          class a {
+            constructor(e, t, s) {
               ;(this._colorMap = e),
                 (this._defaults = t),
-                (this._root = n),
-                (this._cachedMatchRoot = new s.CachedFn(e => this._root.match(e)))
+                (this._root = s),
+                (this._cachedMatchRoot = new n.CachedFn(e => this._root.match(e)))
             }
             static createFromRawTheme(e, t) {
               return this.createFromParsedTheme(c(e), t)
@@ -4753,36 +5189,36 @@
             static createFromParsedTheme(e, t) {
               return (function (e, t) {
                 e.sort((e, t) => {
-                  let n = s.strcmp(e.scope, t.scope)
-                  return 0 !== n
-                    ? n
-                    : ((n = s.strArrCmp(e.parentScopes, t.parentScopes)),
-                      0 !== n ? n : e.index - t.index)
+                  let s = n.strcmp(e.scope, t.scope)
+                  return 0 !== s
+                    ? s
+                    : ((s = n.strArrCmp(e.parentScopes, t.parentScopes)),
+                      0 !== s ? s : e.index - t.index)
                 })
-                let n = 0,
-                  a = '#000000',
+                let s = 0,
+                  r = '#000000',
                   o = '#ffffff'
                 for (; e.length >= 1 && '' === e[0].scope; ) {
                   let t = e.shift()
-                  ;-1 !== t.fontStyle && (n = t.fontStyle),
-                    null !== t.foreground && (a = t.foreground),
+                  ;-1 !== t.fontStyle && (s = t.fontStyle),
+                    null !== t.foreground && (r = t.foreground),
                     null !== t.background && (o = t.background)
                 }
                 let c = new u(t),
-                  l = new i(n, c.getId(a), c.getId(o)),
-                  d = new p(new h(0, null, -1, 0, 0), [])
-                for (let t = 0, n = e.length; t < n; t++) {
-                  let n = e[t]
+                  l = new i(s, c.getId(r), c.getId(o)),
+                  d = new h(new p(0, null, -1, 0, 0), [])
+                for (let t = 0, s = e.length; t < s; t++) {
+                  let s = e[t]
                   d.insert(
                     0,
-                    n.scope,
-                    n.parentScopes,
-                    n.fontStyle,
-                    c.getId(n.foreground),
-                    c.getId(n.background)
+                    s.scope,
+                    s.parentScopes,
+                    s.fontStyle,
+                    c.getId(s.foreground),
+                    c.getId(s.background)
                   )
                 }
-                return new r(c, l, d)
+                return new a(c, l, d)
               })(e, t)
             }
             getColorMap() {
@@ -4794,36 +5230,36 @@
             match(e) {
               if (null === e) return this._defaults
               const t = e.scopeName,
-                n = this._cachedMatchRoot.get(t).find(t =>
+                s = this._cachedMatchRoot.get(t).find(t =>
                   (function (e, t) {
                     if (null === t) return !0
-                    let n = 0,
-                      s = t[n]
+                    let s = 0,
+                      n = t[s]
                     for (; e; ) {
-                      if (o(e.scopeName, s)) {
-                        if ((n++, n === t.length)) return !0
-                        s = t[n]
+                      if (o(e.scopeName, n)) {
+                        if ((s++, s === t.length)) return !0
+                        n = t[s]
                       }
                       e = e.parent
                     }
                     return !1
                   })(e.parent, t.parentScopes)
                 )
-              return n ? new i(n.fontStyle, n.foreground, n.background) : null
+              return s ? new i(s.fontStyle, s.foreground, s.background) : null
             }
           }
-          t.Theme = r
-          class a {
+          t.Theme = a
+          class r {
             constructor(e, t) {
               ;(this.parent = e), (this.scopeName = t)
             }
             static from(...e) {
               let t = null
-              for (let n = 0; n < e.length; n++) t = new a(t, e[n])
+              for (let s = 0; s < e.length; s++) t = new r(t, e[s])
               return t
             }
             push(e) {
-              return new a(this, e)
+              return new r(this, e)
             }
             getSegments() {
               let e = this
@@ -4838,31 +5274,31 @@
           function o(e, t) {
             return t === e || (e.startsWith(t) && '.' === e[t.length])
           }
-          t.ScopeStack = a
+          t.ScopeStack = r
           class i {
-            constructor(e, t, n) {
-              ;(this.fontStyle = e), (this.foregroundId = t), (this.backgroundId = n)
+            constructor(e, t, s) {
+              ;(this.fontStyle = e), (this.foregroundId = t), (this.backgroundId = s)
             }
           }
           function c(e) {
             if (!e) return []
             if (!e.settings || !Array.isArray(e.settings)) return []
             let t = e.settings,
-              n = [],
-              r = 0
-            for (let e = 0, a = t.length; e < a; e++) {
-              let a,
+              s = [],
+              a = 0
+            for (let e = 0, r = t.length; e < r; e++) {
+              let r,
                 o = t[e]
               if (!o.settings) continue
               if ('string' == typeof o.scope) {
                 let e = o.scope
-                ;(e = e.replace(/^[,]+/, '')), (e = e.replace(/[,]+$/, '')), (a = e.split(','))
-              } else a = Array.isArray(o.scope) ? o.scope : ['']
+                ;(e = e.replace(/^[,]+/, '')), (e = e.replace(/[,]+$/, '')), (r = e.split(','))
+              } else r = Array.isArray(o.scope) ? o.scope : ['']
               let i = -1
               if ('string' == typeof o.settings.fontStyle) {
                 i = 0
                 let e = o.settings.fontStyle.split(' ')
-                for (let t = 0, n = e.length; t < n; t++)
+                for (let t = 0, s = e.length; t < s; t++)
                   switch (e[t]) {
                     case 'italic':
                       i |= 1
@@ -4879,31 +5315,31 @@
               }
               let c = null
               'string' == typeof o.settings.foreground &&
-                s.isValidHexColor(o.settings.foreground) &&
+                n.isValidHexColor(o.settings.foreground) &&
                 (c = o.settings.foreground)
               let u = null
               'string' == typeof o.settings.background &&
-                s.isValidHexColor(o.settings.background) &&
+                n.isValidHexColor(o.settings.background) &&
                 (u = o.settings.background)
-              for (let t = 0, s = a.length; t < s; t++) {
-                let s = a[t].trim().split(' '),
-                  o = s[s.length - 1],
-                  h = null
-                s.length > 1 && ((h = s.slice(0, s.length - 1)), h.reverse()),
-                  (n[r++] = new l(o, h, e, i, c, u))
+              for (let t = 0, n = r.length; t < n; t++) {
+                let n = r[t].trim().split(' '),
+                  o = n[n.length - 1],
+                  p = null
+                n.length > 1 && ((p = n.slice(0, n.length - 1)), p.reverse()),
+                  (s[a++] = new l(o, p, e, i, c, u))
               }
             }
-            return n
+            return s
           }
           ;(t.StyleAttributes = i), (t.parseTheme = c)
           class l {
-            constructor(e, t, n, s, r, a) {
+            constructor(e, t, s, n, a, r) {
               ;(this.scope = e),
                 (this.parentScopes = t),
-                (this.index = n),
-                (this.fontStyle = s),
-                (this.foreground = r),
-                (this.background = a)
+                (this.index = s),
+                (this.fontStyle = n),
+                (this.foreground = a),
+                (this.background = r)
             }
           }
           ;(t.ParsedThemeRule = l),
@@ -4928,7 +5364,7 @@
                 Array.isArray(e))
               ) {
                 this._isFrozen = !0
-                for (let t = 0, n = e.length; t < n; t++)
+                for (let t = 0, s = e.length; t < s; t++)
                   (this._color2id[e[t]] = t), (this._id2color[t] = e[t])
               } else this._isFrozen = !1
             }
@@ -4945,16 +5381,16 @@
             }
           }
           t.ColorMap = u
-          class h {
-            constructor(e, t, n, s, r) {
+          class p {
+            constructor(e, t, s, n, a) {
               ;(this.scopeDepth = e),
                 (this.parentScopes = t),
-                (this.fontStyle = n),
-                (this.foreground = s),
-                (this.background = r)
+                (this.fontStyle = s),
+                (this.foreground = n),
+                (this.background = a)
             }
             clone() {
-              return new h(
+              return new p(
                 this.scopeDepth,
                 this.parentScopes,
                 this.fontStyle,
@@ -4964,61 +5400,61 @@
             }
             static cloneArr(e) {
               let t = []
-              for (let n = 0, s = e.length; n < s; n++) t[n] = e[n].clone()
+              for (let s = 0, n = e.length; s < n; s++) t[s] = e[s].clone()
               return t
             }
-            acceptOverwrite(e, t, n, s) {
+            acceptOverwrite(e, t, s, n) {
               this.scopeDepth > e ? console.log('how did this happen?') : (this.scopeDepth = e),
                 -1 !== t && (this.fontStyle = t),
-                0 !== n && (this.foreground = n),
-                0 !== s && (this.background = s)
+                0 !== s && (this.foreground = s),
+                0 !== n && (this.background = n)
             }
           }
-          t.ThemeTrieElementRule = h
-          class p {
-            constructor(e, t = [], n = {}) {
-              ;(this._mainRule = e), (this._children = n), (this._rulesWithParentScopes = t)
+          t.ThemeTrieElementRule = p
+          class h {
+            constructor(e, t = [], s = {}) {
+              ;(this._mainRule = e), (this._children = s), (this._rulesWithParentScopes = t)
             }
             static _sortBySpecificity(e) {
               return 1 === e.length || e.sort(this._cmpBySpecificity), e
             }
             static _cmpBySpecificity(e, t) {
               if (e.scopeDepth === t.scopeDepth) {
-                const n = e.parentScopes,
-                  s = t.parentScopes
-                let r = null === n ? 0 : n.length,
-                  a = null === s ? 0 : s.length
-                if (r === a)
-                  for (let e = 0; e < r; e++) {
-                    const t = n[e].length,
-                      r = s[e].length
-                    if (t !== r) return r - t
+                const s = e.parentScopes,
+                  n = t.parentScopes
+                let a = null === s ? 0 : s.length,
+                  r = null === n ? 0 : n.length
+                if (a === r)
+                  for (let e = 0; e < a; e++) {
+                    const t = s[e].length,
+                      a = n[e].length
+                    if (t !== a) return a - t
                   }
-                return a - r
+                return r - a
               }
               return t.scopeDepth - e.scopeDepth
             }
             match(e) {
               if ('' === e)
-                return p._sortBySpecificity(
+                return h._sortBySpecificity(
                   [].concat(this._mainRule).concat(this._rulesWithParentScopes)
                 )
               let t,
-                n,
-                s = e.indexOf('.')
+                s,
+                n = e.indexOf('.')
               return (
-                -1 === s
-                  ? ((t = e), (n = ''))
-                  : ((t = e.substring(0, s)), (n = e.substring(s + 1))),
+                -1 === n
+                  ? ((t = e), (s = ''))
+                  : ((t = e.substring(0, n)), (s = e.substring(n + 1))),
                 this._children.hasOwnProperty(t)
-                  ? this._children[t].match(n)
-                  : p._sortBySpecificity(
+                  ? this._children[t].match(s)
+                  : h._sortBySpecificity(
                       [].concat(this._mainRule).concat(this._rulesWithParentScopes)
                     )
               )
             }
-            insert(e, t, n, s, r, a) {
-              if ('' === t) return void this._doInsertHere(e, n, s, r, a)
+            insert(e, t, s, n, a, r) {
+              if ('' === t) return void this._doInsertHere(e, s, n, a, r)
               let o,
                 i,
                 c,
@@ -5026,38 +5462,38 @@
               ;-1 === l ? ((o = t), (i = '')) : ((o = t.substring(0, l)), (i = t.substring(l + 1))),
                 this._children.hasOwnProperty(o)
                   ? (c = this._children[o])
-                  : ((c = new p(this._mainRule.clone(), h.cloneArr(this._rulesWithParentScopes))),
+                  : ((c = new h(this._mainRule.clone(), p.cloneArr(this._rulesWithParentScopes))),
                     (this._children[o] = c)),
-                c.insert(e + 1, i, n, s, r, a)
+                c.insert(e + 1, i, s, n, a, r)
             }
-            _doInsertHere(e, t, n, r, a) {
+            _doInsertHere(e, t, s, a, r) {
               if (null !== t) {
                 for (let o = 0, i = this._rulesWithParentScopes.length; o < i; o++) {
                   let i = this._rulesWithParentScopes[o]
-                  if (0 === s.strArrCmp(i.parentScopes, t))
-                    return void i.acceptOverwrite(e, n, r, a)
+                  if (0 === n.strArrCmp(i.parentScopes, t))
+                    return void i.acceptOverwrite(e, s, a, r)
                 }
-                ;-1 === n && (n = this._mainRule.fontStyle),
-                  0 === r && (r = this._mainRule.foreground),
-                  0 === a && (a = this._mainRule.background),
-                  this._rulesWithParentScopes.push(new h(e, t, n, r, a))
-              } else this._mainRule.acceptOverwrite(e, n, r, a)
+                ;-1 === s && (s = this._mainRule.fontStyle),
+                  0 === a && (a = this._mainRule.foreground),
+                  0 === r && (r = this._mainRule.background),
+                  this._rulesWithParentScopes.push(new p(e, t, s, a, r))
+              } else this._mainRule.acceptOverwrite(e, s, a, r)
             }
           }
-          t.ThemeTrieElement = p
+          t.ThemeTrieElement = h
         },
         878: (e, t) => {
-          function n(e) {
+          function s(e) {
             return Array.isArray(e)
               ? (function (e) {
                   let t = []
-                  for (let s = 0, r = e.length; s < r; s++) t[s] = n(e[s])
+                  for (let n = 0, a = e.length; n < a; n++) t[n] = s(e[n])
                   return t
                 })(e)
               : 'object' == typeof e
               ? (function (e) {
                   let t = {}
-                  for (let s in e) t[s] = n(e[s])
+                  for (let n in e) t[n] = s(e[n])
                   return t
                 })(e)
               : e
@@ -5075,40 +5511,40 @@
               t.clone =
                 void 0),
             (t.clone = function (e) {
-              return n(e)
+              return s(e)
             }),
             (t.mergeObjects = function (e, ...t) {
               return (
                 t.forEach(t => {
-                  for (let n in t) e[n] = t[n]
+                  for (let s in t) e[s] = t[s]
                 }),
                 e
               )
             }),
             (t.basename = function e(t) {
-              const n = ~t.lastIndexOf('/') || ~t.lastIndexOf('\\')
-              return 0 === n
+              const s = ~t.lastIndexOf('/') || ~t.lastIndexOf('\\')
+              return 0 === s
                 ? t
-                : ~n == t.length - 1
+                : ~s == t.length - 1
                 ? e(t.substring(0, t.length - 1))
-                : t.substr(1 + ~n)
+                : t.substr(1 + ~s)
             })
-          let s = /\$(\d+)|\${(\d+):\/(downcase|upcase)}/g
-          function r(e, t) {
+          let n = /\$(\d+)|\${(\d+):\/(downcase|upcase)}/g
+          function a(e, t) {
             return e < t ? -1 : e > t ? 1 : 0
           }
           ;(t.RegexSource = class {
             static hasCaptures(e) {
-              return null !== e && ((s.lastIndex = 0), s.test(e))
+              return null !== e && ((n.lastIndex = 0), n.test(e))
             }
-            static replaceCaptures(e, t, n) {
-              return e.replace(s, (e, s, r, a) => {
-                let o = n[parseInt(s || r, 10)]
+            static replaceCaptures(e, t, s) {
+              return e.replace(n, (e, n, a, r) => {
+                let o = s[parseInt(n || a, 10)]
                 if (!o) return e
                 {
                   let e = t.substring(o.start, o.end)
                   for (; '.' === e[0]; ) e = e.substring(1)
-                  switch (a) {
+                  switch (r) {
                     case 'downcase':
                       return e.toLowerCase()
                     case 'upcase':
@@ -5120,21 +5556,21 @@
               })
             }
           }),
-            (t.strcmp = r),
+            (t.strcmp = a),
             (t.strArrCmp = function (e, t) {
               if (null === e && null === t) return 0
               if (!e) return -1
               if (!t) return 1
-              let n = e.length,
-                s = t.length
-              if (n === s) {
-                for (let s = 0; s < n; s++) {
-                  let n = r(e[s], t[s])
-                  if (0 !== n) return n
+              let s = e.length,
+                n = t.length
+              if (s === n) {
+                for (let n = 0; n < s; n++) {
+                  let s = a(e[n], t[n])
+                  if (0 !== s) return s
                 }
                 return 0
               }
-              return n - s
+              return s - n
             }),
             (t.isValidHexColor = function (e) {
               return !!(
@@ -5167,52 +5603,52 @@
                   })
         }
       }),
-      (s = {}),
+      (n = {}),
       (function e(t) {
-        var r = s[t]
-        if (void 0 !== r) return r.exports
-        var a = (s[t] = { exports: {} })
-        return n[t].call(a.exports, a, a.exports, e), a.exports
+        var a = n[t]
+        if (void 0 !== a) return a.exports
+        var r = (n[t] = { exports: {} })
+        return s[t].call(r.exports, r, r.exports, e), r.exports
       })(787))
-  })(M)
-  var G = M.exports
+  })(B)
+  var G = B.exports
   function F(e, t) {
-    let n = []
-    for (let s = 0, r = t.length; s < r; s++) {
-      let r = t.slice(0, s),
-        a = t[s]
-      n[s] = { scopeName: a, themeMatches: U(e, a, r) }
+    let s = []
+    for (let n = 0, a = t.length; n < a; n++) {
+      let a = t.slice(0, n),
+        r = t[n]
+      s[n] = { scopeName: r, themeMatches: U(e, r, a) }
     }
-    return n
+    return s
   }
   function D(e, t) {
-    let n = e + '.'
-    return e === t || t.substring(0, n.length) === n
+    let s = e + '.'
+    return e === t || t.substring(0, s.length) === s
   }
-  function $(e, t, n, s) {
-    if (!D(e, n)) return !1
-    let r = t.length - 1,
-      a = s.length - 1
-    for (; r >= 0 && a >= 0; ) D(t[r], s[a]) && r--, a--
-    return -1 === r
+  function $(e, t, s, n) {
+    if (!D(e, s)) return !1
+    let a = t.length - 1,
+      r = n.length - 1
+    for (; a >= 0 && r >= 0; ) D(t[a], n[r]) && a--, r--
+    return -1 === a
   }
-  function U(e, t, n) {
-    let s = [],
-      r = 0
-    for (let a = 0, o = e.settings.length; a < o; a++) {
+  function U(e, t, s) {
+    let n = [],
+      a = 0
+    for (let r = 0, o = e.settings.length; r < o; r++) {
       let o,
-        i = e.settings[a]
+        i = e.settings[r]
       if ('string' == typeof i.scope) o = i.scope.split(/,/).map(e => e.trim())
       else {
         if (!Array.isArray(i.scope)) continue
         o = i.scope
       }
-      for (let e = 0, a = o.length; e < a; e++) {
+      for (let e = 0, r = o.length; e < r; e++) {
         let c = o[e].split(/ /)
-        $(c[c.length - 1], c.slice(0, c.length - 1), t, n) && ((s[r++] = i), (e = a))
+        $(c[c.length - 1], c.slice(0, c.length - 1), t, s) && ((n[a++] = i), (e = r))
       }
     }
-    return s
+    return n
   }
   var W = [
       'black',
@@ -5233,15 +5669,15 @@
       'brightWhite'
     ],
     q = { 1: 'bold', 2: 'dim', 3: 'italic', 4: 'underline', 7: 'reverse', 9: 'strikethrough' }
-  function z(e, t) {
-    const n = e.indexOf('', t)
-    if (-1 !== n && '[' === e[n + 1]) {
-      const t = e.indexOf('m', n)
-      return { sequence: e.substring(n + 2, t).split(';'), startPosition: n, position: t + 1 }
+  function H(e, t) {
+    const s = e.indexOf('', t)
+    if (-1 !== s && '[' === e[s + 1]) {
+      const t = e.indexOf('m', s)
+      return { sequence: e.substring(s + 2, t).split(';'), startPosition: s, position: t + 1 }
     }
     return { position: e.length }
   }
-  function H(e) {
+  function z(e) {
     const t = e.shift()
     if ('2' === t) {
       const t = e.splice(0, 3).map(e => Number.parseInt(e))
@@ -5256,35 +5692,35 @@
   function V(e) {
     const t = []
     for (; e.length > 0; ) {
-      const n = e.shift()
-      if (!n) continue
-      const s = Number.parseInt(n)
-      if (!Number.isNaN(s))
-        if (0 === s) t.push({ type: 'resetAll' })
-        else if (s <= 9) {
-          q[s] && t.push({ type: 'setDecoration', value: q[s] })
-        } else if (s <= 29) {
-          const e = q[s - 20]
+      const s = e.shift()
+      if (!s) continue
+      const n = Number.parseInt(s)
+      if (!Number.isNaN(n))
+        if (0 === n) t.push({ type: 'resetAll' })
+        else if (n <= 9) {
+          q[n] && t.push({ type: 'setDecoration', value: q[n] })
+        } else if (n <= 29) {
+          const e = q[n - 20]
           e && t.push({ type: 'resetDecoration', value: e })
-        } else if (s <= 37)
-          t.push({ type: 'setForegroundColor', value: { type: 'named', name: W[s - 30] } })
-        else if (38 === s) {
-          const n = H(e)
-          n && t.push({ type: 'setForegroundColor', value: n })
-        } else if (39 === s) t.push({ type: 'resetForegroundColor' })
-        else if (s <= 47)
-          t.push({ type: 'setBackgroundColor', value: { type: 'named', name: W[s - 40] } })
-        else if (48 === s) {
-          const n = H(e)
-          n && t.push({ type: 'setBackgroundColor', value: n })
+        } else if (n <= 37)
+          t.push({ type: 'setForegroundColor', value: { type: 'named', name: W[n - 30] } })
+        else if (38 === n) {
+          const s = z(e)
+          s && t.push({ type: 'setForegroundColor', value: s })
+        } else if (39 === n) t.push({ type: 'resetForegroundColor' })
+        else if (n <= 47)
+          t.push({ type: 'setBackgroundColor', value: { type: 'named', name: W[n - 40] } })
+        else if (48 === n) {
+          const s = z(e)
+          s && t.push({ type: 'setBackgroundColor', value: s })
         } else
-          49 === s
+          49 === n
             ? t.push({ type: 'resetBackgroundColor' })
-            : s >= 90 && s <= 97
-            ? t.push({ type: 'setForegroundColor', value: { type: 'named', name: W[s - 90 + 8] } })
-            : s >= 100 &&
-              s <= 107 &&
-              t.push({ type: 'setBackgroundColor', value: { type: 'named', name: W[s - 100 + 8] } })
+            : n >= 90 && n <= 97
+            ? t.push({ type: 'setForegroundColor', value: { type: 'named', name: W[n - 90 + 8] } })
+            : n >= 100 &&
+              n <= 107 &&
+              t.push({ type: 'setBackgroundColor', value: { type: 'named', name: W[n - 100 + 8] } })
     }
     return t
   }
@@ -5306,25 +5742,25 @@
     brightCyan: '#55ffff',
     brightWhite: '#ffffff'
   }
-  function Q(e = K) {
+  function J(e = K) {
     function t(t) {
       return e[t]
     }
-    function n(e) {
+    function s(e) {
       return `#${e.map(e => Math.max(0, Math.min(e, 255)).toString(16).padStart(2, '0')).join('')}`
     }
-    let s
-    function r(e) {
+    let n
+    function a(e) {
       return (function () {
-        if (s) return s
-        s = []
-        for (let e = 0; e < W.length; e++) s.push(t(W[e]))
+        if (n) return n
+        n = []
+        for (let e = 0; e < W.length; e++) n.push(t(W[e]))
         let e = [0, 95, 135, 175, 215, 255]
         for (let t = 0; t < 6; t++)
-          for (let r = 0; r < 6; r++) for (let a = 0; a < 6; a++) s.push(n([e[t], e[r], e[a]]))
-        let r = 8
-        for (let e = 0; e < 24; e++, r += 10) s.push(n([r, r, r]))
-        return s
+          for (let a = 0; a < 6; a++) for (let r = 0; r < 6; r++) n.push(s([e[t], e[a], e[r]]))
+        let a = 8
+        for (let e = 0; e < 24; e++, a += 10) n.push(s([a, a, a]))
+        return n
       })()[e]
     }
     return {
@@ -5333,70 +5769,70 @@
           case 'named':
             return t(e.name)
           case 'rgb':
-            return n(e.rgb)
+            return s(e.rgb)
           case 'table':
-            return r(e.index)
+            return a(e.index)
         }
       }
     }
   }
-  function J(e, t) {
-    const s = t.split(/\r?\n/),
-      r = Q(
+  function Q(e, t) {
+    const n = t.split(/\r?\n/),
+      a = J(
         Object.fromEntries(
           W.map(t => [t, e.colors[`terminal.ansi${t[0].toUpperCase()}${t.substring(1)}`]])
         )
       ),
-      a = (function () {
+      r = (function () {
         let e = null,
           t = null,
-          n = new Set()
+          s = new Set()
         return {
-          parse(s) {
-            const r = []
-            let a = 0
+          parse(n) {
+            const a = []
+            let r = 0
             do {
-              const o = z(s, a),
-                i = o.sequence ? s.substring(a, o.startPosition) : s.substring(a)
+              const o = H(n, r),
+                i = o.sequence ? n.substring(r, o.startPosition) : n.substring(r)
               if (
                 (i.length > 0 &&
-                  r.push({ value: i, foreground: e, background: t, decorations: new Set(n) }),
+                  a.push({ value: i, foreground: e, background: t, decorations: new Set(s) }),
                 o.sequence)
               ) {
-                const s = V(o.sequence)
-                for (const r of s)
-                  'resetAll' === r.type
-                    ? ((e = null), (t = null), n.clear())
-                    : 'resetForegroundColor' === r.type
+                const n = V(o.sequence)
+                for (const a of n)
+                  'resetAll' === a.type
+                    ? ((e = null), (t = null), s.clear())
+                    : 'resetForegroundColor' === a.type
                     ? (e = null)
-                    : 'resetBackgroundColor' === r.type
+                    : 'resetBackgroundColor' === a.type
                     ? (t = null)
-                    : 'resetDecoration' === r.type && n.delete(r.value)
-                for (const r of s)
-                  'setForegroundColor' === r.type
-                    ? (e = r.value)
-                    : 'setBackgroundColor' === r.type
-                    ? (t = r.value)
-                    : 'setDecoration' === r.type && n.add(r.value)
+                    : 'resetDecoration' === a.type && s.delete(a.value)
+                for (const a of n)
+                  'setForegroundColor' === a.type
+                    ? (e = a.value)
+                    : 'setBackgroundColor' === a.type
+                    ? (t = a.value)
+                    : 'setDecoration' === a.type && s.add(a.value)
               }
-              a = o.position
-            } while (a < s.length)
-            return r
+              r = o.position
+            } while (r < n.length)
+            return a
           }
         }
       })()
-    return s.map(t =>
-      a.parse(t).map(t => {
-        let s
-        ;(s = t.decorations.has('reverse')
+    return n.map(t =>
+      r.parse(t).map(t => {
+        let n
+        ;(n = t.decorations.has('reverse')
           ? t.background
-            ? r.value(t.background)
+            ? a.value(t.background)
             : e.bg
           : t.foreground
-          ? r.value(t.foreground)
+          ? a.value(t.foreground)
           : e.fg),
           t.decorations.has('dim') &&
-            (s = (function (e) {
+            (n = (function (e) {
               const t = e.match(/#([0-9a-f]{3})([0-9a-f]{3})?([0-9a-f]{2})?/)
               if (t) {
                 if (t[3]) {
@@ -5411,69 +5847,69 @@
                       .map(e => `${e}${e}`)
                       .join('')}80`
               }
-              const n = e.match(/var\((--shiki-color-ansi-[\w-]+)\)/)
-              if (n) return `var(${n[1]}-dim)`
+              const s = e.match(/var\((--shiki-color-ansi-[\w-]+)\)/)
+              if (s) return `var(${s[1]}-dim)`
               return e
-            })(s))
-        let a = n.None
+            })(n))
+        let r = s.None
         return (
-          t.decorations.has('bold') && (a |= n.Bold),
-          t.decorations.has('italic') && (a |= n.Italic),
-          t.decorations.has('underline') && (a |= n.Underline),
-          { content: t.value, color: s, fontStyle: a }
+          t.decorations.has('bold') && (r |= s.Bold),
+          t.decorations.has('italic') && (r |= s.Italic),
+          t.decorations.has('underline') && (r |= s.Underline),
+          { content: t.value, color: n, fontStyle: r }
         )
       })
     )
   }
-  const Y = {
-    pre: ({ className: e, style: t, children: n }) =>
-      `<pre class="${e}" style="${t}" tabindex="0">${n}</pre>`,
+  const X = {
+    pre: ({ className: e, style: t, children: s }) =>
+      `<pre class="${e}" style="${t}" tabindex="0">${s}</pre>`,
     code: ({ children: e }) => `<code>${e}</code>`,
     line: ({ className: e, children: t }) => `<span class="${e}">${t}</span>`,
     token: ({ style: e, children: t }) => `<span style="${e}">${t}</span>`
   }
-  function X(e, t = {}) {
-    const s = t.bg || '#fff',
-      r = (function (e, t) {
-        const n = new Map()
-        for (const s of e) {
-          const e = t(s)
-          n.has(e) ? n.get(e).push(s) : n.set(e, [s])
+  function Y(e, t = {}) {
+    const n = t.bg || '#fff',
+      a = (function (e, t) {
+        const s = new Map()
+        for (const n of e) {
+          const e = t(n)
+          s.has(e) ? s.get(e).push(n) : s.set(e, [n])
         }
-        return n
+        return s
       })(t.lineOptions ?? [], e => e.line),
-      a = t.elements || {}
-    function o(e = '', t = {}, n) {
-      const s = a[e] || Y[e]
-      return s
-        ? ((n = n.filter(Boolean)), s({ ...t, children: 'code' === e ? n.join('\n') : n.join('') }))
+      r = t.elements || {}
+    function o(e = '', t = {}, s) {
+      const n = r[e] || X[e]
+      return n
+        ? ((s = s.filter(Boolean)), n({ ...t, children: 'code' === e ? s.join('\n') : s.join('') }))
         : ''
     }
     return o(
       'pre',
-      { className: 'shiki ' + (t.themeName || ''), style: `background-color: ${s}` },
+      { className: 'shiki ' + (t.themeName || ''), style: `background-color: ${n}` },
       [
         t.langId ? `<div class="language-id">${t.langId}</div>` : '',
         o(
           'code',
           {},
-          e.map((s, a) => {
-            const i = a + 1,
+          e.map((n, r) => {
+            const i = r + 1,
               c = (function (e) {
                 const t = new Set(['line'])
-                for (const n of e) for (const e of n.classes ?? []) t.add(e)
+                for (const s of e) for (const e of s.classes ?? []) t.add(e)
                 return Array.from(t)
-              })(r.get(i) ?? []).join(' ')
+              })(a.get(i) ?? []).join(' ')
             return o(
               'line',
-              { className: c, lines: e, line: s, index: a },
-              s.map((e, r) => {
-                const a = [`color: ${e.color || t.fg}`]
+              { className: c, lines: e, line: n, index: r },
+              n.map((e, a) => {
+                const r = [`color: ${e.color || t.fg}`]
                 return (
-                  e.fontStyle & n.Italic && a.push('font-style: italic'),
-                  e.fontStyle & n.Bold && a.push('font-weight: bold'),
-                  e.fontStyle & n.Underline && a.push('text-decoration: underline'),
-                  o('token', { style: a.join('; '), tokens: s, token: e, index: r }, [
+                  e.fontStyle & s.Italic && r.push('font-style: italic'),
+                  e.fontStyle & s.Bold && r.push('font-weight: bold'),
+                  e.fontStyle & s.Underline && r.push('text-decoration: underline'),
+                  o('token', { style: r.join('; '), tokens: n, token: e, index: a }, [
                     ((i = e.content), i.replace(/[&<>"']/g, e => Z[e]))
                   ])
                 )
@@ -5516,24 +5952,24 @@
       return this._resolvedGrammars[e]
     }
     async loadLanguage(e) {
-      const t = e.embeddedLangs?.reduce(async (e, t, n) => {
+      const t = e.embeddedLangs?.reduce(async (e, t, s) => {
           if (!this.getLoadedLanguages().includes(t) && this._resolver.getLangRegistration(t))
             return (
               await this._resolver.loadGrammar(this._resolver.getLangRegistration(t).scopeName),
-              (e[this._resolver.getLangRegistration(t).scopeName] = n + 2),
+              (e[this._resolver.getLangRegistration(t).scopeName] = s + 2),
               e
             )
         }, {}),
-        n = {
+        s = {
           embeddedLanguages: t,
           balancedBracketSelectors: e.balancedBracketSelectors || ['*'],
           unbalancedBracketSelectors: e.unbalancedBracketSelectors || []
         },
-        s = await this.loadGrammarWithConfiguration(e.scopeName, 1, n)
-      ;(this._resolvedGrammars[e.id] = s),
+        n = await this.loadGrammarWithConfiguration(e.scopeName, 1, s)
+      ;(this._resolvedGrammars[e.id] = n),
         e.aliases &&
           e.aliases.forEach(e => {
-            this._resolvedGrammars[e] = s
+            this._resolvedGrammars[e] = n
           })
     }
     async loadLanguages(e) {
@@ -5615,44 +6051,44 @@
       'winter-is-coming-light',
       'winter-is-coming'
     ]),
-    (e.FontStyle = n),
+    (e.FontStyle = s),
     (e.getHighlighter = async function (e) {
       const {
-          _languages: n,
-          _themes: r,
-          _wasmPath: a
+          _languages: s,
+          _themes: a,
+          _wasmPath: r
         } = (function (e) {
-          let n = t,
-            s = e.themes || [],
-            r = e.paths?.wasm ? (e.paths.wasm.endsWith('/') ? e.paths.wasm : e.paths.wasm + '/') : C
+          let s = t,
+            n = e.themes || [],
+            a = e.paths?.wasm ? (e.paths.wasm.endsWith('/') ? e.paths.wasm : e.paths.wasm + '/') : C
           return (
-            e.langs && (n = e.langs.map(te)),
-            e.theme && s.unshift(e.theme),
-            s.length || (s = ['nord']),
-            { _languages: n, _themes: s, _wasmPath: r }
+            e.langs && (s = e.langs.map(te)),
+            e.theme && n.unshift(e.theme),
+            n.length || (n = ['nord']),
+            { _languages: s, _themes: n, _wasmPath: a }
           )
         })(e),
-        c = new B(
+        c = new M(
           (async function (e) {
-            if (!x) {
+            if (!P) {
               let t
               if (S)
                 t =
-                  'string' == typeof N
+                  'string' == typeof w
                     ? m.loadWASM({ data: await fetch(A(i(...o(e), 'onig.wasm'))) })
-                    : m.loadWASM({ data: N })
+                    : m.loadWASM({ data: w })
               else {
                 const e = require('path').join(require.resolve('vscode-oniguruma'), '../onig.wasm'),
-                  n = require('fs').readFileSync(e).buffer
-                t = m.loadWASM(n)
+                  s = require('fs').readFileSync(e).buffer
+                t = m.loadWASM(s)
               }
-              x = t.then(() => ({
+              P = t.then(() => ({
                 createOnigScanner: e => m.createOnigScanner(e),
                 createOnigString: e => m.createOnigString(e)
               }))
             }
-            return x
-          })(a),
+            return P
+          })(r),
           'vscode-oniguruma'
         ),
         l = new ee(c)
@@ -5662,10 +6098,10 @@
           (c.languagesPath = e.paths.languages.endsWith('/')
             ? e.paths.languages
             : e.paths.languages + '/')
-      const u = (await l.loadThemes(r))[0]
-      let h
-      await l.loadLanguages(n)
-      let p = (function () {
+      const u = (await l.loadThemes(a))[0]
+      let p
+      await l.loadLanguages(s)
+      let h = (function () {
         const e = {
           '#000001': 'var(--shiki-color-text)',
           '#000002': 'var(--shiki-color-background)',
@@ -5680,33 +6116,33 @@
           '#000012': 'var(--shiki-token-link)'
         }
         for (let t = 0; t < W.length; t++) {
-          const n = `#A${t.toString().padStart(5, '0')}`,
-            s = W[t].replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
-          e[n] = `var(--shiki-color-ansi-${s})`
+          const s = `#A${t.toString().padStart(5, '0')}`,
+            n = W[t].replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+          e[s] = `var(--shiki-color-ansi-${n})`
         }
         return e
       })()
       function d(e) {
         const t = e ? l.getTheme(e) : u
         if (!t) throw Error(`No theme registration for ${e}`)
-        ;(h && h.name === t.name) || (l.setTheme(t), (h = t))
-        const n = l.getColorMap()
+        ;(p && p.name === t.name) || (l.setTheme(t), (p = t))
+        const s = l.getColorMap()
         return (
           'css' === t.type &&
             (function (e, t) {
-              ;(e.bg = p[e.bg] || e.bg),
-                (e.fg = p[e.fg] || e.fg),
-                Object.entries(e.colors).forEach(([t, n]) => {
-                  e.colors[t] = p[n] || n
+              ;(e.bg = h[e.bg] || e.bg),
+                (e.fg = h[e.fg] || e.fg),
+                Object.entries(e.colors).forEach(([t, s]) => {
+                  e.colors[t] = h[s] || s
                 }),
-                t.forEach((e, n) => {
-                  t[n] = p[e] || e
+                t.forEach((e, s) => {
+                  t[s] = h[e] || e
                 })
-            })(t, n),
-          { _theme: t, _colorMap: n }
+            })(t, s),
+          { _theme: t, _colorMap: s }
         )
       }
-      function g(e, t = 'text', n, r = { includeExplanation: !0 }) {
+      function g(e, t = 'text', s, a = { includeExplanation: !0 }) {
         if (
           (function (e) {
             return !e || ['plaintext', 'txt', 'text'].includes(e)
@@ -5714,70 +6150,70 @@
         ) {
           return [...e.split(/\r\n|\r|\n/).map(e => [{ content: e }])]
         }
-        const { _grammar: a } = (function (e) {
+        const { _grammar: r } = (function (e) {
             const t = l.getGrammar(e)
             if (!t) throw Error(`No language registration for ${e}`)
             return { _grammar: t }
           })(t),
-          { _theme: o, _colorMap: i } = d(n)
-        return (function (e, t, n, r, a) {
-          let o = n.split(/\r\n|\r|\n/),
+          { _theme: o, _colorMap: i } = d(s)
+        return (function (e, t, s, a, r) {
+          let o = s.split(/\r\n|\r|\n/),
             i = G.INITIAL,
             c = [],
             l = []
-          for (let n = 0, u = o.length; n < u; n++) {
+          for (let s = 0, u = o.length; s < u; s++) {
             let u,
-              h,
               p,
-              d = o[n]
+              h,
+              d = o[s]
             if ('' === d) {
               ;(c = []), l.push([])
               continue
             }
-            a.includeExplanation && ((u = r.tokenizeLine(d, i)), (h = u.tokens), (p = 0))
-            let m = r.tokenizeLine2(d, i),
+            r.includeExplanation && ((u = a.tokenizeLine(d, i)), (p = u.tokens), (h = 0))
+            let m = a.tokenizeLine2(d, i),
               g = m.tokens.length / 2
-            for (let n = 0; n < g; n++) {
-              let r = m.tokens[2 * n],
-                o = n + 1 < g ? m.tokens[2 * n + 2] : d.length
-              if (r === o) continue
-              let i = m.tokens[2 * n + 1],
-                l = t[s.getForeground(i)],
-                u = s.getFontStyle(i),
+            for (let s = 0; s < g; s++) {
+              let a = m.tokens[2 * s],
+                o = s + 1 < g ? m.tokens[2 * s + 2] : d.length
+              if (a === o) continue
+              let i = m.tokens[2 * s + 1],
+                l = t[n.getForeground(i)],
+                u = n.getFontStyle(i),
                 f = []
-              if (a.includeExplanation) {
+              if (r.includeExplanation) {
                 let t = 0
-                for (; r + t < o; ) {
-                  let n = h[p],
-                    s = d.substring(n.startIndex, n.endIndex)
-                  ;(t += s.length), f.push({ content: s, scopes: F(e, n.scopes) }), p++
+                for (; a + t < o; ) {
+                  let s = p[h],
+                    n = d.substring(s.startIndex, s.endIndex)
+                  ;(t += n.length), f.push({ content: n, scopes: F(e, s.scopes) }), h++
                 }
               }
-              c.push({ content: d.substring(r, o), color: l, fontStyle: u, explanation: f })
+              c.push({ content: d.substring(a, o), color: l, fontStyle: u, explanation: f })
             }
             l.push(c), (c = []), (i = m.ruleStack)
           }
           return l
-        })(o, i, e, a, r)
+        })(o, i, e, r, a)
       }
       function f(e, t) {
-        const { _theme: n } = d(t)
-        return J(n, e)
+        const { _theme: s } = d(t)
+        return Q(s, e)
       }
       return {
         codeToThemedTokens: g,
-        codeToHtml: function (e, t = 'text', n) {
-          let s
-          s = 'object' == typeof t ? t : { lang: t, theme: n }
-          const r = g(e, s.lang, s.theme, { includeExplanation: !1 }),
-            { _theme: a } = d(s.theme)
-          return X(r, { fg: a.fg, bg: a.bg, lineOptions: s?.lineOptions, themeName: a.name })
+        codeToHtml: function (e, t = 'text', s) {
+          let n
+          n = 'object' == typeof t ? t : { lang: t, theme: s }
+          const a = g(e, n.lang, n.theme, { includeExplanation: !1 }),
+            { _theme: r } = d(n.theme)
+          return Y(a, { fg: r.fg, bg: r.bg, lineOptions: n?.lineOptions, themeName: r.name })
         },
         ansiToThemedTokens: f,
         ansiToHtml: function (e, t) {
-          const n = f(e, t?.theme),
-            { _theme: s } = d(t?.theme)
-          return X(n, { fg: s.fg, bg: s.bg, lineOptions: t?.lineOptions, themeName: s.name })
+          const s = f(e, t?.theme),
+            { _theme: n } = d(t?.theme)
+          return Y(s, { fg: n.fg, bg: n.bg, lineOptions: t?.lineOptions, themeName: n.name })
         },
         getTheme: e => d(e)._theme,
         loadTheme: async function (e) {
@@ -5802,14 +6238,14 @@
           return l.getLoadedLanguages()
         },
         setColorReplacements: function (e) {
-          p = e
+          h = e
         }
       }
     }),
     (e.loadTheme = T),
-    (e.renderToHtml = X),
+    (e.renderToHtml = Y),
     (e.setCDN = function (e) {
-      w = e.endsWith('/') ? e : e + '/'
+      v = e.endsWith('/') ? e : e + '/'
     }),
     (e.setOnigasmWASM = function (e) {
       j(e)

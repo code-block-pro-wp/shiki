@@ -263,6 +263,7 @@ interface IHighlighterPaths {
 type ILanguageRegistration = {
   id: string
   scopeName: string
+  displayName?: string
   aliases?: string[]
   samplePath?: string
   /**
@@ -390,6 +391,7 @@ type Lang =
   | 'ballerina'
   | 'bat'
   | 'batch'
+  | 'beancount'
   | 'berry'
   | 'be'
   | 'bibtex'
@@ -413,6 +415,8 @@ type Lang =
   | 'cs'
   | 'css'
   | 'cue'
+  | 'cypher'
+  | 'cql'
   | 'd'
   | 'dart'
   | 'dax'
@@ -435,6 +439,10 @@ type Lang =
   | 'gherkin'
   | 'git-commit'
   | 'git-rebase'
+  | 'glimmer-js'
+  | 'gjs'
+  | 'glimmer-ts'
+  | 'gts'
   | 'glsl'
   | 'gnuplot'
   | 'go'
@@ -447,6 +455,7 @@ type Lang =
   | 'haskell'
   | 'hs'
   | 'hcl'
+  | 'hjson'
   | 'hlsl'
   | 'html'
   | 'http'
@@ -461,6 +470,7 @@ type Lang =
   | 'json'
   | 'json5'
   | 'jsonc'
+  | 'jsonl'
   | 'jsonnet'
   | 'jssm'
   | 'fsl'
@@ -483,6 +493,10 @@ type Lang =
   | 'matlab'
   | 'mdx'
   | 'mermaid'
+  | 'narrat'
+  | 'nar'
+  | 'nextflow'
+  | 'nf'
   | 'nginx'
   | 'nim'
   | 'nix'
@@ -563,6 +577,8 @@ type Lang =
   | 'vimscript'
   | 'vue-html'
   | 'vue'
+  | 'vyper'
+  | 'vy'
   | 'wasm'
   | 'wenyan'
   | '文言'
