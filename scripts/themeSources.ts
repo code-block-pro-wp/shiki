@@ -104,7 +104,6 @@ export const githubThemeSources: [string, string][] = [
     'tokyo-night-light',
     'https://github.com/enkia/tokyo-night-vscode-theme/blob/master/themes/tokyo-night-light-color-theme.json'
   ],
-  ['colbalt2', 'https://github.com/wesbos/cobalt2-vscode/blob/master/theme/cobalt2.json'],
   [
     'palenight',
     'https://github.com/whizkydee/vscode-palenight-theme/blob/master/themes/palenight.json'
@@ -132,7 +131,12 @@ export const githubThemeSources: [string, string][] = [
   [
     'night-owl-light',
     'https://github.com/sdras/night-owl-vscode-theme/blob/main/themes/Night%20Owl-Light-color-theme.json'
-  ]
+  ],
+  [
+    'andromeda',
+    'https://github.com/EliverLara/Andromeda/blob/master/themes/Andromeda-color-theme.json'
+  ],
+  ['cobalt2', 'https://github.com/wesbos/cobalt2-vscode/blob/master/theme/cobalt2.json']
 ]
 
 /**

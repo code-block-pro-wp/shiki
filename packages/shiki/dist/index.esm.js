@@ -2,10 +2,11 @@ import { loadWASM, createOnigScanner, createOnigString } from 'vscode-oniguruma'
 import { INITIAL, Registry as Registry$1 } from 'vscode-textmate'
 
 const themes = [
+  'andromeda',
   'ayu-dark',
   'ayu-light',
   'ayu-mirage',
-  'colbalt2',
+  'cobalt2',
   'css-variables',
   'dark-plus',
   'dracula-soft',

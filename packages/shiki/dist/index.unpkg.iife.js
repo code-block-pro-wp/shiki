@@ -5991,10 +5991,11 @@
   }
   ;(e.BUNDLED_LANGUAGES = t),
     (e.BUNDLED_THEMES = [
+      'andromeda',
       'ayu-dark',
       'ayu-light',
       'ayu-mirage',
-      'colbalt2',
+      'cobalt2',
       'css-variables',
       'dark-plus',
       'dracula-soft',
