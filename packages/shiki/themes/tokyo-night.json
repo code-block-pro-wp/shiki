@@ -62,9 +62,9 @@
     "input.placeholderForeground": "#787c998A",
     "inputOption.activeForeground": "#c0caf5",
     "inputOption.activeBackground": "#3d59a144",
-    "inputValidation.infoForeground": "#000000",
-    "inputValidation.infoBackground": "#0da0ba",
-    "inputValidation.infoBorder": "#0db9d7",
+    "inputValidation.infoForeground": "#bbc2e0",
+    "inputValidation.infoBackground": "#3d59a15c",
+    "inputValidation.infoBorder": "#3d59a1",
     "inputValidation.warningForeground": "#000000",
     "inputValidation.warningBackground": "#c2985b",
     "inputValidation.warningBorder": "#e0af68",
@@ -129,7 +129,7 @@
     "editor.foreground": "#a9b1d6",
     "editor.foldBackground": "#1111174a",
     "editorLink.activeForeground": "#acb0d0",
-    "editor.selectionBackground": "#515c7e40",
+    "editor.selectionBackground": "#515c7e4d",
     "editor.inactiveSelectionBackground": "#515c7e25",
     "editor.findMatchBackground": "#3d59a166",
     "editor.findMatchBorder": "#e0af68",
@@ -183,6 +183,7 @@
     "editorGroupHeader.noTabsBackground": "#16161e",
     "editorGroupHeader.border": "#101014",
     "editorPane.background": "#16161e",
+    "editorWidget.foreground": "#787c99",
     "editorWidget.background": "#16161e",
     "editorWidget.resizeBorder": "#545c7e33",
     "editorSuggestWidget.background": "#16161e",
@@ -284,7 +285,7 @@
     "debugIcon.breakpointUnverifiedForeground": "#c24242",
     "terminal.background": "#16161e",
     "terminal.foreground": "#787c99",
-    "terminal.selectionBackground": "#515c7e30",
+    "terminal.selectionBackground": "#515c7e4d",
     "terminal.ansiBlack": "#363b54",
     "terminal.ansiRed": "#f7768e",
     "terminal.ansiGreen": "#41a6b5",
@@ -335,9 +336,10 @@
     "mergeEditor.conflict.handledFocused.border": "#41a6b565",
     "mergeEditor.conflict.handled.minimapOverViewRuler": "#449dab",
     "mergeEditor.conflict.unhandled.minimapOverViewRuler": "#e0af68",
-    "gitlens.trailingLineForegroundColor": "#444b6a",
-    "gitlens.gutterUncommittedForegroundColor": "#444b6a",
-    "gitlens.gutterForegroundColor": "#444b6a",
+    "gitlens.trailingLineForegroundColor": "#646e9c",
+    "gitlens.gutterUncommittedForegroundColor": "#7aa2f7",
+    "gitlens.gutterForegroundColor": "#787c99",
+    "gitlens.gutterBackgroundColor": "#16161e",
     "notificationCenterHeader.background": "#101014",
     "notifications.background": "#101014",
     "notificationLink.foreground": "#6183bb",
@@ -373,8 +375,8 @@
       }
     },
     {
-      "name": "Fix YAML block scalar",
-      "scope": "keyword.control.flow.block-scalar.literal",
+      "name": "Fix YAML block scalar, Python Logical",
+      "scope": ["keyword.control.flow.block-scalar.literal", "keyword.control.flow.python"],
       "settings": {
         "fontStyle": ""
       }
@@ -431,7 +433,8 @@
         "punctuation.definition.constant",
         "constant.language",
         "constant.numeric",
-        "support.constant"
+        "support.constant",
+        "constant.other.caps"
       ],
       "settings": {
         "foreground": "#ff9e64"
@@ -439,7 +442,13 @@
     },
     {
       "name": "String, Symbols",
-      "scope": ["string", "constant.other.symbol", "constant.other.key", "meta.attribute-selector"],
+      "scope": [
+        "string",
+        "constant.other.symbol",
+        "constant.other.key",
+        "meta.attribute-selector",
+        "string constant.character"
+      ],
       "settings": {
         "fontStyle": "",
         "foreground": "#9ece6a"
@@ -534,6 +543,7 @@
         "punctuation.definition.string",
         "punctuation.support.type.property-name",
         "text.html.vue-html meta.tag",
+        "meta.attribute.directive",
         "punctuation.definition.keyword",
         "punctuation.terminator.rule",
         "punctuation.definition.entity",
@@ -599,8 +609,13 @@
       }
     },
     {
-      "name": "Tag Component",
-      "scope": ["entity.name.tag support.class.component", "meta.tag"],
+      "name": "Tag - Custom / Unrecognized",
+      "scope": [
+        "entity.name.tag support.class.component",
+        "meta.tag.custom entity.name.tag",
+        "meta.tag.other.unrecognized.html.derivative entity.name.tag",
+        "meta.tag"
+      ],
       "settings": {
         "foreground": "#de5971"
       }
@@ -633,7 +648,9 @@
         "support.variable",
         "string constant.other.placeholder",
         "variable.parameter.handlebars",
-        "variable.other.object"
+        "variable.other.object",
+        "meta.fstring",
+        "meta.function-call meta.function-call.arguments"
       ],
       "settings": {
         "foreground": "#c0caf5"
@@ -655,7 +672,8 @@
         "string.unquoted.graphql",
         "string.unquoted.alias.graphql",
         "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js",
-        "meta.field.declaration.ts variable.object.property"
+        "meta.field.declaration.ts variable.object.property",
+        "meta.block entity.name.label"
       ],
       "settings": {
         "foreground": "#73daca"
@@ -999,7 +1017,7 @@
       }
     },
     {
-      "name": "Vue Template attributes",
+      "name": "Vue (Vetur / deprecated) Template attributes",
       "scope": [
         "entity.other.attribute-name.id.html",
         "meta.directive.vue entity.other.attribute-name.html"

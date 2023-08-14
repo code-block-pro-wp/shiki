@@ -1,6 +1,6 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "colbalt2",
+  "name": "cobalt2",
   "type": "dark",
   "semanticHighlighting": true,
   "semanticTokenColors": {
@@ -38,9 +38,9 @@
     "debugToolBar.background": "#193549",
     "descriptionForeground": "#aaa",
     "diffEditor.insertedTextBackground": "#3ad90033",
-    "diffEditor.insertedTextBorder": "#3ad90055",
+    "diffEditor.insertedTextBorder": "#00000000",
     "diffEditor.removedTextBackground": "#ee3a4333",
-    "diffEditor.removedTextBorder": "#ee3a4355",
+    "diffEditor.removedTextBorder": "#00000000",
     "dropdown.background": "#193549",
     "dropdown.border": "#15232d",
     "dropdown.foreground": "#fff",
@@ -166,8 +166,8 @@
     "progressBar.background": "#ffc600",
     "scrollbar.shadow": "#00000000",
     "scrollbarSlider.activeBackground": "#355166cc",
-    "scrollbarSlider.background": "#1F466280",
-    "scrollbarSlider.hoverBackground": "#406179cc",
+    "scrollbarSlider.background": "#406179cc",
+    "scrollbarSlider.hoverBackground": "#437da3cc",
     "selection.background": "#027dff",
     "sideBar.background": "#15232d",
     "sideBar.border": "#0d3a58",
@@ -188,6 +188,8 @@
     "statusBarItem.hoverBackground": "#0d3a58",
     "statusBarItem.prominentBackground": "#15232d",
     "statusBarItem.prominentHoverBackground": "#0d3a58",
+    "statusBarItem.remoteBackground": "#15232d",
+    "statusBarItem.remoteForeground": "#aaa",
     "tab.activeBackground": "#193549",
     "tab.activeForeground": "#fff",
     "tab.border": "#15232D",
@@ -214,7 +216,7 @@
     "terminal.ansiBrightWhite": "#ffffff",
     "terminal.background": "#122738",
     "terminal.foreground": "#ffffff",
-    "terminalCursor.background": "#ffc600",
+    "terminalCursor.background": "#122738",
     "terminalCursor.foreground": "#ffc600",
     "gitDecoration.modifiedResourceForeground": "#ffc600",
     "gitDecoration.deletedResourceForeground": "#ff628c",
@@ -279,6 +281,34 @@
       "scope": "keyword, storage.type.class, keyword.control.default.ts",
       "settings": {
         "foreground": "#ff9d00"
+      }
+    },
+    {
+      "name": "Markup Inserted",
+      "scope": ["markup.inserted", "meta.diff.header.to-file"],
+      "settings": {
+        "foreground": "#a5ff90"
+      }
+    },
+    {
+      "name": "Markup Inserted Punctuation",
+      "scope": ["punctuation.definition.inserted"],
+      "settings": {
+        "foreground": "#a5ff90cc"
+      }
+    },
+    {
+      "name": "Markup Deleted",
+      "scope": ["markup.deleted", "meta.diff.header.from-file"],
+      "settings": {
+        "foreground": "#ff628c"
+      }
+    },
+    {
+      "name": "Markup Deleted Punctuation",
+      "scope": ["punctuation.definition.deleted"],
+      "settings": {
+        "foreground": "#ff628ccc"
       }
     },
     {
@@ -525,7 +555,17 @@
     },
     {
       "name": "[PYTHON] - Self Argument",
-      "scope": "variable.parameter.function.language.special.self.python",
+      "scope": [
+        "variable.parameter.function.language.special.self.python",
+        "meta.function-call.generic.python"
+      ],
+      "settings": {
+        "foreground": "#9effff"
+      }
+    },
+    {
+      "name": "[PYTHON] - Function Call Argument",
+      "scope": ["meta.function-call.arguments.python"],
       "settings": {
         "foreground": "#fb94ff"
       }

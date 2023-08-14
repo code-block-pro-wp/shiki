@@ -59,7 +59,7 @@
     "editor.findMatchBackground": "#ff7300ab",
     "editor.findMatchHighlightBackground": "#FFFF0336",
     "editor.findRangeHighlightBackground": "#FFFF0336",
-    "editor.hoverHighlightBackground": "#FF730056",
+    "editor.hoverHighlightBackground": "#1E1E3F80",
     "editor.lineHighlightBackground": "#1F1F41",
     "editor.lineHighlightBorder": "#1F1F41",
     "editor.rangeHighlightBackground": "#1F1F41",

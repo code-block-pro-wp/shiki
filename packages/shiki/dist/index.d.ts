@@ -1,10 +1,11 @@
 import { IGrammar, IRawTheme } from 'vscode-textmate'
 
 type Theme =
+  | 'andromeda'
   | 'ayu-dark'
   | 'ayu-light'
   | 'ayu-mirage'
-  | 'colbalt2'
+  | 'cobalt2'
   | 'css-variables'
   | 'dark-plus'
   | 'dracula-soft'

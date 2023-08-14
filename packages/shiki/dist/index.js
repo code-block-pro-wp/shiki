@@ -4,10 +4,11 @@ var vscodeOniguruma = require('vscode-oniguruma')
 var vscodeTextmate = require('vscode-textmate')
 
 const themes = [
+  'andromeda',
   'ayu-dark',
   'ayu-light',
   'ayu-mirage',
-  'colbalt2',
+  'cobalt2',
   'css-variables',
   'dark-plus',
   'dracula-soft',

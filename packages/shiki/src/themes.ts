@@ -1,8 +1,9 @@
 export type Theme =
+  | 'andromeda'
   | 'ayu-dark'
   | 'ayu-light'
   | 'ayu-mirage'
-  | 'colbalt2'
+  | 'cobalt2'
   | 'css-variables'
   | 'dark-plus'
   | 'dracula-soft'
@@ -60,10 +61,11 @@ export type Theme =
   | 'winter-is-coming'
 
 export const themes: Theme[] = [
+  'andromeda',
   'ayu-dark',
   'ayu-light',
   'ayu-mirage',
-  'colbalt2',
+  'cobalt2',
   'css-variables',
   'dark-plus',
   'dracula-soft',

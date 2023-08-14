@@ -129,10 +129,11 @@ Note that this client-side theme is less granular than most other supported VSCo
 
 ```ts
 export type Theme =
+  | 'andromeda'
   | 'ayu-dark'
   | 'ayu-light'
   | 'ayu-mirage'
-  | 'colbalt2'
+  | 'cobalt2'
   | 'css-variables'
   | 'dark-plus'
   | 'dracula-soft'
