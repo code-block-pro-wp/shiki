@@ -492,8 +492,10 @@ type Lang =
   | 'md'
   | 'marko'
   | 'matlab'
+  | 'mdc'
   | 'mdx'
   | 'mermaid'
+  | 'mojo'
   | 'narrat'
   | 'nar'
   | 'nextflow'
@@ -544,13 +546,16 @@ type Lang =
   | 'shader'
   | 'shellscript'
   | 'bash'
-  | 'console'
   | 'sh'
   | 'shell'
   | 'zsh'
+  | 'shellsession'
+  | 'console'
   | 'smalltalk'
   | 'solidity'
   | 'sparql'
+  | 'splunk'
+  | 'spl'
   | 'sql'
   | 'ssh-config'
   | 'stata'
@@ -590,11 +595,19 @@ type Lang =
   | 'yaml'
   | 'yml'
   | 'zenscript'
+  | 'zig'
 declare const languages: ILanguageRegistration[]
 
 declare function getHighlighter(options: HighlighterOptions): Promise<Highlighter>
 
 declare function renderToHtml(lines: IThemedToken[][], options?: HtmlRendererOptions): string
+
+declare global {
+  interface Response {
+    json(): Promise<any>
+    text(): Promise<any>
+  }
+}
 
 /**
  * Set the route for loading the assets
