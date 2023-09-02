@@ -1,5 +1,15 @@
 /// <reference path="./global.d.ts" />
 
+// This is declared here rather than in global.d.ts because it is part of our
+// public api due to setWasm. We need it because it won't be defined otherwise
+// for Node users without "DOM" in their lib.
+declare global {
+  interface Response {
+    json(): Promise<any>
+    text(): Promise<any>
+  }
+}
+
 import { join, dirpathparts } from './utils'
 import type { IGrammar, IOnigLib, IRawTheme } from 'vscode-textmate'
 import { loadWASM, createOnigScanner, createOnigString } from 'vscode-oniguruma'
@@ -13,7 +23,12 @@ export const isNode =
   typeof process !== 'undefined' &&
   typeof process.release !== 'undefined' &&
   process.release.name === 'node'
-export const isBrowser = isWebWorker || !isNode
+export const isBun =
+  'process' in globalThis &&
+  typeof process !== 'undefined' &&
+  typeof process.release !== 'undefined' &&
+  process.release.name === 'bun'
+export const isBrowser = isWebWorker || (!isNode && !isBun)
 
 // to be replaced by rollup
 let CDN_ROOT = '__CDN_ROOT__'

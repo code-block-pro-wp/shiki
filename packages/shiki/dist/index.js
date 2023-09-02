@@ -92,7 +92,8 @@ const languages = [
     id: 'apache',
     scopeName: 'source.apacheconf',
     path: 'apache.tmLanguage.json',
-    displayName: 'Apache Conf'
+    displayName: 'Apache Conf',
+    samplePath: 'apache.sample'
   },
   {
     id: 'apex',
@@ -106,6 +107,7 @@ const languages = [
     scopeName: 'source.apl',
     path: 'apl.tmLanguage.json',
     displayName: 'APL',
+    samplePath: 'apl.sample',
     embeddedLangs: ['html', 'xml', 'css', 'javascript', 'json']
   },
   {
@@ -189,7 +191,8 @@ const languages = [
     id: 'bibtex',
     scopeName: 'text.bibtex',
     path: 'bibtex.tmLanguage.json',
-    displayName: 'BibTeX'
+    displayName: 'BibTeX',
+    samplePath: 'bibtex.sample'
   },
   {
     id: 'bicep',
@@ -257,8 +260,7 @@ const languages = [
     path: 'codeql.tmLanguage.json',
     displayName: 'CodeQL',
     samplePath: 'codeql.sample',
-    aliases: ['ql'],
-    embeddedLangs: ['markdown']
+    aliases: ['ql']
   },
   {
     id: 'coffee',
@@ -354,7 +356,8 @@ const languages = [
     id: 'dream-maker',
     scopeName: 'source.dm',
     path: 'dream-maker.tmLanguage.json',
-    displayName: 'Dream Maker'
+    displayName: 'Dream Maker',
+    samplePath: 'dream-maker.sample'
   },
   {
     id: 'elixir',
@@ -430,7 +433,8 @@ const languages = [
     id: 'gherkin',
     scopeName: 'text.gherkin.feature',
     path: 'gherkin.tmLanguage.json',
-    displayName: 'Gherkin'
+    displayName: 'Gherkin',
+    samplePath: 'gherkin.sample'
   },
   {
     id: 'git-commit',
@@ -474,7 +478,8 @@ const languages = [
     id: 'gnuplot',
     scopeName: 'source.gnuplot',
     path: 'gnuplot.tmLanguage.json',
-    displayName: 'Gnuplot'
+    displayName: 'Gnuplot',
+    samplePath: 'gnuplot.sample'
   },
   {
     id: 'go',
@@ -488,19 +493,22 @@ const languages = [
     scopeName: 'source.graphql',
     path: 'graphql.tmLanguage.json',
     displayName: 'GraphQL',
+    samplePath: 'graphql.sample',
     embeddedLangs: ['javascript', 'typescript', 'jsx', 'tsx']
   },
   {
     id: 'groovy',
     scopeName: 'source.groovy',
     path: 'groovy.tmLanguage.json',
-    displayName: 'Groovy'
+    displayName: 'Groovy',
+    samplePath: 'groovy.sample'
   },
   {
     id: 'hack',
     scopeName: 'source.hack',
     path: 'hack.tmLanguage.json',
     displayName: 'Hack',
+    samplePath: 'hack.sample',
     embeddedLangs: ['html', 'sql']
   },
   {
@@ -508,6 +516,7 @@ const languages = [
     scopeName: 'text.haml',
     path: 'haml.tmLanguage.json',
     displayName: 'Ruby Haml',
+    samplePath: 'haml.sample',
     embeddedLangs: ['ruby', 'javascript', 'sass', 'coffee', 'markdown', 'css']
   },
   {
@@ -515,6 +524,7 @@ const languages = [
     scopeName: 'text.html.handlebars',
     path: 'handlebars.tmLanguage.json',
     displayName: 'Handlebars',
+    samplePath: 'handlebars.sample',
     aliases: ['hbs'],
     embeddedLangs: ['html', 'css', 'javascript', 'yaml']
   },
@@ -523,6 +533,7 @@ const languages = [
     scopeName: 'source.haskell',
     path: 'haskell.tmLanguage.json',
     displayName: 'Haskell',
+    samplePath: 'haskell.sample',
     aliases: ['hs']
   },
   {
@@ -543,7 +554,8 @@ const languages = [
     id: 'hlsl',
     scopeName: 'source.hlsl',
     path: 'hlsl.tmLanguage.json',
-    displayName: 'HLSL'
+    displayName: 'HLSL',
+    samplePath: 'hlsl.sample'
   },
   {
     id: 'html',
@@ -573,6 +585,7 @@ const languages = [
     scopeName: 'source.ini',
     path: 'ini.tmLanguage.json',
     displayName: 'INI',
+    samplePath: 'ini.sample',
     aliases: ['properties']
   },
   {
@@ -595,6 +608,7 @@ const languages = [
     scopeName: 'text.html.jinja',
     path: 'jinja-html.tmLanguage.json',
     displayName: 'Jinja',
+    samplePath: 'jinja-html.sample',
     embeddedLangs: ['html']
   },
   {
@@ -609,7 +623,8 @@ const languages = [
     id: 'json',
     scopeName: 'source.json',
     path: 'json.tmLanguage.json',
-    displayName: 'JSON'
+    displayName: 'JSON',
+    samplePath: 'json.sample'
   },
   {
     id: 'json5',
@@ -622,19 +637,22 @@ const languages = [
     id: 'jsonc',
     scopeName: 'source.json.comments',
     path: 'jsonc.tmLanguage.json',
-    displayName: 'JSON with Comments'
+    displayName: 'JSON with Comments',
+    samplePath: 'jsonc.sample'
   },
   {
     id: 'jsonl',
     scopeName: 'source.json.lines',
     path: 'jsonl.tmLanguage.json',
-    displayName: 'JSON Lines'
+    displayName: 'JSON Lines',
+    samplePath: 'jsonl.sample'
   },
   {
     id: 'jsonnet',
     scopeName: 'source.jsonnet',
     path: 'jsonnet.tmLanguage.json',
-    displayName: 'Jsonnet'
+    displayName: 'Jsonnet',
+    samplePath: 'jsonnet.sample'
   },
   {
     id: 'jssm',
@@ -648,13 +666,15 @@ const languages = [
     id: 'jsx',
     scopeName: 'source.js.jsx',
     path: 'jsx.tmLanguage.json',
-    displayName: 'JSX'
+    displayName: 'JSX',
+    samplePath: 'jsx.sample'
   },
   {
     id: 'julia',
     scopeName: 'source.julia',
     path: 'julia.tmLanguage.json',
     displayName: 'Julia',
+    samplePath: 'julia.sample',
     embeddedLangs: ['cpp', 'python', 'javascript', 'r', 'sql']
   },
   {
@@ -677,6 +697,7 @@ const languages = [
     scopeName: 'text.tex.latex',
     path: 'latex.tmLanguage.json',
     displayName: 'LaTeX',
+    samplePath: 'latex.sample',
     embeddedLangs: [
       'tex',
       'css',
@@ -701,6 +722,7 @@ const languages = [
     scopeName: 'source.css.less',
     path: 'less.tmLanguage.json',
     displayName: 'Less',
+    samplePath: 'less.sample',
     embeddedLangs: ['css']
   },
   {
@@ -715,19 +737,22 @@ const languages = [
     id: 'lisp',
     scopeName: 'source.lisp',
     path: 'lisp.tmLanguage.json',
-    displayName: 'Lisp'
+    displayName: 'Lisp',
+    samplePath: 'lisp.sample'
   },
   {
     id: 'logo',
     scopeName: 'source.logo',
     path: 'logo.tmLanguage.json',
-    displayName: 'Logo'
+    displayName: 'Logo',
+    samplePath: 'logo.sample'
   },
   {
     id: 'lua',
     scopeName: 'source.lua',
     path: 'lua.tmLanguage.json',
     displayName: 'Lua',
+    samplePath: 'lua.sample',
     embeddedLangs: ['c']
   },
   {
@@ -735,6 +760,7 @@ const languages = [
     scopeName: 'source.makefile',
     path: 'make.tmLanguage.json',
     displayName: 'Makefile',
+    samplePath: 'make.sample',
     aliases: ['makefile']
   },
   {
@@ -742,6 +768,7 @@ const languages = [
     scopeName: 'text.html.markdown',
     path: 'markdown.tmLanguage.json',
     displayName: 'Markdown',
+    samplePath: 'markdown.sample',
     aliases: ['md'],
     embeddedLangs: [
       'css',
@@ -802,19 +829,30 @@ const languages = [
     scopeName: 'text.marko',
     path: 'marko.tmLanguage.json',
     displayName: 'Marko',
+    samplePath: 'marko.sample',
     embeddedLangs: ['css', 'less', 'scss', 'javascript']
   },
   {
     id: 'matlab',
     scopeName: 'source.matlab',
     path: 'matlab.tmLanguage.json',
-    displayName: 'MATLAB'
+    displayName: 'MATLAB',
+    samplePath: 'matlab.sample'
+  },
+  {
+    id: 'mdc',
+    scopeName: 'text.markdown.mdc',
+    path: 'mdc.tmLanguage.json',
+    displayName: 'markdown',
+    samplePath: 'mdc.sample',
+    embeddedLangs: ['markdown', 'yaml']
   },
   {
     id: 'mdx',
     scopeName: 'source.mdx',
     path: 'mdx.tmLanguage.json',
     displayName: 'MDX',
+    samplePath: 'mdx.sample',
     embeddedLangs: [
       'tsx',
       'toml',
@@ -853,6 +891,7 @@ const languages = [
       'scala',
       'scss',
       'shellscript',
+      'shellsession',
       'sql',
       'xml',
       'swift',
@@ -863,7 +902,15 @@ const languages = [
     id: 'mermaid',
     scopeName: 'source.mermaid',
     path: 'mermaid.tmLanguage.json',
-    displayName: 'Mermaid'
+    displayName: 'Mermaid',
+    samplePath: 'mermaid.sample'
+  },
+  {
+    id: 'mojo',
+    scopeName: 'source.mojo',
+    path: 'mojo.tmLanguage.json',
+    displayName: 'MagicPython',
+    samplePath: 'mojo.sample'
   },
   {
     id: 'narrat',
@@ -886,6 +933,7 @@ const languages = [
     scopeName: 'source.nginx',
     path: 'nginx.tmLanguage.json',
     displayName: 'Nginx',
+    samplePath: 'nginx.sample',
     embeddedLangs: ['lua']
   },
   {
@@ -893,44 +941,51 @@ const languages = [
     scopeName: 'source.nim',
     path: 'nim.tmLanguage.json',
     displayName: 'Nim',
+    samplePath: 'nim.sample',
     embeddedLangs: ['c', 'html', 'xml', 'javascript', 'css', 'glsl', 'markdown']
   },
   {
     id: 'nix',
     scopeName: 'source.nix',
     path: 'nix.tmLanguage.json',
-    displayName: 'Nix'
+    displayName: 'Nix',
+    samplePath: 'nix.sample'
   },
   {
     id: 'objective-c',
     scopeName: 'source.objc',
     path: 'objective-c.tmLanguage.json',
     displayName: 'Objective-C',
+    samplePath: 'objective-c.sample',
     aliases: ['objc']
   },
   {
     id: 'objective-cpp',
     scopeName: 'source.objcpp',
     path: 'objective-cpp.tmLanguage.json',
-    displayName: 'Objective-C++'
+    displayName: 'Objective-C++',
+    samplePath: 'objective-cpp.sample'
   },
   {
     id: 'ocaml',
     scopeName: 'source.ocaml',
     path: 'ocaml.tmLanguage.json',
-    displayName: 'OCaml'
+    displayName: 'OCaml',
+    samplePath: 'ocaml.sample'
   },
   {
     id: 'pascal',
     scopeName: 'source.pascal',
     path: 'pascal.tmLanguage.json',
-    displayName: 'Pascal'
+    displayName: 'Pascal',
+    samplePath: 'pascal.sample'
   },
   {
     id: 'perl',
     scopeName: 'source.perl',
     path: 'perl.tmLanguage.json',
     displayName: 'Perl',
+    samplePath: 'perl.sample',
     embeddedLangs: ['html', 'xml', 'css', 'javascript', 'sql']
   },
   {
@@ -938,19 +993,22 @@ const languages = [
     scopeName: 'source.php',
     path: 'php.tmLanguage.json',
     displayName: 'PHP',
+    samplePath: 'php.sample',
     embeddedLangs: ['html', 'xml', 'sql', 'javascript', 'json', 'css']
   },
   {
     id: 'plsql',
     scopeName: 'source.plsql.oracle',
     path: 'plsql.tmLanguage.json',
-    displayName: 'PL/SQL'
+    displayName: 'PL/SQL',
+    samplePath: 'plsql.sample'
   },
   {
     id: 'postcss',
     scopeName: 'source.css.postcss',
     path: 'postcss.tmLanguage.json',
-    displayName: 'PostCSS'
+    displayName: 'PostCSS',
+    samplePath: 'postcss.sample'
   },
   {
     id: 'powerquery',
@@ -964,6 +1022,7 @@ const languages = [
     scopeName: 'source.powershell',
     path: 'powershell.tmLanguage.json',
     displayName: 'PowerShell',
+    samplePath: 'powershell.sample',
     aliases: ['ps', 'ps1']
   },
   {
@@ -977,7 +1036,8 @@ const languages = [
     id: 'prolog',
     scopeName: 'source.prolog',
     path: 'prolog.tmLanguage.json',
-    displayName: 'Prolog'
+    displayName: 'Prolog',
+    samplePath: 'prolog.sample'
   },
   {
     id: 'proto',
@@ -991,6 +1051,7 @@ const languages = [
     scopeName: 'text.pug',
     path: 'pug.tmLanguage.json',
     displayName: 'Pug',
+    samplePath: 'pug.sample',
     aliases: ['jade'],
     embeddedLangs: ['javascript', 'css', 'sass', 'scss', 'stylus', 'coffee', 'html']
   },
@@ -998,13 +1059,15 @@ const languages = [
     id: 'puppet',
     scopeName: 'source.puppet',
     path: 'puppet.tmLanguage.json',
-    displayName: 'Puppet'
+    displayName: 'Puppet',
+    samplePath: 'puppet.sample'
   },
   {
     id: 'purescript',
     scopeName: 'source.purescript',
     path: 'purescript.tmLanguage.json',
-    displayName: 'PureScript'
+    displayName: 'PureScript',
+    samplePath: 'purescript.sample'
   },
   {
     id: 'python',
@@ -1018,13 +1081,15 @@ const languages = [
     id: 'r',
     scopeName: 'source.r',
     path: 'r.tmLanguage.json',
-    displayName: 'R'
+    displayName: 'R',
+    samplePath: 'r.sample'
   },
   {
     id: 'raku',
     scopeName: 'source.perl.6',
     path: 'raku.tmLanguage.json',
     displayName: 'Perl 6',
+    samplePath: 'raku.sample',
     aliases: ['perl6']
   },
   {
@@ -1032,6 +1097,7 @@ const languages = [
     scopeName: 'text.aspnetcorerazor',
     path: 'razor.tmLanguage.json',
     displayName: 'ASP.NET Razor',
+    samplePath: 'razor.sample',
     embeddedLangs: ['html', 'csharp']
   },
   {
@@ -1052,13 +1118,15 @@ const languages = [
     id: 'riscv',
     scopeName: 'source.riscv',
     path: 'riscv.tmLanguage.json',
-    displayName: 'RISC-V'
+    displayName: 'RISC-V',
+    samplePath: 'riscv.sample'
   },
   {
     id: 'rst',
     scopeName: 'source.rst',
     path: 'rst.tmLanguage.json',
     displayName: 'reStructuredText',
+    samplePath: 'rst.sample',
     embeddedLangs: ['cpp', 'python', 'javascript', 'shellscript', 'yaml', 'cmake', 'ruby']
   },
   {
@@ -1075,6 +1143,7 @@ const languages = [
     scopeName: 'source.rust',
     path: 'rust.tmLanguage.json',
     displayName: 'Rust',
+    samplePath: 'rust.sample',
     aliases: ['rs']
   },
   {
@@ -1082,31 +1151,36 @@ const languages = [
     scopeName: 'source.sas',
     path: 'sas.tmLanguage.json',
     displayName: 'SAS',
+    samplePath: 'sas.sample',
     embeddedLangs: ['sql']
   },
   {
     id: 'sass',
     scopeName: 'source.sass',
     path: 'sass.tmLanguage.json',
-    displayName: 'Sass'
+    displayName: 'Sass',
+    samplePath: 'sass.sample'
   },
   {
     id: 'scala',
     scopeName: 'source.scala',
     path: 'scala.tmLanguage.json',
-    displayName: 'Scala'
+    displayName: 'Scala',
+    samplePath: 'scala.sample'
   },
   {
     id: 'scheme',
     scopeName: 'source.scheme',
     path: 'scheme.tmLanguage.json',
-    displayName: 'Scheme'
+    displayName: 'Scheme',
+    samplePath: 'scheme.sample'
   },
   {
     id: 'scss',
     scopeName: 'source.css.scss',
     path: 'scss.tmLanguage.json',
     displayName: 'SCSS',
+    samplePath: 'scss.sample',
     embeddedLangs: ['css']
   },
   {
@@ -1114,6 +1188,7 @@ const languages = [
     scopeName: 'source.shaderlab',
     path: 'shaderlab.tmLanguage.json',
     displayName: 'ShaderLab',
+    samplePath: 'shaderlab.sample',
     aliases: ['shader'],
     embeddedLangs: ['hlsl']
   },
@@ -1122,19 +1197,31 @@ const languages = [
     scopeName: 'source.shell',
     path: 'shellscript.tmLanguage.json',
     displayName: 'Shell',
-    aliases: ['bash', 'console', 'sh', 'shell', 'zsh']
+    samplePath: 'shellscript.sample',
+    aliases: ['bash', 'sh', 'shell', 'zsh']
+  },
+  {
+    id: 'shellsession',
+    scopeName: 'text.shell-session',
+    path: 'shellsession.tmLanguage.json',
+    displayName: 'Shell Session',
+    samplePath: 'shellsession.sample',
+    aliases: ['console'],
+    embeddedLangs: ['shellscript']
   },
   {
     id: 'smalltalk',
     scopeName: 'source.smalltalk',
     path: 'smalltalk.tmLanguage.json',
-    displayName: 'Smalltalk'
+    displayName: 'Smalltalk',
+    samplePath: 'smalltalk.sample'
   },
   {
     id: 'solidity',
     scopeName: 'source.solidity',
     path: 'solidity.tmLanguage.json',
-    displayName: 'Solidity'
+    displayName: 'Solidity',
+    samplePath: 'solidity.sample'
   },
   {
     id: 'sparql',
@@ -1145,16 +1232,26 @@ const languages = [
     embeddedLangs: ['turtle']
   },
   {
+    id: 'splunk',
+    scopeName: 'source.splunk_search',
+    path: 'splunk.tmLanguage.json',
+    displayName: 'Splunk Query Language',
+    samplePath: 'splunk.sample',
+    aliases: ['spl']
+  },
+  {
     id: 'sql',
     scopeName: 'source.sql',
     path: 'sql.tmLanguage.json',
-    displayName: 'SQL'
+    displayName: 'SQL',
+    samplePath: 'sql.sample'
   },
   {
     id: 'ssh-config',
     scopeName: 'source.ssh-config',
     path: 'ssh-config.tmLanguage.json',
-    displayName: 'SSH Config'
+    displayName: 'SSH Config',
+    samplePath: 'ssh-config.sample'
   },
   {
     id: 'stata',
@@ -1169,6 +1266,7 @@ const languages = [
     scopeName: 'source.stylus',
     path: 'stylus.tmLanguage.json',
     displayName: 'Stylus',
+    samplePath: 'stylus.sample',
     aliases: ['styl']
   },
   {
@@ -1176,6 +1274,7 @@ const languages = [
     scopeName: 'source.svelte',
     path: 'svelte.tmLanguage.json',
     displayName: 'Svelte',
+    samplePath: 'svelte.sample',
     embeddedLangs: [
       'javascript',
       'typescript',
@@ -1194,13 +1293,15 @@ const languages = [
     id: 'swift',
     scopeName: 'source.swift',
     path: 'swift.tmLanguage.json',
-    displayName: 'Swift'
+    displayName: 'Swift',
+    samplePath: 'swift.sample'
   },
   {
     id: 'system-verilog',
     scopeName: 'source.systemverilog',
     path: 'system-verilog.tmLanguage.json',
-    displayName: 'SystemVerilog'
+    displayName: 'SystemVerilog',
+    samplePath: 'system-verilog.sample'
   },
   {
     id: 'tasl',
@@ -1213,20 +1314,23 @@ const languages = [
     id: 'tcl',
     scopeName: 'source.tcl',
     path: 'tcl.tmLanguage.json',
-    displayName: 'Tcl'
+    displayName: 'Tcl',
+    samplePath: 'tcl.sample'
   },
   {
     id: 'tex',
     scopeName: 'text.tex',
     path: 'tex.tmLanguage.json',
     displayName: 'TeX',
+    samplePath: 'tex.sample',
     embeddedLangs: ['r']
   },
   {
     id: 'toml',
     scopeName: 'source.toml',
     path: 'toml.tmLanguage.json',
-    displayName: 'TOML'
+    displayName: 'TOML',
+    samplePath: 'toml.sample'
   },
   {
     id: 'tsx',
@@ -1247,6 +1351,7 @@ const languages = [
     scopeName: 'text.html.twig',
     path: 'twig.tmLanguage.json',
     displayName: 'Twig',
+    samplePath: 'twig.sample',
     embeddedLangs: ['css', 'javascript', 'php', 'python', 'ruby']
   },
   {
@@ -1254,6 +1359,7 @@ const languages = [
     scopeName: 'source.ts',
     path: 'typescript.tmLanguage.json',
     displayName: 'TypeScript',
+    samplePath: 'typescript.sample',
     aliases: ['ts']
   },
   {
@@ -1268,25 +1374,29 @@ const languages = [
     scopeName: 'source.asp.vb.net',
     path: 'vb.tmLanguage.json',
     displayName: 'Visual Basic',
+    samplePath: 'vb.sample',
     aliases: ['cmd']
   },
   {
     id: 'verilog',
     scopeName: 'source.verilog',
     path: 'verilog.tmLanguage.json',
-    displayName: 'Verilog'
+    displayName: 'Verilog',
+    samplePath: 'verilog.sample'
   },
   {
     id: 'vhdl',
     scopeName: 'source.vhdl',
     path: 'vhdl.tmLanguage.json',
-    displayName: 'VHDL'
+    displayName: 'VHDL',
+    samplePath: 'vhdl.sample'
   },
   {
     id: 'viml',
     scopeName: 'source.viml',
     path: 'viml.tmLanguage.json',
     displayName: 'Vim Script',
+    samplePath: 'viml.sample',
     aliases: ['vim', 'vimscript']
   },
   {
@@ -1294,6 +1404,7 @@ const languages = [
     scopeName: 'text.html.vue-html',
     path: 'vue-html.tmLanguage.json',
     displayName: 'Vue HTML',
+    samplePath: 'vue-html.sample',
     embeddedLangs: ['vue', 'javascript']
   },
   {
@@ -1301,6 +1412,7 @@ const languages = [
     scopeName: 'source.vue',
     path: 'vue.tmLanguage.json',
     displayName: 'Vue',
+    samplePath: 'vue.sample',
     embeddedLangs: [
       'html',
       'markdown',
@@ -1334,13 +1446,15 @@ const languages = [
     id: 'wasm',
     scopeName: 'source.wat',
     path: 'wasm.tmLanguage.json',
-    displayName: 'WebAssembly'
+    displayName: 'WebAssembly',
+    samplePath: 'wasm.sample'
   },
   {
     id: 'wenyan',
     scopeName: 'source.wenyan',
     path: 'wenyan.tmLanguage.json',
     displayName: 'Wenyan',
+    samplePath: 'wenyan.sample',
     aliases: ['\u6587\u8A00']
   },
   {
@@ -1362,6 +1476,7 @@ const languages = [
     scopeName: 'text.xml',
     path: 'xml.tmLanguage.json',
     displayName: 'XML',
+    samplePath: 'xml.sample',
     embeddedLangs: ['java']
   },
   {
@@ -1369,6 +1484,7 @@ const languages = [
     scopeName: 'text.xml.xsl',
     path: 'xsl.tmLanguage.json',
     displayName: 'XSL',
+    samplePath: 'xsl.sample',
     embeddedLangs: ['xml']
   },
   {
@@ -1376,6 +1492,7 @@ const languages = [
     scopeName: 'source.yaml',
     path: 'yaml.tmLanguage.json',
     displayName: 'YAML',
+    samplePath: 'yaml.sample',
     aliases: ['yml']
   },
   {
@@ -1384,6 +1501,13 @@ const languages = [
     path: 'zenscript.tmLanguage.json',
     displayName: 'ZenScript',
     samplePath: 'zenscript.sample'
+  },
+  {
+    id: 'zig',
+    scopeName: 'source.zig',
+    path: 'zig.tmLanguage.json',
+    displayName: 'zig',
+    samplePath: 'zig.sample'
   }
 ]
 
@@ -2405,7 +2529,12 @@ const isNode =
   typeof process !== 'undefined' &&
   typeof process.release !== 'undefined' &&
   process.release.name === 'node'
-const isBrowser = isWebWorker || !isNode
+const isBun =
+  'process' in globalThis &&
+  typeof process !== 'undefined' &&
+  typeof process.release !== 'undefined' &&
+  process.release.name === 'bun'
+const isBrowser = isWebWorker || (!isNode && !isBun)
 let CDN_ROOT = ''
 let WASM = ''
 const WASM_PATH = 'dist/'

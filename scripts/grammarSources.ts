@@ -21,7 +21,9 @@ export const vscodeGrammarsToRemove = [
   'md-math-inline',
   'md-math-block',
   'cpp-grammar-bailout',
-  'markdown-latex-combined'
+  'markdown-latex-combined',
+  // vscode specific snippets
+  'snippets'
 ]
 
 /**
@@ -96,7 +98,7 @@ export const githubGrammarSources: [string, string][] = [
   ],
   [
     'berry',
-    'https://github.com/berry-lang/berry/blob/master/tools/plugins/vscode/skiars.berry-0.1.0/syntaxes/berry.json'
+    'https://github.com/berry-lang/berry/blob/master/tools/plugins/vscode/skiars.berry-1.1.0/syntaxes/berry.json'
   ],
   ['bicep', 'https://github.com/Azure/bicep/blob/main/src/textmate/bicep.tmlanguage'],
   ['blade', 'https://github.com/spatie/shiki-php/blob/main/languages/blade.tmLanguage.json'],
@@ -106,7 +108,7 @@ export const githubGrammarSources: [string, string][] = [
   ],
   [
     'clarity',
-    'https://github.com/hirosystems/clarity-lsp/blob/develop/syntaxes/clarity.tmLanguage.json'
+    'https://github.com/hirosystems/clarity.tmbundle/blob/main/Syntaxes/clarity.JSON-tmLanguage'
   ],
   ['cmake', 'https://github.com/twxs/vs.language.cmake/blob/master/syntaxes/CMake.tmLanguage'],
   ['cobol', 'https://github.com/spgennard/vscode_cobol/blob/master/syntaxes/COBOL.tmLanguage.json'],
@@ -210,7 +212,9 @@ export const githubGrammarSources: [string, string][] = [
     'matlab',
     'https://github.com/mathworks/MATLAB-Language-grammar/blob/40d9a0cd3b628f80cdcf948bbe1747a527ed5dd5/Matlab.tmbundle/Syntaxes/MATLAB.tmLanguage'
   ],
+  ['mdc', 'https://github.com/nuxtlabs/vscode-mdc/blob/main/syntaxes/mdc.tmLanguage.json'],
   ['mdx', 'https://github.com/wooorm/markdown-tm-language/blob/main/source.mdx.tmLanguage'],
+  ['mojo', 'https://github.com/modularml/mojo-syntax/blob/main/syntaxes/mojo.syntax.json'],
   [
     'narrat',
     'https://github.com/liana-p/narrat-syntax-highlighting-vscode/blob/main/syntaxes/narrat.tmLanguage.yaml'
@@ -273,6 +277,10 @@ export const githubGrammarSources: [string, string][] = [
   ],
   ['scheme', 'https://github.com/sjhuangx/vscode-scheme/blob/master/syntaxes/scheme.tmLanguage'],
   [
+    'shellsession',
+    'https://github.com/hronro/sublime-linguist-syntax/blob/master/syntaxes/ShellSession.tmLanguage'
+  ],
+  [
     'smalltalk',
     'https://github.com/leocamello/vscode-smalltalk/blob/master/syntaxes/smalltalk.tmLanguage.json'
   ],
@@ -283,6 +291,10 @@ export const githubGrammarSources: [string, string][] = [
   [
     'sparql',
     'https://github.com/stardog-union/stardog-vsc/blob/master/stardog-rdf-grammars/syntaxes/sparql.tmLanguage.json'
+  ],
+  [
+    'splunk',
+    'https://github.com/arcsector/vscode-splunk-search-syntax/blob/master/syntaxes/splunk_search.tmLanguage'
   ],
   [
     'ssh-config',
@@ -334,7 +346,8 @@ export const githubGrammarSources: [string, string][] = [
     'zenscript',
     'https://github.com/CraftTweaker/ZenScript-tmLanguage/blob/master/zenscript.tmLanguage.json'
   ],
-  ['v', 'https://github.com/vlang/vscode-vlang/blob/master/syntaxes/v.tmLanguage.json']
+  ['v', 'https://github.com/vlang/vscode-vlang/blob/master/syntaxes/v.tmLanguage.json'],
+  ['zig', 'https://github.com/ziglang/vscode-zig/blob/master/syntaxes/zig.tmLanguage.json']
 ]
 
 /**
@@ -373,7 +386,9 @@ export const languageAliases = {
   rust: ['rs'],
   'html-ruby-erb': ['erb'],
   shaderlab: ['shader'],
-  shellscript: ['bash', 'console', 'sh', 'shell', 'zsh'],
+  shellscript: ['bash', 'sh', 'shell', 'zsh'],
+  shellsession: ['console'],
+  splunk: ['spl'],
   stylus: ['styl'],
   typescript: ['ts'],
   vb: ['cmd'],
